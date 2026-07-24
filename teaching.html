@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teaching | Zhengbing He</title>
+    <style>
+      body {
+        font-family: Menlo, Monaco, "SFMono-Regular", "Cascadia Code", Consolas,
+          monospace;
+        font-size: 12px;
+        line-height: 1.35;
+        max-width: none;
+        margin: 32px 0;
+        padding: 0 24px;
+        color: #222;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1 {
+        margin-bottom: 0.6em;
+        font-size: 1.35rem;
+      }
+      h2 {
+        margin: 1.4em 0 0.55em;
+        font-size: 1.35rem;
+      }
+      .subtitle {
+        font-size: 12px;
+        margin-bottom: 0.9em;
+      }
+      h5 {
+        margin: 0.9em 0 0.3em;
+        font-size: 1rem;
+      }
+      p {
+        margin: 0.6em 0;
+      }
+      .teaching-indent {
+        margin-left: 2em;
+      }
+      ul {
+        margin: 0;
+        padding-left: 1.25em;
+      }
+      li {
+        margin: 0.5em 0;
+      }
+      .course-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 587px);
+        gap: 24px;
+        align-items: start;
+        margin-top: 1.4em;
+      }
+      .course-content.teaching-indent {
+        margin-left: 2em;
+      }
+      .course-content img {
+        display: block;
+        width: 70%;
+        height: auto;
+        background: #fff;
+        filter: contrast(1.03);
+      }
+      .course-outline {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .course-outline li:first-child {
+        margin-top: 0;
+      }
+      .intro-layout {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+      }
+      .intro-text {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .intro-photo {
+        flex: 0 0 auto;
+        align-self: stretch;
+        display: flex;
+        align-items: stretch;
+      }
+      .intro-photo img {
+        display: block;
+        height: 100%;
+        width: auto;
+        max-width: 100px;
+        object-fit: cover;
+      }
+      @media (max-width: 760px) {
+        .course-content {
+          grid-template-columns: 1fr;
+        }
+
+        .intro-layout {
+          flex-direction: column;
+        }
+
+        .intro-photo {
+          align-self: flex-start;
+        }
+
+        .intro-photo img {
+          height: auto;
+          width: min(240px, 60vw);
+        }
+      }
+      @media (max-width: 640px) {
+        .teaching-indent {
+          margin-left: 0;
+        }
+
+        .course-content.teaching-indent {
+          margin-left: 0;
+        }
+      }
+      a {
+        color: #0969da;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="index.html">[home]</a>
+      <a href="teaching.html">[teaching]</a>
+      <a href="publication.html">[publications]</a>
+    </div>
+
+    <div class="intro-layout">
+      <div class="intro-text">
+        <h1>Zhengbing He</h1>
+        <div class="subtitle">
+          Professor in Autonomous and Intelligent Systems<br />
+          University of Nottingham Ningbo China
+        </div>
+        <div>
+          <a href="https://scholar.google.com/citations?user=qH12Xy4AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/gotrafficgo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/zhengbing/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          Email: he dot zb at hotmail dot com<br />
+          Office: IAMET 322, UNNC Campus
+        </div>
+      </div>
+      <div class="intro-photo">
+        <img src="photo.jpeg" alt="Zhengbing He" />
+      </div>
+    </div>
+
+    <h2>Traffic Flow Theory</h2>
+    <p class="teaching-indent">
+      <strong>Traffic Flow Theory is a foundational course</strong> that focuses on <strong>traffic dynamics</strong> and the essential mathematical models and tools used to analyze and predict vehicle movement and traffic congestion on roadways. The course provides a solid understanding of <strong>key concepts</strong> such as vehicle trajectories, capacity drop, fundamental diagrams. It particularly covers <strong>important models and tools</strong>, including car-following models, lane-changing models, kinematic wave theory, and cumulative count curves. These concepts and tools form the foundation for various studies and applications in transportation engineering and traffic management. Download: <a href="https://github.com/gotrafficgo/traffic_flow_theory_slides">https://github.com/gotrafficgo/traffic_flow_theory_slides</a>
+    </p>
+
+    <div class="course-content teaching-indent">
+      <ul class="course-outline">
+        <li>0. Introduction to traffic flow theory</li>
+        <li>1. Trajectories and microscopic traffic variables</li>
+        <li>2. Macroscopic traffic variables</li>
+        <li>3. Important traffic characteristics</li>
+        <li>4. Kinematic wave theory</li>
+        <li>5. Cumulative count curve and queueing analysis</li>
+        <li>6. Cellular automata</li>
+        <li>7.1 Car-following models: Basic</li>
+        <li>7.2 Car-following models: Gipps model</li>
+        <li>8.1 Car-following models: Newell model</li>
+        <li>8.2 Car-following models: Data-driven model</li>
+        <li>9.1 Lane-changing models: Basic</li>
+        <li>9.2 Lane-changing models: Data-driven</li>
+        <li>10.1 Intersection control: Basic</li>
+        <li>10.2 Intersection control: Future</li>
+        <li>11.1 Emerging Technologies: Stop-and-Go Wave Suppression</li>
+      </ul>
+      <img src="tft.gif" alt="Traffic Flow Theory visualization" />
+    </div>
+  </body>
+</html>
