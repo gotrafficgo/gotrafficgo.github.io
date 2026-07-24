@@ -62,7 +62,7 @@
         }
 
         .academic-services li {
-          grid-template-columns: 8em 0.4em minmax(0, 1fr);
+          grid-template-columns: 7em 0.4em minmax(0, 1fr);
         }
       }
       .intro-layout {
@@ -143,6 +143,16 @@
       a {
         color: #0969da;
       }
+      .scientific-citation,
+      .scientific-citation:visited {
+        color: #4a4a4a;
+        text-decoration: none;
+      }
+      .scientific-highlight-link,
+      .scientific-highlight-link:visited {
+        color: #0000ff;
+        text-decoration: underline;
+      }
       .top-nav {
         font-size: 14px;
       }
@@ -209,7 +219,7 @@
       In particular, I am a pioneer and long-term contributor in <strong>AI-driven transportation modeling</strong> and <strong>AV-empowered traffic mitigation</strong>, and an early innovator in <strong>generative AI</strong> applications in transportation (see <em>Scientific Contributions</em> below).
     </p>
 
-    <h2>Detailed Introduction to Selected Projects</h2>
+    <h2>Project Details</h2>
     <ul class="project-list selected-projects">
       <li>
         <a href="https://gotrafficgo.github.io/webpage_project/1/">AI-Driven Modeling of Vehicle Dynamics</a>
@@ -290,37 +300,93 @@
 
       <h5>Pioneer and long-term contributor to AI-based transportation modeling</h5>
       <p class="paragraph-indent">
-        Car-following and lane-changing models are cornerstones for understanding driver behavior, traffic dynamics, and supporting autonomous driving. As early as 2014, at the dawn of the deep learning era, my team proposed <strong>an innovative kNN-based data-driven car-following model</strong>. This model has been cited almost 200 times, and it is widely recognized as one of the first data-driven car-following models by review articles published by scholars from institutions such as the University of California, Berkeley (<em>Zhang et al., 2025</em>), the University of Washington (<em>Chen et al., 2023</em>), and Imperial College London (<em>Rowam et al., 2025</em>). In 2019, my team developed <strong>the first deep-learning-based lane-changing model using DBN and LSTM neural networks</strong>, which has since been cited over 300 times and is widely recognized in subsequent research (<em>Siebke et al., 2023; Han et al., 2024; Wang et al., 2024; Huang et al., 2025</em>) as a pioneering contribution to AI-driven modeling of driver behavior and traffic dynamics.
+        Car-following and lane-changing models are cornerstones for understanding driver behavior, traffic dynamics, and supporting autonomous driving.
+        As early as 2014, at the dawn of the deep learning era, my team proposed <strong><a class="scientific-highlight-link" href="http://dx.doi.org/10.1016/j.trb.2015.07.010">an innovative data-driven car-following model</a></strong> based on k Nearest Neighbors.
+        This model has been cited more than 200 times, and it is widely recognized as one of the first data-driven car-following models by review articles published by scholars from institutions
+        such as University of California, Berkeley (<a class="scientific-citation" href="https://doi.org/10.1109/TIV.2024.3409468"><em>Zhang et al., 2025</em></a>),
+        University of Washington (<a class="scientific-citation" href="https://doi.org/10.1038/s41597-023-02718-7"><em>Chen et al., 2023</em></a>),
+        Imperial College London (<a class="scientific-citation" href="https://doi.org/10.1016/j.commtr.2025.100164"><em>Rowam et al., 2025</em></a>),
+        and Tsinghua University (<a class="scientific-citation" href="https://doi.org/10.1016/j.trc.2026.105840"><em>Li et al., 2026</em></a>).
+        In 2019, my team developed <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2019.07.002">the first deep-learning-based lane-changing model</a></strong> using DBN and LSTM neural networks,
+        which has since been cited over 300 times and is widely recognized in subsequent research
+        (<a class="scientific-citation" href="https://ieeexplore.ieee.org/document/9954276"><em>Siebke et al., 2023</em></a>;
+         <a class="scientific-citation" href="https://doi.org/10.1016/j.trc.2024.104841"><em>Han et al., 2024</em></a>;
+         <a class="scientific-citation" href="https://doi.org/10.1109/TIV.2023.3333796"><em>Wang et al., 2024</em></a>;
+         <a class="scientific-citation" href="https://ieeexplore.ieee.org/document/10855350"><em>Huang et al., 2025</em></a>)
+        as a pioneering contribution to AI-driven modeling of driver behavior and traffic dynamics.
       </p>
     <p class="paragraph-indent">
-      Prediction is a central topic in transportation research and practice. I contributed to the development of the first <strong>CNN-based network-wide traffic speed prediction model</strong>, and the single paper has been cited over 1,600 times. Other representative works include <strong>spatial-temporal graph attention transformer-based trajectory prediction</strong>, <strong>graph CNN-based bike-sharing demand prediction</strong>, <strong>GAN-based travel time prediction</strong>, etc. All these works were published in leading journals, such as TRC, CACAIE, and Information Fusion, and have received substantial citations, making a significant impact on the field of AI-driven transportation prediction.
+      Prediction is a central topic in transportation research and practice.
+      I contributed to the development of the first <strong><a class="scientific-highlight-link" href="https://www.mdpi.com/1424-8220/17/4/818">CNN-based network-wide traffic speed prediction model</a></strong>, and the single paper has been cited over 1,700 times.
+      Other representative works include <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2018.10.011">graph CNN-based bike-sharing demand prediction</a></strong>,
+      <strong><a class="scientific-highlight-link" href="https://doi.org/10.1111/mice.12595">GAN-based travel time prediction</a></strong>, etc.
+      All these works were published in leading journals, such as TRC, CACAIE, and Information Fusion, and have received substantial citations,
+      making a significant impact on the field of AI-driven transportation prediction.
     </p>
     <p class="paragraph-indent">
-      An early innovator in large language model (LLM) applications in transportation. Since the emergence of LLMs in 2023, my team was among the first to introduce <strong>LLM-based intelligent driving assistance</strong>, highlight <strong>the positive role of prompt engineering in enhancing prediction accuracy</strong>, and develop <strong>AI agent models for everyday route choice</strong>, with a series of early papers published in leading journals. These works rank among the earliest applications of LLMs and have attracted wide attention in the research community. In 2024, I was twice invited to introduce those LLM-based progresses in ground mobility at SAE International, the world’s leading authority on automotive industry standards. At the beginning of 2026, we had a Correspondence, titled “<em>AI writing tools could lead scholars from low-income countries to erase their own voices</em>”, which was published in <strong>Nature</strong>.
+      An early innovator in large language model (LLM) applications in transportation.
+      Since the emergence of LLMs in 2023, my team was among the first to introduce <strong><a class="scientific-highlight-link" href="https://doi.org/10.1109/TIV.2023.3325300">LLM-based intelligent driving assistance</a></strong>,
+      highlight <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.inffus.2023.102038">the positive role of prompt engineering</a></strong> in enhancing prediction accuracy,
+      and develop <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2025.105307">AI agent models for everyday route choice</a></strong>, with a series of early papers published in leading journals.
+      These works rank among the earliest applications of LLMs and have attracted wide attention in the research community.
+      In 2024, I was twice invited to introduce those LLM-based progresses in ground mobility at SAE International,
+      the world’s leading authority on automotive industry standards.
+      At the beginning of 2026, we had a Correspondence, titled “<em><a class="scientific-highlight-link" href="https://doi.org/10.1038/d41586-026-00121-x">AI writing tools could erase low-income countries‘ voices</a></em>”,
+      which was published in <strong>Nature</strong>.
     </p>
 
     <h5>Developed autonomous driving strategies to mitigate traffic congestion, shaping the field</h5>
     <p class="paragraph-indent">
-      To address highway congestion and emissions, my team was the first to propose a <strong>feedback control–based congestion mitigation strategy</strong> for connected vehicles and the <strong>jam-absorption driving strategy</strong>, with results published in IEEE TITS and more than 300 citations and reported by Italian media. Researchers in Japan cited our work on jam-absorption strategies more than ten times in a single paper (<em>Nishi, 2020</em>), recognizing the two-step jam-absorption strategy as an effective means of alleviating traffic congestion. I am leading a survey paper co-authored with scholars from MIT, Georgia Tech, and TU Delft, which is forthcoming in IEEE TITS, reflecting my international influence in this topic.
+      To address highway congestion and emissions,
+      my team was the first to propose a <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/8434122">feedback control–based congestion mitigation strategy</a></strong> for connected vehicles and the <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/7534847">jam-absorption driving strategy</a></strong>,
+      with results published in IEEE TITS and more than 300 citations and reported by Italian media.
+      Researchers in Japan cited our work on jam-absorption strategies more than ten times in a single paper (<a class="scientific-citation" href="https://doi.org/10.1016/j.physa.2019.123393"><em>Nishi, 2020</em></a>),
+      recognizing the two-step jam-absorption strategy as an effective means of alleviating traffic congestion.
+      I am leading a <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/11435503">survey paper</a></strong> co-authored with scholars from MIT, Georgia Tech, and TU Delft, which is forthcoming in IEEE TITS,
+      reflecting my international influence in this topic.
     </p>
     <p class="paragraph-indent">
-      For the urban scenarios, I introduced a novel future <strong>no-lane-change road transportation system</strong> for autonomous driving and subsequently extended the framework to include <strong>pedestrians</strong>. The series of works was published in IEEE TIV, IEEE TVT, and TRC, drawing wide attention from the research community (such as more than 100,000 views on LinkedIn). Researchers from institutions such as the University of Florida provided a detailed and positive assessment of the no-lane-change concept (<em>Li et al., 2018</em>), and subsequent studies by <em>Antonio et al. (2022)</em> and <em>Zhao et al. (2025)</em> considered it one of the first conflict-based intersection management.
+      For the urban scenarios, I introduced a novel future <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/8286963">no-lane-change road transportation system</a></strong>
+      for autonomous driving and subsequently extended the framework to include <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2024.104623">pedestrians</a></strong>.
+      The series of works was published in IEEE TIV, IEEE TVT, and TRC, drawing wide attention from the research community
+      (such as more than 100,000 views on LinkedIn).
+      Researchers from institutions such as the University of Florida provided a detailed and positive assessment of the no-lane-change concept (<a class="scientific-citation" href="https://orcid.org/0000-0002-6345-0215"><em>Li et al., 2018</em></a>),
+      and subsequent studies by <a class="scientific-citation" href="https://ieeexplore.ieee.org/document/9762548"><em>Antonio et al. (2022)</em></a> and <a class="scientific-citation" href="https://ieeexplore.ieee.org/document/11125839"><em>Zhao et al. (2025)</em></a> considered it one of the first conflict-based intersection management.
     </p>
     <p class="paragraph-indent">
-      I have also devoted significant effort to predicting the motion of surrounding agents for autonomous vehicles, with a particular focus on intersection conflict scenarios. To date, I have developed a series of methods, including approaches based on <strong>Transformers</strong>, <strong>LLMs with CoT reasoning</strong>, and <strong>World Models</strong>.
+      I have also devoted significant effort to predicting the motion of surrounding agents for autonomous vehicles, with a particular focus on intersection conflict scenarios.
+      To date, I have developed a series of methods, including approaches based on <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/9768029">Transformers</a></strong>, <strong><a class="scientific-highlight-link" href="https://www.computer.org/csdl/journal/ai/2026/02/10980428/26l8EsPsdJm">LLMs with CoT reasoning</a></strong>, and <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2025.105456">World Models</a></strong>.
     </p>
 
     <h5>Advanced traffic state sensing and visualization, driving practical applications</h5>
     <p class="paragraph-indent">
-      Time-space traffic diagrams are one of the most important traffic analysis and visualization tools. The series of works centered on the enhancement of the diagrams, including <strong>the mapping-to-cell approaches</strong>, <strong>the wave-aware construction</strong>, <strong>the traffic emission estimation</strong> and <strong>the resolution enhancement</strong>. In particular, the wave-aware method of constructing time-space diagrams has been substantively implemented in the well-known <a href="https://i24motion.org/">I-24 MOTION project</a> in Nashville (<em>Ji et al., 2024; Ji et al., 2026</em>), as well as in the works of global researchers from the UK (<em>Shang et al., 2023</em>), Sweden (<em>Tsanakas et al., 2022</em>), and China (<em>He et al., 2024</em>). Notably, these implementations were carried out completely independently of our own research activities.
+      Time-space traffic diagrams are one of the most important traffic analysis and visualization tools.
+      The series of works centered on the enhancement of the diagrams, including <strong>the mapping-to-cell approaches (<a class="scientific-highlight-link" href="https://www.sciencedirect.com/science/article/pii/S1093968726008297">highways</a>, <a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2019.10.001">urban roads</a>)</strong>,
+      the <strong><a class="scientific-highlight-link" href="https://doi.org/10.1080/21680566.2017.1320774">wave-aware construction</a></strong>,
+      the <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/8691686">traffic emission estimation</a></strong> and the <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/10265298">resolution enhancement</a></strong>.
+      In particular, the wave-aware method of constructing time-space diagrams has been substantively implemented in the well-known <a class="scientific-citation" href="https://i24motion.org/"><em>I-24 MOTION project</em></a> in Nashville (<a class="scientific-citation" href="https://ieeexplore.ieee.org/document/10485593"><em>Ji et al., 2024</em></a>; <a class="scientific-citation" href="https://doi.org/10.1016/j.trc.2025.105385"><em>Ji et al., 2026</em></a>),
+      as well as in the works of global researchers from
+      the UK (<a class="scientific-citation" href="https://doi.org/10.1016/j.apenergy.2023.121916"><em>Shang et al., 2023</em></a>),
+      Sweden (<a class="scientific-citation" href="https://doi.org/10.1016/j.trc.2022.103615"><em>Tsanakas et al., 2022</em></a>),
+      and China (<a class="scientific-citation" href="https://ieeexplore.ieee.org/document/10595431"><em>He et al., 2024</em></a>).
+      Notably, these implementations were carried out completely independently of our own research activities.
     </p>
 
     <h5>Also active in resilience, sustainability, shared mobility, and travel behavior</h5>
     <p class="paragraph-indent">
-      Representative works include <strong>the assessment of the dynamic vulnerability of transportation systems</strong>, <strong>a mesoscopic CO2 emission estimation model with the consideration of traffic dynamics</strong>, <strong>multi-day rail-hailing behavior characteristics and modeling</strong>, and <strong>in-lab experiment-based day-to-day route choice modeling</strong>, demonstrating my broad research interests, strong research skills, effective team leadership and collaboration, and wide-reaching impact.
+      Representative works include the <strong>assessment of the dynamic vulnerability of transportation systems (<a class="scientific-highlight-link" href="https://doi.org/10.1016/j.jtrangeo.2024.103850">urban rail</a>, <a class="scientific-highlight-link" href="https://doi.org/10.1177/03611981251357909">multi-modal</a>)</strong>,
+      <strong><a class="scientific-highlight-link" href="https://ieeexplore.ieee.org/document/8691686">a mesoscopic CO2 emission estimation model</a></strong> with the consideration of traffic dynamics,
+      <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.tra.2021.01.017">multi-day rail-hailing behavior characteristics and modeling</a></strong>,
+      and <strong>in-lab experiment-based day-to-day route choice modeling (<a class="scientific-highlight-link" href="https://doi.org/10.1016/j.tra.2022.11.013">part I</a>, <a class="scientific-highlight-link" href="https://doi.org/10.1016/j.commtr.2024.100123">part II</a>)</strong>,
+      demonstrating my broad research interests, strong research skills, effective team leadership and collaboration, and wide-reaching impact.
     </p>
       <p class="paragraph-indent">
-        I co-authored multiple highly cited review articles in transportation research, <strong>synthesizing trajectory data studies</strong> (citation&gt;250), <strong>automated vehicle-involved traffic</strong> (citation&gt;250), and <strong>transportation system resilience</strong> (citation&gt;200). These reviews have guided subsequent research, reflecting both scholarly recognition and field-wide impact.
+        I co-authored multiple highly cited review articles in transportation research,
+        <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2020.02.016">synthesizing trajectory data studies</a></strong> (citation &gt; 300),
+        <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.trc.2021.103101">automated vehicle-involved traffic</a></strong> (citation &gt; 300),
+        <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.physa.2021.126235">transportation system resilience</a></strong> (citation &gt; 250),
+        and also <strong><a class="scientific-highlight-link" href="https://doi.org/10.1016/j.tre.2025.104634">multi-modal resilience</a></strong>.
+        These reviews have guided subsequent research, reflecting both scholarly recognition and field-wide impact.
       </p>
 
       <h5>First-author papers</h5>
