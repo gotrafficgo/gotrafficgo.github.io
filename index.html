@@ -68,10 +68,105 @@
       .project-details strong {
         font-weight: normal;
       }
+      .project-showcase {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 1160px;
+        margin-left: 2em;
+        padding: 0;
+        list-style: none;
+      }
+      .project-list.project-showcase li {
+        min-width: 0;
+        margin: 0;
+        padding: 0.55em 0.85em;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        color: #64748b;
+        background: #f8fafc;
+        line-height: 1.3;
+      }
+      .project-list.project-showcase li:has(> a) {
+        padding: 0;
+        border-left: 3px solid #0969da;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+        transition: border-color 160ms ease, box-shadow 160ms ease,
+          transform 160ms ease;
+      }
+      .project-list.project-showcase li:has(> a):hover {
+        border-color: #93c5fd;
+        border-left-color: #0969da;
+        box-shadow: 0 5px 14px rgba(15, 23, 42, 0.1);
+        transform: translateY(-2px);
+      }
+      .project-showcase a,
+      .project-showcase a:visited {
+        position: relative;
+        display: block;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.55em 2.15em 0.55em 0.85em;
+        color: #1e293b;
+        text-decoration: none;
+      }
+      .project-showcase a::after {
+        content: "↗";
+        position: absolute;
+        top: 0.5em;
+        right: 0.85em;
+        color: #0969da;
+        font-size: 0.95em;
+      }
+      .project-showcase a:hover {
+        color: #0969da;
+      }
+      .project-showcase a:focus-visible {
+        border-radius: 6px;
+        outline: 3px solid rgba(9, 105, 218, 0.28);
+        outline-offset: 2px;
+      }
+      .project-showcase a b,
+      .project-showcase a strong {
+        display: block;
+        font-weight: 700;
+      }
+      .project-summary {
+        display: block;
+        margin-top: 0.05em;
+        color: #475569;
+        font-weight: 400;
+      }
+      .project-list.project-showcase li.project-category {
+        grid-column: 1 / -1;
+        margin: 1.1em 0 0;
+        padding: 0 0 0.45em;
+        border: 0;
+        border-bottom: 2px solid #dbeafe;
+        border-radius: 0;
+        color: #0f172a;
+        background: transparent;
+        font-size: 1.02rem;
+        font-weight: 650;
+        letter-spacing: -0.01em;
+      }
+      .project-list.project-showcase li.project-category:first-child {
+        margin-top: 0;
+      }
+      @media (max-width: 900px) {
+        .project-showcase {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
       @media (max-width: 640px) {
         .paragraph-indent,
         .selected-projects {
           margin-left: 0;
+        }
+
+        .project-showcase {
+          grid-template-columns: 1fr;
         }
 
         .academic-services li {
@@ -261,32 +356,32 @@
     </p>
 
     <h2>Projects</h2>
-    <ul class="project-list selected-projects project-details">
+    <ul class="project-list selected-projects project-details project-showcase">
       <li class="project-category">Traffic Dynamics &amp; Modeling</li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/occams-razor/" target="_blank" rel="noopener noreferrer"><b>Occam's Razor</b> -- Simple Models for Traffic Dynamics</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/occams-razor/" target="_blank" rel="noopener noreferrer"><b>Occam's Razor</b><span class="project-summary">Simple Models for Traffic Dynamics</span></a>
       </li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer"><b>AI-Driven Modeling</b> -- Vehicle Dynamics</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer"><b>AI-Driven Modeling</b><span class="project-summary">Vehicle Dynamics</span></a>
       </li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/time-space-traffic-diagram/" target="_blank" rel="noopener noreferrer"><b>Time-Space Traffic Diagram</b> -- Construction, Refinement, and Applications</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/time-space-traffic-diagram/" target="_blank" rel="noopener noreferrer"><b>Time-Space Traffic Diagram</b><span class="project-summary">Construction, Refinement, and Applications</span></a>
       </li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/microscopic-traffic-modeling/" target="_blank" rel="noopener noreferrer"><b>Understanding Traffic Dynamics</b> -- Microscopic Modeling</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/microscopic-traffic-modeling/" target="_blank" rel="noopener noreferrer"><b>Understanding Traffic Dynamics</b><span class="project-summary">Microscopic Modeling</span></a>
       </li>
       <li>
-        <a href="https://www.gotrafficgo.com/webpage_project/mapping-to-cells/" target="_blank" rel="noopener noreferrer"><b>Sensing Traffic Congestion</b> -- Mapping to Cells</a>
+        <a href="https://www.gotrafficgo.com/webpage_project/mapping-to-cells/" target="_blank" rel="noopener noreferrer"><b>Sensing Traffic Congestion</b><span class="project-summary">Mapping to Cells</span></a>
       </li>
       <li>Traffic State Estimation</li>
       <li>Data Analysis</li>
 
       <li class="project-category">Intelligent Vehicles &amp; Congestion Mitigation</li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/dedicated-vehicle-dispatch/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b> -- Dispatching Dedicated Vehicles</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/dedicated-vehicle-dispatch/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b><span class="project-summary">Dispatching Dedicated Vehicles</span></a>
       </li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/connected-vehicle-traffic/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b> -- Connected Vehicles</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/connected-vehicle-traffic/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b><span class="project-summary">Connected Vehicles</span></a>
       </li>
       <li>
         <a href="https://gotrafficgo.github.io/webpage_project/autonomous-intersection/" target="_blank" rel="noopener noreferrer"><b>Autonomous Intersection</b></a>
@@ -298,7 +393,7 @@
 
       <li class="project-category">Transportation Networks &amp; Resilience</li>
       <li>
-        <a href="https://gotrafficgo.github.io/webpage_project/transportation-resilience/" target="_blank" rel="noopener noreferrer"><b>Transportation Resilience</b> -- Dynamic Demand and Multi-Modal Networks</a>
+        <a href="https://gotrafficgo.github.io/webpage_project/transportation-resilience/" target="_blank" rel="noopener noreferrer"><b>Transportation Resilience</b><span class="project-summary">Dynamic Demand and Multi-Modal Networks</span></a>
       </li>
       <li>Day-to-Day Route Choice</li>
       <li>Network Equilibrium</li>
