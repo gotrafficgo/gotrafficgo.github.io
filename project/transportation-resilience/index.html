@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Transportation Resilience: Dynamic Demand and Multimodal Networks | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on transportation system vulnerability and resilience under dynamic travel demand, operational disruptions, infrastructure failures, cascading failures, floods, winter storms, and fog, covering urban rail transit, single-mode and multimodal networks, interdependent transportation systems, resilience metrics, evaluation and optimization, recovery strategies, and crowdsourced data analysis."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-award { color: #0969da; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Transportation Resilience: Dynamic Demand and Multimodal Networks</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        Transportation systems are essential to urban mobility and socioeconomic activity, yet they are increasingly exposed to operational disruptions,
+        infrastructure failures, extreme weather, and rapidly changing travel demand. Understanding their
+        <strong class="emphasis">vulnerability</strong>, i.e., how and to what extent system performance deteriorates under disturbances, and their
+        <strong class="emphasis">resilience</strong>, i.e., the ability to withstand, adapt to, and recover from such disturbances, is therefore critical
+        for identifying weak components, anticipating system-wide impacts, and developing effective mitigation and recovery strategies.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/overview-resilience.png" alt="Transportation resilience across dynamic demand, multimodal networks, cascading disruptions, and adverse weather" decoding="async" />
+      </figure>
+
+      <p>
+        Our work on transportation vulnerability and resilience centers on
+        <strong class="emphasis">dynamic travel demand</strong> and
+        <strong class="emphasis">single-</strong> and <strong class="emphasis">multimodal networks</strong>:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          We developed <strong class="emphasis">demand-aware methods for evaluating network vulnerability, resilience, and disruption dynamics</strong>.
+          We first examined how time-varying passenger demand shaped the dynamic vulnerability of a single-mode urban rail transit network<sup class="citation-sup"><strong>[1]</strong></sup>.
+          We then extended this perspective to multimodal transportation networks by integrating network structure, minute-level dynamic demand, travel behavior,
+          and demand redistribution<sup class="citation-sup"><strong>[2]</strong></sup>. Furthermore, we modeled how disruptions propagated within interdependent
+          transportation networks through cascading failures, accounting for both intramodal and intermodal dynamics<sup class="citation-sup"><strong>[3]</strong></sup>.
+        </li>
+        <li>
+          We provided <strong class="emphasis">systematic reviews of transportation vulnerability and resilience research</strong>.
+          One study synthesized the concepts, metrics, and analytical methods used across different transportation modes and system structures<sup class="citation-sup"><strong>[4]</strong></sup>.
+          The other focused specifically on multimodal urban transportation networks and organized the literature around network modeling, resilience evaluation,
+          and resilience optimization<sup class="citation-sup"><strong>[5]</strong></sup>.
+        </li>
+        <li>
+          We explored <strong class="emphasis">data-driven measurement of transportation resilience under real-world disruptions</strong> by fusing multiple
+          crowdsourced datasets to quantify link-level traffic resilience to floods, winter storms, and fog, and to reveal how resilience varied with roadway
+          and traffic characteristics<sup class="citation-sup"><strong>[6]</strong></sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/on-the-dynamic-vulnerability.png"
+            alt="A simple nonparametric car-following model driven by field data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>On the Dynamic Vulnerability of an Urban Rail Transit System and the Impact of Human Mobility
+          </div>
+          <div class="paper-meta">
+            Shouzheng Pan, Shuai Ling, Ning Jia, Yiliu Liu, <strong>Zhengbing He*</strong> · Journal of Transport Geography · 116:103850 · 2024 · <span class="paper-award">Best Paper Award, TRB 2024-AMR10</span>
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.jtrangeo.2024.103850" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexPan2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/on-the-resilience-evaluation.png"
+            alt="Mapping to cells for extracting traffic dynamics from probe vehicle data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>On the Resilience Evaluation of Urban Multimodal Transportation Network Considering Dynamic Travel Demand
+          </div>
+          <div class="paper-meta">
+            Biao Chen, Bobin Wang, Shouzheng Pan, Jianjun Wu, <strong>Zhengbing He*</strong> · Transportation Research Record · 2680(1):519–549 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1177/03611981251357909" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexChen2026Evaluation)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/cascading-failures.png"
+            alt="Cascading failures in interdependent transportation networks"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Cascading Failures in Interdependent Transportation Networks: A Generalized Coupled Map Lattice Model with Intermodal Dynamics
+          </div>
+          <div class="paper-meta">
+            Biao Chen, Jianjun Wu, Yanyan Chen, Der-Horng Lee, <strong>Zhengbing He*</strong> · Physica A: Statistical Mechanics and its Applications · 675:130836 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.physa.2025.130836" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexChen2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/vulnerability.png"
+            alt="Vulnerability and resilience of transportation systems"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Vulnerability and Resilience of Transportation Systems: A Recent Literature Review
+          </div>
+          <div class="paper-meta">
+            Shouzheng Pan, Hai Yan, Jia He, <strong>Zhengbing He</strong> · Physica A: Statistical Mechanics and its Applications · 581:126235 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.physa.2021.126235" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexPan2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/a-survey.png"
+            alt="A survey of multi-modal urban transportation network resilience"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>A Survey of Multi-Modal Urban Transportation Network Resilience: Modeling, Evaluation, and Optimization
+          </div>
+          <div class="paper-meta">
+            Biao Chen, Songhua Hu, Xiangdong Xu, Guangchao Wang, Der-Horng Lee, <strong>Zhengbing He*</strong> · Transportation Research Part E: Logistics and Transportation Review · 207:104634 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.tre.2025.104634" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexChen2026Survey)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/multi-crowdsourced.png"
+            alt="Link-level traffic resilience to adverse weather events"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Multi-Crowdsourced Data Fusion for Modeling Link-Level Traffic Resilience to Adverse Weather Events
+          </div>
+          <div class="paper-meta">
+            Songhua Hu, Kai-Lai Wang, Lingyao Li, Yingrui Zhao, <strong>Zhengbing He</strong>, Yunpeng Zhang · International Journal of Disaster Risk Reduction · 112:104754 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.ijdrr.2024.104754" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHu2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexPan2024 = `@article{pan2024dynamic,
+  title = {On the dynamic vulnerability of an urban rail transit system and the impact of human mobility},
+  author = {Pan, Shouzheng and Ling, Shuai and Jia, Ning and Liu, Yiliu and He, Zhengbing},
+  journal = {Journal of Transport Geography},
+  volume = {116},
+  pages = {103850},
+  year = {2024},
+  doi = {10.1016/j.jtrangeo.2024.103850}
+}`;
+
+    const bibtexChen2026Survey = `@article{chen2026survey,
+  title = {A survey of multi-modal urban transportation network resilience: Modeling, evaluation, and optimization},
+  author = {Chen, Biao and Hu, Songhua and Xu, Xiangdong and Wang, Guangchao and Lee, Der-Horng and He, Zhengbing},
+  journal = {Transportation Research Part E: Logistics and Transportation Review},
+  volume = {207},
+  pages = {104634},
+  year = {2026},
+  doi = {10.1016/j.tre.2025.104634}
+}`;
+
+    const bibtexPan2021 = `@article{pan2021vulnerability,
+  title = {Vulnerability and resilience of transportation systems: A recent literature review},
+  author = {Pan, Shouzheng and Yan, Hai and He, Jia and He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {581},
+  pages = {126235},
+  year = {2021},
+  doi = {10.1016/j.physa.2021.126235}
+}`;
+
+    const bibtexChen2026Evaluation = `@article{chen2026resilience,
+  title = {On the resilience evaluation of urban multimodal transportation network considering dynamic travel demand},
+  author = {Chen, Biao and Wang, Bobin and Pan, Shouzheng and Wu, Jianjun and He, Zhengbing},
+  journal = {Transportation Research Record},
+  volume = {2680},
+  number = {1},
+  pages = {519--549},
+  year = {2026},
+  doi = {10.1177/03611981251357909}
+}`;
+
+    const bibtexChen2025 = `@article{chen2025cascading,
+  title = {Cascading failures in interdependent transportation networks: A generalized coupled map lattice model with intermodal dynamics},
+  author = {Chen, Biao and Wu, Jianjun and Chen, Yanyan and Lee, Der-Horng and He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {675},
+  pages = {130836},
+  year = {2025},
+  doi = {10.1016/j.physa.2025.130836}
+}`;
+
+    const bibtexHu2024 = `@article{hu2024multicrowdsourced,
+  title = {Multi-crowdsourced data fusion for modeling link-level traffic resilience to adverse weather events},
+  author = {Hu, Songhua and Wang, Kai-Lai and Li, Lingyao and Zhao, Yingrui and He, Zhengbing and Zhang, Yunpeng},
+  journal = {International Journal of Disaster Risk Reduction},
+  volume = {112},
+  pages = {104754},
+  year = {2024},
+  doi = {10.1016/j.ijdrr.2024.104754}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

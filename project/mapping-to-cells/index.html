@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sensing Traffic Congestion: Mapping to Cells</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on Mapping-to-Cells methods for sensing traffic congestion, extracting freeway and urban traffic dynamics from probe vehicle data without digital maps or GIS tools, forecasting travel times, and visualizing traffic using floating car data."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .work-list a { color: #0969da; }
+    .overview-highlight { width: 65%; margin: 20px auto 22px; }
+    .overview-highlight img, .overview-highlight video, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Sensing Traffic Congestion: Mapping to Cells</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Almost all GPS data-based traffic studies rely on a digital map, yet this dependence introduces several well-known challenges</strong>:
+        (i) map-matching is difficult, particularly when the map and GPS data use different coordinate systems;
+        (ii) high-fidelity digital maps are not always readily available;
+        and (iii) commercial GIS software can be expensive.
+      </p>
+
+      <figure class="overview-highlight">
+        <video src="videos/software.mp4" autoplay muted loop playsinline></video>
+      </figure>
+
+      <p>
+        To eliminate these dependencies and <strong class="emphasis">rapidly diagnose traffic congestion</strong>, we conducted the following studies:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          <strong class="emphasis">Mapping to Cells (Freeway):</strong>
+          We developed <strong class="emphasis">a simple method for extracting traffic dynamics directly from floating car (probe vehicle) data</strong>.
+          It partitions a freeway network into small square cells, determines the traffic-flow direction in each cell,
+          and constructs spatiotemporal diagrams colored by speed. A Beijing case study demonstrated that the method can reveal congestion efficiently
+          through basic arithmetic operations, without GIS software, digital maps, or other external tools<sup class="citation-sup"><strong>[1]</strong></sup>.
+        </li>
+        <li>
+          <strong class="emphasis">Mapping to Cells (Urban Roads):</strong>
+          We developed an urban-road companion <strong class="emphasis">to answer a practical question: in a city with thousands of intersections, where and when does turn-level congestion occur?</strong>
+          Using only low-frequency probe vehicle data, the method reconstructs intersections and rapidly screens an entire road network for turn-level congestion.
+          It is map-independent and computationally efficient because it discretizes two-dimensional space, making it well suited to large-scale urban congestion detection<sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+        <li>
+          <strong class="emphasis">Mapping to Cells-Based Travel Time Forecasting:</strong>
+          Using the traffic dynamics generated by the Mapping-to-Cells (Freeway) approach（<a href="https://www.researchgate.net/publication/311545056_Part_I_2015_45-day_Beijing_traffic_data_processed_using_the_proposed_MTC_method" target="_blank" rel="noopener noreferrer">Data 1</a>, <a href="https://www.researchgate.net/publication/311545126_Part_II_Corresponding_time-space_speed_diagrams_of_the_45-day_traffic_data" target="_blank" rel="noopener noreferrer">Data 2</a>）, we proposed a simple and efficient pattern-matching method for multi-step travel time forecasting.
+          Rather than using travel time directly as the input, the method matches current and historical spatiotemporal traffic patterns and forecasts travel times from the most similar cases.
+        </li>
+        <li>
+          <strong class="emphasis">Flexible Version of Mapping to Cells:</strong>
+          This version uses rectangular cells with flexible shapes and dimensions rather than fixed square cells, allowing it to track the road network more accurately.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/mapping.png"
+            alt="Mapping to cells for extracting traffic dynamics from probe vehicle data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Mapping to Cells: A Simple Method to Extract Traffic Dynamics from Probe Vehicle Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng, Peng Chen, Wei Guan · Computer-Aided Civil and Infrastructure Engineering · 32(3):252–267 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1111/mice.12251" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/network-wide.png"
+            alt="Network-wide identification of turn-level intersection congestion"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Network-Wide Identification of Turn-Level Intersection Congestion Using Only Low-Frequency Probe Vehicle Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Geqi Qi, Lili Lu, Yanyan Chen · Transportation Research Part C: Emerging Technologies · 108:320–339 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2019.10.001" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/probe.png"
+            alt="Probe data-driven travel time forecasting for urban expressways"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Probe Data-Driven Travel Time Forecasting for Urban Expressways by Matching Similar Spatiotemporal Traffic Patterns
+          </div>
+          <div class="paper-meta">
+            Zhihao Zhang, Yunpeng Wang, Peng Chen, <strong>Zhengbing He</strong>, Guizhen Yu · Transportation Research Part C: Emerging Technologies · 85:476–493 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2017.10.010" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/visualizing.png"
+            alt="Visualizing traffic dynamics based on floating car data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Visualizing Traffic Dynamics Based on Floating Car Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng · Journal of Transportation Engineering, Part A: Systems · 143(5):04017005 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1061/JTEPBS.0000024" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHeVisualizing2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2015 = `@article{he2015simple,
+  title = {A simple nonparametric car-following model driven by field data},
+  author = {He, Zhengbing and Zheng, Liang and Guan, Wei},
+  journal = {Transportation Research Part B: Methodological},
+  volume = {80},
+  pages = {185--201},
+  year = {2015},
+  doi = {10.1016/j.trb.2015.07.010}
+}`;
+
+    const bibtexHe2017 = `@article{he2017mapping,
+  title = {Mapping to cells: A simple method to extract traffic dynamics from probe vehicle data},
+  author = {He, Zhengbing and Zheng, Liang and Chen, Peng and Guan, Wei},
+  journal = {Computer-Aided Civil and Infrastructure Engineering},
+  volume = {32},
+  number = {3},
+  pages = {252--267},
+  year = {2017},
+  doi = {10.1111/mice.12251}
+}`;
+
+    const bibtexHe2019 = `@article{he2019network,
+  title = {Network-wide identification of turn-level intersection congestion using only low-frequency probe vehicle data},
+  author = {He, Zhengbing and Qi, Geqi and Lu, Lili and Chen, Yanyan},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {108},
+  pages = {320--339},
+  year = {2019},
+  doi = {10.1016/j.trc.2019.10.001}
+}`;
+
+    const bibtexHe2024 = `@article{he2024refining,
+  title = {Refining time-space traffic diagrams: A simple multiple linear regression model},
+  author = {He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {25},
+  number = {2},
+  pages = {1465--1475},
+  year = {2024},
+  doi = {10.1109/TITS.2023.3316593}
+}`;
+
+    const bibtexZhang2017 = `@article{zhang2017probe,
+  title = {Probe data-driven travel time forecasting for urban expressways by matching similar spatiotemporal traffic patterns},
+  author = {Zhang, Zhihao and Wang, Yunpeng and Chen, Peng and He, Zhengbing and Yu, Guizhen},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {85},
+  pages = {476--493},
+  year = {2017},
+  doi = {10.1016/j.trc.2017.10.010}
+}`;
+
+    const bibtexHeVisualizing2017 = `@article{he2017visualizing,
+  title = {Visualizing traffic dynamics based on floating car data},
+  author = {He, Zhengbing and Zheng, Liang},
+  journal = {Journal of Transportation Engineering, Part A: Systems},
+  volume = {143},
+  number = {5},
+  pages = {04017005},
+  year = {2017},
+  doi = {10.1061/JTEPBS.0000024}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

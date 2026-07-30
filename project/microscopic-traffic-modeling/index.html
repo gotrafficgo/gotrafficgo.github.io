@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Understanding Traffic Dynamics: Microscopic Modeling | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on microscopic traffic flow modeling, connecting car-following, lane-changing, visual perception, vehicle-type and driver heterogeneity, reaction time, stochastic multi-regime behavior, traffic stability, safety, fundamental diagrams, shockwaves, and congestion to explain how individual vehicle interactions shape system-level traffic dynamics."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Understanding Traffic Dynamics: Microscopic Modeling</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+      Microscopic traffic flow modeling is essential for linking individual driving behaviors with system-level traffic performance. 
+      Traffic stability, safety, congestion, fundamental diagrams, and shockwave propagation all emerge from local vehicle interactions, 
+      including car-following, lane-changing, perception, reaction, and heterogeneous driving decisions. 
+      Therefore, microscopic models provide a critical foundation for explaining how individual driving mechanisms shape aggregate traffic dynamics.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/highlight.png" alt="Overview highlight of microscopic traffic flow modeling studies" />
+      </figure>
+
+      <p>
+      <strong class="emphasis">Together, my team’s studies form a coherent progression from perception-based and heterogeneous driving mechanisms, 
+      to maneuver-induced disturbance quantification, stochastic behavioral modeling, 
+        and macro-level traffic flow representations grounded in microscopic behavior.</strong>
+      </p>
+
+      <ul class="work-list">
+        <li>
+          In our early work, we proposed a visual imaging car-following model, showing that drivers’ visual perception of the preceding vehicle can better explain following behavior and traffic stability, especially under different vehicle-type conditions<sup class="citation-sup"><strong>[5]</strong></sup>.
+        </li>
+        <li>
+          We then further examined vehicle-type-dependent car-following heterogeneity from both microscopic safety indicators and macroscopic Lagrangian fundamental diagrams, demonstrating that larger vehicles lead drivers to maintain lower-risk and larger-spacing behavior<sup class="citation-sup"><strong>[4]</strong></sup>.
+        </li>
+        <li>
+          To connect microscopic behavior with aggregate traffic flow characteristics, we developed a flexible traffic stream model that links driving parameters, including reaction time, calmness, and sensitivity, with macroscopic fundamental diagrams and shockwave dynamics<sup class="citation-sup"><strong>[3]</strong></sup>.
+        </li>
+        <li>
+          We also derived an anisotropic continuum model from car-following behavior and showed its capability to reproduce real congestion waves<sup class="citation-sup"><strong>[6]</strong></sup>.
+        </li>
+        <li>
+          Extending the focus from car-following to lane-changing, we quantified the temporal and spatial impact of a single discretionary lane change, finding that it typically affects 4 surrounding vehicles for about 12 seconds<sup class="citation-sup"><strong>[1]</strong></sup>.
+        </li>
+        <li>
+          More recently, our work has incorporated stochasticity, driver heterogeneity, and time-varying behavioral regimes into Bayesian car-following models, showing that stochastic multi-regime representations can better reproduce human driving dynamics than deterministic models<sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/lane-changing-impact-time.png"
+            alt="Lane-changing impact time on initial lane and target lane"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>The Impact of a Single Discretionary Lane Change on Surrounding Traffic: An Analytic Investigation
+          </div>
+          <div class="paper-meta">
+            Jia He, Jie Qu, Jian Zhang, <strong>Zhengbing He*</strong> · IEEE Transactions on Intelligent Transportation Systems · 24(1):554–563 · 2023
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2022.3209668" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2023)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/car-following-heterogeneity.png"
+            alt="Modeling car-following behaviors considering driver heterogeneity"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Modeling Car-Following Behaviors Considering Driver Heterogeneity: A Multi-Regime Stochastic Framework
+          </div>
+          <div class="paper-meta">
+            Shubo Wu, Dong Ngoduy, <strong>Zhengbing He</strong>, Yajie Zou, Jian Sun · Transportation Research Part C: Emerging Technologies · 179:105282 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2025.105282" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWu2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/flexible-traffic-stream-model.png"
+            alt="A flexible traffic stream model and its three representations of traffic flow"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>A Flexible Traffic Stream Model and Its Three Representations of Traffic Flow
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, <strong>Zhengbing He*</strong>, Tian He · Transportation Research Part C: Emerging Technologies · 75:136–167 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2016.12.006" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2017Flexible)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/vehicle-type-dependent-heterogeneity.png"
+            alt="Empirical validation of vehicle type-dependent car-following heterogeneity"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Empirical Validation of Vehicle Type-Dependent Car-Following Heterogeneity from Micro- and Macro-Viewpoints
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, Chuang Zhu, <strong>Zhengbing He*</strong>, Tian He, Sisi Liu · Transportmetrica B: Transport Dynamics · 7(1):765–787 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/21680566.2018.1517057" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/visual-imaging-car-following.png"
+            alt="A new car-following model from the perspective of visual imaging"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>A New Car-Following Model from the Perspective of Visual Imaging
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, <strong>Zhengbing He*</strong> · International Journal of Modern Physics C · 26(8):1550090 · 2015
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1142/S0129183115500904" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2015)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/anisotropic-continuum-model.png"
+            alt="An anisotropic continuum model and its calibration with an improved monkey algorithm"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>An Anisotropic Continuum Model and Its Calibration with an Improved Monkey Algorithm
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, <strong>Zhengbing He</strong>, Tian He* · Transportmetrica A: Transport Science · 13(6):519–543 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/23249935.2017.1299814" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2017Anisotropic)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2023 = `@article{he2023impact,
+  title = {The impact of a single discretionary lane change on surrounding traffic: An analytic investigation},
+  author = {He, Jia and Qu, Jie and Zhang, Jian and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {24},
+  number = {1},
+  pages = {554--563},
+  year = {2023},
+  doi = {10.1109/TITS.2022.3209668}
+}`;
+
+    const bibtexWu2025 = `@article{wu2025modeling,
+  title = {Modeling car-following behaviors considering driver heterogeneity: A multi-regime stochastic framework},
+  author = {Wu, Shubo and Ngoduy, Dong and He, Zhengbing and Zou, Yajie and Sun, Jian},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {179},
+  pages = {105282},
+  year = {2025},
+  doi = {10.1016/j.trc.2025.105282}
+}`;
+
+    const bibtexZheng2017Flexible = `@article{zheng2017flexible,
+  title = {A flexible traffic stream model and its three representations of traffic flow},
+  author = {Zheng, Liang and He, Zhengbing and He, Tian},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {75},
+  pages = {136--167},
+  year = {2017},
+  doi = {10.1016/j.trc.2016.12.006}
+}`;
+
+    const bibtexZheng2019 = `@article{zheng2019empirical,
+  title = {Empirical validation of vehicle type-dependent car-following heterogeneity from micro- and macro-viewpoints},
+  author = {Zheng, Liang and Zhu, Chuang and He, Zhengbing and He, Tian and Liu, Sisi},
+  journal = {Transportmetrica B: Transport Dynamics},
+  volume = {7},
+  number = {1},
+  pages = {765--787},
+  year = {2019},
+  doi = {10.1080/21680566.2018.1517057}
+}`;
+
+    const bibtexZheng2015 = `@article{zheng2015visual,
+  title = {A new car-following model from the perspective of visual imaging},
+  author = {Zheng, Liang and He, Zhengbing},
+  journal = {International Journal of Modern Physics C},
+  volume = {26},
+  number = {8},
+  pages = {1550090},
+  year = {2015},
+  doi = {10.1142/S0129183115500904}
+}`;
+
+    const bibtexZheng2017Anisotropic = `@article{zheng2017anisotropic,
+  title = {An anisotropic continuum model and its calibration with an improved monkey algorithm},
+  author = {Zheng, Liang and He, Zhengbing and He, Tian},
+  journal = {Transportmetrica A: Transport Science},
+  volume = {13},
+  number = {6},
+  pages = {519--543},
+  year = {2017},
+  doi = {10.1080/23249935.2017.1299814}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

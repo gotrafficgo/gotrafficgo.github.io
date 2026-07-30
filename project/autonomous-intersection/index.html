@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Autonomous Intersection | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on signal-free cooperative autonomous intersections, including all-direction turn lanes, connected and autonomous vehicle coordination, conflict avoidance, entry-time scheduling, trajectory optimization, Monte Carlo Tree Search, lane change-free road transportation systems, on- and off-ramp cooperation, and demand-responsive automated pedestrian shuttles."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .stacked-media figure { position: relative; height: 40px; margin: 0 0 20px; }
+    .stacked-media figure:last-child { margin-bottom: 0; }
+    .stacked-media img { display: block; width: 100%; height: 100%; object-fit: contain; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .stacked-media figcaption { position: absolute; top: 7px; left: 14px; padding: 4px 8px; border-radius: 6px; background: rgba(255, 255, 255, 0.9); color: #222; font-size: 0.65rem; font-weight: 700; line-height: 1.3; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16); }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight { width: 100%; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Autonomous Intersection</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">(Signal-free/Cooperative) autonomous intersections use vehicle connectivity, automated driving, and centralized coordination to organize how vehicles move through an intersection without relying on conventional traffic signals</strong>.
+        By jointly scheduling vehicle entry times, routes, and trajectories, they can resolve movement conflicts while allowing connected and autonomous vehicles to pass safely with fewer stops.        
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/autonomous-intersection.gif" alt="Autonomous intersection coordination demonstration" decoding="async" />
+      </figure>
+
+      <p>
+        Our work develops the autonomous-intersection concept through the four following studies:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          We <strong class="emphasis">first introduced the concept of an autonomous intersection with all-direction turn lanes in 2018</strong>, allowing autonomous vehicles to turn from any approach lane to any downstream lane and thereby reducing the need for lane changes on roads. A conflict-avoidance coordination method guides approaching vehicles through the intersection safely and efficiently<sup class="citation-sup"><strong>[1]</strong></sup>.
+        </li>
+        <li>
+          We further developed the vision of a <strong class="emphasis">lane change-free road transportation system</strong> through cooperative driving, including intersections, on- and off-ramps. In the future, vehicles can reach their destination without making any on-road lane changes<sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+        <li>
+          We <strong class="emphasis">systematically compared all-direction</strong> and specific-direction turn-lane designs using a two-stage framework for entry-time scheduling and trajectory optimization, together with a Monte Carlo Tree Search solution for high traffic demand. The results clarify when flexible all-direction lanes improve efficiency and when conventional lane assignments provide greater fault tolerance<sup class="citation-sup"><strong>[3]</strong></sup>.
+        </li>
+        <li>
+          We <strong class="emphasis">extended it to pedestrian mobility</strong> by designing an automated pedestrian shuttle service. Demand-responsive route planning, vehicle scheduling, trajectory optimization, and a rolling-horizon strategy enable pedestrians to cross safely while preserving continuous vehicle flow and imposing only minor delays on main-lane traffic<sup class="citation-sup"><strong>[4]</strong></sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/erasing-lane.png"
+            alt="Erasing lane changes through autonomous intersection design"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Erasing Lane Changes From Roads: A Design of Future Road Intersections
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng, Lili Lu, Wei Guan · IEEE Transactions on Intelligent Vehicles · 3(2):173–184 · 2018
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TIV.2018.2804164" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2018)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/cooperative-driving.png"
+            alt="Cooperative driving and a lane change-free road transportation system"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Cooperative Driving and a Lane Change-Free Road Transportation System
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong> · In <em>Traffic Information and Control</em>, Chapter 8, pp. 163–183 · The Institution of Engineering and Technology (IET) · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1049/PBTR026E_ch8" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2020LaneChangeFree)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/is-all-direction.png"
+            alt="All-direction turn-lane design for autonomous intersections"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Is All-Direction Turn Lane a Good Choice for Autonomous Intersections? A Study of Method Development and Comparisons
+          </div>
+          <div class="paper-meta">
+            Haoran Jiang, Zhihong Yao, Yangsheng Jiang, <strong>Zhengbing He</strong> · IEEE Transactions on Vehicular Technology · 72(7):8510–8525 · 2023
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TVT.2023.3250957" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexJiang2023)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/pedestrian-shuttle.png"
+            alt="Pedestrian shuttle service for autonomous intersection management"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Pedestrian Shuttle Service Optimization for Autonomous Intersection Management
+          </div>
+          <div class="paper-meta">
+            Haoran Jiang, Zhihong Yao, Yongxiang Zhang, Yangsheng Jiang, <strong>Zhengbing He*</strong> · Transportation Research Part C: Emerging Technologies · 163:104623 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2024.104623" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexJiang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="stacked-media">
+        <figure>
+          <img src="images/off-ramp.gif" alt="Autonomous vehicles coordinating at an off-ramp" loading="lazy" decoding="async" />
+          <figcaption>Off-ramp</figcaption>
+        </figure>
+        <figure>
+          <img src="images/on-ramp.gif" alt="Autonomous vehicles coordinating at an on-ramp" loading="lazy" decoding="async" />
+          <figcaption>On-ramp</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2018 = `@article{he2018erasing,
+  title = {Erasing Lane Changes From Roads: A Design of Future Road Intersections},
+  author = {He, Zhengbing and Zheng, Liang and Lu, Lili and Guan, Wei},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  volume = {3},
+  number = {2},
+  pages = {173--184},
+  year = {2018},
+  doi = {10.1109/TIV.2018.2804164}
+}`;
+
+    const bibtexJiang2024 = `@article{jiang2024pedestrian,
+  title = {Pedestrian Shuttle Service Optimization for Autonomous Intersection Management},
+  author = {Jiang, Haoran and Yao, Zhihong and Zhang, Yongxiang and Jiang, Yangsheng and He, Zhengbing},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {163},
+  pages = {104623},
+  year = {2024},
+  doi = {10.1016/j.trc.2024.104623}
+}`;
+
+    const bibtexJiang2023 = `@article{jiang2023allDirection,
+  title = {Is All-Direction Turn Lane a Good Choice for Autonomous Intersections? A Study of Method Development and Comparisons},
+  author = {Jiang, Haoran and Yao, Zhihong and Jiang, Yangsheng and He, Zhengbing},
+  journal = {IEEE Transactions on Vehicular Technology},
+  volume = {72},
+  number = {7},
+  pages = {8510--8525},
+  year = {2023},
+  doi = {10.1109/TVT.2023.3250957}
+}`;
+
+    const bibtexHe2020LaneChangeFree = `@incollection{He2020LaneChangeFree,
+  author = {Zhengbing He},
+  title = {Cooperative Driving and a Lane Change-Free Road Transportation System},
+  booktitle = {Traffic Information and Control},
+  editor = {Ruimin Li and Zhengbing He},
+  publisher = {The Institution of Engineering and Technology (IET)},
+  year = {2020},
+  chapter = {8},
+  pages = {163--183},
+  isbn = {978-1-83953-025-8},
+  doi = {10.1049/PBTR026E_ch8}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

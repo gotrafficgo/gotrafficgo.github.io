@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI-Driven Modeling of Vehicle Dynamics | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's pioneering research on AI-driven vehicle dynamics and driver behavior modeling, featuring an early k-nearest-neighbor data-driven car-following model and the first deep-learning lane-changing model based on deep belief networks and LSTM neural networks, with applications to traffic dynamics, driving behavior analysis, and autonomous driving."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>AI-Driven Modeling of Vehicle Dynamics</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        Vehicle dynamics include car-following and lane-changing.
+        The corresponding models are cornerstones for understanding driver behavior,
+        traffic dynamics, and supporting autonomous driving.
+      </p>
+
+      <p>
+        As early as 2014, at the dawn of the deep learning era, my team proposed an innovative
+        kNN-based data-driven car-following model. 
+        This model has been <strong class="emphasis">cited more than 200 times</strong>,
+        and it is widely recognized as one of <strong class="emphasis">the first AI-driven car-following models</strong>
+        by review articles published by scholars from institutions such as
+        the University of California, Berkeley (<a class="citation-link" href="https://ieeexplore.ieee.org/document/10547481">Zhang et al., 2025</a>),
+        the University of Washington (<a class="citation-link" href="https://www.nature.com/articles/s41597-023-02718-7">Chen et al., 2023</a>),
+        Imperial College London (<a class="citation-link" href="https://doi.org/10.1016/j.commtr.2025.100164" target="_blank" rel="noopener noreferrer">Rowam et al., 2025</a>),
+        Tshinghua Univeristy (<a class="citation-link" href="https://doi.org/10.1016/j.trc.2026.105840" target="_blank" rel="noopener noreferrer">Xie et al., 2026</a>)
+      </p>
+
+      <p>
+        In 2019, my team developed <strong class="emphasis">the first deep-learning-based lane-changing model</strong> using DBN
+        and LSTM neural networks, which has since been <strong class="emphasis">cited over 300 times</strong> and is widely recognized
+        in subsequent research (<a class="citation-link" href="https://ieeexplore.ieee.org/document/9954276">Siebke et al., 2023</a>;
+        <a class="citation-link" href="https://doi.org/10.1016/j.trc.2024.104841" target="_blank" rel="noopener noreferrer">Han et al., 2024</a>;
+        <a class="citation-link" href="https://ieeexplore.ieee.org/document/10321740">Wang et al., 2024</a>;
+        <a class="citation-link" href="https://ieeexplore.ieee.org/document/10855350">Huang et al., 2025</a>
+        ) as a pioneering contribution to AI-driven modeling of driver behavior
+        and traffic dynamics.
+      </p>
+    </section>
+
+    <section>
+      <h2>Slides</h2>
+
+      <div class="media-grid">
+        <figure>
+          <img src="images/page-01.png" alt="Project presentation slide 1" />
+        </figure>
+        <figure>
+          <img src="images/page-02.png" alt="Project presentation slide 2" />
+        </figure>
+        <figure>
+          <img src="images/page-03.png" alt="Project presentation slide 3" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-04.png" alt="Project presentation slide 4" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-05.png" alt="Project presentation slide 5" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-06.png" alt="Project presentation slide 6" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-07.png" alt="Project presentation slide 7" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-08.png" alt="Project presentation slide 8" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-09.png" alt="Project presentation slide 9" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-10.png" alt="Project presentation slide 10" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-11.png" alt="Project presentation slide 11" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-12.png" alt="Project presentation slide 12" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-13.png" alt="Project presentation slide 13" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-14.png" alt="Project presentation slide 14" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-15.png" alt="Project presentation slide 15" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/page-16.png" alt="Project presentation slide 16" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper">
+        <div class="paper-title">
+          A Simple Nonparametric Car-Following Model Driven by Field Data
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong>, Liang Zheng, Wei Guan · Transportation Research Part B: Methodological · 80:185–201 · 2015
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trb.2015.07.010" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2015)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          On the Impact of Prior Experiences in Car-Following Models: Model Development, Computational Efficiency, Comparative Analyses, and Extensive Applications
+        </div>
+        <div class="paper-meta">
+          Yang Yu, <strong>Zhengbing He</strong>, Xiaobo Qu · IEEE Transactions on Cybernetics · 53(3):1405–1418 · 2023
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1109/TCYB.2021.3095154" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexYu2023)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          A Data-Driven Lane-Changing Model Based on Deep Learning
+        </div>
+        <div class="paper-meta">
+          Dong-Fan Xie, Zhe-Zhe Fang, Bin Jia, <strong>Zhengbing He*</strong> · Transportation Research Part C: Emerging Technologies · 106:41–60 · 2019
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trc.2019.07.002" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexXie2019)">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2015 = `@article{he2015simple,
+  title = {A simple nonparametric car-following model driven by field data},
+  author = {He, Zhengbing and Zheng, Liang and Guan, Wei},
+  journal = {Transportation Research Part B: Methodological},
+  volume = {80},
+  pages = {185--201},
+  year = {2015},
+  doi = {10.1016/j.trb.2015.07.010}
+}`;
+
+    const bibtexYu2023 = `@article{yu2023impact,
+  title = {On the impact of prior experiences in car-following models: Model development, computational efficiency, comparative analyses, and extensive applications},
+  author = {Yu, Yang and He, Zhengbing and Qu, Xiaobo},
+  journal = {IEEE Transactions on Cybernetics},
+  volume = {53},
+  number = {3},
+  pages = {1405--1418},
+  year = {2023},
+  doi = {10.1109/TCYB.2021.3095154}
+}`;
+
+    const bibtexXie2019 = `@article{xie2019data,
+  title = {A data-driven lane-changing model based on deep learning},
+  author = {Xie, Dong-Fan and Fang, Zhe-Zhe and Jia, Bin and He, Zhengbing},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {106},
+  pages = {41--60},
+  year = {2019},
+  doi = {10.1016/j.trc.2019.07.002}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

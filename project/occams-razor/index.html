@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Occam's Razor: Simple Models for Traffic Dynamics | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on simple, parsimonious, and data-driven traffic models inspired by Occam's Razor, including nonparametric k-nearest-neighbor car-following, map-free extraction of freeway and urban traffic dynamics from low-frequency probe vehicle data, and transparent multiple linear regression for refining time-space traffic diagrams."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .work-list a, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Occam's Razor: Simple Models for Traffic Dynamics</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Occam's Razor is a principle of parsimony</strong>: when several explanations or methods can account for the same phenomenon,
+        the one relying on fewer assumptions and less unnecessary complexity should be preferred.
+      </p>
+
+      <p>
+        The following three studies follow this principle in different ways.
+        They seek to understand and represent traffic dynamics with
+        <strong class="emphasis">fewer behavioral assumptions, fewer external data and software dependencies, and lower model complexity.</strong>
+        Although developed for different problems, all three works share the same objective:
+        to achieve sufficient explanatory, predictive, and practical value through simple and transparent methods.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/razor.png" alt="Occam's Razor applied through fewer assumptions, fewer dependencies, and lower model complexity" decoding="async" />
+      </figure>
+
+      <p>
+        Our work develops this idea through three studies:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          We <strong class="emphasis">developed a nonparametric car-following model</strong> based on a simple k-nearest-neighbor approach,
+          reproducing empirical traffic dynamics without assuming driver-behavior parameters or a fundamental diagram<sup class="citation-sup"><strong>[1]</strong></sup>.
+          <a href="https://www.gotrafficgo.com/webpage_project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer">More details.</a>
+        </li>
+        <li>
+          We <strong class="emphasis">proposed a mapping-to-cells method</strong> that extracts freeway traffic dynamics directly from probe vehicle data,
+          without relying on GIS software, a digital map, or complicated map-matching tools<sup class="citation-sup"><strong>[2]</strong></sup>,
+          and developed its <strong class="emphasis">urban-road companion</strong> to identify turn-level intersection congestion across an entire network using only low-frequency probe vehicle data<sup class="citation-sup"><strong>[3]</strong></sup>.
+          <a href="https://www.gotrafficgo.com/webpage_project/mapping-to-cells/" target="_blank" rel="noopener noreferrer">More details.</a>
+        </li>
+        <li>
+          We <strong class="emphasis">introduced a multiple linear regression model</strong> for refining time-space traffic diagrams,
+          demonstrating that a transparent and readily applicable model can achieve promising accuracy and reliable transferability<sup class="citation-sup"><strong>[4]</strong></sup>.
+          <a href="https://www.gotrafficgo.com/webpage_project/time-space-traffic-diagrams/" target="_blank" rel="noopener noreferrer">More details.</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/nonparametric.png"
+            alt="A simple nonparametric car-following model driven by field data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>A Simple Nonparametric Car-Following Model Driven by Field Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng, Wei Guan · Transportation Research Part B: Methodological · 80:185–201 · 2015
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trb.2015.07.010" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2015)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/mapping.png"
+            alt="Mapping to cells for extracting traffic dynamics from probe vehicle data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Mapping to Cells: A Simple Method to Extract Traffic Dynamics from Probe Vehicle Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng, Peng Chen, Wei Guan · Computer-Aided Civil and Infrastructure Engineering · 32(3):252–267 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1111/mice.12251" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/network-wide.png"
+            alt="Network-wide identification of turn-level intersection congestion"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Network-Wide Identification of Turn-Level Intersection Congestion Using Only Low-Frequency Probe Vehicle Data
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Geqi Qi, Lili Lu, Yanyan Chen · Transportation Research Part C: Emerging Technologies · 108:320–339 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2019.10.001" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/refining.png"
+            alt="Refining time-space traffic diagrams with multiple linear regression"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Refining Time-Space Traffic Diagrams: A Simple Multiple Linear Regression Model
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 25(2):1465–1475 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2023.3316593" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2015 = `@article{he2015simple,
+  title = {A simple nonparametric car-following model driven by field data},
+  author = {He, Zhengbing and Zheng, Liang and Guan, Wei},
+  journal = {Transportation Research Part B: Methodological},
+  volume = {80},
+  pages = {185--201},
+  year = {2015},
+  doi = {10.1016/j.trb.2015.07.010}
+}`;
+
+    const bibtexHe2017 = `@article{he2017mapping,
+  title = {Mapping to cells: A simple method to extract traffic dynamics from probe vehicle data},
+  author = {He, Zhengbing and Zheng, Liang and Chen, Peng and Guan, Wei},
+  journal = {Computer-Aided Civil and Infrastructure Engineering},
+  volume = {32},
+  number = {3},
+  pages = {252--267},
+  year = {2017},
+  doi = {10.1111/mice.12251}
+}`;
+
+    const bibtexHe2019 = `@article{he2019network,
+  title = {Network-wide identification of turn-level intersection congestion using only low-frequency probe vehicle data},
+  author = {He, Zhengbing and Qi, Geqi and Lu, Lili and Chen, Yanyan},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {108},
+  pages = {320--339},
+  year = {2019},
+  doi = {10.1016/j.trc.2019.10.001}
+}`;
+
+    const bibtexHe2024 = `@article{he2024refining,
+  title = {Refining time-space traffic diagrams: A simple multiple linear regression model},
+  author = {He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {25},
+  number = {2},
+  pages = {1465--1475},
+  year = {2024},
+  doi = {10.1109/TITS.2023.3316593}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

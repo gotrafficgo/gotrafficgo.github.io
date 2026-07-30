@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Time-Space Traffic Diagram: Construction, Refinement, and Applications | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on time-space traffic diagrams for visualizing and analyzing traffic dynamics, including wave-aware parallelogram-cell construction, diagram refinement with multiple linear regression, neighborhood-adaptive regression and GANs, freeway CO2 emission estimation from spatiotemporal cells, and CNN-based network-wide traffic speed prediction from floating-car data."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 90%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-award { color: #0969da; }
+    .citation-link, .scientific-citation { color: #666; text-decoration: none; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Time-Space Traffic Diagram: Construction, Refinement, and Applications</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">A time-space (TS) traffic diagram</strong>, in which the x-axis indicates time, the y-axis denotes space, and a diverse array of colors represents different
+        traffic states, is <strong class="emphasis">an important traffic analysis and visualization tool</strong>
+        (<a class="citation-link" href="https://doi.org/10.1016/j.aap.2009.10.009" target="_blank" rel="noopener noreferrer">Zheng et al., 2010</a>;
+        <a class="citation-link" href="https://doi.org/10.1016/j.trb.2010.08.002" target="_blank" rel="noopener noreferrer">Zheng et al., 2011</a>;
+        <a class="citation-link" href="https://doi.org/10.1049/iet-its.2016.0356" target="_blank" rel="noopener noreferrer">Lu et al., 2018</a>;
+        <a class="citation-link" href="https://doi.org/10.1186/s12544-018-0294-8" target="_blank" rel="noopener noreferrer">Grumert et al., 2018</a>;
+        <a class="citation-link" href="https://doi.org/10.1016/j.trc.2021.103444" target="_blank" rel="noopener noreferrer">Wang et al., 2022</a>).
+        From a TS diagram, we can identify traffic bottlenecks
+        (<a class="citation-link" href="https://doi.org/10.3141/1867-06" target="_blank" rel="noopener noreferrer">Chen et al., 2004</a>;
+        <a class="citation-link" href="https://doi.org/10.3141/1999-05" target="_blank" rel="noopener noreferrer">Ban et al., 2007</a>),
+        understand traffic characteristics
+        (<a class="citation-link" href="https://doi.org/10.1016/j.trc.2020.102682" target="_blank" rel="noopener noreferrer">Wan et al., 2020</a>;
+        <a class="citation-link" href="https://doi.org/10.1179/1942787514Y.0000000041" target="_blank" rel="noopener noreferrer">He et al., 2015</a>),
+        predict travel time
+        (<a class="citation-link" href="https://doi.org/10.3390/s17040818" target="_blank" rel="noopener noreferrer">Ma et al., 2017</a>;
+        <a class="citation-link" href="https://doi.org/10.1016/j.trc.2017.10.010" target="_blank" rel="noopener noreferrer">Zhang et al., 2017</a>),
+        and even estimate traffic emissions
+        (<a class="citation-link" href="https://doi.org/10.1109/TITS.2019.2909316" target="_blank" rel="noopener noreferrer">He et al., 2020</a>).
+        Almost all traffic data centers and display platforms, such as California’s Performance Measurement System (PeMS) in the United States, employ
+        TS diagrams to visualize traffic dynamics.
+      </p>
+
+      <p>
+        Centering on the construction, refinement, and applications of TS diagrams, we have conducted a series of original studies:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          We innovatively proposed <strong class="emphasis">wave-aware methods (seminal<sup class="citation-sup">[1]</sup>, advanced<sup class="citation-sup">[2]</sup>)</strong>
+          of constructing time-space diagrams, which have been substantively implemented in the well-known
+          <a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://i24motion.org/"><em>I-24 MOTION project</em></a>
+          in Nashville
+          (<a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://ieeexplore.ieee.org/document/10485593"><em>Ji et al., 2024</em></a>;
+          <a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1016/j.trc.2025.105385"><em>Ji et al., 2026</em></a>),
+          as well as in the works of global researchers from the UK
+          (<a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1016/j.apenergy.2023.121916"><em>Shang et al., 2023</em></a>),
+          Sweden
+          (<a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1016/j.trc.2022.103615"><em>Tsanakas et al., 2022</em></a>),
+          and China
+          (<a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://ieeexplore.ieee.org/document/10595431"><em>He et al., 2024</em></a>).
+          <strong class="emphasis">Notably, these implementations were carried out completely independently of our own research activities.</strong>
+        </li>
+        <li>
+          Despite their importance to transportation research and engineering, most existing and newly produced
+          <strong class="emphasis">TS diagrams remain too coarse to reveal detailed traffic dynamics</strong>
+          because high-fidelity traffic data are difficult to collect. To increase their resolution and enable richer representations
+          of traffic dynamics, <strong class="emphasis">we introduced the TS diagram refinement problem for the first time</strong> and successively developed a multiple linear regression-based
+          solution<sup class="citation-sup"><strong>[3]</strong></sup>, 
+          a neighborhood-adaptive linear regression solution<sup class="citation-sup"><strong>[4]</strong></sup>,
+          and a GAN-based solution<sup class="citation-sup"><strong>[5]</strong></sup>.
+          TS diagram refinement is a pioneering line of research: <strong class="emphasis">it formulated a new transportation problem and has since inspired
+          follow-up studies</strong>
+          (<a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1177/03611981261419011"><em>Hu et al., 2026</em></a>;
+          <a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1016/j.trc.2025.105313"><em>Ji et al., 2025</em></a>;
+          <a target="_blank" rel="noopener noreferrer" class="scientific-citation" href="https://doi.org/10.1016/j.trc.2026.105801"><em>Liu et al., 2026</em></a>).
+        </li>
+        <li>
+          Existing CO<sub>2</sub> emission models are predominantly either microscopic vehicle motion-based models or macroscopic traffic index-based models,
+          leaving a need for a mesoscopic approach that uses easily collected data while capturing traffic dynamics.
+          We proposed a <strong class="emphasis">spatiotemporal cell-based model that estimates freeway CO<sub>2</sub> emissions directly from prevailing TS diagrams</strong><sup class="citation-sup"><strong>[6]</strong></sup>.
+          <strong class="emphasis">It opens the door for estimating CO<sub>2</sub> emissions from widely available low-fidelity traffic data</strong>, since the ST diagram can be constructed by using various traffic flow data, such as loop detector data and floating car data.
+        </li>
+        <li>
+          To capture the spatial correlations of network-wide traffic, we proposed the
+          <strong class="emphasis">first CNN-based approach to network-wide traffic speed prediction</strong><sup class="citation-sup"><strong>[7]</strong></sup>.
+          The approach maps floating-car data onto a road network to construct TS diagrams that capture traffic evolution in both time and space.
+          These diagrams are then fed into a CNN, effectively framing traffic prediction as an image-learning task, a quite innovative
+          perspective at the time.
+        </li>
+      </ul>
+
+    </section>
+
+    <figure class="overview-highlight">
+      <img src="images/overview.jpg" alt="Overview of time-space traffic diagram construction, refinement, and applications" loading="lazy" decoding="async" />
+    </figure>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Constructing Spatiotemporal Speed Contour Diagrams: Using Rectangular or Non-Rectangular Parallelogram Cells?
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Ying Lv, Lili Lu, Wei Guan · Transportmetrica B: Transport Dynamics · 7(1):44–60 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/21680566.2017.1320774" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>From Rectangle to Parallelogram: An Area-Weighted Method to Make Time-Space Diagrams Incorporate Traffic Waves
+          </div>
+          <div class="paper-meta">
+            Ning Wang, Xingye Wang, Hai Yan, <strong>Zhengbing He*</strong> · Digital Transportation and Safety · 3(1):1–7 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.48130/dts-0024-0001" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Refining Time-Space Traffic Diagrams: A Simple Multiple Linear Regression Model
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He*</strong> · IEEE Transactions on Intelligent Transportation Systems · 25(2):1465–1475 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2023.3316593" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Refining Time-Space Traffic Diagrams: A Neighborhood-Adaptive Linear Regression Method
+          </div>
+          <div class="paper-meta">
+            Zhihong Yao, Yi Yu, Yunxia Wu, Hao Li, Yangsheng Jiang, <strong>Zhengbing He*</strong> · IEEE Transactions on Intelligent Transportation Systems · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2026.3678329" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexYao2026)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>TSR-GAN: Generative Adversarial Networks for Traffic State Reconstruction with Time Space Diagrams
+          </div>
+          <div class="paper-meta">
+            Kunpeng Zhang, Xiaoliang Feng, Ning Jia, Liang Zhao, <strong>Zhengbing He*</strong> · Physica A: Statistical Mechanics and its Applications · 591:126788 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.physa.2021.126788" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Estimating Carbon Dioxide Emissions of Freeway Traffic: A Spatiotemporal Cell-Based Model
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Wenyi Zhang, Ning Jia · IEEE Transactions on Intelligent Transportation Systems · 21(5):1976–1986 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2019.2909316" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[7]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
+        </div>
+        <div class="paper-meta">
+          Xiaolei Ma, Zhuang Dai, <strong>Zhengbing He</strong>, Jihui Ma, Yong Wang, Yunpeng Wang · Sensors · 17(4):818 · 2017
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.3390/s17040818" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexMa2017)">Copy BibTeX</button>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2024 = `@article{he2024refining,
+  title = {Refining time-space traffic diagrams: A simple multiple linear regression model},
+  author = {He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {25},
+  number = {2},
+  pages = {1465--1475},
+  year = {2024},
+  doi = {10.1109/TITS.2023.3316593}
+}`;
+
+    const bibtexYao2026 = `@article{yao2026refining,
+  title = {Refining time-space traffic diagrams: A neighborhood-adaptive linear regression method},
+  author = {Yao, Zhihong and Yu, Yi and Wu, Yunxia and Li, Hao and Jiang, Yangsheng and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  year = {2026},
+  doi = {10.1109/TITS.2026.3678329}
+}`;
+
+    const bibtexHe2019 = `@article{he2019constructing,
+  title = {Constructing spatiotemporal speed contour diagrams: Using rectangular or non-rectangular parallelogram cells?},
+  author = {He, Zhengbing and Lv, Ying and Lu, Lili and Guan, Wei},
+  journal = {Transportmetrica B: Transport Dynamics},
+  volume = {7},
+  number = {1},
+  pages = {44--60},
+  year = {2019},
+  doi = {10.1080/21680566.2017.1320774}
+}`;
+
+    const bibtexHe2020 = `@article{he2020estimating,
+  title = {Estimating carbon dioxide emissions of freeway traffic: A spatiotemporal cell-based model},
+  author = {He, Zhengbing and Zhang, Wenyi and Jia, Ning},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {21},
+  number = {5},
+  pages = {1976--1986},
+  year = {2020},
+  doi = {10.1109/TITS.2019.2909316}
+}`;
+
+    const bibtexWang2024 = `@article{wang2024rectangle,
+  title = {From rectangle to parallelogram: An area-weighted method to make time-space diagrams incorporate traffic waves},
+  author = {Wang, Ning and Wang, Xingye and Yan, Hai and He, Zhengbing},
+  journal = {Digital Transportation and Safety},
+  volume = {3},
+  number = {1},
+  pages = {1--7},
+  year = {2024},
+  doi = {10.48130/dts-0024-0001}
+}`;
+
+    const bibtexZhang2022 = `@article{zhang2022tsrgan,
+  title = {{TSR-GAN}: Generative adversarial networks for traffic state reconstruction with time space diagrams},
+  author = {Zhang, Kunpeng and Feng, Xiaoliang and Jia, Ning and Zhao, Liang and He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {591},
+  pages = {126788},
+  year = {2022},
+  doi = {10.1016/j.physa.2021.126788}
+}`;
+
+    const bibtexMa2017 = `@article{ma2017learning,
+  title = {Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction},
+  author = {Ma, Xiaolei and Dai, Zhuang and He, Zhengbing and Ma, Jihui and Wang, Yong and Wang, Yunpeng},
+  journal = {Sensors},
+  volume = {17},
+  number = {4},
+  pages = {818},
+  year = {2017},
+  doi = {10.3390/s17040818}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
