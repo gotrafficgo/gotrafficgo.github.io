@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Traffic Dynamics &amp; Modeling: Others | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on traffic state and travel-time estimation, including stochastic three-detector modeling, sparse freeway sensors, and lane-level travel-time distributions in connected urban networks."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    .publications-heading { margin-top: 32px; padding-bottom: 0; border-bottom: 0; font-size: 1.15rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Traffic Dynamics &amp; Modeling: Others</h1>
+    </header>
+
+    <section>
+      <h2>Traffic State Estimation</h2>
+
+      <p>
+        Our research advances traffic state and travel-time estimation across freeway and urban networks by combining physics-based stochastic modeling with data-driven learning:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          In connected urban environments, we <strong class="emphasis">modeled lane-level travel-time distributions by jointly considering link travel time and movement-specific signal delays</strong>, showing that kernel density estimation captures travel-time reliability more comprehensively than conventional parametric distributions<sup class="citation-sup"><strong>[1]</strong></sup>.
+        </li>
+        <li>
+          For recurrently congested freeways with sparse or malfunctioning detectors, we <strong class="emphasis">integrated self-organizing maps with support vector regression</strong> to identify representative sensors and accurately estimate real-time route travel times from limited data<sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+        <li>
+          We <strong class="emphasis">extended Newell's three-detector method to infer probabilistic traffic states at unobserved freeway locations</strong> from upstream and downstream counts while accounting for day-to-day demand variation, sensor errors, and uncertainty in fundamental-diagram parameters<sup class="citation-sup"><strong>[3]</strong></sup>.
+        </li>
+      </ul>
+
+      <h2 class="publications-heading">Publications</h2>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Estimation of Lane-Level Travel Time Distributions under a Connected Environment
+          </div>
+          <div class="paper-meta">
+            Lili Lu, <strong>Zhengbing He</strong>, Jian Wang, Jufeng Chen, Wei Wang · Journal of Intelligent Transportation Systems · 25(5):501–512 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/15472450.2020.1854093" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLu2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Real-time Estimation of Freeway Travel Time with Recurrent Congestion Based on Sparse Detector Data
+          </div>
+          <div class="paper-meta">
+            Lili Lu, Jian Wang, <strong>Zhengbing He</strong>, Ching-Yao Chan · IET Intelligent Transport Systems · 12(1):2–11 · 2018
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1049/iet-its.2016.0356" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLu2018)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Stochastic Extension of Newell's Three-Detector Method
+          </div>
+          <div class="paper-meta">
+            Jorge A. Laval, <strong>Zhengbing He</strong>, Felipe Castrillon · Transportation Research Record · 2315(1):73–80 · 2012
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.3141/2315-08" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLaval2012)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexLu2018 = `@article{lu2018real,
+  title = {Real-time estimation of freeway travel time with recurrent congestion based on sparse detector data},
+  author = {Lu, Lili and Wang, Jian and He, Zhengbing and Chan, Ching-Yao},
+  journal = {IET Intelligent Transport Systems},
+  volume = {12},
+  number = {1},
+  pages = {2--11},
+  year = {2018},
+  doi = {10.1049/iet-its.2016.0356}
+}`;
+
+    const bibtexLaval2012 = `@article{laval2012stochastic,
+  title = {Stochastic extension of Newell's three-detector method},
+  author = {Laval, Jorge A. and He, Zhengbing and Castrillon, Felipe},
+  journal = {Transportation Research Record},
+  volume = {2315},
+  number = {1},
+  pages = {73--80},
+  year = {2012},
+  doi = {10.3141/2315-08}
+}`;
+
+    const bibtexLu2021 = `@article{lu2021estimation,
+  title = {Estimation of lane-level travel time distributions under a connected environment},
+  author = {Lu, Lili and He, Zhengbing and Wang, Jian and Chen, Jufeng and Wang, Wei},
+  journal = {Journal of Intelligent Transportation Systems},
+  volume = {25},
+  number = {5},
+  pages = {501--512},
+  year = {2021},
+  doi = {10.1080/15472450.2020.1854093}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

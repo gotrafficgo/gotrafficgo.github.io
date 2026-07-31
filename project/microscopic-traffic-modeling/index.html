@@ -67,10 +67,9 @@
       <h2>Overview</h2>
 
       <p>
-      Microscopic traffic flow modeling is essential for linking individual driving behaviors with system-level traffic performance. 
-      Traffic stability, safety, congestion, fundamental diagrams, and shockwave propagation all emerge from local vehicle interactions, 
-      including car-following, lane-changing, perception, reaction, and heterogeneous driving decisions. 
-      Therefore, microscopic models provide a critical foundation for explaining how individual driving mechanisms shape aggregate traffic dynamics.
+      Microscopic traffic flow modeling is essential for <strong class="emphasis">linking individual driving behaviors with system-level traffic performance</strong>.
+      Traffic stability, safety, congestion, fundamental diagrams, shockwave propagation, and network-level hysteresis all emerge from local interactions involving car-following, lane-changing, perception, reaction, and heterogeneous driving decisions.
+      Microscopic models therefore provide the foundation for explaining how local driving mechanisms shape aggregate traffic dynamics.
       </p>
 
       <figure class="overview-highlight">
@@ -78,29 +77,31 @@
       </figure>
 
       <p>
-      <strong class="emphasis">Together, my team’s studies form a coherent progression from perception-based and heterogeneous driving mechanisms, 
-      to maneuver-induced disturbance quantification, stochastic behavioral modeling, 
-        and macro-level traffic flow representations grounded in microscopic behavior.</strong>
+      Together, my team’s studies establish a multi-scale account of traffic dynamics:
+      <strong class="emphasis">from perception and heterogeneous driving behavior to maneuver-induced disturbances, stochastic behavioral regimes, and network-level traffic phenomena.</strong>
       </p>
 
       <ul class="work-list">
         <li>
-          In our early work, we proposed a visual imaging car-following model, showing that drivers’ visual perception of the preceding vehicle can better explain following behavior and traffic stability, especially under different vehicle-type conditions<sup class="citation-sup"><strong>[5]</strong></sup>.
+          In our early work, we proposed a <strong class="emphasis">visual imaging car-following model</strong>, showing that drivers’ visual perception of the preceding vehicle can better explain following behavior and traffic stability, especially under different vehicle-type conditions<sup class="citation-sup"><strong>[5]</strong></sup>.
         </li>
         <li>
-          We then further examined vehicle-type-dependent car-following heterogeneity from both microscopic safety indicators and macroscopic Lagrangian fundamental diagrams, demonstrating that larger vehicles lead drivers to maintain lower-risk and larger-spacing behavior<sup class="citation-sup"><strong>[4]</strong></sup>.
+          We then examined <strong class="emphasis">vehicle-type-dependent car-following heterogeneity from both microscopic and macroscopic viewpoints</strong>, demonstrating that larger vehicles lead drivers to maintain lower-risk and larger-spacing behavior<sup class="citation-sup"><strong>[4]</strong></sup>.
         </li>
         <li>
-          To connect microscopic behavior with aggregate traffic flow characteristics, we developed a flexible traffic stream model that links driving parameters, including reaction time, calmness, and sensitivity, with macroscopic fundamental diagrams and shockwave dynamics<sup class="citation-sup"><strong>[3]</strong></sup>.
+          To connect microscopic behavior with aggregate traffic flow characteristics, we developed a flexible traffic stream model that <strong class="emphasis">links reaction time, calmness, and sensitivity with macroscopic fundamental diagrams and shockwave dynamics</strong><sup class="citation-sup"><strong>[3]</strong></sup>.
         </li>
         <li>
-          We also derived an anisotropic continuum model from car-following behavior and showed its capability to reproduce real congestion waves<sup class="citation-sup"><strong>[6]</strong></sup>.
+          We also <strong class="emphasis">derived an anisotropic continuum model directly from car-following behavior</strong> and showed its capability to reproduce real congestion waves<sup class="citation-sup"><strong>[6]</strong></sup>.
         </li>
         <li>
-          Extending the focus from car-following to lane-changing, we quantified the temporal and spatial impact of a single discretionary lane change, finding that it typically affects 4 surrounding vehicles for about 12 seconds<sup class="citation-sup"><strong>[1]</strong></sup>.
+          Extending the focus from car-following to lane-changing, we <strong class="emphasis">quantified the temporal and spatial impact of a single discretionary lane change</strong>, finding that it typically affects <strong class="emphasis">four surrounding vehicles for about 12 seconds</strong><sup class="citation-sup"><strong>[1]</strong></sup>.
         </li>
         <li>
-          More recently, our work has incorporated stochasticity, driver heterogeneity, and time-varying behavioral regimes into Bayesian car-following models, showing that stochastic multi-regime representations can better reproduce human driving dynamics than deterministic models<sup class="citation-sup"><strong>[2]</strong></sup>.
+          More recently, we incorporated stochasticity, driver heterogeneity, and time-varying behavioral regimes into Bayesian car-following models, showing that <strong class="emphasis">stochastic multi-regime representations reproduce human driving dynamics more faithfully than deterministic models</strong><sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+        <li>
+          At the network scale, we <strong class="emphasis">identified a figure-eight hysteresis pattern in the macroscopic fundamental diagram</strong> and traced its microscopic causes to location-specific flow–occupancy states and different lane-changing rates, demonstrating how local maneuvers and spatial traffic heterogeneity shape aggregate network dynamics<sup class="citation-sup"><strong>[7]</strong></sup>.
         </li>
       </ul>
     </section>
@@ -233,6 +234,27 @@
           </div>
         </div>
       </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/figure-eight.png"
+            alt="Figure-eight hysteresis pattern in a macroscopic fundamental diagram"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[7]</span>A Figure-Eight Hysteresis Pattern in Macroscopic Fundamental Diagrams and Its Microscopic Causes
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He*</strong>, Shuyan He, Wei Guan · Transportation Letters · 7(3):133–142 · 2015
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1179/1942787514Y.0000000041" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2015FigureEight)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -303,6 +325,17 @@
   pages = {519--543},
   year = {2017},
   doi = {10.1080/23249935.2017.1299814}
+}`;
+
+    const bibtexHe2015FigureEight = `@article{he2015figureEight,
+  title = {A figure-eight hysteresis pattern in macroscopic fundamental diagrams and its microscopic causes},
+  author = {He, Zhengbing and He, Shuyan and Guan, Wei},
+  journal = {Transportation Letters},
+  volume = {7},
+  number = {3},
+  pages = {133--142},
+  year = {2015},
+  doi = {10.1179/1942787514Y.0000000041}
 }`;
 
     function copyText(text) {
