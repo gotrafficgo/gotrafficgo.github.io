@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Large Language Model: Powering Transportation Studies | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on resolving congestion with connected vehicles in heterogeneous and mixed traffic, covering penetration rate and spatial distribution, unified car-following models, distributed feedback control, local and global cooperative driving, generalized string-stability analysis, traffic oscillation suppression, and deep-reinforcement-learning-based hybrid platooning of connected, autonomous, and human-driven vehicles."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Large Language Model: Powering Transportation Studies</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        Large language models represent <strong class="emphasis">one of the latest and most powerful advances in artificial intelligence</strong>,
+        and they are reshaping how people communicate, reason, create, and make decisions across society.
+        Transportation research is undergoing the same transformation.
+        From the earliest stage of widespread LLM adoption, our team began exploring how language-based reasoning, semantic understanding, memory, agency, and natural-language interaction could enable frontier applications across traffic systems, travel behavior, and autonomous driving.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/llm-overview.png" alt="Large language models power transportation research and autonomous driving" decoding="async" />
+      </figure>
+
+      <p>
+        Our early and continuing explorations span four directions:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          Published as a Correspondence in <strong class="emphasis">Nature</strong>, this work examined the broader societal implications of generative AI and highlighted the risk that AI writing tools may suppress linguistic and cultural diversity, particularly by encouraging scholars from low-income countries to erase their own voices in pursuit of standardized academic expression<sup class="citation-sup"><strong>[1]</strong></sup>.
+        </li>
+        <li>
+          As <strong class="emphasis">one of the first studies to explore LLMs in vehicles</strong>, we introduced <strong class="emphasis">ChatGPT as a vehicle co-pilot</strong> and developed an early framework that translates natural-language intentions into driving assistance for path tracking and trajectory planning without fine-tuning the underlying LLM<sup class="citation-sup"><strong>[2]</strong></sup>.
+        </li>
+        <li>
+          We <strong class="emphasis">first highlighted the importance of prompts for traffic prediction</strong>, leveraging LLMs to bring semantic understanding into large-scale traffic data imputation<sup class="citation-sup"><strong>[3]</strong></sup>.
+        </li>
+        <li>
+          We systematically reviewed <strong class="emphasis">how LLMs can power autonomous driving</strong> across modular and end-to-end systems, covering their roles in perception, reasoning, decision-making, human–vehicle interaction, long-tail scenarios, and the safety and security challenges that remain<sup class="citation-sup"><strong>[4]</strong></sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/ai-writing.png"
+            alt="AI writing tools and the voices of scholars from low-income countries"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>AI Writing Tools Could Lead Scholars from Low-Income Countries to Erase Their Own Voices
+          </div>
+          <div class="paper-meta">
+            Zhenning Li, <strong>Zhengbing He</strong> · Nature Correspondence · 649:555 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1038/d41586-026-00121-x" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLi2026)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/ChatGPT.png"
+            alt="ChatGPT serving as a vehicle co-pilot"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>ChatGPT as Your Vehicle Co-Pilot: An Initial Attempt
+          </div>
+          <div class="paper-meta">
+            Shiyi Wang, Yuxuan Zhu, Zhiheng Li, Yutong Wang, Li Li, <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Vehicles · 8(12):4706–4721 · 2023
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TIV.2023.3325300" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2023)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/semantic.png"
+            alt="Semantic understanding and prompt engineering for traffic data imputation"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Semantic Understanding and Prompt Engineering for Large-Scale Traffic Data Imputation
+          </div>
+          <div class="paper-meta">
+            Kunpeng Zhang, Feng Zhou, Lan Wu, Na Xie, <strong>Zhengbing He</strong> · Information Fusion · 102:102038 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.inffus.2023.102038" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/a-survey.png"
+            alt="Large language models powering autonomous driving"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>A Survey on Large Language Model-Powered Autonomous Driving
+          </div>
+          <div class="paper-meta">
+            Yuxuan Zhu, Shiyi Wang, Wenqing Zhong, Nianchen Shen, Yunqi Li, Siqi Wang, Zhiheng Li, Cathy Wu, <strong>Zhengbing He</strong>, Li Li · Engineering · Advance online publication · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.eng.2025.07.038" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhu2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexLi2026 = `@article{li2026ai,
+  title = {{AI} writing tools could lead scholars from low-income countries to erase their own voices},
+  author = {Li, Zhenning and He, Zhengbing},
+  journal = {Nature},
+  volume = {649},
+  pages = {555},
+  year = {2026},
+  doi = {10.1038/d41586-026-00121-x}
+}`;
+
+    const bibtexWang2023 = `@article{wang2023chatgpt,
+  title = {{ChatGPT} as your vehicle co-pilot: An initial attempt},
+  author = {Wang, Shiyi and Zhu, Yuxuan and Li, Zhiheng and Wang, Yutong and Li, Li and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  volume = {8},
+  number = {12},
+  pages = {4706--4721},
+  year = {2023},
+  doi = {10.1109/TIV.2023.3325300}
+}`;
+
+    const bibtexZhang2024 = `@article{zhang2024semantic,
+  title = {Semantic understanding and prompt engineering for large-scale traffic data imputation},
+  author = {Zhang, Kunpeng and Zhou, Feng and Wu, Lan and Xie, Na and He, Zhengbing},
+  journal = {Information Fusion},
+  volume = {102},
+  pages = {102038},
+  year = {2024},
+  doi = {10.1016/j.inffus.2023.102038}
+}`;
+
+    const bibtexZhu2025 = `@article{zhu2025survey,
+  title = {A survey on large language model-powered autonomous driving},
+  author = {Zhu, Yuxuan and Wang, Shiyi and Zhong, Wenqing and Shen, Nianchen and Li, Yunqi and Wang, Siqi and Li, Zhiheng and Wu, Cathy and He, Zhengbing and Li, Li},
+  journal = {Engineering},
+  year = {2025},
+  doi = {10.1016/j.eng.2025.07.038}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
