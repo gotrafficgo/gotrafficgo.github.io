@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Day-to-Day Route Choice: From Theory, Experiments to LLM Simulation | Zhengbing He</title>
+  <title>Brain-Driving: EEG and Driving Simulator | Zhengbing He</title>
   <meta
     name="description"
     content="Zhengbing He's research on day-to-day route choice, spanning behavioral theory, controlled experiments, agent-based modeling, and LLM-powered traveler simulation."
@@ -42,7 +42,9 @@
     .paper-index { margin-right: 6px; font-weight: 700; }
     .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
     .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
-    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .feature-video { display: block; width: 70%; height: auto; aspect-ratio: 16 / 9; margin: 20px auto 0; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .video-fallback { margin: 10px 0 0; color: #666; font-size: 0.9rem; text-align: center; }
+    .video-fallback a { color: #0969da; }
     @media (max-width: 600px) {
       .container { padding: 32px 16px; }
       section { padding: 22px; }
@@ -60,34 +62,35 @@
   <main class="container">
     <header>
       <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
-      <h1>Brain-Driving: Driving Simulator and EEG</h1>
+      <h1>Brain-Driving: Electroencephalography (EEG) and Driving Simulator</h1>
     </header>
 
     <section>
       <h2>Overview</h2>
 
       <p>
-        <strong class="emphasis">Day-to-day route choice describes how travelers revise their routes from one day to the next based on experience, expectations, traffic information, and the choices of others.</strong> Their decisions change traffic flows and travel times, which in turn influence future choices. Studying this process helps us understand how traffic evolves and responds to disruptions, information, and transport policies, providing a foundation for traffic management and network planning.
+        <strong class="emphasis">Driving simulators and electroencephalography (EEG) offer a safe and controlled way to study how people drive and think.</strong> Simulators reproduce repeatable traffic scenarios, while EEG reveals the neural activity behind perception and decision-making. Together, they connect brain activity with observable driving behavior and support human-centered traffic safety and intelligent vehicle design.
       </p>
-
-      <figure class="overview-highlight">
-        <img src="images/day-to-day-overview.png" alt="Day-to-day route choice feedback loop from behavioral theory and controlled experiments to agent-based and LLM-powered simulation" decoding="async" />
-      </figure>
 
       <p>
-        Our studies trace a progression, i.e., <strong class="emphasis">behavioral theory<sup class="citation-sup">[1]</sup> -> controlled human experiments<sup class="citation-sup">[2][3]</sup> -> agent-based and LLM-powered simulation<sup class="citation-sup">[4][5]</sup></strong>.
+        We first examined the relationship between EEG features and ordinary driving behavior in simulator experiments, finding that beta-band activity was closely associated with speed, acceleration, and headway<sup class="citation-sup">[1]</sup>. We then developed <strong class="emphasis">Brain Driving</strong>, combining driving-related EEG decoding with situational embeddings to predict personalized vehicle speed. Experiments with 133 participants demonstrated the potential of individualized models for brain–computer interaction and intelligent driving<sup class="citation-sup">[2]</sup>.
       </p>
-      <ul class="work-list">
-        <li>
-          <strong>Behavioral Theory:</strong> On the theoretical side, we formulated day-to-day rerouting processes under <strong class="emphasis">both absolute and relative bounded rationality</strong>, showing that the two mechanisms can produce similar aggregate convergence while generating fundamentally different route-switching dynamics<sup class="citation-sup">[1]</sup>.
-        </li>
-        <li>
-          <strong>Controlled Experiments:</strong> We then conducted a multi-scenario laboratory program in which <strong class="emphasis">312 participants</strong> repeatedly chose among congestible routes. The experiments revealed <strong class="emphasis">route-dependent inertia and preference</strong>, which we incorporated into an analyzable dynamic model<sup class="citation-sup">[2]</sup>; building on the same experimental evidence, we developed a <strong class="emphasis">stochastic-process model</strong> that reproduces the persistent random oscillations observed in route switching and flow evolution<sup class="citation-sup">[3]</sup>.
-        </li>
-        <li>
-          <strong>LLM-Powered Simulation:</strong> Moving to agent-based simulation, we proposed an analyzable framework that accommodates heterogeneous individual learning rules and learning rates while retaining stable aggregate properties<sup class="citation-sup">[4]</sup>. Most recently, we constructed <strong class="emphasis">LLMTraveler, an LLM-based traveler agent</strong> equipped with memory and personality-aware decision-making, and evaluated it through day-to-day congestion-game experiments: first against human laboratory behavior in a single-origin–destination setting, and then on a multi-origin–destination network against conventional multinomial-logit and reinforcement-learning agents<sup class="citation-sup">[5]</sup>.
-        </li>
-      </ul>
+
+      <iframe
+        id="brainDrivingVideo"
+        class="feature-video"
+        src="https://www.youtube.com/embed/lnkLH9a-5wU"
+        title="Brain-Driving video on YouTube"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <p class="video-fallback">
+        Video not playing? Watch it directly on
+        <a href="https://www.youtube.com/watch?v=lnkLH9a-5wU" target="_blank" rel="noopener noreferrer">YouTube</a>
+        or
+        <a href="https://www.bilibili.com/video/BV1WUq7Y9E8k/" target="_blank" rel="noopener noreferrer">Bilibili</a>.
+      </p>
     </section>
 
     <section>
@@ -96,22 +99,22 @@
       <div class="paper featured-paper">
         <figure>
           <img
-            src="images/rerouting.png"
-            alt="Day-to-day rerouting with bounded rationalities"
+            src="images/exploring.png"
+            alt="Simulated driving study of EEG and ordinary driving behavior"
             loading="lazy"
             decoding="async"
           />
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[1]</span>Day-to-Day Rerouting Modeling and Analysis with Absolute and Relative Bounded Rationalities
+            <span class="paper-index">[1]</span>Exploring the Relationship Between Electroencephalography (EEG) and Ordinary Driving Behavior: A Simulated Driving Study
           </div>
           <div class="paper-meta">
-            Wenyi Zhang, <strong>Zhengbing He</strong>, Wei Guan, Geqi Qi · Transportmetrica A: Transport Science · 14(3):256–273 · 2018
+            Liu Yang, <strong>Zhengbing He</strong>, Wei Guan, Shixiong Jiang · Transportation Research Record · 2672(37):172–180 · 2018
           </div>
           <div class="paper-links">
-            <a href="https://doi.org/10.1080/23249935.2017.1373713" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexZhang2018)">Copy BibTeX</button>
+            <a href="https://doi.org/10.1177/0361198118783165" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexYang2018)">Copy BibTeX</button>
           </div>
         </div>
       </div>
@@ -119,91 +122,22 @@
       <div class="paper featured-paper">
         <figure>
           <img
-            src="images/part-i.png"
-            alt="Multi-scenario laboratory experiments for day-to-day route choices"
+            src="images/brain-driving.png"
+            alt="Brain Driving with DR-EEG decoding and situational embeddings"
             loading="lazy"
             decoding="async"
           />
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[2]</span>Investigating Day-to-Day Route Choices Based on Multi-Scenario Laboratory Experiments. Part I: Route-Dependent Attraction and Its Modeling
+            <span class="paper-index">[2]</span>Brain Driving: Personalizing Vehicle Speed with DR-EEG Decoding and Situational Embeddings
           </div>
           <div class="paper-meta">
-            Hang Qi, Ning Jia, Xiaobo Qu, <strong>Zhengbing He</strong> · Transportation Research Part A: Policy and Practice · 167:103553 · 2023
+            Peihao Li, Geqi Qi, Xuedong Yan, Shuo Zhao, Lin Hu, <strong>Zhengbing He</strong>, Wei Guan · IEEE Transactions on Intelligent Vehicles · 10(3):1658–1677 · 2025
           </div>
           <div class="paper-links">
-            <a href="https://doi.org/10.1016/j.tra.2022.11.013" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexQi2023)">Copy BibTeX</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="paper featured-paper">
-        <figure>
-          <img
-            src="images/part-ii.png"
-            alt="Route-dependent attraction-based stochastic process model"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <div class="featured-paper-content">
-          <div class="paper-title">
-            <span class="paper-index">[3]</span>Investigating Day-to-Day Route Choices Based on Multi-Scenario Laboratory Experiments. Part II: A Route-Dependent Attraction-Based Stochastic Process Model
-          </div>
-          <div class="paper-meta">
-            Hang Qi, Ning Jia, Xiaobo Qu, <strong>Zhengbing He</strong> · Communications in Transportation Research · 4:100123 · 2024
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1016/j.commtr.2024.100123" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexQi2024)">Copy BibTeX</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="paper featured-paper">
-        <figure>
-          <img
-            src="images/analyzable.png"
-            alt="Agent-based framework for day-to-day route choice"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <div class="featured-paper-content">
-          <div class="paper-title">
-            <span class="paper-index">[4]</span>An Analyzable Agent-Based Framework for Modeling Day-to-Day Route Choice
-          </div>
-          <div class="paper-meta">
-            Weimeng Li, Shoufeng Ma, Ning Jia, <strong>Zhengbing He</strong> · Transportmetrica A: Transport Science · 18(3):1517–1543 · 2022
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1080/23249935.2021.1952336" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexLi2022)">Copy BibTeX</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="paper featured-paper">
-        <figure>
-          <img
-            src="images/agentic.png"
-            alt="Agentic large language models for day-to-day route choices"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <div class="featured-paper-content">
-          <div class="paper-title">
-            <span class="paper-index">[5]</span>Agentic Large Language Models for Day-to-Day Route Choices
-          </div>
-          <div class="paper-meta">
-            Leizhen Wang, Peibo Duan, <strong>Zhengbing He</strong>, Cheng Lyu, Xin Chen, Nan Zheng, Li Yao, Zhenliang Ma · Transportation Research Part C: Emerging Technologies · 180:105307 · 2025
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1016/j.trc.2025.105307" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexWang2025)">Copy BibTeX</button>
+            <a href="https://doi.org/10.1109/TIV.2024.3430952" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLi2025)">Copy BibTeX</button>
           </div>
         </div>
       </div>
@@ -216,56 +150,26 @@
   </main>
 
   <script>
-    const bibtexQi2023 = `@article{qi2023investigating,
-  title = {Investigating day-to-day route choices based on multi-scenario laboratory experiments. Part I: Route-dependent attraction and its modeling},
-  author = {Qi, Hang and Jia, Ning and Qu, Xiaobo and He, Zhengbing},
-  journal = {Transportation Research Part A: Policy and Practice},
-  volume = {167},
-  pages = {103553},
-  year = {2023},
-  doi = {10.1016/j.tra.2022.11.013}
-}`;
-
-    const bibtexQi2024 = `@article{qi2024investigating,
-  title = {Investigating day-to-day route choices based on multi-scenario laboratory experiments. Part II: A route-dependent attraction-based stochastic process model},
-  author = {Qi, Hang and Jia, Ning and Qu, Xiaobo and He, Zhengbing},
-  journal = {Communications in Transportation Research},
-  volume = {4},
-  pages = {100123},
-  year = {2024},
-  doi = {10.1016/j.commtr.2024.100123}
-}`;
-
-    const bibtexZhang2018 = `@article{zhang2018rerouting,
-  title = {Day-to-day rerouting modeling and analysis with absolute and relative bounded rationalities},
-  author = {Zhang, Wenyi and He, Zhengbing and Guan, Wei and Qi, Geqi},
-  journal = {Transportmetrica A: Transport Science},
-  volume = {14},
+    const bibtexLi2025 = `@article{li2025brain,
+  title = {Brain Driving: Personalizing Vehicle Speed with {DR-EEG} Decoding and Situational Embeddings},
+  author = {Li, Peihao and Qi, Geqi and Yan, Xuedong and Zhao, Shuo and Hu, Lin and He, Zhengbing and Guan, Wei},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  volume = {10},
   number = {3},
-  pages = {256--273},
-  year = {2018},
-  doi = {10.1080/23249935.2017.1373713}
-}`;
-
-    const bibtexLi2022 = `@article{li2022analyzable,
-  title = {An analyzable agent-based framework for modeling day-to-day route choice},
-  author = {Li, Weimeng and Ma, Shoufeng and Jia, Ning and He, Zhengbing},
-  journal = {Transportmetrica A: Transport Science},
-  volume = {18},
-  number = {3},
-  pages = {1517--1543},
-  year = {2022},
-  doi = {10.1080/23249935.2021.1952336}
-}`;
-
-    const bibtexWang2025 = `@article{wang2025agentic,
-  title = {Agentic large language models for day-to-day route choices},
-  author = {Wang, Leizhen and Duan, Peibo and He, Zhengbing and Lyu, Cheng and Chen, Xin and Zheng, Nan and Yao, Li and Ma, Zhenliang},
-  journal = {Transportation Research Part C: Emerging Technologies},
-  volume = {180},
-  pages = {105307},
+  pages = {1658--1677},
   year = {2025},
-  doi = {10.1016/j.trc.2025.105307}
+  doi = {10.1109/TIV.2024.3430952}
+}`;
+
+    const bibtexYang2018 = `@article{yang2018exploring,
+  title = {Exploring the Relationship Between Electroencephalography ({EEG}) and Ordinary Driving Behavior: A Simulated Driving Study},
+  author = {Yang, Liu and He, Zhengbing and Guan, Wei and Jiang, Shixiong},
+  journal = {Transportation Research Record},
+  volume = {2672},
+  number = {37},
+  pages = {172--180},
+  year = {2018},
+  doi = {10.1177/0361198118783165}
 }`;
 
     function copyText(text) {
@@ -273,6 +177,34 @@
         alert("BibTeX copied to clipboard.");
       });
     }
+
+    (function selectVideoPlatform() {
+      const videoFrame = document.getElementById("brainDrivingVideo");
+      if (!videoFrame) return;
+
+      const bilibiliEmbed = "https://player.bilibili.com/player.html?bvid=BV1WUq7Y9E8k&page=1&autoplay=0";
+      const youtubeProbe = new Image();
+      let settled = false;
+
+      function useBilibili() {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(probeTimeout);
+        videoFrame.src = bilibiliEmbed;
+        videoFrame.title = "Brain-Driving video on Bilibili";
+      }
+
+      function keepYouTube() {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(probeTimeout);
+      }
+
+      const probeTimeout = window.setTimeout(useBilibili, 4000);
+      youtubeProbe.onload = keepYouTube;
+      youtubeProbe.onerror = useBilibili;
+      youtubeProbe.src = "https://www.youtube.com/favicon.ico?video-probe=" + Date.now();
+    })();
   </script>
 </body>
 </html>
