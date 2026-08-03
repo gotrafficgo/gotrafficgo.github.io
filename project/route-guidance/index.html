@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Route Guidance: Traffic Condition-Based Approaches | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on variable message signs, traffic-condition-based route guidance, self-regulating strategies, GRIP effectiveness, and VMS placement."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Route Guidance: Traffic Condition-Based Approaches</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Variable message signs (VMSs) are roadside electronic displays that provide drivers with traffic conditions, travel times, incident warnings, and route guidance at critical decision points.</strong> By helping travelers divert before entering congested roads, VMSs can improve the use of available network capacity and alleviate traffic congestion. However, the relatively long update cycles may cause the displayed information to lag behind rapidly changing traffic conditions, while fixed sign locations and limited display capacity restrict where, when, and how much guidance can be delivered. These limitations can reduce the effectiveness of route guidance and, in some cases, merely shift congestion from one route to another.
+      </p>
+
+      <p>
+        To address these issues, as part of <strong class="emphasis">the largest national ITS initiative</strong> under China's 863 Program in 2011, we conducted a systematic investigation into information provision through VMSs. We first proposed a <strong class="emphasis">traffic-condition-based (TCB) route guidance approach</strong> designed for the relatively long information-update cycles of roadside signs<sup class="citation-sup">[1]</sup>.
+        The approach was then extended into a self-regulating framework that accounts for <strong class="emphasis">practical complexities</strong>, including overlapping routes, stochastic traffic, and signalized intersections<sup class="citation-sup">[2]</sup>.
+        We further examined the <strong class="emphasis">effectiveness of VMSs</strong> that communicate traffic conditions using three colors, i.e., red, yellow, and green<sup class="citation-sup">[3]</sup>, and developed a data-driven method for <strong class="emphasis">VMS locating problems</strong>, determining where such signs should be deployed<sup class="citation-sup">[4]</sup>.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/route-guidance-overview.png" alt="Variable message sign using red, yellow, and green traffic states and a framework for evaluating effective route-splitting-rate sets" decoding="async" />
+      </figure>
+
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/traffic-condition-based.png" alt="Traffic-condition-based route guidance for a single-destination road network" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>A Traffic-Condition-Based Route Guidance Strategy for a Single Destination Road Network
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Wei Guan, Shoufeng Ma · Transportation Research Part C: Emerging Technologies · 32:89–102 · 2013
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2013.04.005" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2013)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/self-regulation.png" alt="Self-regulation traffic-condition-based route guidance with realistic considerations" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>A Self-Regulation Traffic-Condition-Based Route Guidance Strategy with Realistic Considerations: Overlapping Routes, Stochastic Traffic, and Signalized Intersections
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liang Zheng, Wei Guan, Baohua Mao · Journal of Intelligent Transportation Systems · 20(6):545–558 · 2016
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/15472450.2016.1157020" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2016SelfRegulation)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/effectiveness.png" alt="Effectiveness of graphic route information panels in alleviating traffic congestion" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Effectiveness of GRIPs in Alleviating Traffic Congestion
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Wei Guan, Wenyi Zhang · Proceedings of the Institution of Civil Engineers – Transport · 169(3):125–137 · 2016
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1680/jtran.14.00047" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2016Grips)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/sorting.png" alt="Data-based sorting algorithm for variable message sign locations in Beijing" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Data-Based Sorting Algorithm for Variable Message Sign Location: Case Study of Beijing
+          </div>
+          <div class="paper-meta">
+            Bingfeng Si, <strong>Zhengbing He</strong>, Xiaobao Yang, Ziyou Gao · Transportation Research Record: Journal of the Transportation Research Board · 2645(1):86–93 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.3141/2645-10" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexSi2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2013 = `@article{he2013traffic,
+  title = {A traffic-condition-based route guidance strategy for a single destination road network},
+  author = {He, Zhengbing and Guan, Wei and Ma, Shoufeng},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {32},
+  pages = {89--102},
+  year = {2013},
+  doi = {10.1016/j.trc.2013.04.005}
+}`;
+
+    const bibtexHe2016SelfRegulation = `@article{he2016self,
+  title = {A self-regulation traffic-condition-based route guidance strategy with realistic considerations: Overlapping routes, stochastic traffic, and signalized intersections},
+  author = {He, Zhengbing and Zheng, Liang and Guan, Wei and Mao, Baohua},
+  journal = {Journal of Intelligent Transportation Systems},
+  volume = {20},
+  number = {6},
+  pages = {545--558},
+  year = {2016},
+  doi = {10.1080/15472450.2016.1157020}
+}`;
+
+    const bibtexHe2016Grips = `@article{he2016effectiveness,
+  title = {Effectiveness of {GRIPs} in alleviating traffic congestion},
+  author = {He, Zhengbing and Guan, Wei and Zhang, Wenyi},
+  journal = {Proceedings of the Institution of Civil Engineers -- Transport},
+  volume = {169},
+  number = {3},
+  pages = {125--137},
+  year = {2016},
+  doi = {10.1680/jtran.14.00047}
+}`;
+
+    const bibtexSi2017 = `@article{si2017data,
+  title = {Data-based sorting algorithm for variable message sign location: Case study of {Beijing}},
+  author = {Si, Bingfeng and He, Zhengbing and Yang, Xiaobao and Gao, Ziyou},
+  journal = {Transportation Research Record: Journal of the Transportation Research Board},
+  volume = {2645},
+  number = {1},
+  pages = {86--93},
+  year = {2017},
+  doi = {10.3141/2645-10}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
