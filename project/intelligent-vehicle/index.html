@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Intelligent Vehicles: Operations and Control | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on intelligent vehicle operations and control, including mixed-traffic management and stabilization, cooperative driving, CAV lane-changing, perturbation propagation, V2V safety modeling, string stability, digital-twin-enabled edge computing, adaptive car-following, and hybrid platooning."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Intelligent Vehicles: Operations and Control</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        Intelligent vehicles—including connected vehicles (CVs), automated vehicles (AVs), and connected and automated vehicles (CAVs)—are increasingly becoming part of human society and everyday mobility.
+        <strong class="emphasis">How to operate and control these vehicles so that they can safely, efficiently, and harmoniously integrate into human society and existing transportation systems is therefore a critical challenge.</strong>
+        Addressing this challenge requires not only reliable control of individual vehicles, but also effective cooperation among vehicles,
+        safe interaction with human drivers, and coordinated management of mixed traffic at the traffic-stream and network levels.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/connected-vehicles-overview.png" alt="Concept map of intelligent vehicle operations and control across traffic management, cooperative maneuver planning, traffic stability, V2V safety, digital infrastructure, and adaptive longitudinal control" decoding="async" />
+      </figure>
+
+      <p>
+        To address these challenges, we have conducted a systematic program of research from the following complementary perspectives:
+      </p>
+
+      <ul class="work-list">
+        <li>
+          <strong>Mixed-Traffic Stabilization and Cooperative Control:</strong>
+          The penetration rate, spatial distribution, and information structure of connected vehicles jointly determine whether disturbances grow or dissipate in heterogeneous traffic.
+          We established a <strong class="emphasis">systematic modeling and control framework</strong> spanning unified car-following and distributed feedback control<sup class="citation-sup">[1]</sup>, local and global cooperative driving strategies<sup class="citation-sup">[2]</sup>, and generalized string-stability analysis<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          <strong>Communication-Aware Traffic Behavior and Safety:</strong>
+          V2V information introduces new pathways for disturbance propagation and new safety–efficiency trade-offs that conventional traffic models cannot fully capture.
+          We developed a <strong class="emphasis">speed-perturbation model</strong> to quantify the relative effects of communication and car-following behavior<sup class="citation-sup">[4]</sup>, together with a safety rule-based cellular automaton model incorporating bidirectional information and heterogeneous driver sensitivity<sup class="citation-sup">[5]</sup>.
+        </li>
+        <li>
+          <strong>Cooperative Maneuver Planning and Digital Infrastructure:</strong>
+          Conventional lane-changing methods often optimize only the subject vehicle, while limited on-board sensing constrains their ability to account for surrounding traffic.
+          We developed a <strong class="emphasis">multi-agent trajectory-planning method</strong> that jointly optimizes interacting vehicles<sup class="citation-sup">[6]</sup>, and a digital-twin-empowered mobile edge computing architecture that supports foresight-informed lane-changing decisions<sup class="citation-sup">[7]</sup>.
+        </li>
+        <li>
+          <strong>Adaptive Longitudinal and Platoon Control:</strong>
+          Because intelligent vehicles are randomly distributed and platoons form only temporarily, real-world controllers must adapt to changing vehicle compositions and traffic conditions.
+          We developed a <strong class="emphasis">unified adaptive car-following framework</strong> that switches between individual and platoon control<sup class="citation-sup">[8]</sup>, and a deep-reinforcement-learning strategy for dynamically organizing connected, automated, and human-driven vehicles into hybrid platoons<sup class="citation-sup">[9]</sup>.
+        </li>
+        <li>
+          <strong>Network-Level Traffic Management:</strong>
+          Although CAVs can increase road capacity, their benefits may be substantially weakened when they share the road with human-driven vehicles, making effective management of mixed traffic essential.
+          We developed a <strong class="emphasis">multiclass traffic-assignment model with elastic demand</strong> and corresponding optimal-toll algorithms to regulate access to autonomous-vehicle/toll lanes and improve network performance<sup class="citation-sup">[10]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/heterogeneous-traffic.png"
+            alt="Heterogeneous traffic mixing regular and connected vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Heterogeneous Traffic Mixing Regular and Connected Vehicles: Modeling and Stabilization
+          </div>
+          <div class="paper-meta">
+            Dong-Fan Xie, Xiao-Mei Zhao, <strong>Zhengbing He*</strong> · IEEE Transactions on Intelligent Transportation Systems · 20(6):2060–2071 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2018.2857465" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexXie2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/cooperative-driving.png"
+            alt="Cooperative driving strategies of connected vehicles for stabilizing traffic flow"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Cooperative Driving Strategies of Connected Vehicles for Stabilizing Traffic Flow
+          </div>
+          <div class="paper-meta">
+            Dong-Fan Xie, Yong-Qi Wen, Xiao-Mei Zhao, Xin-Gang Li, <strong>Zhengbing He*</strong> · Transportmetrica B: Transport Dynamics · 8(1):166–181 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/21680566.2020.1728590" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexXie2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/string-stability.png"
+            alt="String stability analysis of connected vehicular systems"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>String Stability Analysis of Connected Vehicular Systems Based on Car-Following Model
+          </div>
+          <div class="paper-meta">
+            Shuqing Li, Yanyan Qin, <strong>Zhengbing He*</strong> · Journal of Transportation Engineering, Part A: Systems · 147(8):04021038 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1061/JTEPBS.0000551" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLi2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/impact-mechanism.png"
+            alt="Communicating information and perturbation propagation in connected traffic"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Exploring the Impact Mechanism of Communicating Information on the Perturbation Propagation
+          </div>
+          <div class="paper-meta">
+            Chao Li, Xiao-Mei Zhao, Dong-Fan Xie, <strong>Zhengbing He*</strong>, Chaoru Lu · Transportmetrica A: Transport Science · 20(1):e2035013 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/23249935.2022.2035013" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLi2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/rule-based.png"
+            alt="Safety rule-based cellular automaton modeling under a V2V environment"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Safety Rule-Based Cellular Automaton Modeling and Simulation Under V2V Environment
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, Chuang Zhu, <strong>Zhengbing He*</strong>, Tian He · Transportmetrica A: Transport Science · 17(1):81–106 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/23249935.2018.1517135" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/dynamic-lane-change.png"
+            alt="Dynamic lane-changing trajectory planning for connected and automated vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Dynamic Lane Changing Trajectory Planning for CAV: A Multi-Agent Model with Path Preplanning
+          </div>
+          <div class="paper-meta">
+            Fang Zong, <strong>Zhengbing He*</strong>, Meng Zeng, Yixuan Liu · Transportmetrica B: Transport Dynamics · 10(1):266–292 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/21680566.2021.1989079" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZong2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/digital-twin.png"
+            alt="Digital-twin-empowered mobile edge computing for intelligent vehicle lane-changing"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[7]</span>Digital Twin Empowered Mobile Edge Computing for Intelligent Vehicular Lane-Changing
+          </div>
+          <div class="paper-meta">
+            Bo Fan, Yuan Wu, <strong>Zhengbing He</strong>, Yanyan Chen, Tony Q. S. Quek, Cheng-Zhong Xu · IEEE Network · 35(6):194–201 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/MNET.201.2000768" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexFan2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/platoon.png"
+            alt="Adaptive individual and platoon car-following control of connected and automated vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[8]</span>Platoon or Individual: An Adaptive Car-Following Control of Connected and Automated Vehicles
+          </div>
+          <div class="paper-meta">
+            Fang Zong, Sheng Yue, Meng Zeng, <strong>Zhengbing He</strong>, Dong Ngoduy · Chaos, Solitons &amp; Fractals · 191:115850 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.chaos.2024.115850" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZong2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/platooning.png"
+            alt="Platooning connected, autonomous, and human-driven vehicles with deep reinforcement learning"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[9]</span>Platooning Connected, Autonomous, and Human-Driven Vehicles: A Deep Reinforcement Learning-based Approach
+          </div>
+          <div class="paper-meta">
+            Zhen Qin, Dong-Fan Xie, Heng Ma, Xiaomei Zhao, <strong>Zhengbing He*</strong> · arXiv:2606.20648 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2606.20648" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexQin2026)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/toll-design.png"
+            alt="Mixed traffic flow of human-driven and connected and autonomous vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[10]</span>Optimal Toll Design Problems Under Mixed Traffic Flow of Human-Driven Vehicles and Connected and Autonomous Vehicles
+          </div>
+          <div class="paper-meta">
+            Jian Wang, Lili Lu, Srinivas Peeta, <strong>Zhengbing He</strong> · Transportation Research Part C: Emerging Technologies · 125:102952 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2020.102952" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexWang2021 = `@article{Wang2021OptimalToll,
+  author = {Wang, Jian and Lu, Lili and Peeta, Srinivas and He, Zhengbing},
+  title = {Optimal Toll Design Problems Under Mixed Traffic Flow of Human-Driven Vehicles and Connected and Autonomous Vehicles},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  year = {2021},
+  volume = {125},
+  pages = {102952},
+  doi = {10.1016/j.trc.2020.102952}
+}`;
+
+    const bibtexZong2022 = `@article{Zong2022LaneChanging,
+  author = {Zong, Fang and He, Zhengbing and Zeng, Meng and Liu, Yixuan},
+  title = {Dynamic Lane Changing Trajectory Planning for {CAV}: A Multi-Agent Model with Path Preplanning},
+  journal = {Transportmetrica B: Transport Dynamics},
+  year = {2022},
+  volume = {10},
+  number = {1},
+  pages = {266--292},
+  doi = {10.1080/21680566.2021.1989079}
+}`;
+
+    const bibtexLi2024 = `@article{Li2024PerturbationPropagation,
+  author = {Li, Chao and Zhao, Xiao-Mei and Xie, Dong-Fan and He, Zhengbing and Lu, Chaoru},
+  title = {Exploring the Impact Mechanism of Communicating Information on the Perturbation Propagation},
+  journal = {Transportmetrica A: Transport Science},
+  year = {2024},
+  volume = {20},
+  number = {1},
+  pages = {2035013},
+  doi = {10.1080/23249935.2022.2035013}
+}`;
+
+    const bibtexZheng2021 = `@article{Zheng2021SafetyRule,
+  author = {Zheng, Liang and Zhu, Chuang and He, Zhengbing and He, Tian},
+  title = {Safety Rule-Based Cellular Automaton Modeling and Simulation Under V2V Environment},
+  journal = {Transportmetrica A: Transport Science},
+  year = {2021},
+  volume = {17},
+  number = {1},
+  pages = {81--106},
+  doi = {10.1080/23249935.2018.1517135}
+}`;
+
+    const bibtexFan2021 = `@article{Fan2021DigitalTwin,
+  author = {Fan, Bo and Wu, Yuan and He, Zhengbing and Chen, Yanyan and Quek, Tony Q. S. and Xu, Cheng-Zhong},
+  title = {Digital Twin Empowered Mobile Edge Computing for Intelligent Vehicular Lane-Changing},
+  journal = {IEEE Network},
+  year = {2021},
+  volume = {35},
+  number = {6},
+  pages = {194--201},
+  doi = {10.1109/MNET.201.2000768}
+}`;
+
+    const bibtexZong2025 = `@article{Zong2025AdaptiveCarFollowing,
+  author = {Zong, Fang and Yue, Sheng and Zeng, Meng and He, Zhengbing and Ngoduy, Dong},
+  title = {Platoon or Individual: An Adaptive Car-Following Control of Connected and Automated Vehicles},
+  journal = {Chaos, Solitons \& Fractals},
+  year = {2025},
+  volume = {191},
+  pages = {115850},
+  doi = {10.1016/j.chaos.2024.115850}
+}`;
+
+    const bibtexXie2019 = `@article{xie2019heterogeneous,
+  title = {Heterogeneous traffic mixing regular and connected vehicles: Modeling and stabilization},
+  author = {Xie, Dong-Fan and Zhao, Xiao-Mei and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {20},
+  number = {6},
+  pages = {2060--2071},
+  year = {2019},
+  doi = {10.1109/TITS.2018.2857465}
+}`;
+
+    const bibtexXie2020 = `@article{xie2020cooperative,
+  title = {Cooperative driving strategies of connected vehicles for stabilizing traffic flow},
+  author = {Xie, Dong-Fan and Wen, Yong-Qi and Zhao, Xiao-Mei and Li, Xin-Gang and He, Zhengbing},
+  journal = {Transportmetrica B: Transport Dynamics},
+  volume = {8},
+  number = {1},
+  pages = {166--181},
+  year = {2020},
+  doi = {10.1080/21680566.2020.1728590}
+}`;
+
+    const bibtexLi2021 = `@article{li2021string,
+  title = {String stability analysis of connected vehicular systems based on car-following model},
+  author = {Li, Shuqing and Qin, Yanyan and He, Zhengbing},
+  journal = {Journal of Transportation Engineering, Part A: Systems},
+  volume = {147},
+  number = {8},
+  pages = {04021038},
+  year = {2021},
+  doi = {10.1061/JTEPBS.0000551}
+}`;
+
+    const bibtexQin2026 = `@misc{qin2026platooning,
+  title = {Platooning Connected, Autonomous, and Human-Driven Vehicles: A Deep Reinforcement Learning-based Approach},
+  author = {Qin, Zhen and Xie, Dong-Fan and Ma, Heng and Zhao, Xiaomei and He, Zhengbing},
+  year = {2026},
+  eprint = {2606.20648},
+  archivePrefix = {arXiv},
+  primaryClass = {eess.SY},
+  doi = {10.48550/arXiv.2606.20648},
+  url = {https://arxiv.org/abs/2606.20648}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
