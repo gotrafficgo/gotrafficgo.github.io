@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI-Powered Motion Forecasting for Autonomous Driving | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on AI-powered motion forecasting for autonomous driving, spanning graph attention, LLM reasoning, and world models for complex scenarios."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .overview-highlight img { aspect-ratio: 20 / 9; object-fit: cover; }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>AI-Powered Motion Forecasting for Autonomous Driving</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Accurate motion prediction</strong> is essential for safe and reliable autonomous driving, especially at <strong class="emphasis">intersections</strong>, where vehicles, cyclists, pedestrians, traffic signals, and road geometry create dense, highly interactive, and uncertain conflict patterns. Anticipating the future paths of multiple traffic agents allows an autonomous vehicle to achieve <strong class="emphasis">early conflict detection</strong>, plan safe and smooth maneuvers, and remain robust in <strong class="emphasis">rare, safety-critical corner cases</strong> that are often underrepresented in training data.
+      </p>
+      <p>
+        Our studies develop increasingly <strong class="emphasis">context-aware motion forecasting</strong> methods for autonomous driving, with intersection conflict as an important—though not exclusive—application. <strong class="emphasis">Gatformer</strong> represents a traffic scene as a sparse graph and combines spatial encoding, <strong class="emphasis">graph attention</strong>, and a Transformer to capture agent–agent and agent–infrastructure interactions and predict multiple trajectories simultaneously<sup class="citation-sup">[1]</sup>. <strong class="emphasis">CoT-Drive</strong> uses <strong class="emphasis">LLMs and chain-of-thought prompting</strong> to generate semantic scene annotations, then distills this knowledge into lightweight language models for real-time forecasting across highways, urban roads, and complex intersections<sup class="citation-sup">[2]</sup>. <strong class="emphasis">WM-MoE</strong> targets rare corner cases through a <strong class="emphasis">world model</strong> that unifies perception, temporal memory, and counterfactual decision-making, together with a <strong class="emphasis">mixture of experts</strong> that specializes prediction across different interaction regimes<sup class="citation-sup">[3]</sup>.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/motion-forecasting-overview.png" alt="AI-powered motion forecasting across intersections, highways, and roundabouts" decoding="async" />
+      </figure>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/trajectory-prediction.png"
+            alt="Trajectory prediction for autonomous driving"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Trajectory Prediction for Autonomous Driving Using Spatial-Temporal Graph Attention Transformer
+          </div>
+          <div class="paper-meta">
+            Kunpeng Zhang, Xiaoliang Feng, Lan Wu, <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 23(11):22343–22353 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2022.3164450" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/cot-drive.png"
+            alt="CoT-Drive motion forecasting with LLMs and chain-of-thought prompting"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>CoT-Drive: Efficient Motion Forecasting for Autonomous Driving With LLMs and Chain-of-Thought Prompting
+          </div>
+          <div class="paper-meta">
+            Haicheng Liao, Hanlin Kong, Bonan Wang, Chengyue Wang, Kanye Ye Wang, <strong>Zhengbing He</strong>, Chengzhong Xu, Zhenning Li · IEEE Transactions on Artificial Intelligence · 7(2):625–641 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TAI.2025.3564594" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiao2026CotDrive)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/addressing.png"
+            alt="World model approach to autonomous driving corner cases"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Addressing corner cases in autonomous driving: A world model-based approach with mixture of experts and LLMs
+          </div>
+          <div class="paper-meta">
+            Haicheng Liao, Bonan Wang, Junxian Yang, Chengyue Wang, <strong>Zhengbing He</strong>, Guohui Zhang, Chengzhong Xu, Zhenning Li · Transportation Research Part C: Emerging Technologies · 183:105456 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2025.105456" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiao2026CornerCases)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexZhang2022 = `@article{zhang2022trajectory,
+  title = {Trajectory prediction for autonomous driving using spatial-temporal graph attention transformer},
+  author = {Zhang, Kunpeng and Feng, Xiaoliang and Wu, Lan and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {23},
+  number = {11},
+  pages = {22343--22353},
+  year = {2022},
+  doi = {10.1109/TITS.2022.3164450}
+}`;
+
+    const bibtexLiao2026CotDrive = `@article{liao2026cotdrive,
+  title = {{CoT-Drive}: Efficient motion forecasting for autonomous driving with {LLM}s and chain-of-thought prompting},
+  author = {Liao, Haicheng and Kong, Hanlin and Wang, Bonan and Wang, Chengyue and Wang, Kanye Ye and He, Zhengbing and Xu, Chengzhong and Li, Zhenning},
+  journal = {IEEE Transactions on Artificial Intelligence},
+  volume = {7},
+  number = {2},
+  pages = {625--641},
+  year = {2026},
+  doi = {10.1109/TAI.2025.3564594}
+}`;
+
+    const bibtexLiao2026CornerCases = `@article{liao2026addressing,
+  title = {Addressing corner cases in autonomous driving: A world model-based approach with mixture of experts and {LLM}s},
+  author = {Liao, Haicheng and Wang, Bonan and Yang, Junxian and Wang, Chengyue and He, Zhengbing and Zhang, Guohui and Xu, Chengzhong and Li, Zhenning},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {183},
+  pages = {105456},
+  year = {2026},
+  doi = {10.1016/j.trc.2025.105456}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
