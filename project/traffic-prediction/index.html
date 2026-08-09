@@ -94,7 +94,10 @@
           Station-level bike-sharing demand reflects <strong class="emphasis">complex and heterogeneous relationships among stations</strong> that predefined spatial structures cannot fully represent. We developed a <strong class="emphasis">graph convolutional neural network with a data-driven graph filter</strong> to learn hidden pairwise correlations and temporal dependencies, outperforming benchmark models on a large-scale New York City bike-sharing dataset<sup class="citation-sup">[5]</sup>.
         </li>
         <li>
-          Large-scale road speed prediction must capture network-wide spatial and temporal dependencies, but traditional approaches often treat traffic speeds as simple sequences and struggle with complex network topology. We transformed traffic states into <strong class="emphasis">two-dimensional time-space images</strong> and developed a <strong class="emphasis">deep convolutional neural network</strong> for feature extraction and network-wide speed prediction, substantially outperforming conventional and deep-learning benchmarks<sup class="citation-sup">[6]</sup>.
+          Dynamic travel-time forecasting on urban expressways is difficult because traffic states are nonlinear and nonstationary, while simple one-dimensional or nearest-neighbor approaches cannot fully represent high-dimensional spatiotemporal evolution. We proposed a <strong class="emphasis">probe data-driven pattern-matching method</strong> that extracts features from speed contour plots, matches current conditions to historical <strong class="emphasis">spatiotemporal traffic patterns</strong>, and produces robust multi-step travel-time forecasts<sup class="citation-sup">[6]</sup>.
+        </li>
+        <li>
+          Large-scale road speed prediction must capture network-wide spatial and temporal dependencies, but traditional approaches often treat traffic speeds as simple sequences and struggle with complex network topology. We transformed traffic states into <strong class="emphasis">two-dimensional time-space images</strong> and developed a <strong class="emphasis">deep convolutional neural network</strong> for feature extraction and network-wide speed prediction, substantially outperforming conventional and deep-learning benchmarks<sup class="citation-sup">[7]</sup>.
         </li>
       </ul>
     </section>
@@ -220,6 +223,29 @@
       <div class="paper featured-paper">
         <figure>
           <img
+            src="images/probe.png"
+            alt="Probe data-driven travel time forecasting using similar spatiotemporal traffic patterns"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Probe Data-Driven Travel Time Forecasting for Urban Expressways by Matching Similar Spatiotemporal Traffic Patterns
+          </div>
+          <div class="paper-meta">
+            Zhihao Zhang, Yunpeng Wang, Peng Chen, <strong>Zhengbing He</strong>, Guizhen Yu · Transportation Research Part C: Emerging Technologies · 85:476–493 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2017.10.010" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2017Probe)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
             src="images/learning-traffic.png"
             alt="Deep convolutional neural network for large-scale transportation network speed prediction"
             loading="lazy"
@@ -228,7 +254,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[6]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
+            <span class="paper-index">[7]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
           </div>
           <div class="paper-meta">
             Xiaolei Ma, Zhuang Dai, <strong>Zhengbing He</strong>, Jihui Ma, Yong Wang, Yunpeng Wang · Sensors · 17(4):818 · 2017
@@ -298,6 +324,16 @@
   pages = {258--276},
   year = {2018},
   doi = {10.1016/j.trc.2018.10.011}
+}`;
+
+    const bibtexZhang2017Probe = `@article{zhang2017probe,
+  title = {Probe data-driven travel time forecasting for urban expressways by matching similar spatiotemporal traffic patterns},
+  author = {Zhang, Zhihao and Wang, Yunpeng and Chen, Peng and He, Zhengbing and Yu, Guizhen},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {85},
+  pages = {476--493},
+  year = {2017},
+  doi = {10.1016/j.trc.2017.10.010}
 }`;
 
     const bibtexMa2017 = `@article{ma2017learning,
