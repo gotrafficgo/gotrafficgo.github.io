@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mobility Prediction: Traffic States, Travel Times, and Demand | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on mobility prediction, spanning traffic states, travel times, and demand across road networks, shared mobility, and multimodal transportation hubs."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Mobility Prediction: Traffic States, Travel Times, and Demand</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Mobility prediction</strong> uses historical and real-time data to estimate <strong class="emphasis">future traffic states, travel times, and travel demand</strong> across transportation systems. Accurate predictions help agencies anticipate congestion, allocate resources, operate mobility services, and provide reliable traveler information, while their quality depends on <strong class="emphasis">data completeness, feature design, and spatiotemporal modeling</strong>.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/prediction-overview.png" alt="Overview of mobility prediction for traffic states, travel times, and demand" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies advance mobility prediction across <strong class="emphasis">data preparation, feature selection, deep learning architectures, and applications from road networks to multimodal transportation systems</strong>:
+      </p>
+      <ul class="work-list">
+        <li>
+          Accurate <strong class="emphasis">mode-specific passenger flow prediction</strong> is essential for coordinating large transportation hubs, yet conventional methods often aggregate total passenger volume and overlook dependencies among access modes. We proposed <strong class="emphasis">MM-STFlowNet</strong>, which integrates temporal signal processing, spatial-temporal dynamic graph modeling, channel attention, and external factors to deliver state-of-the-art performance, particularly during peak periods<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          The growing scale of interregional travel creates demand for <strong class="emphasis">large-scale collaborative traffic forecasting</strong>, but existing deep models are often computationally expensive and not designed for state-level networks. We developed the <strong class="emphasis">Spatiotemporal Fusion Transformer</strong> with seasonality encoding, tubelet embedding, and graph-informed token permutation, improving forecasting accuracy while achieving up to a 4.46× speedup<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Vehicle trajectories provide network-wide travel-time information, but <strong class="emphasis">sparse and low-resolution trajectory data</strong> leave many road links without sufficient observations. We developed <strong class="emphasis">TTI-GAN</strong> to exploit network-wide spatiotemporal correlations and travel-time distributions, enabling accurate imputation under different missing-data rates<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Although forecasting algorithms have been widely studied, <strong class="emphasis">selecting the right input features</strong> for a specific short-term traffic forecasting task remains underexplored and can strongly affect accuracy. We proposed a <strong class="emphasis">cohesion-based heuristic feature selection method</strong> that serves as a preprocessing step and improves the performance of multiple forecasting algorithms on empirical traffic data<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          Station-level bike-sharing demand reflects <strong class="emphasis">complex and heterogeneous relationships among stations</strong> that predefined spatial structures cannot fully represent. We developed a <strong class="emphasis">graph convolutional neural network with a data-driven graph filter</strong> to learn hidden pairwise correlations and temporal dependencies, outperforming benchmark models on a large-scale New York City bike-sharing dataset<sup class="citation-sup">[5]</sup>.
+        </li>
+        <li>
+          Large-scale road speed prediction must capture network-wide spatial and temporal dependencies, but traditional approaches often treat traffic speeds as simple sequences and struggle with complex network topology. We transformed traffic states into <strong class="emphasis">two-dimensional time-space images</strong> and developed a <strong class="emphasis">deep convolutional neural network</strong> for feature extraction and network-wide speed prediction, substantially outperforming conventional and deep-learning benchmarks<sup class="citation-sup">[6]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/MM-STFlowNet.png"
+            alt="MM-STFlowNet multi-mode passenger flow prediction"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling
+          </div>
+          <div class="paper-meta">
+            Ronghui Zhang, Wenbin Xing, Mengran Li, Zihan Wang, Junzhou Chen, Xiaolei Ma, Zhiyuan Liu, <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 26(11):20450–20463 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2025.3588867" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/spatiotemporal-fusion.png"
+            alt="Spatiotemporal Fusion Transformer for large-scale traffic forecasting"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Spatiotemporal Fusion Transformer for Large-Scale Traffic Forecasting
+          </div>
+          <div class="paper-meta">
+            Zhenghong Wang, Yi Wang, Furong Jia, Fan Zhang, Nikita Klimenko, Leye Wang, <strong>Zhengbing He</strong>, Zhou Huang, Yu Liu · Information Fusion · 107:102293 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.inffus.2024.102293" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/generative-adversarial-network.png"
+            alt="Generative adversarial network for travel time imputation"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>A Generative Adversarial Network for Travel Times Imputation Using Trajectory Data
+          </div>
+          <div class="paper-meta">
+            Kunpeng Zhang, <strong>Zhengbing He</strong>, Liang Zheng, Liang Zhao, Lan Wu · Computer-Aided Civil and Infrastructure Engineering · 36(2):197–212 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1111/mice.12595" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/cohesion-based.png"
+            alt="Cohesion-based heuristic feature selection for traffic forecasting"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>A Cohesion-Based Heuristic Feature Selection for Short-Term Traffic Forecasting
+          </div>
+          <div class="paper-meta">
+            Lishan Liu, Ning Jia, Lei Lin, <strong>Zhengbing He</strong> · IEEE Access · 7:3383–3389 · 2019
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/ACCESS.2018.2889814" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiu2019)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/predicting-station.png"
+            alt="Graph convolutional neural network for bike-sharing demand prediction"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Predicting Station-Level Hourly Demand in a Large-Scale Bike-Sharing Network: A Graph Convolutional Neural Network Approach
+          </div>
+          <div class="paper-meta">
+            Lei Lin, <strong>Zhengbing He</strong>, Srinivas Peeta · Transportation Research Part C: Emerging Technologies · 97:258–276 · 2018
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2018.10.011" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLin2018)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/learning-traffic.png"
+            alt="Deep convolutional neural network for large-scale transportation network speed prediction"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
+          </div>
+          <div class="paper-meta">
+            Xiaolei Ma, Zhuang Dai, <strong>Zhengbing He</strong>, Jihui Ma, Yong Wang, Yunpeng Wang · Sensors · 17(4):818 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.3390/s17040818" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexMa2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexZhang2025 = `@article{zhang2025mmstflownet,
+  title = {{MM-STFlowNet}: A transportation hub-oriented multi-mode passenger flow prediction method via spatial-temporal dynamic graph modeling},
+  author = {Zhang, Ronghui and Xing, Wenbin and Li, Mengran and Wang, Zihan and Chen, Junzhou and Ma, Xiaolei and Liu, Zhiyuan and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {26},
+  number = {11},
+  pages = {20450--20463},
+  year = {2025},
+  doi = {10.1109/TITS.2025.3588867}
+}`;
+
+    const bibtexWang2024 = `@article{wang2024spatiotemporal,
+  title = {Spatiotemporal Fusion Transformer for large-scale traffic forecasting},
+  author = {Wang, Zhenghong and Wang, Yi and Jia, Furong and Zhang, Fan and Klimenko, Nikita and Wang, Leye and He, Zhengbing and Huang, Zhou and Liu, Yu},
+  journal = {Information Fusion},
+  volume = {107},
+  pages = {102293},
+  year = {2024},
+  doi = {10.1016/j.inffus.2024.102293}
+}`;
+
+    const bibtexZhang2021 = `@article{zhang2021generative,
+  title = {A generative adversarial network for travel times imputation using trajectory data},
+  author = {Zhang, Kunpeng and He, Zhengbing and Zheng, Liang and Zhao, Liang and Wu, Lan},
+  journal = {Computer-Aided Civil and Infrastructure Engineering},
+  volume = {36},
+  number = {2},
+  pages = {197--212},
+  year = {2021},
+  doi = {10.1111/mice.12595}
+}`;
+
+    const bibtexLiu2019 = `@article{liu2019cohesion,
+  title = {A cohesion-based heuristic feature selection for short-term traffic forecasting},
+  author = {Liu, Lishan and Jia, Ning and Lin, Lei and He, Zhengbing},
+  journal = {IEEE Access},
+  volume = {7},
+  pages = {3383--3389},
+  year = {2019},
+  doi = {10.1109/ACCESS.2018.2889814}
+}`;
+
+    const bibtexLin2018 = `@article{lin2018predicting,
+  title = {Predicting station-level hourly demand in a large-scale bike-sharing network: A graph convolutional neural network approach},
+  author = {Lin, Lei and He, Zhengbing and Peeta, Srinivas},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {97},
+  pages = {258--276},
+  year = {2018},
+  doi = {10.1016/j.trc.2018.10.011}
+}`;
+
+    const bibtexMa2017 = `@article{ma2017learning,
+  title = {Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction},
+  author = {Ma, Xiaolei and Dai, Zhuang and He, Zhengbing and Ma, Jihui and Wang, Yong and Wang, Yunpeng},
+  journal = {Sensors},
+  volume = {17},
+  number = {4},
+  pages = {818},
+  year = {2017},
+  doi = {10.3390/s17040818}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

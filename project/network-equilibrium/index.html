@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Network Equilibrium: Models, Behavior, and Applications | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on network equilibrium models, traveler behavior, and applications across road, multimodal, and urban rail transportation systems."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Network Equilibrium: Models, Behavior, and Applications</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Network equilibrium</strong> describes a state in which <strong class="emphasis">travelers’ choices and network conditions are mutually consistent</strong>. Travelers choose <strong class="emphasis">routes, departure times, or modes</strong> based on the costs they perceive, while their collective choices determine congestion, travel times, and service conditions. Network equilibrium provides a fundamental framework for predicting traffic patterns, understanding traveler behavior, and evaluating transportation policies and system designs.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/network-overview.png" alt="Overview of network equilibrium models, traveler behavior, and transportation applications" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies extend network equilibrium models to capture <strong class="emphasis">traffic dynamics, uncertainty, heterogeneous behavior, multimodal choice, and transit operations</strong>:
+      </p>
+      <ul class="work-list">
+        <li>
+          Conventional multimodal equilibrium models often overlook <strong class="emphasis">captive travelers</strong> and the <strong class="emphasis">correlations among modes and overlapping routes</strong>, potentially biasing network predictions and policy evaluation. We developed a <strong class="emphasis">multimodal network equilibrium model</strong> that combines hybrid dogit–nested logit mode choice with path-size logit route choice, formulated it as an equivalent mathematical program with a unique solution, and developed a partial-linearization algorithm<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Existing simulation and dynamic assignment methods have difficulty accurately estimating the <strong class="emphasis">spatial and temporal distribution of passengers</strong> while respecting actual train schedules and transfer feasibility. We constructed a <strong class="emphasis">train operation diagram–based equilibrium model</strong> that incorporates travel and transfer times, in-train and station congestion, and explicit transfer constraints, and demonstrated it on the Beijing urban rail network<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          <strong class="emphasis">Aggregate MFD models</strong> reduce the complexity of city-scale traffic analysis, but conventional formulations struggle to represent fast-changing demand, state-dependent travel times, and simultaneous route and departure-time choices. We formulated a <strong class="emphasis">dynamic user equilibrium model for multi-region MFD systems</strong> with endogenous time-varying delays and state and inflow constraints, deriving equilibrium conditions without linearizing the delays or assuming constant travel times<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Classical user equilibrium assumes <strong class="emphasis">complete path information</strong>, while conventional stochastic models do not explicitly represent heterogeneity in travelers’ limited choice sets. We developed an <strong class="emphasis">N-path logit-based stochastic user equilibrium model</strong> that captures perceptual errors and heterogeneous path-set sizes, and showed how appropriately limited guidance information can benefit both travelers and network performance<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          Conventional <strong class="emphasis">stochastic user equilibrium</strong> does not directly describe selfish routing when travelers know the objective probability distributions of uncertain route travel times. We proposed a <strong class="emphasis">probability-dominant user equilibrium</strong> that assigns demand only to the most dominant routes, together with a behavioral rerouting dynamic and a tractable logit-based formulation<sup class="citation-sup">[5]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/multi-modal-network.png"
+            alt="Multi-modal network equilibrium considering captive travelers and mode correlation"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>A Multi-Modal Network Equilibrium Model Considering Captive Travelers and Mode Correlation
+          </div>
+          <div class="paper-meta">
+            Guangchao Wang, Defeng Song, Hang Qi, Juanhua Zhou, <strong>Zhengbing He</strong> · Transportation · 52(5):1793–1826 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1007/s11116-024-10475-8" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/train-operation.png"
+            alt="Train operation diagram-based equilibrium for an urban rail transit network"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Train Operation Diagram–Based Equilibrium Model for an Urban Rail Transit Network with Transfer Constraints
+          </div>
+          <div class="paper-meta">
+            Bingfeng Si, <strong>Zhengbing He</strong>, Di Liu, Xiaobao Yang, Ziyou Gao · Journal of Transportation Engineering, Part A: Systems · 146(11):04020126 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1061/JTEPBS.0000444" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexSi2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/dynamic-user-equilibrium.png"
+            alt="Dynamic user equilibrium for multi-region macroscopic fundamental diagram systems"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>A Dynamic User Equilibrium Model for Multi-Region Macroscopic Fundamental Diagram Systems with Time-Varying Delays
+          </div>
+          <div class="paper-meta">
+            Yunping Huang, Jianhui Xiong, Agachai Sumalee, Nan Zheng, William H. K. Lam, <strong>Zhengbing He</strong>, Renxin Zhong · Transportation Research Part B: Methodological · 131:1–25 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trb.2019.11.002" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHuang2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/n-path.png"
+            alt="N-path logit-based stochastic user equilibrium model"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>An N-Path Logit-Based Stochastic User Equilibrium Model
+          </div>
+          <div class="paper-meta">
+            Jianmei Liu, <strong>Zhengbing He</strong>, Shuaiqi Ma · IEEE Access · 6:20971–20986 · 2018
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/ACCESS.2018.2827071" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiu2018)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/selfish-routing.png"
+            alt="Probability-dominant selfish routing equilibrium in a stochastic traffic network"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Selfish Routing Equilibrium in Stochastic Traffic Network: A Probability-Dominant Description
+          </div>
+          <div class="paper-meta">
+            Wenyi Zhang, <strong>Zhengbing He</strong>, Wei Guan, Rui Ma · PLOS ONE · 12(8):e0183135 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1371/journal.pone.0183135" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2017)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHuang2020 = `@article{huang2020dynamic,
+  title = {A dynamic user equilibrium model for multi-region macroscopic fundamental diagram systems with time-varying delays},
+  author = {Huang, Yunping and Xiong, Jianhui and Sumalee, Agachai and Zheng, Nan and Lam, William H. K. and He, Zhengbing and Zhong, Renxin},
+  journal = {Transportation Research Part B: Methodological},
+  volume = {131},
+  pages = {1--25},
+  year = {2020},
+  doi = {10.1016/j.trb.2019.11.002}
+}`;
+
+    const bibtexWang2025 = `@article{wang2025multimodal,
+  title = {A multi-modal network equilibrium model considering captive travelers and mode correlation},
+  author = {Wang, Guangchao and Song, Defeng and Qi, Hang and Zhou, Juanhua and He, Zhengbing},
+  journal = {Transportation},
+  volume = {52},
+  number = {5},
+  pages = {1793--1826},
+  year = {2025},
+  doi = {10.1007/s11116-024-10475-8}
+}`;
+
+    const bibtexZhang2017 = `@article{zhang2017selfish,
+  title = {Selfish routing equilibrium in stochastic traffic network: A probability-dominant description},
+  author = {Zhang, Wenyi and He, Zhengbing and Guan, Wei and Ma, Rui},
+  journal = {PLOS ONE},
+  volume = {12},
+  number = {8},
+  pages = {e0183135},
+  year = {2017},
+  doi = {10.1371/journal.pone.0183135}
+}`;
+
+    const bibtexLiu2018 = `@article{liu2018npath,
+  title = {An N-path logit-based stochastic user equilibrium model},
+  author = {Liu, Jianmei and He, Zhengbing and Ma, Shuaiqi},
+  journal = {IEEE Access},
+  volume = {6},
+  pages = {20971--20986},
+  year = {2018},
+  doi = {10.1109/ACCESS.2018.2827071}
+}`;
+
+    const bibtexSi2020 = `@article{si2020train,
+  title = {Train operation diagram-based equilibrium model for an urban rail transit network with transfer constraints},
+  author = {Si, Bingfeng and He, Zhengbing and Liu, Di and Yang, Xiaobao and Gao, Ziyou},
+  journal = {Journal of Transportation Engineering, Part A: Systems},
+  volume = {146},
+  number = {11},
+  pages = {04020126},
+  year = {2020},
+  doi = {10.1061/JTEPBS.0000444}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
