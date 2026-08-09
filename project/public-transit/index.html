@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Public Transit: Planning and Operations | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on public transit planning and operations, spanning multimodal transfers and community shuttle network, timetable, and demand-responsive service optimization."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Public Transit: Planning and Operations</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Public transit</strong> connects travelers to jobs, services, and urban opportunities through coordinated rail and bus systems. Effective transit depends on understanding <strong class="emphasis">passenger demand and multimodal transfers</strong> while designing reliable <strong class="emphasis">routes, timetables, and demand-responsive services</strong>.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/public-transit-overview.png" alt="Overview of public transit planning and operations" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies advance public transit through <strong class="emphasis">multimodal data integration and community shuttle network design, timetabling, and demand-responsive operations</strong>:
+      </p>
+      <ul class="work-list">
+        <li>
+          Privacy-preserving anonymization makes it difficult to connect the same traveler across separate modal datasets and reconstruct complete multimodal journeys. We developed <strong class="emphasis">TBLink</strong>, which formulates cross-mode user identification as a <strong class="emphasis">stable matching problem</strong> using repeated spatiotemporal transfer signatures in metro and bus data<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Large communities need efficient last-mile links to metro stations, but conventional shuttle layouts often rely on coarse assumptions and subjective design. We formulated a joint <strong class="emphasis">route-network and service-frequency optimization</strong> model and developed an <strong class="emphasis">adaptive-operator-selection genetic algorithm</strong> to minimize user and operator costs<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Fixed community shuttle services can provide poor service during nonpeak periods when demand is dispersed and uncertain. We formulated a <strong class="emphasis">demand-responsive routing and departure-time optimization</strong> model and designed tabu-search and variable-neighborhood-search algorithms to jointly reduce operating and passenger in-vehicle costs<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Community shuttles must synchronize with metro services while respecting vehicle capacity and fleet limits. We formulated a <strong class="emphasis">synchronized timetable optimization</strong> problem and developed the tailored <strong class="emphasis">FW-SDT algorithm</strong>, which outperformed a genetic algorithm in accuracy and efficiency<sup class="citation-sup">[4]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/identifying.png"
+            alt="Identifying users transferring between transportation modes"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Identifying Users Transferring Between Transportation Modes: A Stable Matching Approach
+          </div>
+          <div class="paper-meta">
+            Hongtai Yang, Zheng Liu, Daniel Kondor, Ke Han, <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 26(4):4432–4442 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2025.3536632" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexYang2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/optimal-design.png"
+            alt="Optimal design of community shuttles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Optimal Design of Community Shuttles With an Adaptive-Operator-Selection-Based Genetic Algorithm
+          </div>
+          <div class="paper-meta">
+            Jie Xiong, Biao Chen, <strong>Zhengbing He</strong>, Wei Guan, Yanyan Chen · Transportation Research Part C: Emerging Technologies · 126:103109 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2021.103109" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexXiong2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/demand-responsive.png"
+            alt="Demand-responsive community shuttle route and departure-time optimization"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Demand Responsive Service-Based Optimization on Flexible Routes and Departure Time of Community Shuttles
+          </div>
+          <div class="paper-meta">
+            Jie Xiong, Biao Chen, Xiangnan Li, <strong>Zhengbing He</strong>, Yanyan Chen · Sustainability · 12(3):897 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.3390/su12030897" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexXiong2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/optimal-timetable.png"
+            alt="Optimal timetable development for community shuttles and metro stations"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Optimal Timetable Development for Community Shuttle Network With Metro Stations
+          </div>
+          <div class="paper-meta">
+            Jie Xiong, <strong>Zhengbing He</strong>, Wei Guan, Bin Ran · Transportation Research Part C: Emerging Technologies · 60:540–565 · 2015
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2015.10.007" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexXiong2015)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexYang2025 = `@article{yang2025identifying,
+  title = {Identifying users transferring between transportation modes: A stable matching approach},
+  author = {Yang, Hongtai and Liu, Zheng and Kondor, Daniel and Han, Ke and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {26},
+  number = {4},
+  pages = {4432--4442},
+  year = {2025},
+  doi = {10.1109/TITS.2025.3536632}
+}`;
+
+    const bibtexXiong2021 = `@article{xiong2021optimal,
+  title = {Optimal design of community shuttles with an adaptive-operator-selection-based genetic algorithm},
+  author = {Xiong, Jie and Chen, Biao and He, Zhengbing and Guan, Wei and Chen, Yanyan},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {126},
+  pages = {103109},
+  year = {2021},
+  doi = {10.1016/j.trc.2021.103109}
+}`;
+
+    const bibtexXiong2020 = `@article{xiong2020demand,
+  title = {Demand responsive service-based optimization on flexible routes and departure time of community shuttles},
+  author = {Xiong, Jie and Chen, Biao and Li, Xiangnan and He, Zhengbing and Chen, Yanyan},
+  journal = {Sustainability},
+  volume = {12},
+  number = {3},
+  pages = {897},
+  year = {2020},
+  doi = {10.3390/su12030897}
+}`;
+
+    const bibtexXiong2015 = `@article{xiong2015optimal,
+  title = {Optimal timetable development for community shuttle network with metro stations},
+  author = {Xiong, Jie and He, Zhengbing and Guan, Wei and Ran, Bin},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {60},
+  pages = {540--565},
+  year = {2015},
+  doi = {10.1016/j.trc.2015.10.007}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

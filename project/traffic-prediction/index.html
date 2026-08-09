@@ -85,19 +85,22 @@
           The growing scale of interregional travel creates demand for <strong class="emphasis">large-scale collaborative traffic forecasting</strong>, but existing deep models are often computationally expensive and not designed for state-level networks. We developed the <strong class="emphasis">Spatiotemporal Fusion Transformer</strong> with seasonality encoding, tubelet embedding, and graph-informed token permutation, improving forecasting accuracy while achieving up to a 4.46× speedup<sup class="citation-sup">[2]</sup>.
         </li>
         <li>
-          Vehicle trajectories provide network-wide travel-time information, but <strong class="emphasis">sparse and low-resolution trajectory data</strong> leave many road links without sufficient observations. We developed <strong class="emphasis">TTI-GAN</strong> to exploit network-wide spatiotemporal correlations and travel-time distributions, enabling accurate imputation under different missing-data rates<sup class="citation-sup">[3]</sup>.
+          Real-time urban rail OD prediction is challenging because OD matrices are delayed, high-dimensional, and sparse. We proposed <strong class="emphasis">CAS-CNN</strong>, combining split convolution, channel-wise attention, inflow/outflow gating, and masked loss to improve <strong class="emphasis">short-term OD demand prediction</strong> on large-scale metro networks<sup class="citation-sup">[3]</sup>.
         </li>
         <li>
-          Although forecasting algorithms have been widely studied, <strong class="emphasis">selecting the right input features</strong> for a specific short-term traffic forecasting task remains underexplored and can strongly affect accuracy. We proposed a <strong class="emphasis">cohesion-based heuristic feature selection method</strong> that serves as a preprocessing step and improves the performance of multiple forecasting algorithms on empirical traffic data<sup class="citation-sup">[4]</sup>.
+          Vehicle trajectories provide network-wide travel-time information, but <strong class="emphasis">sparse and low-resolution trajectory data</strong> leave many road links without sufficient observations. We developed <strong class="emphasis">TTI-GAN</strong> to exploit network-wide spatiotemporal correlations and travel-time distributions, enabling accurate imputation under different missing-data rates<sup class="citation-sup">[4]</sup>.
         </li>
         <li>
-          Station-level bike-sharing demand reflects <strong class="emphasis">complex and heterogeneous relationships among stations</strong> that predefined spatial structures cannot fully represent. We developed a <strong class="emphasis">graph convolutional neural network with a data-driven graph filter</strong> to learn hidden pairwise correlations and temporal dependencies, outperforming benchmark models on a large-scale New York City bike-sharing dataset<sup class="citation-sup">[5]</sup>.
+          Although forecasting algorithms have been widely studied, <strong class="emphasis">selecting the right input features</strong> for a specific short-term traffic forecasting task remains underexplored and can strongly affect accuracy. We proposed a <strong class="emphasis">cohesion-based heuristic feature selection method</strong> that serves as a preprocessing step and improves the performance of multiple forecasting algorithms on empirical traffic data<sup class="citation-sup">[5]</sup>.
         </li>
         <li>
-          Dynamic travel-time forecasting on urban expressways is difficult because traffic states are nonlinear and nonstationary, while simple one-dimensional or nearest-neighbor approaches cannot fully represent high-dimensional spatiotemporal evolution. We proposed a <strong class="emphasis">probe data-driven pattern-matching method</strong> that extracts features from speed contour plots, matches current conditions to historical <strong class="emphasis">spatiotemporal traffic patterns</strong>, and produces robust multi-step travel-time forecasts<sup class="citation-sup">[6]</sup>.
+          Station-level bike-sharing demand reflects <strong class="emphasis">complex and heterogeneous relationships among stations</strong> that predefined spatial structures cannot fully represent. We developed a <strong class="emphasis">graph convolutional neural network with a data-driven graph filter</strong> to learn hidden pairwise correlations and temporal dependencies, outperforming benchmark models on a large-scale New York City bike-sharing dataset<sup class="citation-sup">[6]</sup>.
         </li>
         <li>
-          Large-scale road speed prediction must capture network-wide spatial and temporal dependencies, but traditional approaches often treat traffic speeds as simple sequences and struggle with complex network topology. We transformed traffic states into <strong class="emphasis">two-dimensional time-space images</strong> and developed a <strong class="emphasis">deep convolutional neural network</strong> for feature extraction and network-wide speed prediction, substantially outperforming conventional and deep-learning benchmarks<sup class="citation-sup">[7]</sup>.
+          Dynamic travel-time forecasting on urban expressways is difficult because traffic states are nonlinear and nonstationary, while simple one-dimensional or nearest-neighbor approaches cannot fully represent high-dimensional spatiotemporal evolution. We proposed a <strong class="emphasis">probe data-driven pattern-matching method</strong> that extracts features from speed contour plots, matches current conditions to historical <strong class="emphasis">spatiotemporal traffic patterns</strong>, and produces robust multi-step travel-time forecasts<sup class="citation-sup">[7]</sup>.
+        </li>
+        <li>
+          Large-scale road speed prediction must capture network-wide spatial and temporal dependencies, but traditional approaches often treat traffic speeds as simple sequences and struggle with complex network topology. We transformed traffic states into <strong class="emphasis">two-dimensional time-space images</strong> and developed a <strong class="emphasis">deep convolutional neural network</strong> for feature extraction and network-wide speed prediction, substantially outperforming conventional and deep-learning benchmarks<sup class="citation-sup">[8]</sup>.
         </li>
       </ul>
     </section>
@@ -154,6 +157,29 @@
       <div class="paper featured-paper">
         <figure>
           <img
+            src="images/short-term.png"
+            alt="Short-term urban rail transit origin-destination demand prediction"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Short-Term Origin-Destination Demand Prediction in Urban Rail Transit Systems: A Channel-Wise Attentive Split-Convolutional Neural Network Method
+          </div>
+          <div class="paper-meta">
+            Jinlei Zhang, Hongshu Che, Feng Chen, Wei Ma, <strong>Zhengbing He</strong> · Transportation Research Part C: Emerging Technologies · 124:102928 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2020.102928" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZhang2021CAS)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
             src="images/generative-adversarial-network.png"
             alt="Generative adversarial network for travel time imputation"
             loading="lazy"
@@ -162,7 +188,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[3]</span>A Generative Adversarial Network for Travel Times Imputation Using Trajectory Data
+            <span class="paper-index">[4]</span>A Generative Adversarial Network for Travel Times Imputation Using Trajectory Data
           </div>
           <div class="paper-meta">
             Kunpeng Zhang, <strong>Zhengbing He</strong>, Liang Zheng, Liang Zhao, Lan Wu · Computer-Aided Civil and Infrastructure Engineering · 36(2):197–212 · 2021
@@ -185,7 +211,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[4]</span>A Cohesion-Based Heuristic Feature Selection for Short-Term Traffic Forecasting
+            <span class="paper-index">[5]</span>A Cohesion-Based Heuristic Feature Selection for Short-Term Traffic Forecasting
           </div>
           <div class="paper-meta">
             Lishan Liu, Ning Jia, Lei Lin, <strong>Zhengbing He</strong> · IEEE Access · 7:3383–3389 · 2019
@@ -208,7 +234,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[5]</span>Predicting Station-Level Hourly Demand in a Large-Scale Bike-Sharing Network: A Graph Convolutional Neural Network Approach
+            <span class="paper-index">[6]</span>Predicting Station-Level Hourly Demand in a Large-Scale Bike-Sharing Network: A Graph Convolutional Neural Network Approach
           </div>
           <div class="paper-meta">
             Lei Lin, <strong>Zhengbing He</strong>, Srinivas Peeta · Transportation Research Part C: Emerging Technologies · 97:258–276 · 2018
@@ -231,7 +257,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[6]</span>Probe Data-Driven Travel Time Forecasting for Urban Expressways by Matching Similar Spatiotemporal Traffic Patterns
+            <span class="paper-index">[7]</span>Probe Data-Driven Travel Time Forecasting for Urban Expressways by Matching Similar Spatiotemporal Traffic Patterns
           </div>
           <div class="paper-meta">
             Zhihao Zhang, Yunpeng Wang, Peng Chen, <strong>Zhengbing He</strong>, Guizhen Yu · Transportation Research Part C: Emerging Technologies · 85:476–493 · 2017
@@ -254,7 +280,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[7]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
+            <span class="paper-index">[8]</span>Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction
           </div>
           <div class="paper-meta">
             Xiaolei Ma, Zhuang Dai, <strong>Zhengbing He</strong>, Jihui Ma, Yong Wang, Yunpeng Wang · Sensors · 17(4):818 · 2017
@@ -293,6 +319,16 @@
   pages = {102293},
   year = {2024},
   doi = {10.1016/j.inffus.2024.102293}
+}`;
+
+    const bibtexZhang2021CAS = `@article{zhang2021short,
+  title = {Short-term origin-destination demand prediction in urban rail transit systems: A channel-wise attentive split-convolutional neural network method},
+  author = {Zhang, Jinlei and Che, Hongshu and Chen, Feng and Ma, Wei and He, Zhengbing},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {124},
+  pages = {102928},
+  year = {2021},
+  doi = {10.1016/j.trc.2020.102928}
 }`;
 
     const bibtexZhang2021 = `@article{zhang2021generative,

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Shared Mobility: Behavior, Operations, and Planning | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on shared mobility behavior, operations, and planning, spanning ride-hailing, ride-pooling, bike sharing, travel demand, and service management."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Shared Mobility: Behavior, Operations, and Planning</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Shared mobility</strong> enables travelers to access vehicles or rides when needed through services such as <strong class="emphasis">ride-hailing, ride-pooling, and bike sharing</strong>. Understanding its demand, user behavior, market interactions, and operations is important for improving <strong class="emphasis">accessibility, efficiency, sustainability, and urban transport planning</strong>.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/shared-mobility-overview.png" alt="Overview of shared mobility behavior, operations, and planning" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies examine shared mobility through <strong class="emphasis">travel behavior, service characteristics, demand modeling, operational strategies, competition, and system planning</strong>:
+      </p>
+      <ul class="work-list">
+        <li>
+          Ride-hailing has expanded rapidly, but limited multi-day operational data has constrained understanding of its mobility patterns. Using Beijing trip orders, we portrayed <strong class="emphasis">regional demand rhythms</strong> and <strong class="emphasis">driver service preferences</strong>, providing evidence for demand prediction, behavioral modeling, and platform management<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Bike-sharing demand is sensitive to travel distance, but prior studies rarely distinguish how the <strong class="emphasis">built environment</strong> affects short and long trips. We identified a trip-length threshold and used a <strong class="emphasis">semiparametric geographically weighted Poisson regression</strong> model to reveal spatially heterogeneous effects, supporting bike placement and dispatch decisions<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Dynamic ride-pooling dispatch is often <strong class="emphasis">short-sighted</strong> because current matching decisions overlook future pairing opportunities. We developed a <strong class="emphasis">prediction-based forward-looking dispatch strategy</strong> that estimates future distance savings and integrates them into bipartite matching, improving both system efficiency and passenger experience<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Planning new bike-sharing stations requires time-dependent demand estimates despite the absence of historical records at those locations. We proposed <strong class="emphasis">MMGT</strong>, a <strong class="emphasis">multi-task memory-augmented graph neural network</strong> that transfers knowledge from existing stations and separately models daily trip intensity and hourly distributions<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          The conditions under which traditional taxis can compete with ride-hailing services are not well understood. We introduced a multidimensional framework and a <strong class="emphasis">Competition-Cooperation Index</strong> to identify when and where taxis hold advantages and to connect those patterns with <strong class="emphasis">land use</strong><sup class="citation-sup">[5]</sup>.
+        </li>
+        <li>
+          The rapid growth of shared mobility creates both environmental opportunities and new operational challenges across diverse service models. We synthesized research on <strong class="emphasis">service characteristics and correlates, environmental impacts, and operational and environmental improvements</strong>, framing priorities for policy and practice<sup class="citation-sup">[6]</sup>.
+        </li>
+        <li>
+          Station-free bike-sharing data closely records destinations, creating an opportunity to infer travel purposes and urban functions from observed mobility. We developed a <strong class="emphasis">topic-based two-stage data-mining method</strong> that links mobility patterns with points of interest to reveal <strong class="emphasis">user behavior and city functional regions</strong><sup class="citation-sup">[7]</sup>.
+        </li>
+        <li>
+          Station-level demand depends on complex, heterogeneous relationships that fixed spatial graphs may miss. We proposed a <strong class="emphasis">graph convolutional neural network with a data-driven graph filter</strong> to learn hidden interstation correlations and temporal dependencies, improving hourly demand prediction on New York City's Citi Bike network<sup class="citation-sup">[8]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/portraying.png"
+            alt="Portraying ride-hailing mobility using multi-day trip order data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Portraying Ride-Hailing Mobility Using Multi-Day Trip Order Data: A Case Study of Beijing, China
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong> · Transportation Research Part A: Policy and Practice · 146:152–169 · 2021<br />
+            <em class="emphasis">2022 Key Innovation in the Transportation Sector, Ministry of Transport, China</em>
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.tra.2021.01.017" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/exploring-the-relationship.png"
+            alt="Relationship between the built environment and bike-sharing demand by trip length"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Exploring the Relationship Between Built Environment and Bike-Sharing Demand: Does the Trip Length Matter?
+          </div>
+          <div class="paper-meta">
+            Feiyang Wang, Chaoying Yin, Ximing Chang, Xinyu Zhang, <strong>Zhengbing He</strong> · Transportation Planning and Technology · 48(5):826–852 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/03081060.2024.2400281" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexWang2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/prediction-based.png"
+            alt="Prediction-based forward-looking vehicle dispatching for dynamic ride-pooling"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>A Prediction-Based Forward-Looking Vehicle Dispatching Strategy for Dynamic Ride-Pooling
+          </div>
+          <div class="paper-meta">
+            Chen Yang, Xiaolei Wang, Yuzhen Feng, Luohan Hu, Xing Yang, <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 25(11):16925–16937 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2024.3419178" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexYang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/time-dependent.png"
+            alt="Time-dependent trip generation for bike-sharing planning"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Time-Dependent Trip Generation for Bike Sharing Planning: A Multi-Task Memory-Augmented Graph Neural Network
+          </div>
+          <div class="paper-meta">
+            Yuebing Liang, Zhan Zhao, Fangyi Ding, Yihong Tang, <strong>Zhengbing He</strong> · Information Fusion · 106:102294 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.inffus.2024.102294" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiang2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/competitiveness.png"
+            alt="Competitiveness of taxis and ride-hailing services in Beijing"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Exploring Competitiveness of Taxis to Ride-Hailing Services From a Multidimensional Spatio-Temporal Perspective: A Case Study in Beijing, China
+          </div>
+          <div class="paper-meta">
+            Yihao Luo, Ailing Huang, <strong>Zhengbing He</strong>, Jiaqi Zeng, Dianhai Wang · Journal of Transport Geography · 118:103936 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.jtrangeo.2024.103936" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLuo2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/shared-mobility.jpg"
+            alt="Shared mobility characteristics, impacts, and improvements"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Shared Mobility: Characteristics, Impacts, and Improvements
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Peng Chen · Transportation Research Part D: Transport and Environment · 97:102960 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trd.2021.102960" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHeChen2021)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/understanding.png"
+            alt="Travel behavior and city region functions from station-free shared bike data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[7]</span>Understanding User’s Travel Behavior and City Region Functions From Station-Free Shared Bike Usage Data
+          </div>
+          <div class="paper-meta">
+            Ximing Chang, Jianjun Wu, <strong>Zhengbing He</strong>, Daqing Li, Huijun Sun, Weiping Wang · Transportation Research Part F: Traffic Psychology and Behaviour · 72:81–95 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trf.2020.03.018" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexChang2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/predicting-station.png"
+            alt="Station-level hourly demand prediction in a large-scale bike-sharing network"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[8]</span>Predicting Station-Level Hourly Demand in a Large-Scale Bike-Sharing Network: A Graph Convolutional Neural Network Approach
+          </div>
+          <div class="paper-meta">
+            Lei Lin, <strong>Zhengbing He</strong>, Srinivas Peeta · Transportation Research Part C: Emerging Technologies · 97:258–276 · 2018
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2018.10.011" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLin2018)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexWang2025 = `@article{wang2025built,
+  title = {Exploring the relationship between built environment and bike-sharing demand: Does the trip length matter?},
+  author = {Wang, Feiyang and Yin, Chaoying and Chang, Ximing and Zhang, Xinyu and He, Zhengbing},
+  journal = {Transportation Planning and Technology},
+  volume = {48},
+  number = {5},
+  pages = {826--852},
+  year = {2025},
+  doi = {10.1080/03081060.2024.2400281}
+}`;
+
+    const bibtexYang2024 = `@article{yang2024prediction,
+  title = {A prediction-based forward-looking vehicle dispatching strategy for dynamic ride-pooling},
+  author = {Yang, Chen and Wang, Xiaolei and Feng, Yuzhen and Hu, Luohan and Yang, Xing and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {25},
+  number = {11},
+  pages = {16925--16937},
+  year = {2024},
+  doi = {10.1109/TITS.2024.3419178}
+}`;
+
+    const bibtexLiang2024 = `@article{liang2024time,
+  title = {Time-dependent trip generation for bike sharing planning: A multi-task memory-augmented graph neural network},
+  author = {Liang, Yuebing and Zhao, Zhan and Ding, Fangyi and Tang, Yihong and He, Zhengbing},
+  journal = {Information Fusion},
+  volume = {106},
+  pages = {102294},
+  year = {2024},
+  doi = {10.1016/j.inffus.2024.102294}
+}`;
+
+    const bibtexLuo2024 = `@article{luo2024exploring,
+  title = {Exploring competitiveness of taxis to ride-hailing services from a multidimensional spatio-temporal perspective: A case study in Beijing, China},
+  author = {Luo, Yihao and Huang, Ailing and He, Zhengbing and Zeng, Jiaqi and Wang, Dianhai},
+  journal = {Journal of Transport Geography},
+  volume = {118},
+  pages = {103936},
+  year = {2024},
+  doi = {10.1016/j.jtrangeo.2024.103936}
+}`;
+
+    const bibtexHe2021 = `@article{he2021portraying,
+  title = {Portraying ride-hailing mobility using multi-day trip order data: A case study of Beijing, China},
+  author = {He, Zhengbing},
+  journal = {Transportation Research Part A: Policy and Practice},
+  volume = {146},
+  pages = {152--169},
+  year = {2021},
+  doi = {10.1016/j.tra.2021.01.017}
+}`;
+
+    const bibtexHeChen2021 = `@article{he2021shared,
+  title = {Shared mobility: Characteristics, impacts, and improvements},
+  author = {He, Zhengbing and Chen, Peng},
+  journal = {Transportation Research Part D: Transport and Environment},
+  volume = {97},
+  pages = {102960},
+  year = {2021},
+  doi = {10.1016/j.trd.2021.102960}
+}`;
+
+    const bibtexChang2020 = `@article{chang2020understanding,
+  title = {Understanding user's travel behavior and city region functions from station-free shared bike usage data},
+  author = {Chang, Ximing and Wu, Jianjun and He, Zhengbing and Li, Daqing and Sun, Huijun and Wang, Weiping},
+  journal = {Transportation Research Part F: Traffic Psychology and Behaviour},
+  volume = {72},
+  pages = {81--95},
+  year = {2020},
+  doi = {10.1016/j.trf.2020.03.018}
+}`;
+
+    const bibtexLin2018 = `@article{lin2018predicting,
+  title = {Predicting station-level hourly demand in a large-scale bike-sharing network: A graph convolutional neural network approach},
+  author = {Lin, Lei and He, Zhengbing and Peeta, Srinivas},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {97},
+  pages = {258--276},
+  year = {2018},
+  doi = {10.1016/j.trc.2018.10.011}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

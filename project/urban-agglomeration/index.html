@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Urban Agglomeration: Demand Understanding | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on understanding urban agglomeration travel demand through human mobility patterns, transportation hubs, and intercity interactions."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Urban Agglomeration: Demand Understanding</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        An <strong class="emphasis">urban agglomeration</strong> is a network of closely connected cities whose economic activities and transportation systems increasingly operate as an integrated region. Understanding <strong class="emphasis">intercity travel demand</strong> and <strong class="emphasis">city interactions</strong> is essential for coordinating infrastructure, improving regional accessibility, and supporting balanced urban development.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/urban-agglomeration-overview.png" alt="Overview of urban agglomeration research" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies use <strong class="emphasis">large-scale mobility data</strong> and spatial-interaction models to reveal the structure and dynamics of travel across urban agglomerations:
+      </p>
+      <ul class="work-list">
+        <li>
+          Intercity passenger flows are difficult to observe comprehensively with conventional surveys. We extracted trips from <strong class="emphasis">mobile phone call detail records</strong> in the Beijing–Tianjin–Hebei region and constructed hub-based weighted networks, revealing a <strong class="emphasis">power-law concentration</strong> of travel demand among a small number of transportation hubs<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Conventional gravity models for intercity interaction require parameters to be specified or calibrated. We developed a <strong class="emphasis">parameter-free Interactive City Choice model</strong> based on destination opportunities and transportation-network travel times, then applied it to 339 Chinese cities to quantify how network changes reshaped <strong class="emphasis">intercity interaction</strong> from 2005 to 2018<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Urban-agglomeration demand may exhibit stable structural regularities across spatial and temporal resolutions. By constructing spatial–temporal networks from Taiwan taxi demand, we found persistent <strong class="emphasis">power-law distributions</strong> across aggregation scales, demonstrating a <strong class="emphasis">spatial–temporal fractal</strong> property of regional travel demand<sup class="citation-sup">[3]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/analysis-of-travel.png"
+            alt="Travel demand between transportation hubs in an urban agglomeration"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Analysis of Travel Demand Between Transportation Hubs in Urban Agglomeration Based on Mobile Phone Call Detail Record Data
+          </div>
+          <div class="paper-meta">
+            Yanyan Chen, Zifan Wang, Haodong Sun, Ye Zhang, <strong>Zhengbing He</strong> · Journal of Transportation Engineering, Part A: Systems · 148(7):04022041 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1061/JTEPBS.0000693" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexChen2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/interactive-city.png"
+            alt="Interactive City Choice model for measuring intercity interaction"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>An Interactive City Choice Model and Its Application for Measuring the Intercity Interaction
+          </div>
+          <div class="paper-meta">
+            Xiang-Yu Jia, Er-Jian Liu, Chun-Yan Chen, <strong>Zhengbing He</strong>, Xiao-Yong Yan · Frontiers in Physics · 10:850415 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.3389/fphy.2022.850415" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexJia2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/spatial-temporal.png"
+            alt="Spatial-temporal fractal of urban agglomeration travel demand"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Spatial-Temporal Fractal of Urban Agglomeration Travel Demand
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong> · Physica A: Statistical Mechanics and its Applications · 549:124503 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.physa.2020.124503" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexChen2022 = `@article{chen2022analysis,
+  title = {Analysis of travel demand between transportation hubs in urban agglomeration based on mobile phone call detail record data},
+  author = {Chen, Yanyan and Wang, Zifan and Sun, Haodong and Zhang, Ye and He, Zhengbing},
+  journal = {Journal of Transportation Engineering, Part A: Systems},
+  volume = {148},
+  number = {7},
+  pages = {04022041},
+  year = {2022},
+  doi = {10.1061/JTEPBS.0000693}
+}`;
+
+    const bibtexJia2022 = `@article{jia2022interactive,
+  title = {An interactive city choice model and its application for measuring the intercity interaction},
+  author = {Jia, Xiang-Yu and Liu, Er-Jian and Chen, Chun-Yan and He, Zhengbing and Yan, Xiao-Yong},
+  journal = {Frontiers in Physics},
+  volume = {10},
+  pages = {850415},
+  year = {2022},
+  doi = {10.3389/fphy.2022.850415}
+}`;
+
+    const bibtexHe2020 = `@article{he2020spatial,
+  title = {Spatial-temporal fractal of urban agglomeration travel demand},
+  author = {He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {549},
+  pages = {124503},
+  year = {2020},
+  doi = {10.1016/j.physa.2020.124503}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

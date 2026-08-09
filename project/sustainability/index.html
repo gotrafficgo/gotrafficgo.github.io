@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sustainability: Emissions, Pricing, and Wireless Charging | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's research on transportation sustainability, spanning vehicle emissions, environmental road pricing, dynamic wireless charging, automated mobility, and accessible streets."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Sustainability: Emissions, Pricing, and Wireless Charging</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        <strong class="emphasis">Transportation sustainability</strong> seeks to reduce environmental impacts while maintaining efficient, affordable, and inclusive mobility. Achieving it requires reliable <strong class="emphasis">emission measurement</strong>, cleaner vehicles and energy systems, environmentally informed <strong class="emphasis">pricing and operations</strong>, and accessible infrastructure for all travelers.
+      </p>
+
+      <figure class="overview-highlight">
+        <img src="images/sustainability-overview.png" alt="Overview of transportation sustainability research" decoding="async" />
+      </figure>
+
+      <p>
+        Our studies advance sustainable mobility through <strong class="emphasis">emission modeling, vehicle and traffic control, electric infrastructure, road pricing, and accessible street mapping</strong>:
+      </p>
+      <ul class="work-list">
+        <li>
+          Accurate emission assessment is constrained by trade-offs among <strong class="emphasis">scale, resolution, data requirements, and computational cost</strong>. We developed complementary models spanning <strong class="emphasis">NeuralMOVES</strong> for lightweight microscopic estimation, a modular neural network for city-wide operating-mode distributions, and a spatiotemporal cell-based model for freeway CO₂ emissions<sup class="citation-sup">[1,2,9]</sup>.
+        </li>
+        <li>
+          Driving automation can either improve or worsen environmental performance depending on connectivity, penetration, traffic demand, and control design. We synthesized these operational impacts and emission-reduction methods, then demonstrated an <strong class="emphasis">emission-oriented CAV car-following strategy</strong> that smooths mixed traffic and reduces multiple pollutants under fog<sup class="citation-sup">[3,5]</sup>.
+        </li>
+        <li>
+          Sidewalk accessibility assessment is traditionally manual, expensive, and constrained by limited city-scale data. We designed and validated <strong class="emphasis">Sidewalk AI Scanner</strong>, combining participatory smartphone imagery with <strong class="emphasis">Visual AI</strong> to identify sidewalk width, obstacles, and pavement conditions at scale<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          Dynamic wireless charging can reduce electric-bus battery requirements, but infrastructure deployment and charging schedules are tightly coupled. We developed an <strong class="emphasis">integrated strategic and tactical optimization model</strong> that jointly determines charging locations, battery capacity, and time-of-use charging schedules<sup class="citation-sup">[6]</sup>.
+        </li>
+        <li>
+          Road pricing can mitigate congestion and emissions, but uncertain travel demand and environmental conditions make conventional toll plans unreliable. We developed complementary <strong class="emphasis">distributionally robust simulation-based</strong> and <strong class="emphasis">bilevel stochastic-fuzzy</strong> optimization methods for time-of-day and sustainability-oriented pricing under uncertainty<sup class="citation-sup">[7,8]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/NeuralMOVES.png"
+            alt="NeuralMOVES lightweight microscopic vehicle emission estimation model"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>NeuralMOVES: A Lightweight and Microscopic Vehicle Emission Estimation Model Based on Reverse Engineering and Surrogate Learning
+          </div>
+          <div class="paper-meta">
+            Edgar Ramirez-Sanchez, Catherine Tang, Yaosheng Xu, Nrithya Renganathan, Vindula Jayawardana, <strong>Zhengbing He</strong>, Cathy Wu · Transportation Research Part C: Emerging Technologies · 184:105530 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2026.105530" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexRamirezSanchez2026)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/estimating-city-wide.png"
+            alt="City-wide operating-mode distribution estimation for light-duty vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>Estimating City-Wide Operating Mode Distribution of Light-Duty Vehicles: A Neural Network-Based Approach
+          </div>
+          <div class="paper-meta">
+            Muhammad Usama, Haris N. Koutsopoulos, <strong>Zhengbing He</strong>, Lijiao Wang · Transportation Research Record · 2679(11):511–525 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1177/03611981251348465" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexUsama2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/environmental-impacts.png"
+            alt="Environmental impacts and emission reduction methods for automated vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[3]</span>Environmental Impacts and Emission Reduction Methods of Vehicles Equipped With Driving Automation Systems: An Operational-Level Review
+          </div>
+          <div class="paper-meta">
+            Haoran Jiang, Kui Xia, Yingying Zhao, Zhihong Yao, Yangsheng Jiang, <strong>Zhengbing He</strong> · Transportation Research Part C: Emerging Technologies · 173:104996 · 2025
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2024.104996" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexJiang2025)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/mapping-sidewalk.png"
+            alt="Participatory sidewalk accessibility mapping with smartphone imagery and Visual AI"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[4]</span>Mapping Sidewalk Accessibility With Smartphone Imagery and Visual AI: A Participatory Approach
+          </div>
+          <div class="paper-meta">
+            Diego Morra, Xiaosheng Zhu, Chang Liu, Kyle Fu, Fábio Duarte, Simone Mora, <strong>Zhengbing He</strong>, Carlo Ratti · Philosophical Transactions of the Royal Society A · 382(2285):20240106 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1098/rsta.2024.0106" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexMorra2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/emissions-reduction.png"
+            alt="Emissions-reduction strategy for connected autonomous vehicles"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Emissions-Reduction Strategy for Connected Autonomous Vehicles on Mixed Traffic Freeways
+          </div>
+          <div class="paper-meta">
+            Yanyan Qin, Tengfei Xiao, <strong>Zhengbing He</strong> · Physica A: Statistical Mechanics and its Applications · 653:130113 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.physa.2024.130113" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexQin2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/planning-dynamic.png"
+            alt="Dynamic wireless charging infrastructure planning for battery electric buses"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>Planning Dynamic Wireless Charging Infrastructure for Battery Electric Bus Systems With the Joint Optimization of Charging Scheduling
+          </div>
+          <div class="paper-meta">
+            Wenlong Li, Yi He, Songhua Hu, <strong>Zhengbing He</strong>, Carlo Ratti · Transportation Research Part C: Emerging Technologies · 159:104469 · 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2023.104469" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLi2024)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/time-of-day .png"
+            alt="Distributionally robust time-of-day pricing for toll roads"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[7]</span>Time-of-Day Pricing for Toll Roads Under Traffic Demand Uncertainties: A Distributionally Robust Simulation-Based Optimization Method
+          </div>
+          <div class="paper-meta">
+            Liang Zheng, Pengjie Liu, Huimin Huang, Bin Ran, <strong>Zhengbing He</strong> · Transportation Research Part C: Emerging Technologies · 144:103894 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2022.103894" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexZheng2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/sustainable-road-pricing.png"
+            alt="Sustainable road pricing under multiple environmental uncertainties"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[8]</span>A Sustainable Road Pricing Oriented Bilevel Optimization Approach Under Multiple Environmental Uncertainties
+          </div>
+          <div class="paper-meta">
+            Ying Lv, Shanshan Wang, Ziyou Gao, Guanhui Cheng, Guohe Huang, <strong>Zhengbing He</strong> · International Journal of Sustainable Transportation · 16(2):152–165 · 2022
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/15568318.2020.1858374" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLv2022)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/estimating-carbon-dioxide.png"
+            alt="Spatiotemporal cell-based carbon dioxide emissions estimation for freeway traffic"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[9]</span>Estimating Carbon Dioxide Emissions of Freeway Traffic: A Spatiotemporal Cell-Based Model
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Wei Zhang, Ning Jia · IEEE Transactions on Intelligent Transportation Systems · 21(5):1976–1986 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2019.2909316" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2020)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexRamirezSanchez2026 = `@article{ramirezsanchez2026neuralmoves,
+  title = {{NeuralMOVES}: A lightweight and microscopic vehicle emission estimation model based on reverse engineering and surrogate learning},
+  author = {Ramirez-Sanchez, Edgar and Tang, Catherine and Xu, Yaosheng and Renganathan, Nrithya and Jayawardana, Vindula and He, Zhengbing and Wu, Cathy},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {184},
+  pages = {105530},
+  year = {2026},
+  doi = {10.1016/j.trc.2026.105530}
+}`;
+
+    const bibtexUsama2025 = `@article{usama2025estimating,
+  title = {Estimating city-wide operating mode distribution of light-duty vehicles: A neural network-based approach},
+  author = {Usama, Muhammad and Koutsopoulos, Haris N. and He, Zhengbing and Wang, Lijiao},
+  journal = {Transportation Research Record},
+  volume = {2679},
+  number = {11},
+  pages = {511--525},
+  year = {2025},
+  doi = {10.1177/03611981251348465}
+}`;
+
+    const bibtexJiang2025 = `@article{jiang2025environmental,
+  title = {Environmental impacts and emission reduction methods of vehicles equipped with driving automation systems: An operational-level review},
+  author = {Jiang, Haoran and Xia, Kui and Zhao, Yingying and Yao, Zhihong and Jiang, Yangsheng and He, Zhengbing},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {173},
+  pages = {104996},
+  year = {2025},
+  doi = {10.1016/j.trc.2024.104996}
+}`;
+
+    const bibtexMorra2024 = `@article{morra2024mapping,
+  title = {Mapping sidewalk accessibility with smartphone imagery and {Visual AI}: A participatory approach},
+  author = {Morra, Diego and Zhu, Xiaosheng and Liu, Chang and Fu, Kyle and Duarte, Fábio and Mora, Simone and He, Zhengbing and Ratti, Carlo},
+  journal = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+  volume = {382},
+  number = {2285},
+  pages = {20240106},
+  year = {2024},
+  doi = {10.1098/rsta.2024.0106}
+}`;
+
+    const bibtexQin2024 = `@article{qin2024emissions,
+  title = {Emissions-reduction strategy for connected autonomous vehicles on mixed traffic freeways},
+  author = {Qin, Yanyan and Xiao, Tengfei and He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {653},
+  pages = {130113},
+  year = {2024},
+  doi = {10.1016/j.physa.2024.130113}
+}`;
+
+    const bibtexLi2024 = `@article{li2024planning,
+  title = {Planning dynamic wireless charging infrastructure for battery electric bus systems with the joint optimization of charging scheduling},
+  author = {Li, Wenlong and He, Yi and Hu, Songhua and He, Zhengbing and Ratti, Carlo},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {159},
+  pages = {104469},
+  year = {2024},
+  doi = {10.1016/j.trc.2023.104469}
+}`;
+
+    const bibtexZheng2022 = `@article{zheng2022timeofday,
+  title = {Time-of-day pricing for toll roads under traffic demand uncertainties: A distributionally robust simulation-based optimization method},
+  author = {Zheng, Liang and Liu, Pengjie and Huang, Huimin and Ran, Bin and He, Zhengbing},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {144},
+  pages = {103894},
+  year = {2022},
+  doi = {10.1016/j.trc.2022.103894}
+}`;
+
+    const bibtexLv2022 = `@article{lv2022sustainable,
+  title = {A sustainable road pricing oriented bilevel optimization approach under multiple environmental uncertainties},
+  author = {Lv, Ying and Wang, Shanshan and Gao, Ziyou and Cheng, Guanhui and Huang, Guohe and He, Zhengbing},
+  journal = {International Journal of Sustainable Transportation},
+  volume = {16},
+  number = {2},
+  pages = {152--165},
+  year = {2022},
+  doi = {10.1080/15568318.2020.1858374}
+}`;
+
+    const bibtexHe2020 = `@article{he2020estimating,
+  title = {Estimating carbon dioxide emissions of freeway traffic: A spatiotemporal cell-based model},
+  author = {He, Zhengbing and Zhang, Wei and Jia, Ning},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {21},
+  number = {5},
+  pages = {1976--1986},
+  year = {2020},
+  doi = {10.1109/TITS.2019.2909316}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
