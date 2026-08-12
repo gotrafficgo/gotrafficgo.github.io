@@ -71,7 +71,7 @@
         <strong class="emphasis">Accurate motion prediction</strong> is essential for safe and reliable autonomous driving, especially at <strong class="emphasis">intersections</strong>, where vehicles, cyclists, pedestrians, traffic signals, and road geometry create dense, highly interactive, and uncertain conflict patterns. Anticipating the future paths of multiple traffic agents allows an autonomous vehicle to achieve <strong class="emphasis">early conflict detection</strong>, plan safe and smooth maneuvers, and remain robust in <strong class="emphasis">rare, safety-critical corner cases</strong> that are often underrepresented in training data.
       </p>
       <p>
-        Our studies develop increasingly <strong class="emphasis">context-aware motion forecasting</strong> methods for autonomous driving, with intersection conflict as an important—though not exclusive—application. <strong class="emphasis">Gatformer</strong> represents a traffic scene as a sparse graph and combines spatial encoding, <strong class="emphasis">graph attention</strong>, and a Transformer to capture agent–agent and agent–infrastructure interactions and predict multiple trajectories simultaneously<sup class="citation-sup">[1]</sup>. <strong class="emphasis">CoT-Drive</strong> uses <strong class="emphasis">LLMs and chain-of-thought prompting</strong> to generate semantic scene annotations, then distills this knowledge into lightweight language models for real-time forecasting across highways, urban roads, and complex intersections<sup class="citation-sup">[2]</sup>. <strong class="emphasis">WM-MoE</strong> targets rare corner cases through a <strong class="emphasis">world model</strong> that unifies perception, temporal memory, and counterfactual decision-making, together with a <strong class="emphasis">mixture of experts</strong> that specializes prediction across different interaction regimes<sup class="citation-sup">[3]</sup>.
+        Our studies develop increasingly <strong class="emphasis">context-aware motion forecasting</strong> methods for autonomous driving, with intersection conflict as an important—though not exclusive—application. <strong class="emphasis">Gatformer</strong> represents a traffic scene as a sparse graph and combines spatial encoding, <strong class="emphasis">graph attention</strong>, and a Transformer to capture agent–agent and agent–infrastructure interactions and predict multiple trajectories simultaneously<sup class="citation-sup">[1]</sup>. <strong class="emphasis">CoT-Drive</strong> uses <strong class="emphasis">LLMs and chain-of-thought prompting</strong> to generate semantic scene annotations, then distills this knowledge into lightweight language models for real-time forecasting across highways, urban roads, and complex intersections<sup class="citation-sup">[2]</sup>. <strong class="emphasis">WM-MoE</strong> targets rare corner cases through a <strong class="emphasis">world model</strong> that unifies perception, temporal memory, and counterfactual decision-making, together with a <strong class="emphasis">mixture of experts</strong> that specializes prediction across different interaction regimes<sup class="citation-sup">[3]</sup>. We further extend forecasting toward <strong class="emphasis">safety-critical intent and event anticipation</strong>: <strong class="emphasis">ROAR</strong> combines multi-resolution wavelet features, object-aware temporal reasoning, and dynamic focal loss to anticipate accidents despite noisy or incomplete sensor data<sup class="citation-sup">[4]</sup>, while a gradient-boosting model uses observed trajectories to predict whether pedestrians will wait or cross at unsignalized crosswalks<sup class="citation-sup">[5]</sup>.
       </p>
 
       <figure class="overview-highlight">
@@ -151,6 +151,37 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/ROAR.png"
+            alt="ROAR robust accident recognition and anticipation for autonomous driving"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[4]</span>ROAR: Robust Accident Recognition and Anticipation for Autonomous Driving</div>
+          <div class="paper-meta">Xingcheng Liu, Yanchen Guan, Haicheng Liao, <strong>Zhengbing He</strong>, Zhenning Li · Accident Analysis &amp; Prevention · 228:108414 · 2026</div>
+          <div class="paper-links"><a href="https://doi.org/10.1016/j.aap.2026.108414" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexLiu2026ROAR)">Copy BibTeX</button></div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/prediction-of-pedestrians.png"
+            alt="Prediction of pedestrians' wait-or-go decisions from trajectory data"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[5]</span>Prediction of Pedestrians' Wait-or-Go Decision Using Trajectory Data Based on Gradient Boosting Decision Tree</div>
+          <div class="paper-meta">Xiuying Xin, Ning Jia, Shuai Ling, <strong>Zhengbing He</strong> · Transportmetrica B: Transport Dynamics · 10(1):693–717 · 2022</div>
+          <div class="paper-links"><a href="https://doi.org/10.1080/21680566.2022.2027294" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexXin2022WaitOrGo)">Copy BibTeX</button></div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -189,6 +220,18 @@
   pages = {105456},
   year = {2026},
   doi = {10.1016/j.trc.2025.105456}
+}`;
+
+    const bibtexLiu2026ROAR = `@article{Liu2026ROAR,
+  author = {Liu, Xingcheng and Guan, Yanchen and Liao, Haicheng and He, Zhengbing and Li, Zhenning},
+  title = {{ROAR}: Robust Accident Recognition and Anticipation for Autonomous Driving},
+  journal = {Accident Analysis & Prevention}, year = {2026}, volume = {228}, pages = {108414}, doi = {10.1016/j.aap.2026.108414}
+}`;
+
+    const bibtexXin2022WaitOrGo = `@article{Xin2022WaitOrGo,
+  author = {Xin, Xiuying and Jia, Ning and Ling, Shuai and He, Zhengbing},
+  title = {Prediction of Pedestrians' Wait-or-Go Decision Using Trajectory Data Based on Gradient Boosting Decision Tree},
+  journal = {Transportmetrica B: Transport Dynamics}, year = {2022}, volume = {10}, number = {1}, pages = {693--717}, doi = {10.1080/21680566.2022.2027294}
 }`;
 
     function copyText(text) {

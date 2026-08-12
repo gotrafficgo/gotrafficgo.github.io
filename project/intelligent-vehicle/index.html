@@ -107,6 +107,10 @@
           Although CAVs can increase road capacity, their benefits may be substantially weakened when they share the road with human-driven vehicles, making effective management of mixed traffic essential.
           We developed a <strong class="emphasis">multiclass traffic-assignment model with elastic demand</strong> and corresponding optimal-toll algorithms to regulate access to autonomous-vehicle/toll lanes and improve network performance<sup class="citation-sup">[10]</sup>.
         </li>
+        <li>
+          <strong>System Evidence and Communication Infrastructure:</strong>
+          We synthesized assumptions, models, and evidence on how automated vehicles affect traffic-flow efficiency, stability, and safety across penetration scenarios<sup class="citation-sup">[11]</sup>. At the supporting-network level, we developed deep-learning-enabled traffic offloading for software-defined cellular V2X networks<sup class="citation-sup">[12]</sup> and energy-efficient channel and power allocation for priority-sensitive vehicular mobile-health communications<sup class="citation-sup">[13]</sup>.
+        </li>
       </ul>
     </section>
 
@@ -344,6 +348,74 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/automated-vehicle-involved.png"
+            alt="Survey of automated vehicle-involved traffic flow studies"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[11]</span>Automated Vehicle-Involved Traffic Flow Studies: A Survey of Assumptions, Models, Speculations, and Perspectives
+          </div>
+          <div class="paper-meta">
+            Haiyang Yu, Rui Jiang, <strong>Zhengbing He</strong>, Zuduo Zheng, Li Li, Runkun Liu, Xiqun Chen · Transportation Research Part C · 127:103101 · 2021
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.trc.2021.103101" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexYu2021Survey)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/deep-learning.png"
+            alt="Deep learning empowered traffic offloading in intelligent software-defined cellular V2X networks"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[12]</span>Deep Learning Empowered Traffic Offloading in Intelligent Software Defined Cellular V2X Networks
+          </div>
+          <div class="paper-meta">
+            Bo Fan, <strong>Zhengbing He</strong>, Yuan Wu, Jia He, Yanyan Chen, Li Jiang · IEEE Transactions on Vehicular Technology · 69(11):13328–13340 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TVT.2020.3023194" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexFan2020Offloading)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/energy-efficient.png"
+            alt="Energy-efficient resource allocation for vehicular mobile-health communications"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[13]</span>Energy-Efficient Resource Allocation for Dynamic Priority-Based Vehicular Mobile-Health Communications
+          </div>
+          <div class="paper-meta">
+            Bo Fan, <strong>Zhengbing He</strong>, Hui Tian, Dewen Kong, Yanyan Chen · IEEE Systems Journal · 14(2):2097–2108 · 2020
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/JSYST.2019.2919569" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexFan2020MobileHealth)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -459,6 +531,10 @@
   doi = {10.48550/arXiv.2606.20648},
   url = {https://arxiv.org/abs/2606.20648}
 }`;
+
+    const bibtexYu2021Survey = `@article{Yu2021AutomatedVehicleTrafficFlow, author={Yu, Haiyang and Jiang, Rui and He, Zhengbing and Zheng, Zuduo and Li, Li and Liu, Runkun and Chen, Xiqun}, title={Automated Vehicle-Involved Traffic Flow Studies: A Survey of Assumptions, Models, Speculations, and Perspectives}, journal={Transportation Research Part C: Emerging Technologies}, year={2021}, volume={127}, pages={103101}, doi={10.1016/j.trc.2021.103101}}`;
+    const bibtexFan2020Offloading = `@article{Fan2020TrafficOffloading, author={Fan, Bo and He, Zhengbing and Wu, Yuan and He, Jia and Chen, Yanyan and Jiang, Li}, title={Deep Learning Empowered Traffic Offloading in Intelligent Software Defined Cellular V2X Networks}, journal={IEEE Transactions on Vehicular Technology}, year={2020}, volume={69}, number={11}, pages={13328--13340}, doi={10.1109/TVT.2020.3023194}}`;
+    const bibtexFan2020MobileHealth = `@article{Fan2020MobileHealth, author={Fan, Bo and He, Zhengbing and Tian, Hui and Kong, Dewen and Chen, Yanyan}, title={Energy-Efficient Resource Allocation for Dynamic Priority-Based Vehicular Mobile-Health Communications}, journal={IEEE Systems Journal}, year={2020}, volume={14}, number={2}, pages={2097--2108}, doi={10.1109/JSYST.2019.2919569}}`;
 
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {

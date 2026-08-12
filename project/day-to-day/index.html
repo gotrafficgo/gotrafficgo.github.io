@@ -75,11 +75,11 @@
       </figure>
 
       <p>
-        Our studies trace a progression, i.e., <strong class="emphasis">behavioral theory<sup class="citation-sup">[1]</sup> -> controlled human experiments<sup class="citation-sup">[2][3]</sup> -> agent-based and LLM-powered simulation<sup class="citation-sup">[4][5]</sup></strong>.
+        Our studies trace a progression, i.e., <strong class="emphasis">behavioral theory<sup class="citation-sup">[1,6]</sup> -> controlled human experiments<sup class="citation-sup">[2][3]</sup> -> agent-based and LLM-powered simulation<sup class="citation-sup">[4][5]</sup></strong>.
       </p>
       <ul class="work-list">
         <li>
-          <strong>Behavioral Theory:</strong> On the theoretical side, we formulated day-to-day rerouting processes under <strong class="emphasis">both absolute and relative bounded rationality</strong>, showing that the two mechanisms can produce similar aggregate convergence while generating fundamentally different route-switching dynamics<sup class="citation-sup">[1]</sup>.
+          <strong>Behavioral Theory:</strong> Our early behavioral model represented the daily feedback loop between deliberate and habitual choice while incorporating forgetting, risk attitude, habit, attention, and imperfect travel-time perception<sup class="citation-sup">[6]</sup>. We subsequently formulated day-to-day rerouting processes under <strong class="emphasis">both absolute and relative bounded rationality</strong>, showing that the two mechanisms can produce similar aggregate convergence while generating fundamentally different route-switching dynamics<sup class="citation-sup">[1]</sup>.
         </li>
         <li>
           <strong>Controlled Experiments:</strong> We then conducted a multi-scenario laboratory program in which <strong class="emphasis">312 participants</strong> repeatedly chose among congestible routes. The experiments revealed <strong class="emphasis">route-dependent inertia and preference</strong>, which we incorporated into an analyzable dynamic model<sup class="citation-sup">[2]</sup>; building on the same experimental evidence, we developed a <strong class="emphasis">stochastic-process model</strong> that reproduces the persistent random oscillations observed in route switching and flow evolution<sup class="citation-sup">[3]</sup>.
@@ -208,6 +208,28 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/behavioural-characteristics.png"
+            alt="Day-to-day route choice model based on travellers' behavioural characteristics"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[6]</span>A Day-to-Day Route Choice Model Based on Travellers' Behavioural Characteristics
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Liu Yang, Wei Guan · Procedia – Social and Behavioral Sciences · 138:738–747 · 2014
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.sbspro.2014.07.251" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2014DayToDay)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -267,6 +289,8 @@
   year = {2025},
   doi = {10.1016/j.trc.2025.105307}
 }`;
+
+    const bibtexHe2014DayToDay = `@inproceedings{He2014DayToDayRouteChoice, author={He, Zhengbing and Yang, Liu and Guan, Wei}, title={A Day-to-Day Route Choice Model Based on Travellers' Behavioural Characteristics}, booktitle={9th International Conference on Traffic and Transportation Studies}, series={Procedia -- Social and Behavioral Sciences}, year={2014}, volume={138}, pages={738--747}, doi={10.1016/j.sbspro.2014.07.251}}`;
 
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {

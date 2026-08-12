@@ -75,6 +75,9 @@
         The approach was then extended into a self-regulating framework that accounts for <strong class="emphasis">practical complexities</strong>, including overlapping routes, stochastic traffic, and signalized intersections<sup class="citation-sup">[2]</sup>.
         We further examined the <strong class="emphasis">effectiveness of VMSs</strong> that communicate traffic conditions using three colors, i.e., red, yellow, and green<sup class="citation-sup">[3]</sup>, and developed a data-driven method for <strong class="emphasis">VMS locating problems</strong>, determining where such signs should be deployed<sup class="citation-sup">[4]</sup>.
       </p>
+      <p>
+        Before this TCB program, we compared eight prevalent feedback strategies on an <strong class="emphasis">asymmetric two-route network</strong>. The analysis showed that only mean-velocity feedback consistently linked its guidance signal to travel time closely enough to approach user-optimal route use, providing an empirical and theoretical baseline for the later strategy designs<sup class="citation-sup">[5]</sup>.
+      </p>
 
       <figure class="overview-highlight">
         <img src="images/route-guidance-overview.png" alt="Variable message sign using red, yellow, and green traffic states and a framework for evaluating effective route-splitting-rate sets" decoding="async" />
@@ -157,6 +160,28 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/route-guidance.png"
+            alt="Comparison and evaluation of route guidance strategies in an asymmetric two-route network"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[5]</span>Route Guidance Strategies Revisited: Comparison and Evaluation in an Asymmetric Two-Route Traffic Network
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Bokui Chen, Ning Jia, Wei Guan, Benchuan Lin, Binghong Wang · International Journal of Modern Physics C · 25(4):1450005 · 2014
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1142/S0129183114500053" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2014Strategies)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -207,6 +232,8 @@
   year = {2017},
   doi = {10.3141/2645-10}
 }`;
+
+    const bibtexHe2014Strategies = `@article{He2014RouteGuidanceStrategies, author={He, Zhengbing and Chen, Bokui and Jia, Ning and Guan, Wei and Lin, Benchuan and Wang, Binghong}, title={Route Guidance Strategies Revisited: Comparison and Evaluation in an Asymmetric Two-Route Traffic Network}, journal={International Journal of Modern Physics C}, year={2014}, volume={25}, number={4}, pages={1450005}, doi={10.1142/S0129183114500053}}`;
 
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {

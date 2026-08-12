@@ -91,6 +91,9 @@
           Dynamic wireless charging can reduce electric-bus battery requirements, but infrastructure deployment and charging schedules are tightly coupled. We developed an <strong class="emphasis">integrated strategic and tactical optimization model</strong> that jointly determines charging locations, battery capacity, and time-of-use charging schedules<sup class="citation-sup">[6]</sup>.
         </li>
         <li>
+          Electric-vehicle operations must also jointly respect range limits, charging time, and time-varying congestion. We formulated a <strong class="emphasis">dynamic electric-vehicle routing problem</strong> that coordinates routes, departure times, and repeated charging decisions using a genetic algorithm and dynamic shortest paths<sup class="citation-sup">[10]</sup>.
+        </li>
+        <li>
           Road pricing can mitigate congestion and emissions, but uncertain travel demand and environmental conditions make conventional toll plans unreliable. We developed complementary <strong class="emphasis">distributionally robust simulation-based</strong> and <strong class="emphasis">bilevel stochastic-fuzzy</strong> optimization methods for time-of-day and sustainability-oriented pricing under uncertainty<sup class="citation-sup">[7,8]</sup>.
         </li>
       </ul>
@@ -306,6 +309,28 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/electric-vehicle.png"
+            alt="Electric vehicle routing with charging time and variable travel time"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[10]</span>Electric Vehicle Routing Problem with Charging Time and Variable Travel Time
+          </div>
+          <div class="paper-meta">
+            Sai Shao, Wei Guan, Bin Ran, <strong>Zhengbing He</strong>, Jun Bi · Mathematical Problems in Engineering · 2017:5098183 · 2017
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1155/2017/5098183" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexShao2017EVRouting)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -407,6 +432,8 @@
   year = {2020},
   doi = {10.1109/TITS.2019.2909316}
 }`;
+
+    const bibtexShao2017EVRouting = `@article{Shao2017ElectricVehicleRouting, author={Shao, Sai and Guan, Wei and Ran, Bin and He, Zhengbing and Bi, Jun}, title={Electric Vehicle Routing Problem with Charging Time and Variable Travel Time}, journal={Mathematical Problems in Engineering}, year={2017}, volume={2017}, pages={5098183}, doi={10.1155/2017/5098183}}`;
 
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {

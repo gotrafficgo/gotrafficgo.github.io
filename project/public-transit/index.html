@@ -90,6 +90,9 @@
         <li>
           Community shuttles must synchronize with metro services while respecting vehicle capacity and fleet limits. We formulated a <strong class="emphasis">synchronized timetable optimization</strong> problem and developed the tailored <strong class="emphasis">FW-SDT algorithm</strong>, which outperformed a genetic algorithm in accuracy and efficiency<sup class="citation-sup">[4]</sup>.
         </li>
+        <li>
+          Beyond service operations, we assess <strong class="emphasis">coverage, accessibility, and multimodal structure</strong>. A demand-independent persistent-homology method detects and ranks spatial-temporal transit deserts<sup class="citation-sup">[5]</sup>; taxi and subway trip patterns reveal how the two modes complement or compete<sup class="citation-sup">[6]</sup>; grid-based taxi trajectories provide time-sensitive accessibility measures<sup class="citation-sup">[7]</sup>; and flow-weighted transit networks in R-space reveal how public-transport topology and passenger flows co-evolve<sup class="citation-sup">[8]</sup>.
+        </li>
       </ul>
     </section>
 
@@ -188,6 +191,49 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/identifying-public.png" alt="Identifying public transit deserts using persistent homology" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[5]</span>Identifying Public Transit Deserts: A Travel Demand-Independent Persistent Homology-Based Method</div>
+          <div class="paper-meta">Daniel Carmody, Ophelia Zhu, <strong>Zhengbing He</strong>, Paolo Santi, Carlo Ratti · Transportation Safety and Environment · 7(2):tdaf015 · 2025</div>
+          <div class="paper-links"><a href="https://doi.org/10.1093/tse/tdaf015" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexCarmody2025TransitDeserts)">Copy BibTeX</button></div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/inter-modal.png" alt="Inter-modal relationship between taxi and subway in Beijing" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[6]</span>Exploring the Inter-Modal Relationship Between Taxi and Subway in Beijing, China</div>
+          <div class="paper-meta">Shixiong Jiang, Wei Guan, <strong>Zhengbing He</strong>, Yang Liu · Journal of Advanced Transportation · 2018:3981845 · 2018</div>
+          <div class="paper-links"><a href="https://doi.org/10.1155/2018/3981845" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexJiang2018TaxiSubway)">Copy BibTeX</button></div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/measuring-taxi.png" alt="Grid-based measurement of taxi accessibility using trajectory data" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[7]</span>Measuring Taxi Accessibility Using Grid-Based Method with Trajectory Data</div>
+          <div class="paper-meta">Shixiong Jiang, Wei Guan, <strong>Zhengbing He</strong>, Yang Liu · Sustainability · 10(9):3187 · 2018</div>
+          <div class="paper-links"><a href="https://doi.org/10.3390/su10093187" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexJiang2018TaxiAccessibility)">Copy BibTeX</button></div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img src="images/comparative.png" alt="Comparative analysis of flow-weighted transit route networks in R-space" loading="lazy" decoding="async" />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[8]</span>Comparative Empirical Analysis of Flow-Weighted Transit Route Networks in R-Space and Evolution Modeling</div>
+          <div class="paper-meta">Ailing Huang, Guangzhi Zang, <strong>Zhengbing He</strong>, Wei Guan · International Journal of Modern Physics B · 31(12):1750087 · 2017</div>
+          <div class="paper-links"><a href="https://doi.org/10.1142/S0217979217500874" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexHuang2017TransitNetworks)">Copy BibTeX</button></div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -236,6 +282,19 @@
   pages = {540--565},
   year = {2015},
   doi = {10.1016/j.trc.2015.10.007}
+}`;
+
+    const bibtexCarmody2025TransitDeserts = `@article{Carmody2025TransitDeserts,
+  author = {Carmody, Daniel and Zhu, Ophelia and He, Zhengbing and Santi, Paolo and Ratti, Carlo}, title = {Identifying Public Transit Deserts: A Travel Demand-Independent Persistent Homology-Based Method}, journal = {Transportation Safety and Environment}, year = {2025}, volume = {7}, number = {2}, pages = {tdaf015}, doi = {10.1093/tse/tdaf015}
+}`;
+    const bibtexJiang2018TaxiSubway = `@article{Jiang2018TaxiSubway,
+  author = {Jiang, Shixiong and Guan, Wei and He, Zhengbing and Liu, Yang}, title = {Exploring the Inter-Modal Relationship Between Taxi and Subway in Beijing, China}, journal = {Journal of Advanced Transportation}, year = {2018}, volume = {2018}, pages = {3981845}, doi = {10.1155/2018/3981845}
+}`;
+    const bibtexJiang2018TaxiAccessibility = `@article{Jiang2018TaxiAccessibility,
+  author = {Jiang, Shixiong and Guan, Wei and He, Zhengbing and Liu, Yang}, title = {Measuring Taxi Accessibility Using Grid-Based Method with Trajectory Data}, journal = {Sustainability}, year = {2018}, volume = {10}, number = {9}, pages = {3187}, doi = {10.3390/su10093187}
+}`;
+    const bibtexHuang2017TransitNetworks = `@article{Huang2017TransitNetworks,
+  author = {Huang, Ailing and Zang, Guangzhi and He, Zhengbing and Guan, Wei}, title = {Comparative Empirical Analysis of Flow-Weighted Transit Route Networks in R-Space and Evolution Modeling}, journal = {International Journal of Modern Physics B}, year = {2017}, volume = {31}, number = {12}, pages = {1750087}, doi = {10.1142/S0217979217500874}
 }`;
 
     function copyText(text) {

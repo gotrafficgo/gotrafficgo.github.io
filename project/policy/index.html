@@ -90,6 +90,9 @@
         <li>
           Rules requiring drivers to yield can improve pedestrian priority, yet perceived protection may also encourage riskier crossing decisions. We extended the <strong class="emphasis">Theory of Planned Behavior</strong> with policy knowledge and perceived effectiveness, revealing the policy's <strong class="emphasis">two-edged behavioral effect</strong><sup class="citation-sup">[4]</sup>.
         </li>
+        <li>
+          Posted speed limits likewise work only through actual compliance. Using large-scale driving data, we examined the gap between prescribed and observed speeds and framed <strong class="emphasis">speed-limit compliance as a behavioral policy problem</strong>, highlighting how road context and collective behavior affect whether regulation translates into safer operation<sup class="citation-sup">[7]</sup>.
+        </li>
       </ul>
     </section>
 
@@ -234,6 +237,28 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/speed-limit.png"
+            alt="Observed speed-limit compliance and driving behavior"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[7]</span>Speed Limit: Obey, or Not Obey?
+          </div>
+          <div class="paper-meta">
+            <strong>Zhengbing He</strong>, Mirco Nanni, Luca Pappalardo, Paolo Santi, Carlo Ratti · arXiv:2307.12189 · 2023
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.48550/arXiv.2307.12189" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2023SpeedLimit)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -301,6 +326,8 @@
   year = {2017},
   doi = {10.1016/j.trd.2016.10.035}
 }`;
+
+    const bibtexHe2023SpeedLimit = `@misc{He2023SpeedLimit, author={He, Zhengbing and Nanni, Mirco and Pappalardo, Luca and Santi, Paolo and Ratti, Carlo}, title={Speed Limit: Obey, or Not Obey?}, year={2023}, eprint={2307.12189}, archivePrefix={arXiv}, primaryClass={physics.soc-ph}, doi={10.48550/arXiv.2307.12189}}`;
 
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {
