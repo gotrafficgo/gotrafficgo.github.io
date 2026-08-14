@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Perspectives | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Zhengbing He's reviews and perspectives on multimodal network resilience, traffic flow, automated vehicles, space weather, vehicle sensor data, and route guidance."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .paper { min-width: 0; margin-bottom: 24px; }
+    .paper:last-child { margin-bottom: 0; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Perspectives</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        These <strong class="emphasis">reviews and perspectives</strong> revisit established approaches, synthesize emerging evidence, and identify <strong class="emphasis">future research priorities</strong> across transportation data, modeling, operations, and system risk:
+      </p>
+      <ul class="work-list">
+        <li>
+          Urban transportation increasingly depends on tightly coupled modes, yet resilience research has often examined each network in isolation. We organized the field around <strong class="emphasis">network modeling, resilience evaluation, and resilience optimization</strong>, compared mono-modal and multi-modal approaches, and incorporated emerging modes such as shared mobility and urban air mobility<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Space weather can disrupt navigation, communications, power systems, and transportation operations, yet its cross-modal effects had not been comprehensively synthesized. We reviewed impacts on <strong class="emphasis">air, maritime, rail, and ground transportation</strong>, connected the underlying disruption mechanisms to historical evidence, and outlined forecasting, mitigation, and <strong class="emphasis">resilient-infrastructure</strong> priorities<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Transportation vulnerability and resilience research spans overlapping concepts and disconnected analytical traditions. We clarified these concepts from supply-and-demand perspectives, organized studies into <strong class="emphasis">topological and system-structure approaches</strong>, and summarized the growing roles of simulation, mathematical modeling, and data-driven analysis<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Research on automated-vehicle traffic flow had grown rapidly around heterogeneous assumptions and largely unvalidated models. We systematically reviewed <strong class="emphasis">microscopic, mesoscopic, and macroscopic models</strong>, linked automated-driving strategies with traffic dynamics and management, and highlighted the need for field data and more realistic mixed-traffic assumptions<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          The availability of vehicle trajectories, especially NGSIM data, reshaped empirical traffic-flow research but also produced fragmented findings across scales. We revisited 15 years of <strong class="emphasis">trajectory-based traffic-flow studies</strong>, unified new phenomena and models from microscopic to macroscopic levels, and identified priorities for higher-quality data and theory development<sup class="citation-sup">[5]</sup>.
+        </li>
+        <li>
+          Vehicle-mounted and mobile sensors create new opportunities for observing travelers, vehicles, and surrounding traffic at scale. We synthesized <strong class="emphasis">vehicle sensor data</strong> research across data quality, human behavior, transportation operations, emissions, and policy, showing how these data support modeling, analysis, control, and management<sup class="citation-sup">[6]</sup>.
+        </li>
+        <li>
+          Many route-guidance strategies had been evaluated only in idealized symmetric networks, leaving their performance under asymmetric conditions uncertain. By comparing eight strategies in an <strong class="emphasis">asymmetric two-route network</strong>, we showed that only mean-velocity feedback consistently approximated user optimality and clarified why other feedback measures failed<sup class="citation-sup">[7]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[1]</span>A Survey of Multi-Modal Urban Transportation Network Resilience: Modeling, Evaluation, and Optimization
+        </div>
+        <div class="paper-meta">
+          Biao Chen, Songhua Hu, Xiangdong Xu, Guangchao Wang, Der-Horng Lee, <strong>Zhengbing He*</strong> · Transportation Research Part E: Logistics and Transportation Review · 207:104634 · 2026
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.tre.2025.104634" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexChen2026)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[2]</span>Space Weather Effects on Transportation Systems: A Review of Current Understanding and Future Outlook
+        </div>
+        <div class="paper-meta">
+          Dabin Xue, Lingxiao Wu, Tianhe Xu, Cheng-Lung Wu, Zhipeng Wang, <strong>Zhengbing He</strong> · Space Weather · 22(12):e2024SW004055 · 2024
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1029/2024SW004055" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexXue2024)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[3]</span>Vulnerability and Resilience of Transportation Systems: A Recent Literature Review
+        </div>
+        <div class="paper-meta">
+          Shouzheng Pan, Hai Yan, Jia He, <strong>Zhengbing He</strong> · Physica A: Statistical Mechanics and its Applications · 581:126235 · 2021
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.physa.2021.126235" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexPan2021)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[4]</span>Automated Vehicle-Involved Traffic Flow Studies: A Survey of Assumptions, Models, Speculations, and Perspectives
+        </div>
+        <div class="paper-meta">
+          Haiyang Yu, Rui Jiang, <strong>Zhengbing He</strong>, Zuoduo Zheng, Li Li, Runkun Liu, Xiqun Chen · Transportation Research Part C: Emerging Technologies · 127:103101 · 2021
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trc.2021.103101" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexYu2021)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[5]</span>Trajectory Data-Based Traffic Flow Studies: A Revisit
+        </div>
+        <div class="paper-meta">
+          Li Li, Rui Jiang, <strong>Zhengbing He</strong>, Xiqun Chen, Xuesong Zhou · Transportation Research Part C: Emerging Technologies · 114:225–240 · 2020
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trc.2020.02.016" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexLi2020)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[6]</span>Vehicle Sensor Data-Based Transportation Research: Modeling, Analysis, and Management
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong>, Jia Hu, B. Brian Park, Michael W. Levin · Journal of Intelligent Transportation Systems · 23(2):99–102 · 2019
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1080/15472450.2019.1586335" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2019)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[7]</span>Route Guidance Strategies Revisited: Comparison and Evaluation in an Asymmetric Two-Route Traffic Network
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong>, Bokui Chen, Ning Jia, Wei Guan, Benchuan Lin, Binghong Wang · International Journal of Modern Physics C · 25(4):1450005 · 2014
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1142/S0129183114500053" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2014)">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexChen2026 = `@article{chen2026survey,
+  title = {A survey of multi-modal urban transportation network resilience: Modeling, evaluation, and optimization},
+  author = {Chen, Biao and Hu, Songhua and Xu, Xiangdong and Wang, Guangchao and Lee, Der-Horng and He, Zhengbing},
+  journal = {Transportation Research Part E: Logistics and Transportation Review},
+  volume = {207},
+  pages = {104634},
+  year = {2026},
+  doi = {10.1016/j.tre.2025.104634}
+}`;
+
+    const bibtexXue2024 = `@article{xue2024space,
+  title = {Space weather effects on transportation systems: A review of current understanding and future outlook},
+  author = {Xue, Dabin and Wu, Lingxiao and Xu, Tianhe and Wu, Cheng-Lung and Wang, Zhipeng and He, Zhengbing},
+  journal = {Space Weather},
+  volume = {22},
+  number = {12},
+  pages = {e2024SW004055},
+  year = {2024},
+  doi = {10.1029/2024SW004055}
+}`;
+
+    const bibtexPan2021 = `@article{pan2021vulnerability,
+  title = {Vulnerability and resilience of transportation systems: A recent literature review},
+  author = {Pan, Shouzheng and Yan, Hai and He, Jia and He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {581},
+  pages = {126235},
+  year = {2021},
+  doi = {10.1016/j.physa.2021.126235}
+}`;
+
+    const bibtexYu2021 = `@article{yu2021automated,
+  title = {Automated vehicle-involved traffic flow studies: A survey of assumptions, models, speculations, and perspectives},
+  author = {Yu, Haiyang and Jiang, Rui and He, Zhengbing and Zheng, Zuoduo and Li, Li and Liu, Runkun and Chen, Xiqun},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {127},
+  pages = {103101},
+  year = {2021},
+  doi = {10.1016/j.trc.2021.103101}
+}`;
+
+    const bibtexLi2020 = `@article{li2020trajectory,
+  title = {Trajectory data-based traffic flow studies: A revisit},
+  author = {Li, Li and Jiang, Rui and He, Zhengbing and Chen, Xiqun and Zhou, Xuesong},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {114},
+  pages = {225--240},
+  year = {2020},
+  doi = {10.1016/j.trc.2020.02.016}
+}`;
+
+    const bibtexHe2019 = `@article{he2019vehicle,
+  title = {Vehicle sensor data-based transportation research: Modeling, analysis, and management},
+  author = {He, Zhengbing and Hu, Jia and Park, B. Brian and Levin, Michael W.},
+  journal = {Journal of Intelligent Transportation Systems},
+  volume = {23},
+  number = {2},
+  pages = {99--102},
+  year = {2019},
+  doi = {10.1080/15472450.2019.1586335}
+}`;
+
+    const bibtexHe2014 = `@article{he2014route,
+  title = {Route guidance strategies revisited: Comparison and evaluation in an asymmetric two-route traffic network},
+  author = {He, Zhengbing and Chen, Bokui and Jia, Ning and Guan, Wei and Lin, Benchuan and Wang, Binghong},
+  journal = {International Journal of Modern Physics C},
+  volume = {25},
+  number = {4},
+  pages = {1450005},
+  year = {2014},
+  doi = {10.1142/S0129183114500053}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>

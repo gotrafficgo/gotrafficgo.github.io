@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Solo-Authored Papers | Zhengbing He</title>
+  <meta
+    name="description"
+    content="Solo-authored research by Zhengbing He on traffic-flow visualization, ride-hailing mobility, urban agglomeration demand, cooperative driving, trajectory data, and traffic-wave mitigation."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    .container { max-width: 1440px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis, .paper-award { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .paper { min-width: 0; margin-bottom: 24px; }
+    .paper:last-child { margin-bottom: 0; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-award { margin: -2px 0 6px; font-size: 0.95rem; font-style: italic; font-weight: 600; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="https://www.GoTrafficGo.com">← Back to main page</a>
+      <h1>Solo-Authored Papers</h1>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+
+      <p>
+        These <strong class="emphasis">solo-authored works</strong> develop concise, interpretable approaches to understanding transportation data, mobility patterns, traffic operations, and future road systems:
+      </p>
+      <ul class="work-list">
+        <li>
+          Jam-absorption driving can suppress stop-and-go waves, but most strategies remain difficult to deploy because they lack practical implementation vehicles and operating rules. Inspired by police-car swerving, this study formulated a <strong class="emphasis">single-vehicle, two-detector strategy</strong> and demonstrated that it can eliminate an isolated wave without creating a secondary disturbance<sup class="citation-sup">[1]</sup>.
+        </li>
+        <li>
+          Widely used time–space traffic diagrams are often too coarse to reveal detailed traffic dynamics. A simple <strong class="emphasis">multiple linear regression refinement model</strong> increased diagram resolution by factors of four and sixteen, outperforming adaptive smoothing while transferring reliably across times, locations, and countries<sup class="citation-sup">[2]</sup>.
+        </li>
+        <li>
+          Ride-hailing research has been constrained by limited access to detailed operational data. Using multi-day Beijing trip orders, this study portrayed <strong class="emphasis">regional demand rhythms and driver service preferences</strong>, revealing distinct driver types and informing demand prediction, behavior modeling, and platform management<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          Travel demand across integrated urban regions may retain stable structural regularities at different spatial and temporal resolutions. Spatial–temporal networks constructed from Taiwan taxi data exhibited persistent <strong class="emphasis">power-law distributions</strong>, demonstrating a <strong class="emphasis">spatial–temporal fractal</strong> property of urban-agglomeration demand<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          Connected and automated vehicles create opportunities to coordinate movements at intersections and ramps beyond conventional lane-based control. This chapter reviewed prevailing <strong class="emphasis">cooperative-driving strategies</strong> and proposed a <strong class="emphasis">lane change-free road transportation system</strong> in which vehicles can reach any destination without on-road lane changes<sup class="citation-sup">[5]</sup>.
+        </li>
+        <li>
+          NGSIM datasets have shaped traffic-flow research, yet their uses and limitations were dispersed across many studies. This review classified leading Transportation Research papers into six subjects and five data uses, then identified dataset limitations and priorities for <strong class="emphasis">future high-fidelity trajectory collection</strong><sup class="citation-sup">[6]</sup>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[1]</span>Transforming Policy-Car Swerving for Mitigating Stop-and-Go Traffic Waves: A Practice-Oriented Jam-Absorption Driving Strategy
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · arXiv:2602.10234 · 2026
+        </div>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2602.10234" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2026)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[2]</span>Refining Time-Space Traffic Diagrams: A Simple Multiple Linear Regression Model
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · IEEE Transactions on Intelligent Transportation Systems · 25(2):1465–1475 · 2024
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1109/TITS.2023.3316593" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2024)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[3]</span>Portraying Ride-Hailing Mobility Using Multi-Day Trip Order Data: A Case Study of Beijing, China
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · Transportation Research Part A: Policy and Practice · 146:152–169 · 2021
+        </div>
+        <div class="paper-award">2022 Key Innovation in the Transportation Sector, Ministry of Transport, China</div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.tra.2021.01.017" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2021)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[4]</span>Spatial-Temporal Fractal of Urban Agglomeration Travel Demand
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · Physica A: Statistical Mechanics and its Applications · 549:124503 · 2020
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.physa.2020.124503" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2020Fractal)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[5]</span>Cooperative Driving and a Lane Change-Free Road Transportation System
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · Chapter 8 in <em>Traffic Information and Control</em> · IET · pp. 163–183 · 2020
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1049/PBTR026E_ch8" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2020Chapter)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          <span class="paper-index">[6]</span>Research Based on High-Fidelity NGSIM Vehicle Trajectory Datasets: A Review
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong> · Research report · 2017
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.13140/RG.2.2.11429.60643" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexHe2017)">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Zhengbing He
+    </footer>
+  </main>
+
+  <script>
+    const bibtexHe2026 = `@misc{he2026transforming,
+  title = {Transforming policy-car swerving for mitigating stop-and-go traffic waves: A practice-oriented jam-absorption driving strategy},
+  author = {He, Zhengbing},
+  year = {2026},
+  eprint = {2602.10234},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2602.10234}
+}`;
+
+    const bibtexHe2024 = `@article{he2024refining,
+  title = {Refining time-space traffic diagrams: A simple multiple linear regression model},
+  author = {He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {25},
+  number = {2},
+  pages = {1465--1475},
+  year = {2024},
+  doi = {10.1109/TITS.2023.3316593}
+}`;
+
+    const bibtexHe2021 = `@article{he2021portraying,
+  title = {Portraying ride-hailing mobility using multi-day trip order data: A case study of Beijing, China},
+  author = {He, Zhengbing},
+  journal = {Transportation Research Part A: Policy and Practice},
+  volume = {146},
+  pages = {152--169},
+  year = {2021},
+  doi = {10.1016/j.tra.2021.01.017}
+}`;
+
+    const bibtexHe2020Fractal = `@article{he2020spatial,
+  title = {Spatial-temporal fractal of urban agglomeration travel demand},
+  author = {He, Zhengbing},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  volume = {549},
+  pages = {124503},
+  year = {2020},
+  doi = {10.1016/j.physa.2020.124503}
+}`;
+
+    const bibtexHe2020Chapter = `@incollection{he2020cooperative,
+  title = {Cooperative driving and a lane change-free road transportation system},
+  author = {He, Zhengbing},
+  booktitle = {Traffic Information and Control},
+  editor = {Li, Ruimin and He, Zhengbing},
+  publisher = {Institution of Engineering and Technology},
+  pages = {163--183},
+  year = {2020},
+  doi = {10.1049/PBTR026E_ch8}
+}`;
+
+    const bibtexHe2017 = `@techreport{he2017research,
+  title = {Research based on high-fidelity {NGSIM} vehicle trajectory datasets: A review},
+  author = {He, Zhengbing},
+  year = {2017},
+  doi = {10.13140/RG.2.2.11429.60643}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
