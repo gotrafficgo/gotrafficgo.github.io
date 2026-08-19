@@ -737,7 +737,7 @@ function draw() {
     && simT >= jad.track.changeStart
     && simT <= data.jadInterventionEnd
   );
-  const jadStatus = jadIsSwerving ? 'Activated' : 'Deactivated';
+  const jadStatus = jadIsSwerving ? 'Activated (55 km/h)' : 'Deactivated';
   jadStateEl.textContent = `JAD ${jadStatus}`;
   jadStateEl.classList.toggle('is-active', jadIsSwerving);
   timeStatusEl.textContent = `, t=${simT.toFixed(1)}s`;
