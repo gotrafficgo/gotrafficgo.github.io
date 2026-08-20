@@ -543,7 +543,7 @@ function drawRoad(x, y, w, h, label, scale) {
   }
   ctx.fillStyle = '#222';
   ctx.font = '13px Arial';
-  const statusText = scale.status ? ` (${scale.status})` : '';
+  const statusText = scale.status ? `: ${scale.status}` : '';
   const labelWidth = ctx.measureText(label).width;
   const statusWidth = ctx.measureText(statusText).width;
   const wraps = statusText && labelWidth + statusWidth > w;
