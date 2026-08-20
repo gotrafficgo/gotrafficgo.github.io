@@ -118,6 +118,7 @@
     background: #fff;
   }
   .jad-animation .observation-video-section {
+    position: relative;
     margin: 0;
     padding: 16px 20px 20px;
     text-align: center;
@@ -157,6 +158,23 @@
   .jad-animation .observation-video-caption a {
     color: #fff;
   }
+  .jad-animation .jad-paper-info {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: clamp(110px, calc(50% - min(360px, 36%) - 40px), 300px);
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    text-align: right;
+  }
+  .jad-animation .jad-paper-link,
+  .jad-animation .jad-paper-link:visited {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6b7280;
+  }
   @media (max-width: 699px) {
     .jad-animation .jad-toolbar { padding: 8px 14px; }
     .jad-animation .observation-video-section { padding: 12px 14px 14px; }
@@ -188,6 +206,10 @@
         <source src="videos/Cop-Car-Swerving-across-Freeway.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+    </div>
+    <div class="jad-paper-info">
+      <div>Transforming Police-Car Swerving for Mitigating Isolated Stop-and-Go Traffic Waves: A Practice-Oriented Jam-Absorption Driving Strategy</div>
+      <a class="jad-paper-link" href="https://arxiv.org/abs/2602.10234" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2602.10234</a>
     </div>
   </section>
 </div>
@@ -736,7 +758,7 @@ function draw() {
   const localView = { left: pad, top: localTop, width: availableW, height: localH, xMin, xMax: xMin + followWidth, scale: localScale, showLaneLines: true, showRoadFrame: true };
 
   const jadTrafficStatus = getJadTrafficStatus(simT, jadTrack);
-  drawScene(baselineView, 'Natural Traffic', 1, data.baselineTracks, frameStates, null);
+  drawScene(baselineView, 'Nature Traffic w/ Stop-and-Go Wave', 1, data.baselineTracks, frameStates, null);
   drawScene(fullView, 'JAD-Intervened Traffic', 1, data.tracks, frameStates, jad, jadTrafficStatus);
   drawScene(localView, '', 1, data.tracks, frameStates, jad);
   drawZoomRelationship(fullView, localView);
