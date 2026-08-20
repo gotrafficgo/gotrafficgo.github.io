@@ -95,7 +95,6 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
-  .jad-animation #jadState.is-active { color: #2563eb; }
   .jad-animation .jad-controls {
     display: flex;
     align-items: center;
@@ -170,7 +169,7 @@
 <body>
 <div class="jad-animation" id="jadAnimation">
   <div class="jad-toolbar">
-    <span id="status"><span id="jadState">JAD Deactivated</span><span id="timeStatus"></span></span>
+    <span id="status"><span id="timeStatus"></span></span>
     <div class="jad-controls">
       <label>Speed <input id="speed" type="range" min="0" max="12" value="4" step="0.1"></label>
       <label>Time <input id="scrub" type="range" min="540.0" max="980.0" value="540.0" step="0.1"></label>
@@ -327,7 +326,6 @@ const canvas = document.getElementById('jadCanvas');
 const ctx = canvas.getContext('2d');
 const speed = document.getElementById('speed');
 const scrub = document.getElementById('scrub');
-const jadStateEl = document.getElementById('jadState');
 const timeStatusEl = document.getElementById('timeStatus');
 const playBtn = document.getElementById('play');
 const observationVideo = document.getElementById('observationVideo');
@@ -523,7 +521,15 @@ function drawRoad(x, y, w, h, label, scale) {
   }
   ctx.fillStyle = '#222';
   ctx.font = '13px Arial';
-  ctx.fillText(label, x, y - 12);
+  const statusText = scale.status ? ` (${scale.status})` : '';
+  const labelWidth = ctx.measureText(label).width;
+  const statusWidth = ctx.measureText(statusText).width;
+  const wraps = statusText && labelWidth + statusWidth > w;
+  ctx.fillText(label, x, y - (wraps ? 27 : 12));
+  if (statusText) {
+    ctx.fillStyle = '#2563eb';
+    ctx.fillText(statusText, wraps ? x : x + labelWidth, y - 12);
+  }
 }
 
 function laneYToScreen(yMeters, top, scale) {
@@ -605,8 +611,8 @@ function getJadState(frameStates) {
   return { track: jad, state };
 }
 
-function drawScene(view, label, vehicleScale, tracks, frameStates, jad) {
-  drawRoad(view.left, view.top, view.width, view.height, label, { value: view.scale, showLaneLines: view.showLaneLines, showRoadFrame: view.showRoadFrame });
+function drawScene(view, label, vehicleScale, tracks, frameStates, jad, status = '') {
+  drawRoad(view.left, view.top, view.width, view.height, label, { value: view.scale, showLaneLines: view.showLaneLines, showRoadFrame: view.showRoadFrame, status });
   let drawn = 0;
   for (const tr of tracks) {
     if (tr.role === 'jad') continue;
@@ -654,6 +660,15 @@ function drawZoomRelationship(sourceView, detailView) {
   ctx.lineWidth = 1.5;
   ctx.strokeRect(detailView.left, detailView.top, detailView.width, detailView.height);
   ctx.restore();
+}
+
+function getJadTrafficStatus(t, jadTrack) {
+  const insertionTime = jadTrack?.t?.[0] ?? 590;
+  const activationTime = jadTrack?.changeStart ?? 627;
+  if (t < insertionTime) return 'No Police Car';
+  if (t < activationTime) return 'Police Car Inserted; Not Yet Activated';
+  if (t <= data.jadInterventionEnd) return 'Police Car Swerving at 55 km/h';
+  return 'Police Car Has Left';
 }
 
 function syncObservationVideo(activated) {
@@ -720,8 +735,9 @@ function draw() {
   const xMin = Math.max(0, Math.min(data.roadLength - followWidth, centerX - followWidth / 2));
   const localView = { left: pad, top: localTop, width: availableW, height: localH, xMin, xMax: xMin + followWidth, scale: localScale, showLaneLines: true, showRoadFrame: true };
 
-  drawScene(baselineView, 'Natural Traffic w/o JAD', 1, data.baselineTracks, frameStates, null);
-  drawScene(fullView, 'JAD-Intervented Traffic', 1, data.tracks, frameStates, jad);
+  const jadTrafficStatus = getJadTrafficStatus(simT, jadTrack);
+  drawScene(baselineView, 'Natural Traffic', 1, data.baselineTracks, frameStates, null);
+  drawScene(fullView, 'JAD-Intervened Traffic', 1, data.tracks, frameStates, jad, jadTrafficStatus);
   drawScene(localView, '', 1, data.tracks, frameStates, jad);
   drawZoomRelationship(fullView, localView);
 
@@ -737,10 +753,7 @@ function draw() {
     && simT >= jad.track.changeStart
     && simT <= data.jadInterventionEnd
   );
-  const jadStatus = jadIsSwerving ? 'Activated (55 km/h)' : 'Deactivated';
-  jadStateEl.textContent = `JAD ${jadStatus}`;
-  jadStateEl.classList.toggle('is-active', jadIsSwerving);
-  timeStatusEl.textContent = `, t=${simT.toFixed(1)}s`;
+  timeStatusEl.textContent = `t=${simT.toFixed(1)}s`;
   syncObservationVideo(jadIsSwerving);
   scrub.value = simT;
 }
