@@ -580,7 +580,7 @@ function drawDetectorLabel(view, positionMeters) {
   ctx.stroke();
   if (detectorStatus) {
     const prefix = 'Detector: ';
-    ctx.font = '14px Arial';
+    ctx.font = '12px Arial';
     ctx.textAlign = 'left';
     const prefixWidth = ctx.measureText(prefix).width;
     const statusWidth = ctx.measureText(detectorStatus).width;
@@ -618,7 +618,7 @@ function drawPoliceCarBelowView(view, positionMeters) {
 function drawPoliceCarStatus(view, status) {
   ctx.save();
   ctx.fillStyle = '#2563eb';
-  ctx.font = '14px Arial';
+  ctx.font = '12px Arial';
   ctx.textAlign = 'center';
   ctx.fillText(status, view.left + view.width / 2, view.top + view.height + 24);
   ctx.restore();
