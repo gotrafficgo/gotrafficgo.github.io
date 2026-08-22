@@ -57,114 +57,10 @@
       .selected-projects {
         margin-left: 2em;
       }
-      .project-details a,
-      .project-details a:visited,
-      .project-details strong {
-        color: #000;
-      }
-      .project-details b,
-      .project-details strong {
-        font-weight: normal;
-      }
-      .project-showcase {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        max-width: 1160px;
-        margin-left: 2em;
-        padding: 0;
-        list-style: none;
-      }
-      .project-list.project-showcase li {
-        min-width: 0;
-        margin: 0;
-        padding: 0.55em 0.85em;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        color: #64748b;
-        background: #f8fafc;
-        line-height: 1.3;
-      }
-      .project-list.project-showcase li:has(> a) {
-        padding: 0;
-        border-left: 3px solid #0969da;
-        background: #fff;
-        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
-        transition: border-color 160ms ease, box-shadow 160ms ease,
-          transform 160ms ease;
-      }
-      .project-list.project-showcase li:has(> a):hover {
-        border-color: #93c5fd;
-        border-left-color: #0969da;
-        box-shadow: 0 5px 14px rgba(15, 23, 42, 0.1);
-        transform: translateY(-2px);
-      }
-      .project-showcase a,
-      .project-showcase a:visited {
-        position: relative;
-        display: block;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 0.55em 2.15em 0.55em 0.85em;
-        color: #1e293b;
-        text-decoration: none;
-      }
-      .project-showcase a::after {
-        content: "↗";
-        position: absolute;
-        top: 0.5em;
-        right: 0.85em;
-        color: #0969da;
-        font-size: 0.95em;
-      }
-      .project-showcase a:hover {
-        color: #0969da;
-      }
-      .project-showcase a:focus-visible {
-        border-radius: 6px;
-        outline: 3px solid rgba(9, 105, 218, 0.28);
-        outline-offset: 2px;
-      }
-      .project-showcase a b,
-      .project-showcase a strong {
-        display: block;
-        font-weight: 700;
-      }
-      .project-summary {
-        display: block;
-        margin-top: 0.05em;
-        color: #475569;
-        font-weight: 400;
-      }
-      .project-list.project-showcase li.project-category {
-        grid-column: 1 / -1;
-        margin: 1.1em 0 0;
-        padding: 0 0 0.45em;
-        border: 0;
-        border-bottom: 2px solid #dbeafe;
-        border-radius: 0;
-        color: #0f172a;
-        background: transparent;
-        font-size: 1.02rem;
-        font-weight: 650;
-        letter-spacing: -0.01em;
-      }
-      .project-list.project-showcase li.project-category:first-child {
-        margin-top: 0;
-      }
-      @media (max-width: 900px) {
-        .project-showcase {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
       @media (max-width: 640px) {
         .paragraph-indent,
         .selected-projects {
           margin-left: 0;
-        }
-
-        .project-showcase {
-          grid-template-columns: 1fr;
         }
 
         .academic-services li {
@@ -228,15 +124,6 @@
       }
       .project-list li.group-start {
         margin-top: 0.8em;
-      }
-      .project-list li.project-category {
-        margin-top: 1em;
-        margin-left: -1.25em;
-        list-style: none;
-        font-weight: 600;
-      }
-      .project-list li.project-category:first-child {
-        margin-top: 0;
       }
       .academic-services {
         list-style: none;
@@ -338,95 +225,10 @@
       担任中文核心期刊《交通运输工程与信息学报》主编、《IET Intelligent Transport Systems》执行主编、顶级期刊《IEEE Transactions on Intelligent Transportation Systems》资深编辑、中国科协联合国咨商委员等等。获评交通运输部科技青年英才、中国智能交通协会科技创新领军人才等三项，中国公路学会科技进步二等奖三项等。主页www.GoTrafficGo.com
     </p>
 
-    <h2>团队</h2>
-    <div class="selected-projects">• <a href="students.html">学生</a>&nbsp;&nbsp;&nbsp;• 合作者</div>
-
-    <h2>成果介绍</h2>
-    <ul class="project-list selected-projects chinese-papers project-details project-showcase">
-      <li class="project-category">交通动态与建模</li>
-      <li>
-        <a href="project/occams-razor/" target="_blank" rel="noopener noreferrer"><b>奥卡姆剃刀</b><span class="project-summary">交通动态简单模型</span></a>
-      </li>
-      <li>
-        <a href="project/time-space-traffic-diagram/" target="_blank" rel="noopener noreferrer"><b>交通时空图</b><span class="project-summary">构建、优化与应用</span></a>
-      </li>
-      <li>
-        <a href="project/microscopic-traffic-modeling/" target="_blank" rel="noopener noreferrer"><b>交通动态解析</b><span class="project-summary">微观模型</span></a>
-      </li>
-      <li>
-        <a href="project/mapping-to-cells/" target="_blank" rel="noopener noreferrer"><b>拥堵感知</b><span class="project-summary">网格映射方法</span></a>
-      </li>
-      <li>
-        <a href="project/traffic-state-estimation/" target="_blank" rel="noopener noreferrer"><b>交通状态估计</b><span class="project-summary">旅行时间与车道级方法</span></a>
-      </li>
-      <li>
-        <a href="project/others-traffic-dynamics/" target="_blank" rel="noopener noreferrer"><b>其他</b></a>
-      </li>
-
-      <li class="project-category">智能车</li>
-      <li>
-        <a href="project/dedicated-vehicle-dispatch/" target="_blank" rel="noopener noreferrer"><b>治堵</b><span class="project-summary">单车方法</span></a>
-      </li>
-      <li>
-        <a href="project/intelligent-vehicle/" target="_blank" rel="noopener noreferrer"><b>智能车</b><span class="project-summary">运行与控制</span></a>
-      </li>
-      <li>
-        <a href="project/autonomous-intersection/" target="_blank" rel="noopener noreferrer"><b>自动交叉口</b><span class="project-summary">告别红绿灯</span></a>
-      </li>
-      <li>
-        <a href="project/brain-driving/" target="_blank" rel="noopener noreferrer"><b>脑驾</b><span class="project-summary">脑电与驾驶模拟器</span></a>
-      </li>
-      <li><a href="project/others-intelligent-vehicles/" target="_blank" rel="noopener noreferrer"><b>其他</b></a></li>
-
-      <li class="project-category">AI赋能</li>
-      <li>
-        <a href="project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer"><b>AI驱动</b><span class="project-summary">车辆动力学模型</span></a>
-      </li>
-      <li>
-        <a href="project/motion-prediction/" target="_blank" rel="noopener noreferrer"><b>AI赋能轨迹预测</b><span class="project-summary">自动驾驶</span></a>
-      </li>
-      <li>
-        <a href="project/large-language-model/" target="_blank" rel="noopener noreferrer"><b>大语言模型</b><span class="project-summary">赋能交通研究</span></a>
-      </li>
-      <li>
-        <a href="project/traffic-prediction/" target="_blank" rel="noopener noreferrer"><b>出行预测</b><span class="project-summary">交通状态、旅行时间与需求</span></a>
-      </li>
-      <li>智能体城市</li>
-      <li><a href="project/others-ai-x/" target="_blank" rel="noopener noreferrer"><b>其他</b></a></li>
-
-      <li class="project-category">城市出行</li>
-      <li>
-        <a href="project/transportation-resilience/" target="_blank" rel="noopener noreferrer"><b>交通韧性</b><span class="project-summary">动态需求与多模式网络</span></a>
-      </li>
-      <li>
-        <a href="project/day-to-day/" target="_blank" rel="noopener noreferrer"><b>逐日路径选择</b><span class="project-summary">理论、实验与仿真</span></a>
-      </li>
-      <li>
-        <a href="project/network-equilibrium/" target="_blank" rel="noopener noreferrer"><b>路网均衡</b><span class="project-summary">模型、行为与应用</span></a>
-      </li>
-      <li>
-        <a href="project/urban-agglomeration/" target="_blank" rel="noopener noreferrer"><b>城市群</b><span class="project-summary">出行需求理解</span></a>
-      </li>
-      <li>
-        <a href="project/route-guidance/" target="_blank" rel="noopener noreferrer"><b>路径诱导</b><span class="project-summary">基于交通状态的方法</span></a>
-      </li>
-      <li>
-        <a href="project/sustainability/" target="_blank" rel="noopener noreferrer"><b>可持续发展</b><span class="project-summary">排放、定价与无线充电</span></a>
-      </li>
-      <li>
-        <a href="project/public-transit/" target="_blank" rel="noopener noreferrer"><b>公共交通</b><span class="project-summary">规划与运营</span></a>
-      </li>
-      <li>
-        <a href="project/shared-mobility/" target="_blank" rel="noopener noreferrer"><b>共享出行</b><span class="project-summary">行为、运营与规划</span></a>
-      </li>
-      <li>
-        <a href="project/policy/" target="_blank" rel="noopener noreferrer"><b>交通政策</b><span class="project-summary">需求管理与响应</span></a>
-      </li>
-      <li><a href="project/others-urban-mobility/" target="_blank" rel="noopener noreferrer"><b>其他</b></a></li>
-
-      <li class="project-category">观点与杂项</li>
-      <li><a href="project/perspectives/" target="_blank" rel="noopener noreferrer"><b>综述与展望</b></a></li>
-      <li><a href="project/solo-authored-papers/" target="_blank" rel="noopener noreferrer"><b>独著论文</b></a></li>
+    <h2>科研团队</h2>
+    <ul class="project-list selected-projects">
+      <li><a href="students.html">学生</a></li>
+      <li>合作者</li>
     </ul>
 
     <h2>基金项目</h2>
