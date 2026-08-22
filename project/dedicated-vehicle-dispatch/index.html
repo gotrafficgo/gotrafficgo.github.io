@@ -818,7 +818,7 @@ function getJadTrafficStatus(t, jadTrack) {
   if (t < activationTime) return 'Police Car Inserted; Not Activated';
   if (t <= data.jadInterventionEnd) return 'Police Car Activated: Swerving at 55 km/h';
   if (t <= data.jadInterventionEnd + jadExitDuration) return '';
-  return 'Police Car Has Left';
+  return 'JAD Mission Complete; Police Car Has Left';
 }
 
 function syncObservationVideo(activated) {
