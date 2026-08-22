@@ -655,6 +655,23 @@ function drawPoliceCarBelowView(view, positionMeters) {
     Math.round(vehH),
     0
   );
+  if (simT >= 521) {
+    const lines = view.width < 520
+      ? ['JAD Plan Received;', 'Waiting for a Safe Gap']
+      : ['JAD Plan Received; Waiting for a Safe Gap'];
+    const lineHeight = 14;
+    const centerY = view.top + view.height + 8 + vehH / 2;
+    const firstY = centerY - (lines.length - 1) * lineHeight / 2;
+    ctx.save();
+    ctx.fillStyle = '#2563eb';
+    ctx.font = '12px Arial';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    lines.forEach((line, index) => {
+      ctx.fillText(line, px + vehW / 2 + 6, firstY + index * lineHeight);
+    });
+    ctx.restore();
+  }
 }
 
 function drawPoliceCarStatus(view, status) {
