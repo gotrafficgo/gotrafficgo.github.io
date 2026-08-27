@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <title>Publications in Table</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172033;
+        --muted: #667085;
+        --line: #d9e0ea;
+        --header: #173b63;
+        --header-alt: #245583;
+        --stripe: #f7f9fc;
+        --focus: #dbeafe;
+        --link: #0b63ce;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #f3f6fa;
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+      main { width: min(1800px, calc(100% - 32px)); margin: 20px auto; }
+      .table-shell {
+        overflow: auto;
+        max-height: calc(100vh - 40px);
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(23, 32, 51, 0.08);
+      }
+      table { width: 100%; min-width: 1500px; border-collapse: separate; border-spacing: 0; }
+      caption {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+      }
+      th, td {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th:last-child, td:last-child { border-right: 0; }
+      tbody tr:last-child td { border-bottom: 0; }
+      thead th {
+        position: sticky; top: 0; z-index: 2; background: var(--header); color: #fff;
+        font-size: 12px; letter-spacing: 0.01em; white-space: nowrap;
+      }
+      thead th:nth-child(even) { background: var(--header-alt); }
+      tbody tr[data-year="2007"],
+      tbody tr[data-year="2009"],
+      tbody tr[data-year="2010"],
+      tbody tr[data-year="2014"],
+      tbody tr[data-year="2018"],
+      tbody tr[data-year="2022"],
+      tbody tr[data-year="2026"] { --year-color: #fff2cc; background: var(--year-color); }
+      tbody tr[data-year="2011"],
+      tbody tr[data-year="2015"],
+      tbody tr[data-year="2019"],
+      tbody tr[data-year="2023"] { --year-color: #fce4d6; background: var(--year-color); }
+      tbody tr[data-year="2012"],
+      tbody tr[data-year="2016"],
+      tbody tr[data-year="2020"],
+      tbody tr[data-year="2024"] { --year-color: #ddebf7; background: var(--year-color); }
+      tbody tr[data-year="2013"],
+      tbody tr[data-year="2017"],
+      tbody tr[data-year="2021"],
+      tbody tr[data-year="2025"] { --year-color: #e2f0d9; background: var(--year-color); }
+      .year-cell {
+        background: var(--year-color);
+        font-weight: 600;
+        vertical-align: middle;
+      }
+      .col-no, .col-year, .col-role-1, .col-role-2 {
+        text-align: center;
+        white-space: nowrap;
+      }
+      th:nth-child(1), .col-year { width: 72px; }
+      th:nth-child(2), .col-no { width: 64px; }
+      th:nth-child(3), .col-paper { min-width: 330px; }
+      th:nth-child(4), .col-authors { min-width: 260px; }
+      th:nth-child(5), .col-role-1,
+      th:nth-child(6), .col-role-2 { min-width: 92px; }
+      th:nth-child(7), .col-journal { min-width: 270px; }
+      th:nth-child(8), .col-journal-type { min-width: 110px; }
+      th:nth-child(9), .col-issue { min-width: 180px; }
+      th:nth-child(10), .col-link { width: 64px; }
+      a { color: var(--link); overflow-wrap: anywhere; }
+      .empty { color: #98a2b3; }
+      [hidden] { display: none !important; }
+      @media (max-width: 720px) {
+        main { width: calc(100% - 20px); margin: 10px auto; }
+        .table-shell { max-height: calc(100vh - 20px); }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="table-shell" tabindex="0" aria-label="Scrollable publication table">
+        <table id="publication-table">
+          <caption>Complete publication data from the supplied Excel workbook</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col">No.</th>
+              <th scope="col">Paper</th>
+              <th scope="col">Authors</th>
+              <th scope="col">My Role 1</th>
+              <th scope="col">My Role 2</th>
+              <th scope="col">Journal</th>
+              <th scope="col">Journal Type</th>
+              <th scope="col">Issue, Volume, Pages</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-year="2007">
+              <td rowspan="1" class="year-cell col-year">2007</td>
+              <td class="col-no">1</td>
+              <td class="col-paper">基于反馈学习机制的个体出行行为概念模型研究</td>
+              <td class="col-authors">贺正冰, 马寿峰</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">第九届全国青年管理科学与系统科学学术会议</td>
+              <td class="col-journal-type">Conference</td>
+              <td class="col-issue">广州, 中国</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2009">
+              <td rowspan="1" class="year-cell col-year">2009</td>
+              <td class="col-no">2</td>
+              <td class="col-paper">Empirical study on the influence of learning ability to individual travel Behavior</td>
+              <td class="col-authors">Zhengbing He, Shoufeng Ma*, Xiting Tang</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Transportation Systems Engineering and Information Technology</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">9(2):75-80</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/S1570-6672(08)60057-4" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2010">
+              <td rowspan="3" class="year-cell col-year">2010</td>
+              <td class="col-no">3</td>
+              <td class="col-paper">基于仿真实验的城市交通系统宏观现象研究</td>
+              <td class="col-authors">贺正冰, 马寿峰, 贺国光</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">物理学报</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">59(1):171-177</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2010">
+              <td class="col-no">4</td>
+              <td class="col-paper">基于风险的交通网络可靠性分析方法</td>
+              <td class="col-authors">马寿峰, 贺正冰, 张思伟</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">系统工程理论与实践</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">30(3):550-556</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2010">
+              <td class="col-no">5</td>
+              <td class="col-paper">控制与诱导的协调中路网拥堵状态识别方法</td>
+              <td class="col-authors">刘建美, 马寿峰, 贺正冰, 贾宁</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">管理科学学报</td>
+              <td class="col-journal-type">Journal</td>
+              <td class="col-issue">13(11):35-40</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2011">
+              <td rowspan="2" class="year-cell col-year">2011</td>
+              <td class="col-no">6</td>
+              <td class="col-paper">Introduction to applications of swarm in transportation research</td>
+              <td class="col-authors">Zhengbing He, Shoufeng Ma</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Forth International Joint Conference on Computational Sciences and Optimization</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">1045-1048</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/CSO.2011.7" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2011">
+              <td class="col-no">7</td>
+              <td class="col-paper">Simulation platform oriented to traffic control and guidance coordination system</td>
+              <td class="col-authors">Geng Li, Shoufeng Ma, Zhengbing He</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">18th IEEE Industrial Engineering and Engineering Management (IE&amp;EM)</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue"><span class="empty" aria-label="No data">—</span></td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2012">
+              <td rowspan="2" class="year-cell col-year">2012</td>
+              <td class="col-no">8</td>
+              <td class="col-paper">Stochastic extension of Newell’s &quot;three-detector method&quot;</td>
+              <td class="col-authors">Jorge Laval*, Zhengbing He, Felipe Castrillon</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Record: Journal of the Transportation Research Board</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2315(1):73-80</td>
+              <td class="col-link"><a href="https://doi.org/10.3141/2315-08" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2012">
+              <td class="col-no">9</td>
+              <td class="col-paper">Approximating the minimum distribution of two normally distributed variables each with the same mean and variance</td>
+              <td class="col-authors">Zhengbing He, Ailing Huang</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Fifth International Joint Conference on Computational Sciences and Optimization</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">103-107</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/CSO.2012.31" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2013">
+              <td rowspan="4" class="year-cell col-year">2013</td>
+              <td class="col-no">10</td>
+              <td class="col-paper">A traffic-condition-based route guidance strategy for a single destination road network</td>
+              <td class="col-authors">Zhengbing He, Wei Guan*, Shoufeng Ma</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">32:89-102</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2013.04.005" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2013">
+              <td class="col-no">11</td>
+              <td class="col-paper">Delays caused by motorized vehicles unable to clear intersections in China: Graphical analysis</td>
+              <td class="col-authors">Zhengbing He, Shoufeng Ma, Wei Guan*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Central South University</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">20(9):2614-2624</td>
+              <td class="col-link"><a href="https://doi.org/10.1007/s11771-013-1776-4" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2013">
+              <td class="col-no">12</td>
+              <td class="col-paper">面向长周期的交通状态反馈诱导策略</td>
+              <td class="col-authors">贺正冰, 关伟</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">控制与决策</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">28(7):1046-1050</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2013">
+              <td class="col-no">13</td>
+              <td class="col-paper">考虑信号交叉口影响的分散路径诱导策略</td>
+              <td class="col-authors">贺正冰, 关伟</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">北京工业大学学报</td>
+              <td class="col-journal-type">Journal</td>
+              <td class="col-issue">39(10):1539-1544</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2014">
+              <td rowspan="4" class="year-cell col-year">2014</td>
+              <td class="col-no">14</td>
+              <td class="col-paper">Route guidance strategies revisited: Comparison and evaluation in an asymmetric two-route traffic system</td>
+              <td class="col-authors">Zhengbing He, Bokui Chen, Ning Jia, Wei Guan*, Benchuan Lin, Binghong Wang</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">International Journal of Modern Physics C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">25(4):1450005</td>
+              <td class="col-link"><a href="https://doi.org/10.1142/S0129183114500053" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2014">
+              <td class="col-no">15</td>
+              <td class="col-paper">Mobile traffic sensor routing in dynamic transportation systems</td>
+              <td class="col-authors">Ning Zhu, Yang Liu, Shoufeng Ma, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">15(5):2273-2285</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2014.2314732" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2014">
+              <td class="col-no">16</td>
+              <td class="col-paper">北京市快速环路宏观基本图特征研究</td>
+              <td class="col-authors">贺正冰, 关伟*, 樊玲玲, 关积珍</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输系统工程与信息</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">14(2):199-205</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2014">
+              <td class="col-no">17</td>
+              <td class="col-paper">A day-to-day route choice model based on travelers&#x27; behavioral characteristics</td>
+              <td class="col-authors">Zhengbing He, Liu Yang, Wei Guan</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">9th International Conference of Traffic and Transportation Studies</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">138:738-747</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.sbspro.2014.07.251" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2015">
+              <td rowspan="5" class="year-cell col-year">2015</td>
+              <td class="col-no">18</td>
+              <td class="col-paper">A simple nonparametric car-following model driven by field data</td>
+              <td class="col-authors">Zhengbing He, Liang Zheng, Wei Guan*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part B</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">80:185-201</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trb.2015.07.010" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2015">
+              <td class="col-no">19</td>
+              <td class="col-paper">A new car following model from the perspective of visual imaging</td>
+              <td class="col-authors">Liang Zheng, Zhengbing He*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">International Journal of Modern Physics C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">26(8):1550090</td>
+              <td class="col-link"><a href="https://doi.org/10.1142/S0129183115500904" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2015">
+              <td class="col-no">20</td>
+              <td class="col-paper">Optimal timetable development for community shuttle network with metro stations</td>
+              <td class="col-authors">Jie Xiong, Zhengbing He, Wei Guan*, Bin Ran</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">60:540-565</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2015.10.007" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2015">
+              <td class="col-no">21</td>
+              <td class="col-paper">A figure-eight hysteresis pattern in macroscopic fundamental diagrams and its microscopic causes</td>
+              <td class="col-authors">Zhengbing He, Shuyan He, Wei Guan*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Letters</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">7(3):133-142</td>
+              <td class="col-link"><a href="https://doi.org/10.1179/1942787514Y.0000000041" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2015">
+              <td class="col-no">22</td>
+              <td class="col-paper">A discrete-flow form of the point-queue model</td>
+              <td class="col-authors">Zhengbing He, Ailing Huang, Dongfang Ma, Ning Zhu</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Intelligent Transportation Systems Conference</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">1383-1387</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/ITSC.2015.227" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2016">
+              <td rowspan="4" class="year-cell col-year">2016</td>
+              <td class="col-no">23</td>
+              <td class="col-paper">A self-regulation traffic-condition-based route guidance strategy with realistic considerations: overlapping routes, stochastic traffic and signalized intersections</td>
+              <td class="col-authors">Zhengbing He, Liang Zheng*, Wei Guan, Baohua Mao</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">20(6):545-558</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/15472450.2016.1157020" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2016">
+              <td class="col-no">24</td>
+              <td class="col-paper">Effectiveness of GRIPs in alleviating traffic congestion</td>
+              <td class="col-authors">Zhengbing He, Wei Guan*, Wenyi Zhang</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Proceedings of ICE-Transport</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">169(TR3):125-137</td>
+              <td class="col-link"><a href="https://doi.org/10.1680/jtran.14.00047" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2016">
+              <td class="col-no">25</td>
+              <td class="col-paper">Gating control for a single bottleneck link based on traffic load equilibrium</td>
+              <td class="col-authors">Dongfang Ma*, Fengjie Fu, Sheng Jin, Zhengbing He, Fujian Wang, Weiming Zhao, Dianhai Wang</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">International Journal of Civil Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">14(5):281-293</td>
+              <td class="col-link"><a href="https://doi.org/10.1007/s40999-016-0043-0" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2016">
+              <td class="col-no">26</td>
+              <td class="col-paper">A game-theoretical approach for modeling competitions in a maritime supply chain</td>
+              <td class="col-authors">Liying Song, Dong Yang*, Anthony Theng Heng Chin, Guangzhi Zhang, Zhengbing He, Wei Guan, Baohua Mao</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Maritime Policy &amp; Management</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">43(8):976-991</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/03088839.2016.1231427" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td rowspan="13" class="year-cell col-year">2017</td>
+              <td class="col-no">27</td>
+              <td class="col-paper">Research based on high-fidelity NGSIM vehicle trajectory datasets: A review</td>
+              <td class="col-authors">Zhengbing He*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Research Gate</td>
+              <td class="col-journal-type">Journal</td>
+              <td class="col-issue"><span class="empty" aria-label="No data">—</span></td>
+              <td class="col-link"><a href="https://doi.org/10.13140/RG.2.2.11429.60643" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">28</td>
+              <td class="col-paper">Selfish routing equilibrium in stochastic traffic network: A probability-dominant description</td>
+              <td class="col-authors">Wenyi Zhang, Zhengbing He*, Wei Guan, Rui Ma</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">PLoS ONE</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">12(8):e0183135</td>
+              <td class="col-link"><a href="https://doi.org/10.1371/journal.pone.0183135" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">29</td>
+              <td class="col-paper">Mapping to cells: a simple method to extract traffic dynamics from probe vehicle data</td>
+              <td class="col-authors">Zhengbing He, Zheng Liang*, Peng Chen, Wei Guan</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Computer-Aided Civil and Infrastructure Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">32(3):252-267</td>
+              <td class="col-link"><a href="https://doi.org/10.1111/mice.12251" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">30</td>
+              <td class="col-paper">A jam-absorption driving strategy for mitigating traffic oscillations</td>
+              <td class="col-authors">Zhengbing He, Liang Zheng*, Liying Song, Ning Zhu</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">18(4):802-813</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2016.2587699" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">31</td>
+              <td class="col-paper">A flexible traffic stream model and its three representations of traffic flow</td>
+              <td class="col-authors">Liang Zheng, Zhengbing He*, Tian He</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">75:136-167</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2016.12.006" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">32</td>
+              <td class="col-paper">Commuters&#x27; acceptance of and behavior reactions to license plate restriction policy: A case study of Tianjin, China</td>
+              <td class="col-authors">Ning Jia, Yidan Zhang, Zhengbing He*, Geng Li</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part D</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">52:428-440</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trd.2016.10.035" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">33</td>
+              <td class="col-paper">Visualizing traffic dynamics based on floating car data</td>
+              <td class="col-authors">Zhengbing He, Liang Zheng*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">ASCE Journal of Transportation Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">143(5):04017005</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/JTEPBS.0000024" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">34</td>
+              <td class="col-paper">An anisotropic continuum model and its calibration with an improved monkey algorithm</td>
+              <td class="col-authors">Liang Zheng, Zhengbing He*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">13(6):519-543</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2017.1299814" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">35</td>
+              <td class="col-paper">Data-Based Sorting Algorithm for Variable Message Sign Location</td>
+              <td class="col-authors">Bingfeng Si, Zhengbing He*, Xiaobao Yang, Ziyou Gao</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Record: Journal of the Transportation Research Board</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2645(1):86-93</td>
+              <td class="col-link"><a href="https://doi.org/10.3141/2645-10" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">36</td>
+              <td class="col-paper">Comparative empirical analysis of five-weighted transit route network in R-space and evolution modeling</td>
+              <td class="col-authors">Ailing Huang, Guangzhi Zang, Zhengbing He*, Wei Guan</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">International Journal of Modern Physics B</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">31(12):1750087</td>
+              <td class="col-link"><a href="https://doi.org/10.1142/S0217979217500874" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">37</td>
+              <td class="col-paper">Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction</td>
+              <td class="col-authors">Xiaolei Ma, Zhuang Dai, Zhengbing He, Jihui Ma*, Yong Wang, Yunpeng Wang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Sensors</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">17(4):818</td>
+              <td class="col-link"><a href="https://doi.org/10.3390/s17040818" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">38</td>
+              <td class="col-paper">Electric Vehicle Routing Problem with Charging Time and Variable Travel Time</td>
+              <td class="col-authors">Sai Shao, Wei Guan, Bin Ran, Zhengbing He, Jun Bi*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Mathematical Problems in Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2017(1):5098183</td>
+              <td class="col-link"><a href="https://doi.org/10.1155/2017/5098183" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2017">
+              <td class="col-no">39</td>
+              <td class="col-paper">Probe data-driven travel time forecasting for urban expressways by matching similar spatiotemporal traffic patterns</td>
+              <td class="col-authors">Zhihao Zhang, Yunpeng Wang, Peng Chen*, Zhengbing He, Guizhen Yu</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">85:476-493</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2017.10.010" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td rowspan="10" class="year-cell col-year">2018</td>
+              <td class="col-no">40</td>
+              <td class="col-paper">Measuring Taxi Accessibility Using Grid-based Method with Trajectory</td>
+              <td class="col-authors">Shixiong Jiang, Wei Guan*, Zhengbing He, Liu Yang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Sustainability</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">10(9):3187</td>
+              <td class="col-link"><a href="https://doi.org/10.3390/su10093187" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">41</td>
+              <td class="col-paper">Exploring the Intermodal Relationship between Taxi and Subway in Beijing, China</td>
+              <td class="col-authors">Shixiong Jiang, Wei Guan*, Zhengbing He, Liu Yang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Avanced Transportation</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2018:3981845</td>
+              <td class="col-link"><a href="https://doi.org/10.1155/2018/3981845" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">42</td>
+              <td class="col-paper">Erasing Lane Changes from Roads: A Design of Future Intersections</td>
+              <td class="col-authors">Zhengbing He, Liang Zheng, Lili Lu*, Wei Guan</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Vehicles</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">3(2): 173-184</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TIV.2018.2804164" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">43</td>
+              <td class="col-paper">基于多源数据融合的城市道路网络宏观基本图模型</td>
+              <td class="col-authors">金盛，沈莉潇 ，贺正冰*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输系统工程与信息</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">18(2):108-115</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">44</td>
+              <td class="col-paper">Exploring the Relationship between Electroencephalography (EEG) and Ordinary Driving Behavior: A Simulated Driving Study</td>
+              <td class="col-authors">Liu Yang, Zhengbing He, Wei Guan*, Shixiong Jiang</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Record</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2672(37):172-180</td>
+              <td class="col-link"><a href="https://doi.org/10.1177/0361198118783165" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">45</td>
+              <td class="col-paper">Real-Time Estimation of Freeway Travel Time with Recurrent Congestion based on Sparse Detector Data</td>
+              <td class="col-authors">Lili Lu, Jian Wang, Zhengbing He*, Ching-yao Chan</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IET Intelligent Transport Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">12(1):2-11</td>
+              <td class="col-link"><a href="https://doi.org/10.1049/iet-its.2016.0356" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">46</td>
+              <td class="col-paper">Day-to-day rerouting modeling and analysis with absolute and relative bounded rationalities</td>
+              <td class="col-authors">Wenyi Zhang, Zhengbing He*, Wei Guan, Geqi Qi</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">14(3):256-273</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2017.1373713" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">47</td>
+              <td class="col-paper">A day-to-day invariant macroscopic fundamental diagrams for probe vehicles</td>
+              <td class="col-authors">Jingyi Hao, Zhengbing He*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">2018 International Conference on Traffic Engineering and Transportation System</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">189(6):062017</td>
+              <td class="col-link"><a href="https://doi.org/10.1088/1755-1315/189/6/062017" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">48</td>
+              <td class="col-paper">Predicting Station-level Hourly Demand in a Large-scale Bike-sharing Network: A Graph Convolutional Neural Network Approach​</td>
+              <td class="col-authors">Lei Lin, Zhengbing He​, Srinivas Peeta</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">97:258-276</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2018.10.011" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2018">
+              <td class="col-no">49</td>
+              <td class="col-paper">An N-path logit-based stochastic user equilibrium model</td>
+              <td class="col-authors">Jianmei Liu, Zhengbing He*, Shuaiqi Ma</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Access</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">6:20971-20986</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/ACCESS.2018.2827071" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td rowspan="9" class="year-cell col-year">2019</td>
+              <td class="col-no">50</td>
+              <td class="col-paper">A Cohesion-based Heuristic Feature Selection for Short-term Traffic Forecasting</td>
+              <td class="col-authors">Lishan Liu, Ning Jia, Lei Lin, Zhengbing He*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Access</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">7:3383-3389</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/ACCESS.2018.2889814" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">51</td>
+              <td class="col-paper">Vehicle Sensor Data-based Transportation Research: Modelling, Analysis, and Management</td>
+              <td class="col-authors">Zhengbing He, Jia Hu,  Brian Park, Michael Levin</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">23(2):99-102</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/15472450.2019.1586335" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">52</td>
+              <td class="col-paper">Constructing spatiotemporal speed contour diagrams: using rectangular or non-rectangular parallelogram cells</td>
+              <td class="col-authors">Zhengbing He, Ying Lv, Lili Lu*, Wei Guan</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportmetrica B: Transport Dynamics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">7(1):44-60</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/21680566.2017.1320774" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">53</td>
+              <td class="col-paper">Empirical validation of vehicle type-dependent car-following heterogeneity from micro- and macro-viewpoints</td>
+              <td class="col-authors">Liang Zheng, Chuang Zhu, Zhengbing He*, Tian He, Sisi Liu</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica B: Transport Dynamics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">7(1):765-787</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/21680566.2018.1517057" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">54</td>
+              <td class="col-paper">Heterogeneous Traffic Mixing Regular and Connected Vehicles: Modelling and Stabilization</td>
+              <td class="col-authors">Dongfan Xie, Xiaomei Zhao, Zhengbing He*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">20(6):2060-2071</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2018.2857465" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">55</td>
+              <td class="col-paper">A Data-driven Lane-changing Model based on Deep Learning</td>
+              <td class="col-authors">Dongfan Xie, Zhe-Zhe Fang, Bin Jia, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">106(2019): 41-60</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2019.07.002" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">56</td>
+              <td class="col-paper">Network-wide Identification of Turn-level Intersection Congestion Using Only Low-frequency Probe Vehicle Data</td>
+              <td class="col-authors">Zhengbing He, Geqi Qi, Lili Lu, Yanyan Chen* </td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">108 (2019) 320-339</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2019.10.001" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">57</td>
+              <td class="col-paper">Adaptive kernel fuzzy C-Means clustering algorithm based on cluster structure</td>
+              <td class="col-authors">Geqi Qi, Wei Guan, Zhengbing He, Ailing Huang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Intelligent and Fuzzy Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">37(2):2453-2471</td>
+              <td class="col-link"><a href="https://doi.org/10.3233/JIFS-182750" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2019">
+              <td class="col-no">58</td>
+              <td class="col-paper">基于车路协同多业务优先级的车载通信退避算法</td>
+              <td class="col-authors">马晓威，范博，何佳，陈艳艳，贺正冰</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输研究</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">5(4):76-88</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2020">
+              <td rowspan="15" class="year-cell col-year">2020</td>
+              <td class="col-no">59</td>
+              <td class="col-paper">Optimal location of lane-changing warning point in a two-lane road considering different traffic flows</td>
+              <td class="col-authors">Jia He, Zhengbing He*, Bo Fan, Yanyan Chen</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">540 (2020) 123000​</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2019.123000" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">60</td>
+              <td class="col-paper">Trajectory data-based traffic flow studies: A revisit</td>
+              <td class="col-authors">Li Li, Rui Jiang, Zhengbing He*, Xiqun Chen*, Xuesong Zhou*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">114(2020):225-240</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2020.02.016" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">61</td>
+              <td class="col-paper">Cooperative driving strategies of connected vehicles for stabilizing traffic flow</td>
+              <td class="col-authors">Dong-Fan Xie, Yong-Qi Wen, Xiao-Mei Zhao, Xin-Gang Li, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica B: Transport Dynamics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">8:1, 166-181</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/21680566.2020.1728590" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">62</td>
+              <td class="col-paper">Understanding user’s travel behavior and city region functions from station-free shared bike usage data</td>
+              <td class="col-authors">Ximing Chang, Jianjun Wu*, Zhengbing He, Daqing Li, Huijun Sun, Weiping Wang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part F</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">72:81-95</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trf.2020.03.018" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">63</td>
+              <td class="col-paper">道路阻抗函数研究综述</td>
+              <td class="col-authors">陈旭，陆丽丽*，曹祖平，陈晨，贺正冰，叶晓飞</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输研究</td>
+              <td class="col-journal-type">Journal</td>
+              <td class="col-issue">6(2):30-39</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">64</td>
+              <td class="col-paper">Energy-efficient resource allocation for dynamic priority-based in-vehicle mobile-health communications</td>
+              <td class="col-authors">Bo Fan, Zhengbing He, Hui Tian, Dewen Kong, Yanyan Chen*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Systems Journal</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">14(2):2097-2108</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/JSYST.2019.2919569" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">65</td>
+              <td class="col-paper">Bus-car mode identification: A traffic condition-based random forests method</td>
+              <td class="col-authors">Fang Zong, Meng Zeng, Zhengbing He*, Yixin Yuan</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">ASCE Journal of Transportation Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">146(10): 04020113</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/JTEPBS.0000442" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">66</td>
+              <td class="col-paper">Spatial-temporal Fractal of Urban Agglomeration Travel Demand</td>
+              <td class="col-authors">Zhengbing He*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">549:124503</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2020.124503" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">67</td>
+              <td class="col-paper">Estimating Carbon Dioxide Emissions of Freeway Traffic: A Spatiotemporal Cell-based Model</td>
+              <td class="col-authors">Zhengbing He, Wenyi Zhang, Ning Jia</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">21(5):1976-1986</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2019.2909316" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">68</td>
+              <td class="col-paper">Deep Learning Empowered Traffic Offloading in Intelligent Software Defined Cellular V2X Networks</td>
+              <td class="col-authors">Bo Fan, Zhengbing He, Yuan Wu, Jia He, Yanyan Chen, Li Jiang</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Vehicluar Technology</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">69(11): 13328-13340, 2020</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TVT.2020.3023194" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">69</td>
+              <td class="col-paper">Train operation diagram-based equilibrium model for an urban rail transit network with transfer constraints</td>
+              <td class="col-authors">Bingfeng Si, Zhengbing He*, Di Liu, Xiaobao Yang, Ziyou Gao</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">ASCE Journal of Transportation Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">146(11): 04020126</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/JTEPBS.0000444" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">70</td>
+              <td class="col-paper">Cooperative driving and a lane change-free road transportation system</td>
+              <td class="col-authors">Zhengbing He</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Chapter of IET Book Modern Traffic Information Technology</td>
+              <td class="col-journal-type">Book Chapter</td>
+              <td class="col-issue">163-183</td>
+              <td class="col-link"><a href="https://doi.org/10.1049/PBTR026E_ch8" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">71</td>
+              <td class="col-paper">新技术时代城市交通管理与服务研究发展展望</td>
+              <td class="col-authors">陈艳艳, 李同飞, 何佳, 杨洋, 孙浩冬, 贺正冰</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">北京工业大学学报</td>
+              <td class="col-journal-type">Journal</td>
+              <td class="col-issue">46(6):621-629</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">72</td>
+              <td class="col-paper">Demand responsive service-based optimization on flexible routes and departure time of community shuttles</td>
+              <td class="col-authors">Jie Xiong, Biao Chen, Xiangnan Li, Zhengbing He, Yanyan Chen*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Sustainability</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">12(3):897</td>
+              <td class="col-link"><a href="https://doi.org/10.3390/su12030897" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2020">
+              <td class="col-no">73</td>
+              <td class="col-paper">A dynamic user equilibrium model for multi-region macroscopic fundamental diagram systems with time-varying delays</td>
+              <td class="col-authors">YP Huang, JH Xiong, A Sumalee, N Zheng, WHK Lam, Zhengbing He, RX Zhong</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part B</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">131(2020):1-25</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trb.2019.11.002" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td rowspan="17" class="year-cell col-year">2021</td>
+              <td class="col-no">74</td>
+              <td class="col-paper">Safety rule-based cellular automaton modeling and simulation under V2V environment</td>
+              <td class="col-authors">Liang Zheng, Chuang Zhu, Zhengbing He*, Tian He</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">17(1):81-106</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2018.1517135" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">75</td>
+              <td class="col-paper">A generative adversarial network for travel times imputation using trajectory data</td>
+              <td class="col-authors">Kunpeng Zhang, Zhengbing He, Liang Zheng*, and Liang Zhao</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Computer-Aided Civil and Infrastructure Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">36(2):197-212</td>
+              <td class="col-link"><a href="https://doi.org/10.1111/mice.12595" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">76</td>
+              <td class="col-paper">Optimal design of community shuttles with an adaptive-operator-selection-based genetic algorithm</td>
+              <td class="col-authors">Jie Xiong, Biao Chen, Zhengbing He*, Wei Guan, Yanyan Chen</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">126 (2021):103109</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2021.103109" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">77</td>
+              <td class="col-paper">Portraying ride-hailing mobility using multi-day trip order data: A case study of Beijing, China</td>
+              <td class="col-authors">Zhengbing He*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">146:152-169</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tra.2021.01.017" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">78</td>
+              <td class="col-paper">Automated Vehicle-involved Traffic Flow Studies: A Survey of Assumptions, Models, Speculations, and Perspectives</td>
+              <td class="col-authors">Haiyang Yu, Rui Jiang, Zhengbing He*, Zuduo Zheng*, Li Li*, Runkun Liu, Xiqun Chen</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">127:103101</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2021.103101" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">79</td>
+              <td class="col-paper">Short-term prediction of urban rail transit origin-destination flow: A channel-wise attentive split-convolutional neural network method</td>
+              <td class="col-authors">Jinlei Zhang, Hongshu Che, Feng Chen*, Wei Ma, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">124:102928</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2020.102928" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">80</td>
+              <td class="col-paper">Optimal toll design problems under mixed traffic flow of human-driven vehicles and connected and autonomous vehicles</td>
+              <td class="col-authors">Jian Wang, Lili Lu, Srinivas Peeta, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">125:102952</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2020.102952" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">81</td>
+              <td class="col-paper">Shared mobility: Characteristics, impacts, and improvements</td>
+              <td class="col-authors">Zhengbing He*, Peng Chen*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part D</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue"> 97 (2021): 102960</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trd.2021.102960" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">82</td>
+              <td class="col-paper">String stability analysis of connected vehicular systems based on car-following model</td>
+              <td class="col-authors">Shu-Qing Li, Yan-Yan Qin, Zhengbing He*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">ASCE Journal of Transportation Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">147(8):04021038</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/JTEPBS.0000551" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">83</td>
+              <td class="col-paper">Vulnerability and resilience of transportation systems A recent literature review</td>
+              <td class="col-authors">Shouzheng Pan, Hai Yan, Jia He*, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">581 (2021): 126235</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2021.126235" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">84</td>
+              <td class="col-paper">考虑出行者习惯与利他性偏好的自动驾驶网约车</td>
+              <td class="col-authors">齐航，夏嘉祺，王光超，贾宁，贺正冰</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">19(2): 1-10</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">85</td>
+              <td class="col-paper">Estimation of lane-level travel time distributions under a connected environment</td>
+              <td class="col-authors">Lili Lu, Zhengbing He, Jian Wang, Jufeng Chen, Wei Wang</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">25(5): 501-512</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/15472450.2020.1854093" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">86</td>
+              <td class="col-paper">基于多核自适应网络的高速公路交通流预测方法</td>
+              <td class="col-authors">习金浩，孟峰*，朱凤华，贺正冰，李润梅，吕宜生</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输研究</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">7(4):1-9</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">87</td>
+              <td class="col-paper">数据驱动跟驰模型综述</td>
+              <td class="col-authors">贺正冰*，徐瑞康，谢东繁，宗芳，钟任新</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输系统工程与信息</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">21(5):102-113</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">88</td>
+              <td class="col-paper">Digital Twin Empowered Mobile Edge Computing for Intelligent Vehicular Lane-Changing</td>
+              <td class="col-authors">Bo Fan, Yuan Wu, Zhengbing He, Yanyan Chen, Tony Q.S. Quek, Cheng-Zhong Xu</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Network</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">35(6):194-201</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/MNET.201.2000768" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">89</td>
+              <td class="col-paper">考虑前后多车的网联自动驾驶车辆混流跟驰模型</td>
+              <td class="col-authors">宗芳，石佩鑫，王猛，贺正冰*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">中国公路学报</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">34(7):105-117</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2021">
+              <td class="col-no">90</td>
+              <td class="col-paper">京津冀城市群多模式客运枢纽一体化运行关键技术研究</td>
+              <td class="col-authors">李斌，姚恩建，贺正冰，杨敏，刘冬梅，张晓亮，郭宇奇，郭忠，于帅</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">中国基础科学</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">23(02):23-33</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td rowspan="24" class="year-cell col-year">2022</td>
+              <td class="col-no">91</td>
+              <td class="col-paper">TSR-GAN: Generative Adversarial Networks for Traffic State Reconstruction with Trajectory Data</td>
+              <td class="col-authors">Kunpeng Zhang, Lan Wu, Ning Jia, Liang Zhao, Xiaoliang Feng, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">591(2022):126788</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2021.126788" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">92</td>
+              <td class="col-paper">A sustainable road pricing oriented bilevel optimization approach under multiple environmental uncertainties</td>
+              <td class="col-authors">Ying Lv, Shanshan Wang, Ziyou Gao, Guanhui Cheng, Guohe Huang, Zhengbing He*</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">International Journal of Sustainable Transportation</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">16(2):152-165</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/15568318.2020.1858374" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">93</td>
+              <td class="col-paper">Prediction of pedestrians&#x27; wait-to-go decision using trajectory data based on gradient boosting decision tree</td>
+              <td class="col-authors">Xiuying Xin, Ning Jia, Shuai Ling*, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportmetrica B: Transport Dynamics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">10(1): 693-717</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/21680566.2022.2027294" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">94</td>
+              <td class="col-paper">考虑多车影响的分子动力学智能网联跟驰模型</td>
+              <td class="col-authors">宗芳，王猛，贺正冰</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输系统工程与信息</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">22(1):37-48</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">95</td>
+              <td class="col-paper">Dynamic lane changing trajectory planning for CAV A multi agent model with path preplanning</td>
+              <td class="col-authors">Fang Zong, Zhengbing He*, Meng Zeng*, Yixuan Liu</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica B: Transport Dynamics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">10(1):266–292</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/21680566.2021.1989079" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">96</td>
+              <td class="col-paper">An interactive city choice model and its application for measuring the intercity interaction</td>
+              <td class="col-authors">Xiang-Yu Jia, Er-Jian Liu*, Chun-Yan Chen, Zhengbing He, Xiao-Yong Yan*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Frontiers in Physics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">10:850415</td>
+              <td class="col-link"><a href="https://doi.org/10.3389/fphy.2022.850415" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">97</td>
+              <td class="col-paper">Mining crowdsourced trajectory and geo-tagged data for spatial-semantic road map construction</td>
+              <td class="col-authors">Jincai Huang, Yunfei Zhang, Min Deng, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transactions in GIS</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">26:735-754</td>
+              <td class="col-link"><a href="https://doi.org/10.1111/tgis.12879" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">98</td>
+              <td class="col-paper">Special issue on methodological advancements in understanding and managing urban traffic congestion</td>
+              <td class="col-authors">Renxin Zhong, Zhengbing He, Andy Chow, Victor Knoop</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">18(1):1-4</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2021.1894266" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">99</td>
+              <td class="col-paper">思想政治引领下运筹学资源库建设与正反馈式教改探索</td>
+              <td class="col-authors">何佳，贺正冰，周雨阳，陈亮，杨松坡</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">教育教学论坛</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">5:58-61</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">100</td>
+              <td class="col-paper">Road Intersection Optimization Considering Spatial-temporal Interactions among Turning Movement Spillovers</td>
+              <td class="col-authors">Hongsheng Qi, Zhengbing He*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">23(5): 4291-4304</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2020.3043274" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">101</td>
+              <td class="col-paper">双车道异质交通波同步机理解析</td>
+              <td class="col-authors">潘守政，何佳，王凤淇，贺正冰*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">公路交通科技</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">39(4): 140-149</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">102</td>
+              <td class="col-paper">微观交通模型：智能网联化转型与通用驾驶人模型框架</td>
+              <td class="col-authors">贺正冰</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">20(2): 1-13</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">103</td>
+              <td class="col-paper">A robust approach to integrated wireless charging infrastructure design and bus fleet size optimization</td>
+              <td class="col-authors">Zijian Bai, Lei Yang, Chenyi Fu*, Zhaocai Liu, Zhengbing He, Ning Zhu </td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Computers &amp; Industrial Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">168 (2022) 108046</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.cie.2022.108046" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">104</td>
+              <td class="col-paper">Time-of-day pricing for toll roads under traffic demand uncertainties A distributionally robust simulation-based optimization method</td>
+              <td class="col-authors">Liang Zheng, Pengjie Liu, Huimin Huang, Bin Ran, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">144:103894</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2022.103894" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">105</td>
+              <td class="col-paper">策略性交通出行选择行为研究评述：实验经济学方法的应用</td>
+              <td class="col-authors">齐航，于跃洋，王光超，贾宁，凌帅，贺正冰</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">20(3): 142-153</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">106</td>
+              <td class="col-paper">A new reinforcement learning-based variable speed limit control approach to improve traffic efficiency against freeway jam waves</td>
+              <td class="col-authors">Yu Han, Andreas Hegyi, Le Zhang, Zhengbing He, Edward Chung, Pan Liu</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">144 (2022) 103900</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2022.103900" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">107</td>
+              <td class="col-paper">How to promote the transition from solo driving to mobility services delivery? An empirical study focusing on ridesharing, </td>
+              <td class="col-authors">Xin Zhang, Shiquan Zhong, Shuai Ling, Ning Jia, Hang Qi, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transport Policy</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">129 (2022):176-187</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tranpol.2022.10.009" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">108</td>
+              <td class="col-paper">Analysis of vehicle driving styles at freeway merging areas using trajectory data</td>
+              <td class="col-authors">Shuai Wen, Xin Gu, Shahd Omar, Xi Jin, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Intelligent Transportation Systems Conference</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">3652-3656,  October 8-12, 2022, Macau, China</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/ITSC55140.2022.9922336" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">109</td>
+              <td class="col-paper">Trajectory Prediction for Autonomous Driving Using Spatial-Temporal Graph Attention Transformer</td>
+              <td class="col-authors">Kunpeng Zhang, Xiaoliang Feng, Lan Wu, Zhengbing He*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">23(11):22343-22353</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2022.3164450" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">110</td>
+              <td class="col-paper">An analyzable agent based framework for modeling day to day route choice</td>
+              <td class="col-authors">Weimeng Li, Shoufeng Ma, Ning Jia, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">18(3):1517-1543</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2021.1952336" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">111</td>
+              <td class="col-paper">环线对地铁网络弹性的影响研究</td>
+              <td class="col-authors">潘守政，何佳，王英平，贺正冰*，</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">20(4):100-110</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">112</td>
+              <td class="col-paper">Analysis of Travel Demand between Transportation Hubs in Urban Agglomeration Based on Mobile Phone Call Detail Record Data</td>
+              <td class="col-authors">Yanyan Chen, Zifan Wang, Haodong Sun, Ye Zhang, Zhengbing He, </td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">ASCE Journal of Transportation Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">148(7): 04022041</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/JTEPBS.0000693" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">113</td>
+              <td class="col-paper">基于混行跟驰仿真的CAV专用进口道动态设置方法</td>
+              <td class="col-authors">宗芳，李宇暄，贺正冰*，曾梦</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">中国公路学报</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">35(7):251-260</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2022">
+              <td class="col-no">114</td>
+              <td class="col-paper">Home-based Trips Analysis and Households Travel Behavior Case Study of Nablus City, Palestine</td>
+              <td class="col-authors">Omar Shahd, He Zhengbing, Liu Di</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">World Transport Convention</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">2022</td>
+              <td class="col-link"><a href="https://www.wtc-conference.com/" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td rowspan="14" class="year-cell col-year">2023</td>
+              <td class="col-no">115</td>
+              <td class="col-paper">The impact of a single discretionary lane change on surrounding traffic: An analytic investigation</td>
+              <td class="col-authors">Jia He, Jie Qu, Jian Zhang, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">24(1):554-563</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2022.3209668" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">116</td>
+              <td class="col-paper">On the impact of prior experiences in car following models model development, computational efficiency, comparative analyses and extensive applications</td>
+              <td class="col-authors">Yang Yu, Zhengbing He, Xiaobo Qu*</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Cybernetics</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">53(3):1405-1418</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TCYB.2021.3095154" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">117</td>
+              <td class="col-paper">Investigating day-to-day route choices based on multi-scenario laboratory experiments. Part I Route-dependent attraction and its modeling</td>
+              <td class="col-authors">Hang Qi, Ning Jia, Xiaobo Qu, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">167 (2023) 103553</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tra.2022.11.013" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">118</td>
+              <td class="col-paper">A novel one-stage approach for pointwise transportation mode identification inspired by point cloud processing</td>
+              <td class="col-authors">Rongsong Li, Zi Yang, Xin Pei, Yun Yue, Shaocheng Jia, Chunyang Han, Zhengbing He*</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">152 (2023) 104127</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2023.104127" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">119</td>
+              <td class="col-paper">雾天场景下高速公路通行能力分析及提升策略</td>
+              <td class="col-authors">秦严严，肖腾飞，贺正冰*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输系统工程与信息</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">23(3):39-47</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">120</td>
+              <td class="col-paper">网联自动驾驶车辆混合交通流专用道管控方法</td>
+              <td class="col-authors">秦严严，罗钦中，贺正冰*</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输工程学报</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">23(3):221-231</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">121</td>
+              <td class="col-paper">Is All-Direction Turn Lane a Good Choice for Autonomous Intersections A Study of Method Development and Comparisons</td>
+              <td class="col-authors">Haoran Jiang, Zhihong Yao, Yangsheng Jiang*, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Vehicular Technology</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">72(7):8510-8525, 2023</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TVT.2023.3250957" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">122</td>
+              <td class="col-paper">Traffic Conflict Analysis at Freeway Interchange Merging Areas: A Joint Model Based on Tobit and Survival Analysis Model</td>
+              <td class="col-authors">Xin Gu, Yi Yang, Yunxuan Li, Zhengbing He, Yanyan Chen</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">23rd COTA International Conference of Transportation Professionals, 2023</td>
+              <td class="col-journal-type">Conference/EI</td>
+              <td class="col-issue">1615-1625</td>
+              <td class="col-link"><a href="https://doi.org/10.1061/9780784484869.154" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">123</td>
+              <td class="col-paper">Evaluation of driver demand for in-vehicle information: An integrated method combining clustering and multivariate ordered probit model</td>
+              <td class="col-authors">Jingyu Li, Weihua Zhang, Dianchen Zhu, Zhongxiang Feng, Zhengbing He, Quansheng Yue, Zhipeng Huang</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Safety Research</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">85:222-233</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.jsr.2023.02.006" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">124</td>
+              <td class="col-paper">A mixed traffic car-following behavior model</td>
+              <td class="col-authors">Xinke Wang, Jian Zhang, Honghai Li, Zhengbing He*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">632 (2023) 129299</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2023.129299" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">125</td>
+              <td class="col-paper">The effect of the ‘yield to pedestrians’ policy on risky pedestrian behaviors: Is it a ‘two-edged sword’?</td>
+              <td class="col-authors">Xiuying Xin, Ning Jia, Shuai Ling, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">178 (2023) 103870</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tra.2023.103870" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">126</td>
+              <td class="col-paper">考虑异常车次的公交车辆调度计划问题研究</td>
+              <td class="col-authors">于昕曜, 朱宁, 马延明, 贺正冰</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">系统工程理论与实践</td>
+              <td class="col-journal-type">EI</td>
+              <td class="col-issue">43(3):910-928</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">127</td>
+              <td class="col-paper">ChatGPT as Your Vehicle Co-Pilot An Initial Attempt</td>
+              <td class="col-authors">Shiyi Wang, Yuxuan Zhu, Zhiheng Li, Yutong Wang, Li Li, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Vehicles</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">8(12):4706-4721</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TIV.2023.3325300" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2023">
+              <td class="col-no">128</td>
+              <td class="col-paper">Speed Limit: Obey, or Not Obey</td>
+              <td class="col-authors">Zhengbing He, Mirco Nanni, Luca Pappalardo, Paolo Santi, Carlo Ratti</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">ArXiv</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue"><span class="empty" aria-label="No data">—</span></td>
+              <td class="col-link"><a href="https://doi.org/10.48550/arXiv.2307.12189" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td rowspan="27" class="year-cell col-year">2024</td>
+              <td class="col-no">129</td>
+              <td class="col-paper">Semantic understanding and prompt engineering for large-scale traffic data imputation</td>
+              <td class="col-authors">Kunpeng Zhang, Feng Zhou, Lan Wu, Na Xie, Zhengbing He*</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Information Fusion</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">102 (2024) 102038</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.inffus.2023.102038" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">130</td>
+              <td class="col-paper">Exploring the impact mechanism of communicating information on the perturbation propagation</td>
+              <td class="col-authors">Chao Li, Xiao-Mei Zhao*, Dong-Fan Xie, Zhengbing He*, Chaoru Lu</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportmetrica A: Transport Science</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">20(1):2035013</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/23249935.2022.2035013" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">131</td>
+              <td class="col-paper">Planning dynamic wireless charging infrastructure for battery electric bus systems with the joint optimization of charging scheduling</td>
+              <td class="col-authors">Wenlong Li, Yi He, Songhua Hu, Zhengbing He*, Carlo Ratti</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">159 (2024) 104469</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2023.104469" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">132</td>
+              <td class="col-paper">Modeling the mixed traffic capacity of minor roads at a priority intersection</td>
+              <td class="col-authors">Yanyan Qin, Qinzhong Luo, Tengfei Xiao, Zhengbing He*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">636 (2024) 129541</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2024.129541" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">133</td>
+              <td class="col-paper">Refining time-space traffic diagrams: A simple multiple linear regression model</td>
+              <td class="col-authors">Zhengbing He*</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">25(2): 1465-1475</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2023.3316593" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">134</td>
+              <td class="col-paper">Time-dependent trip generation for bike sharing planning: A multi-task memory-augmented graph neural network</td>
+              <td class="col-authors">Yuebing Liang, Zhan Zhao, Fangyi Ding, Yihong Tang, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Information Fusion</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">106 (2024) 102294</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.inffus.2024.102294" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">135</td>
+              <td class="col-paper">Spatiotemporal Fusion Transformer for Large-scale Traffic Forecasting</td>
+              <td class="col-authors">Zhenghong Wang, Yi Wang, Furong Jia, Fan Zhang, Nikita Klimenko, Leye Wang, Zhengbing He, Zhou Huang, Yu Liu, </td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Information Fusion</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">107 (2024) 102293</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.inffus.2024.102293" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">136</td>
+              <td class="col-paper">Private vehicle drivers&#x27; acceptance of autonomous vehicles: The role of trait mindfulness</td>
+              <td class="col-authors">Jinping Guan, Xinyu Du, Jiayue Zhang, Philip Maymin, Emma DeSoto, Ellen Langer, Zhengbing He*, </td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transport Policy</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">149 (2024) 211–221</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tranpol.2024.02.013" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">137</td>
+              <td class="col-paper">Guest Editorial: Modelling, operation and management of traffic mixed with connected and automated vehicles</td>
+              <td class="col-authors">Fang Zong, Renxin Zhong, Wei Ma, Dujuan Yang, Ziyuan Pu, Ngoduy Dong, Zhengbing He</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IET Intelligent Transport Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">18(3):433-435</td>
+              <td class="col-link"><a href="https://doi.org/10.1049/itr2.12496" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">138</td>
+              <td class="col-paper">Sustainability evaluation of multi-component subsea transmission system considering failure dependence and maintenance activities</td>
+              <td class="col-authors">Yixin Zhao, Baoping Cai, Tao Zeng, Zhengbing He, Yiliu Liu*</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Ocean Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">296:116945</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.oceaneng.2024.116945" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">139</td>
+              <td class="col-paper">Factors affecting injury severity in motorcycle crashes: different age groups analysis using Catboost and SHAP techniques</td>
+              <td class="col-authors">Muhammad Zahid, Muhammad Faisal Habib, Muhammad Ijaz, Iqra Ameer, Irfan Ullah, Tufail Ahmed, Zhengbing He</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Traffic Injury Prevention</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">25(3): 472-481</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/15389588.2023.2297168" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">140</td>
+              <td class="col-paper">On the dynamic vulnerability of an urban rail transit system and the impact of human mobility</td>
+              <td class="col-authors">Shouzheng Pan, Shuai Ling, Ning Jia, Yiliu Liu, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Journal of Transport Geography </td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">116 (2024) 103850</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.jtrangeo.2024.103850" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">141</td>
+              <td class="col-paper">网联混合交递流环境下高速公路⻋道管理策略及通行能力分析</td>
+              <td class="col-authors">王正武，陈涛，向健，贺正冰</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">公路交通科技</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">41(2):191-202</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">142</td>
+              <td class="col-paper">Investigating and modeling day-to-day route choices based on laboratory experiments, Part II: A route-dependent attraction-based stochastic process model</td>
+              <td class="col-authors">Hang Qi, Ning Jia, Xiaobo Qu, Zhengbing He∗</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Communications in Transportation Research</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">4 (2024) 100123</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.commtr.2024.100123" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">143</td>
+              <td class="col-paper">Pedestrian shuttle service optimization for autonomous intersection management</td>
+              <td class="col-authors">Haoran Jiang, Zhihong Yao, Yongxiang Zhang, Yangsheng Jiang, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">163 (2024) 104623</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2024.104623" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">144</td>
+              <td class="col-paper">From rectangle to parallelogram an area-weighted method to make time-space diagrams incorporate traffic waves</td>
+              <td class="col-authors">Ning Wang, Xingye Wang, Hai Yan, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Digital Transportation and Safety</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">3(1): 1−7</td>
+              <td class="col-link"><a href="https://doi.org/10.48130/dts-0024-0001" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">145</td>
+              <td class="col-paper">Closing the loophole of vehicle ownership restriction: The impact of non-local vehicle restriction on new vehicle registrations and air pollution</td>
+              <td class="col-authors">Yifan Fu, Shiquan Zhong, Shuai Ling, Zhengbing He</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">185 (2024) 104102</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tra.2024.104102" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">146</td>
+              <td class="col-paper">Exploring competitiveness of taxis to ride-hailing services from a multidimensional spatio-temporal perspective: A case study in Beijing, China</td>
+              <td class="col-authors">Yihao Luo, Ailing Huang*, Zhengbing He, Jiaqi Zeng, Dianhai Wang</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Journal of Transport Geography </td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">118 (2024) 103936</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.jtrangeo.2024.103936" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">147</td>
+              <td class="col-paper">Multi-crowdsourced data fusion for modeling link-level traffic resilience to adverse weather events</td>
+              <td class="col-authors">Songhua Hu, Kailai Wang, Lingyao Li, Yingrui Zhao, Zhengbing He, Yunpeng Zhang</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">International Journal of Disaster Risk Reduction</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">112 (2024) 104754</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.ijdrr.2024.104754" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">148</td>
+              <td class="col-paper">Emissions-reduction strategy for connected autonomous vehicles on mixed traffic freeways</td>
+              <td class="col-authors">Yanyan Qin, Tengfei Xiao, Zhengbing He</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">653 (2024) 130113</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2024.130113" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">149</td>
+              <td class="col-paper">A Prediction-Based Forward-Looking Vehicle Dispatching Strategy for Dynamic Ride-Pooling</td>
+              <td class="col-authors">Chen Yang, Xiaolei Wang, Yuzhen Feng, Luohan Hu, Xing Yang, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">25(11): 16925-16937</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2024.3419178" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">150</td>
+              <td class="col-paper">Mapping sidewalk accessibility with smartphone imagery and Visual AI: a participatory approach</td>
+              <td class="col-authors">Diego Morra, Xiaosheng Zhu, Chang Liu, Kyle Fu, Fábio Duarte, Simone Mora, Zhengbing He, Carlo Ratti</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Philosophical Transactions A: Mathematical, Physical and Engineering Sciences</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">382(2285):20240106</td>
+              <td class="col-link"><a href="https://doi.org/10.1098/rsta.2024.0106" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">151</td>
+              <td class="col-paper">Space Weather Effects on Transportation Systems: A Review of Current Understanding and Future Outlook</td>
+              <td class="col-authors">Dabin Xue, Lingxiao Wu, Tianhe Xu, Cheng-Lung Wu, Zhipeng Wang, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Space Weather</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">22(12), e2024SW004055</td>
+              <td class="col-link"><a href="https://doi.org/10.1029/2024SW004055" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">152</td>
+              <td class="col-paper">基于峰值检测的跟驰瞬时反应时间估计方法 </td>
+              <td class="col-authors">刘婧，王扬，刘冬梅，刘娉婷，贺正冰</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">22(4):85-95</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">153</td>
+              <td class="col-paper">此消彼长：共享单车对城市公共交通客运总量的影响 </td>
+              <td class="col-authors">付一帆，凌帅，牟婷，贺正冰</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">22(4):183-194</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">154</td>
+              <td class="col-paper">自动驾驶出行服务的公众自动驾驶出行服务的公众关切与研究展望 </td>
+              <td class="col-authors">齐航，王光超，张运胜，段宏磊，桑金燕，秦端，贺正冰</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">22(4):1-12</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2024">
+              <td class="col-no">155</td>
+              <td class="col-paper">技术革新对出租车司机职业的冲击 </td>
+              <td class="col-authors">孙慧倩，景鹏，贺正冰，汪道歌，徐佳欣，姜乐炜</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">22(4):13-24</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2025">
+              <td rowspan="17" class="year-cell col-year">2025</td>
+              <td class="col-no">156</td>
+              <td class="col-paper">Platoon or Individual: An Adaptive Car-following Control of Connected and Automated Vehicles</td>
+              <td class="col-authors">Fang Zong, Sheng Yue, Meng Zeng, Zhengbing He, Dong Ngoduy</td>
+              <td class="col-role-1">4</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Chaos Solitons &amp; Fractals</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">191 (2025) 115850</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.chaos.2024.115850" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">157</td>
+              <td class="col-paper">Environmental impacts and emission reduction methods of vehicles equipped with driving automation systems: An operational-level review</td>
+              <td class="col-authors">Haoran Jiang, Kui Xia, Yingying Zhao, Zhihong Yao, Yangsheng Jiang, Zhengbing He*</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">173 (2025) 104996</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2024.104996" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">158</td>
+              <td class="col-paper">大语言模型在道路交通领域应用：创新与挑战</td>
+              <td class="col-authors">贺正冰</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">交通运输工程与信息学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">23(1):1-8</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">159</td>
+              <td class="col-paper">Identifying users transferring between transportation modes: A stable matching approach</td>
+              <td class="col-authors">Hongtai Yang, Zheng Liu, Daniel Kondor, Ke Han, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">26(4):4432-4442</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2025.3536632" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">160</td>
+              <td class="col-paper">Cascading failures in interdependent transportation networks: A generalized coupled map lattice model with intermodal dynamics</td>
+              <td class="col-authors">Biao Chen, Jianjun Wu, Yanyan Chen, Der-Horng Lee, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Physica A</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">675 (2025) 130836</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.physa.2025.130836" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">161</td>
+              <td class="col-paper">Exploring the relationship between built environment and bike-sharing demand: Does the trip length matter?</td>
+              <td class="col-authors">Feiyang Wang, Chaoying Yin, Ximing Chang, Xinyu Zhang, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Planning and Technology</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">48(5):826-852</td>
+              <td class="col-link"><a href="https://doi.org/10.1080/03081060.2024.2400281" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">162</td>
+              <td class="col-paper">Identifying public transit deserts: A travel demand-independent persistent homology-based method</td>
+              <td class="col-authors">Daniel Carmody, Ophelia Zhu, Zhengbing He, Paolo Santi, Carlo Ratti</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Safety and Environment</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">7(2):tdaf015</td>
+              <td class="col-link"><a href="https://doi.org/10.1093/tse/tdaf015" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">163</td>
+              <td class="col-paper">Modeling Car-Following Behaviors Considering Driver Heterogeneity: A Multi-Regime Stochastic Framework </td>
+              <td class="col-authors">Shubo Wu, Dong Ngoduy, Zhengbing He, Yajie Zou, Jian Sun</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">179 (2025) 105282</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2025.105282" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">164</td>
+              <td class="col-paper">Brain Driving: Personalizing Vehicle Speed with DR-EEG Decoding and Situational Embeddings</td>
+              <td class="col-authors">Peihao Li, Geqi Qi, Xuedong Yan, Shuo Zhao, Li Hu, Zhengbing He, Wei Guan</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Vehicles</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">10(3):1658-1677</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TIV.2024.3430952" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">165</td>
+              <td class="col-paper">A multi-modal network equilibrium model considering captive travelers and mode correlation</td>
+              <td class="col-authors">Guangchao Wang, Defeng Song, Hang Qi, Juanhua Zhou, Zhengbing He</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">52(5):1793-1826</td>
+              <td class="col-link"><a href="https://doi.org/10.1007/s11116-024-10475-8" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">166</td>
+              <td class="col-paper">Agentic Large Language Models for day-to-day route choices</td>
+              <td class="col-authors">Leizhen Wang, Peibo Duan, Zhengbing He, Cheng Lyu, Xin Chen, Nan Zheng, Li Yao, Zhenliang Ma</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">180 (2025) 105307</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2025.105307" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">167</td>
+              <td class="col-paper">Unlocking the potential of cooperative staggered shifts in urban networks</td>
+              <td class="col-authors">Wenbin Yao, Xinyi Shen, Zhengbing He, Yong Liu, Xin Yang, Jiaqi Zeng, Chunqin Zhang, Sheng Jin</td>
+              <td class="col-role-1">8</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">180 (2025) 105354</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2025.105354" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">168</td>
+              <td class="col-paper">On the Level of Innovation in New Technology-Driven Research: The Case of AI for Transportation</td>
+              <td class="col-authors">Zhengbing He</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Research Gate</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">DOI: 10.13140/RG.2.2.24715.55845</td>
+              <td class="col-link"><a href="https://doi.org/10.13140/RG.2.2.24715.55845" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">169</td>
+              <td class="col-paper">混行环境下自动驾驶出行服务供给模式分析</td>
+              <td class="col-authors">齐航，王光超，贾宁，凌帅，贺正冰</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">管理科学学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">28(9):143-156</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">170</td>
+              <td class="col-paper">平行智能范式视角下的视觉-语言-动作模型发展现状与展望</td>
+              <td class="col-authors">李柏，郝金第，孙跃硕，孟雨晴，黄峻，田永林，贺正冰</td>
+              <td class="col-role-1">7</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">智能科学与技术学报</td>
+              <td class="col-journal-type">/</td>
+              <td class="col-issue">7(3):291-303</td>
+              <td class="col-link"><span class="empty" aria-label="No link">—</span></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">171</td>
+              <td class="col-paper">MM-STFlowNet: A Transportation Hub-Oriented Multi-Mode Passenger Flow Prediction Method via Spatial-Temporal Dynamic Graph Modeling</td>
+              <td class="col-authors">Ronghui Zhang, Wenbin Xing, Mengran Li, Zihan Wang, Junzhou Chen, Xiaolei Ma, Zhiyuan Liu, Zhengbing He</td>
+              <td class="col-role-1">8</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">26 (11):20450-20463</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2025.3588867" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2025">
+              <td class="col-no">172</td>
+              <td class="col-paper">Estimating city-wide operating mode distribution of light-duty vehicles: A neural network-based approach</td>
+              <td class="col-authors">Muhammad Usama, Haris N. Koutsopoulos, Zhengbing He, Lijiao Wang</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Record: Journal of the Transportation Research Board</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2679(11): 511-525</td>
+              <td class="col-link"><a href="https://doi.org/10.1177/03611981251348465" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td rowspan="11" class="year-cell col-year">2026</td>
+              <td class="col-no">173</td>
+              <td class="col-paper">On the resilience evaluation of urban multimodal transportation network considering dynamic travel demand</td>
+              <td class="col-authors">Biao Chen, Bobin Wang, Shouzheng Pan, Jianjun Wu, Zhengbing He*</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Record: Journal of the Transportation Research Board</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">2680(1), 519-549</td>
+              <td class="col-link"><a href="https://doi.org/10.1177/03611981251357909" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">174</td>
+              <td class="col-paper">Addressing corner cases in autonomous driving: A world model-based approach with mixture of experts and LLMs</td>
+              <td class="col-authors">Haicheng Liao, Bonan Wang, Junxian Yang, Chengyue Wang, Zhengbing He, Guohui Zhang, Chengzhong Xu, Zhenning Li </td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">183 (2026) 105456</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2025.105456" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">175</td>
+              <td class="col-paper">A survey of multi-modal urban transportation network resilience/ modeling, evaluation, and optimization</td>
+              <td class="col-authors">Biao Chen, Songhua Hu, Xiangdong Xu, Guangchao Wang, Der-Horng Lee, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part E</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">207 (2026) 104634</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.tre.2025.104634" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">176</td>
+              <td class="col-paper">AI writing tools could lead scholars from low-income countries to erase their own voices</td>
+              <td class="col-authors">Zhenning Li, Zhengbing He</td>
+              <td class="col-role-1">2</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Nature</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">649, 555</td>
+              <td class="col-link"><a href="https://doi.org/10.1038/d41586-026-00121-x" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">177</td>
+              <td class="col-paper">ROAR: Robust accident recognition and anticipation for autonomous driving</td>
+              <td class="col-authors">Xingcheng Liu, Yanchen Guan, Haicheng Liao, Zhengbing He, Zhenning Li</td>
+              <td class="col-role-1">5</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">Accident Analysis and Prevention </td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">228:108414</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.aap.2026.108414" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">178</td>
+              <td class="col-paper">NeuralMOVES: A lightweight and microscopic vehicle emission estimation model based on reverse engineering and surrogate learning</td>
+              <td class="col-authors">Edgar Ramirez-Sanchez, Catherine Tang, Yaosheng Xu, Nrithya Renganathan, Vindula Jayawardana, Zhengbing He*, Cathy Wu</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Transportation Research Part C</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">184:105530</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.trc.2026.105530" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">179</td>
+              <td class="col-paper">CoT-Drive Efficient Motion Forecasting for Autonomous Driving with LLMs and Chain-of-Thought Prompting</td>
+              <td class="col-authors">Haicheng Liao, Hanlin Kong, Bonan Wang, Chengyue Wang, Kanye Ye Wang, Zhengbing He, Chengzhong Xu, Zhenning Li</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">/</td>
+              <td class="col-journal">IEEE Transactions on Artificial Intelligence</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">7(2):625-641</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TAI.2025.3564594" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">180</td>
+              <td class="col-paper">A Review of Stop-and-Go Traffic Wave Suppression Strategies Variable Speed Limit vs. Jam-Absorption Driving</td>
+              <td class="col-authors">Zhengbing He, Jorge Laval, Yu Han, Andreas Hegyi, Ryosuke Nishi, Cathy Wu</td>
+              <td class="col-role-1">1</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">27(5):4986-5000</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2026.3658644" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">181</td>
+              <td class="col-paper">Probability-Aware Parking Selection</td>
+              <td class="col-authors">Cameron Hickert, Sirui Li, Zhengbing He, Cathy Wu</td>
+              <td class="col-role-1">3</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">27(3):3247-3256</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2025.3649170" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">182</td>
+              <td class="col-paper">Refining Time-Space Traffic Diagrams: A Neighborhood-Adaptive Linear Regression Method</td>
+              <td class="col-authors">Zhihong Yao, Yi Yu, Yunxia Wu, Hao Li, Yangsheng Jiang, Zhengbing He</td>
+              <td class="col-role-1">6</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">IEEE Transactions on Intelligent Transportation Systems</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">27(8):10276-10291</td>
+              <td class="col-link"><a href="https://doi.org/10.1109/TITS.2026.3678329" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+            <tr data-year="2026">
+              <td class="col-no">183</td>
+              <td class="col-paper">A Survey on Large Language Model-Powered Autonomous Driving</td>
+              <td class="col-authors">Yuxuan Zhu, Shiyi Wang, Wenqing Zhong, Nianchen Shen, Yunqi Li, Siqi Wang, Zhiheng Li, Cathy Wu, Zhengbing He, Li Li</td>
+              <td class="col-role-1">9</td>
+              <td class="col-role-2">Corresponding</td>
+              <td class="col-journal">Engineering</td>
+              <td class="col-journal-type">SCI</td>
+              <td class="col-issue">63:190-203</td>
+              <td class="col-link"><a href="https://doi.org/10.1016/j.eng.2025.07.038" target="_blank" rel="noopener noreferrer">Link</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
