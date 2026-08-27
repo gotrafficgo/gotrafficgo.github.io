@@ -322,10 +322,92 @@
         color: #0000ff;
         font-weight: normal;
       }
+      .home-jad-animation {
+        position: relative;
+        width: calc(100% + 48px);
+        margin: -32px -24px 24px;
+        overflow: hidden;
+      }
+      .home-jad-animation iframe {
+        display: block;
+        width: 100%;
+        height: 820px;
+        border: 0;
+        overflow: hidden;
+      }
+      .home-jad-latest-work {
+        position: absolute;
+        top: 340px;
+        left: 80px;
+        z-index: 2;
+        color: #64748b;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+        transform: translateY(60px);
+        pointer-events: none;
+      }
+      .home-jad-actions {
+        position: absolute;
+        right: auto;
+        left: 24px;
+        bottom: 32px;
+        z-index: 2;
+        display: grid;
+        gap: 10px;
+        width: min(250px, calc(100% - 48px));
+        transform: translateY(-36px);
+      }
+      .home-jad-continue-cue {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #64748b;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.2;
+        animation: home-jad-cue-pulse 1.25s ease-in-out infinite;
+      }
+      .home-jad-actions .direction-arrow {
+        flex: 0 0 32px;
+        color: inherit;
+        font-family: "Arial Black", Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 0.8;
+        text-align: center;
+      }
+      @keyframes home-jad-cue-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.28; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .home-jad-continue-cue { animation: none; }
+      }
+      @media (max-width: 640px) {
+        .home-jad-animation { margin-bottom: 18px; }
+      }
     </style>
   </head>
   <body>
-    <div class="top-nav">
+    <div class="home-jad-animation">
+      <iframe
+        id="homeJadAnimation"
+        src="project/dedicated-vehicle-dispatch/index.html?animation-only=1"
+        title="Jam-absorption driving animation"
+        scrolling="no"
+        loading="eager"
+      ></iframe>
+      <div class="home-jad-latest-work" id="homeJadLatestWork">My Latest Work</div>
+      <div class="home-jad-actions">
+        <div class="home-jad-continue-cue">
+          <span class="direction-arrow" aria-hidden="true">&darr;</span>
+          <span>Continue to My Homepage</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-nav" id="homeContentStart">
       <a href="index.html">[home]</a>
       <a href="teaching.html">[teaching]</a>
       <a href="publication.html">[publications]</a>
@@ -528,6 +610,40 @@
       <img src="photo.jpeg" alt="Zhengbing He" />
       <div class="footer-photo-caption">with my beloved Charlotte</div>
     </div>
+
+    <script>
+      (() => {
+        const frame = document.getElementById("homeJadAnimation");
+        const latestWork = document.getElementById("homeJadLatestWork");
+        let observer;
+
+        const fitAnimation = () => {
+          const animation = frame.contentDocument?.getElementById("jadAnimation");
+          if (!animation) return;
+          const styles = frame.contentWindow.getComputedStyle(animation);
+          const height = animation.getBoundingClientRect().height
+            + parseFloat(styles.marginTop)
+            + parseFloat(styles.marginBottom);
+          frame.style.height = `${Math.ceil(height)}px`;
+
+          const video = frame.contentDocument?.getElementById("observationVideo");
+          if (video) {
+            latestWork.style.top = `${Math.round(frame.offsetTop + video.getBoundingClientRect().top)}px`;
+          }
+        };
+
+        frame.addEventListener("load", () => {
+          fitAnimation();
+          const animation = frame.contentDocument?.getElementById("jadAnimation");
+          if (animation && "ResizeObserver" in window) {
+            observer?.disconnect();
+            observer = new ResizeObserver(fitAnimation);
+            observer.observe(animation);
+          }
+        });
+        window.addEventListener("resize", fitAnimation);
+      })();
+    </script>
 
   </body>
 </html>

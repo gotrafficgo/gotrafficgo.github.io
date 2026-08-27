@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
 
+  <script>
+    if (new URLSearchParams(window.location.search).get("animation-only") === "1") {
+      document.documentElement.classList.add("animation-only");
+    }
+  </script>
+
   <title>Resolving Traffic Congestion by Dispatching Dedicated Vehicles | Zhengbing He</title>
   <meta
     name="description"
@@ -177,6 +183,8 @@
     margin-top: 10px;
     color: #6b7280;
   }
+  html.animation-only body > main.container { display: none; }
+  html.animation-only body { background: #fff; }
   @media (max-width: 699px) {
     .jad-animation {
       width: calc(100% - 16px);
@@ -204,12 +212,13 @@
     .jad-animation .jad-controls input[type="range"] {
       width: 100%;
       max-width: none;
-      min-height: 28px;
+      min-height: 36px;
       margin: 0;
+      touch-action: none;
     }
     .jad-animation .jad-controls button {
       width: 100%;
-      min-height: 38px;
+      min-height: 44px;
     }
     .jad-animation .observation-video-section { padding: 12px 14px 14px; }
     .jad-animation .observation-video-wrap { width: 100%; }
@@ -243,7 +252,7 @@
         [<a href="https://www.youtube.com/watch?v=_IvmWaSDorg" target="_blank" rel="noopener noreferrer">YouTube</a>]
         [<a href="https://www.bilibili.com/video/BV1LucVzmExH?t=10.1" target="_blank" rel="noopener noreferrer">BiliBili</a>]
       </div>
-      <video class="observation-video" id="observationVideo" muted loop playsinline preload="auto" tabindex="-1">
+      <video class="observation-video" id="observationVideo" muted loop playsinline preload="metadata" tabindex="-1">
         <source src="videos/Cop-Car-Swerving-across-Freeway.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -545,7 +554,8 @@ function interpTrack(track, t) {
 }
 
 function resizeCanvas(cssW, cssH) {
-  const dpr = window.devicePixelRatio || 1;
+  const dprLimit = window.innerWidth < 700 ? 1.5 : 2;
+  const dpr = Math.min(window.devicePixelRatio || 1, dprLimit);
   canvas.style.width = cssW + 'px';
   canvas.style.height = cssH + 'px';
   const w = Math.round(cssW * dpr);
