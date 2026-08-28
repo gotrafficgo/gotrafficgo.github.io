@@ -755,9 +755,10 @@ function drawPoliceCarBelowView(view, positionMeters) {
   const px = view.left + (positionMeters - view.xMin) * view.scale;
   const vehW = Math.max(1, data.vehicleLength * view.scale) * vehicleScale;
   const vehH = Math.max(1, data.vehicleWidth * view.scale) * vehicleScale;
+  const carTop = view.top + view.height + 8;
   drawPoliceCar(
     Math.round(px - vehW / 2),
-    Math.round(view.top + view.height + 8),
+    Math.round(carTop),
     Math.round(vehW),
     Math.round(vehH),
     0
@@ -767,8 +768,7 @@ function drawPoliceCarBelowView(view, positionMeters) {
       ? ['JAD Plan Received;', 'Waiting for a Safe Gap']
       : ['JAD Plan Received; Waiting for a Safe Gap'];
     const lineHeight = 14;
-    const centerY = view.top + view.height + 8 + vehH / 2;
-    const firstY = centerY - (lines.length - 1) * lineHeight / 2;
+    const firstY = carTop + 7;
     ctx.save();
     ctx.fillStyle = canvasColors.accent;
     ctx.font = '12px Arial';
@@ -788,7 +788,7 @@ function drawPoliceCarStatus(view, status) {
   const lines = shouldWrap
     ? status.split('; ').map((line, index, all) => index < all.length - 1 ? `${line};` : line)
     : [status];
-  const baseY = view.top - 12;
+  const baseY = view.top + view.height + 24;
   const lineHeight = 14;
   ctx.save();
   ctx.fillStyle = canvasColors.accent;
