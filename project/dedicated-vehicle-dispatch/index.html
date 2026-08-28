@@ -67,6 +67,8 @@
     --muted: #666;
     --road: #f5f5f5;
     --line: #8a8a8a;
+    --jad-surface: #fff;
+    --jad-toolbar-surface: #f8fafc;
   }
   .jad-animation, .jad-animation * { box-sizing: border-box; }
   .jad-animation { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: var(--ink); line-height: normal; }
@@ -76,7 +78,7 @@
     margin: 12px auto;
     padding: 0;
     overflow: hidden;
-    background: #fff;
+    background: var(--jad-surface);
     border: 1px solid #e2e8f0;
     border-radius: 14px;
     box-shadow: 0 3px 14px rgba(15, 23, 42, 0.06);
@@ -92,7 +94,7 @@
     padding: 8px 20px;
     font-size: 13px;
     color: #475569;
-    background: #f8fafc;
+    background: var(--jad-toolbar-surface);
     border: 0;
     border-bottom: 1px solid #e5e7eb;
     border-radius: 0;
@@ -113,7 +115,7 @@
   .jad-animation .jad-controls input[type="range"] { width: 150px; max-width: 32vw; }
   .jad-animation .jad-controls button {
     border: 1px solid #cbd5e1;
-    background: #fff;
+    background: var(--jad-surface);
     border-radius: 6px;
     padding: 5px 12px;
     cursor: pointer;
@@ -123,14 +125,14 @@
     display: block;
     border: 0;
     border-radius: 0;
-    background: #fff;
+    background: var(--jad-surface);
   }
   .jad-animation .observation-video-section {
     position: relative;
     margin: 0;
     padding: 16px 20px 20px;
     text-align: center;
-    background: #fff;
+    background: var(--jad-surface);
     border: 0;
     border-top: 0;
     border-radius: 0;
@@ -185,6 +187,12 @@
   }
   .jad-animation .mobile-home-latest-work,
   .jad-animation .mobile-home-continue-cue { display: none; }
+  html.animation-only .jad-animation {
+    --jad-surface: #080b10;
+    --jad-toolbar-surface: #111827;
+    color: #fff;
+    border-color: #334155;
+  }
   html.animation-only body > main.container { display: none; }
   html.animation-only body { background: #fff; }
   @media (max-width: 699px) {
@@ -281,6 +289,21 @@
   @media (prefers-reduced-motion: reduce) {
     .jad-animation .mobile-home-continue-cue { animation: none; }
   }
+  html.animation-only .jad-animation .jad-toolbar,
+  html.animation-only .jad-animation #status,
+  html.animation-only .jad-animation .jad-controls button,
+  html.animation-only .jad-animation .jad-paper-info,
+  html.animation-only .jad-animation .jad-paper-link,
+  html.animation-only .jad-animation .jad-paper-link:visited,
+  html.animation-only .jad-animation .mobile-home-latest-work,
+  html.animation-only .jad-animation .mobile-home-continue-cue,
+  html.animation-only .jad-animation .observation-video-caption,
+  html.animation-only .jad-animation .observation-video-caption a,
+  html.animation-only .jad-animation .observation-video-caption a:visited {
+    color: #fff;
+  }
+  html.animation-only .jad-animation .jad-toolbar { border-bottom-color: #334155; }
+  html.animation-only .jad-animation .jad-controls button { border-color: #64748b; }
 
   </style>
 </head>
@@ -452,6 +475,11 @@ policeCarImage.src = data.policeIcon;
 const root = document.getElementById('jadAnimation');
 const canvas = document.getElementById('jadCanvas');
 const ctx = canvas.getContext('2d');
+const animationSurface = getComputedStyle(root).getPropertyValue('--jad-surface').trim() || '#fff';
+const animationDark = document.documentElement.classList.contains('animation-only');
+const canvasColors = animationDark
+  ? { road: '#111827', frame: '#fff', line: '#64748b', text: '#fff', accent: '#fff', policeFill: '#f8fafc', policeStroke: '#60a5fa' }
+  : { road: '#f5f5f5', frame: '#222', line: '#8a8a8a', text: '#222', accent: '#2563eb', policeFill: '#f8fafc', policeStroke: '#111' };
 const speed = document.getElementById('speed');
 const scrub = document.getElementById('scrub');
 const timeStatusEl = document.getElementById('timeStatus');
@@ -512,7 +540,7 @@ delete data.baselineFlowTracks;
 
 function color(track, speed) {
   if (track.role === 'jad') return '#e11d48';
-  return '#111111';
+  return animationDark ? '#ffffff' : '#111111';
 }
 
 function jadPathLanePosition(track, t) {
@@ -624,15 +652,15 @@ function resizeCanvas(cssW, cssH) {
 }
 
 function drawRoad(x, y, w, h, label, scale) {
-  ctx.fillStyle = '#f5f5f5';
+  ctx.fillStyle = canvasColors.road;
   ctx.fillRect(x, y, w, h);
   if (scale.showRoadFrame !== false) {
-    ctx.strokeStyle = '#222';
+    ctx.strokeStyle = canvasColors.frame;
     ctx.lineWidth = 1;
     ctx.strokeRect(x, y, w, h);
   }
   if (scale.showLaneLines !== false) {
-    ctx.strokeStyle = '#8a8a8a';
+    ctx.strokeStyle = canvasColors.line;
     ctx.setLineDash([8, 8]);
     for (let i = 1; i < data.lanes; i++) {
       const yy = y + i * data.laneWidth * scale.value;
@@ -643,7 +671,7 @@ function drawRoad(x, y, w, h, label, scale) {
     }
     ctx.setLineDash([]);
   }
-  ctx.fillStyle = '#222';
+  ctx.fillStyle = canvasColors.text;
   ctx.font = '13px Arial';
   const statusText = scale.status ? `: ${scale.status}` : '';
   const labelWidth = ctx.measureText(label).width;
@@ -651,7 +679,7 @@ function drawRoad(x, y, w, h, label, scale) {
   const wraps = statusText && labelWidth + statusWidth > w;
   ctx.fillText(label, x, y - (wraps ? 27 : 12));
   if (statusText) {
-    ctx.fillStyle = '#2563eb';
+    ctx.fillStyle = canvasColors.accent;
     ctx.fillText(statusText, wraps ? x : x + labelWidth, y - 12);
   }
 }
@@ -664,7 +692,7 @@ function drawDetectorLabel(view, positionMeters, wrapStatus = false) {
       ? "'Stop' Detected"
       : null;
   ctx.save();
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = canvasColors.frame;
   ctx.lineWidth = 1;
   ctx.beginPath();
   ctx.moveTo(px, view.top - 8);
@@ -692,14 +720,14 @@ function drawDetectorLabel(view, positionMeters, wrapStatus = false) {
         Math.min(px - totalWidth / 2, maxRight - totalWidth)
       );
       if (prefix) {
-        ctx.fillStyle = '#000';
+        ctx.fillStyle = canvasColors.text;
         ctx.fillText(prefix, textLeft, firstY + index * lineHeight);
       }
-      ctx.fillStyle = '#2563eb';
+      ctx.fillStyle = canvasColors.accent;
       ctx.fillText(status, textLeft + prefixWidth, firstY + index * lineHeight);
     });
   } else {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = canvasColors.text;
     ctx.font = '13px Arial';
     ctx.textAlign = 'center';
     ctx.fillText('Detector', px, view.top - 12);
@@ -730,7 +758,7 @@ function drawPoliceCarBelowView(view, positionMeters) {
     const centerY = view.top + view.height + 8 + vehH / 2;
     const firstY = centerY - (lines.length - 1) * lineHeight / 2;
     ctx.save();
-    ctx.fillStyle = '#2563eb';
+    ctx.fillStyle = canvasColors.accent;
     ctx.font = '12px Arial';
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
@@ -743,7 +771,7 @@ function drawPoliceCarBelowView(view, positionMeters) {
 
 function drawPoliceCarStatus(view, status) {
   ctx.save();
-  ctx.fillStyle = '#2563eb';
+  ctx.fillStyle = canvasColors.accent;
   ctx.font = '12px Arial';
   ctx.textAlign = 'center';
   ctx.fillText(status, view.left + view.width / 2, view.top + view.height + 24);
@@ -767,7 +795,7 @@ function drawVehicle(track, state, view, vehicleScale = 1) {
   const ry = Math.round(py - vehH / 2);
   if (track.role === 'jad') {
     if (view.scale < 1) {
-      ctx.fillStyle = '#2563eb';
+      ctx.fillStyle = canvasColors.accent;
       ctx.fillRect(Math.round(px - 1.5), Math.round(py - 1.5), 3, 3);
       return true;
     }
@@ -806,8 +834,8 @@ function drawPoliceCar(x, y, w, h, headingAngle) {
     const iconH = Math.max(9, h * 2.1);
     const ix = Math.round(-iconW / 2);
     const iy = Math.round(-iconH / 2);
-    ctx.fillStyle = '#f8fafc';
-    ctx.strokeStyle = '#111';
+    ctx.fillStyle = canvasColors.policeFill;
+    ctx.strokeStyle = canvasColors.policeStroke;
     ctx.fillRect(ix, iy, Math.round(iconW), Math.round(iconH));
     ctx.strokeRect(ix, iy, Math.round(iconW), Math.round(iconH));
   }
@@ -929,7 +957,7 @@ function draw() {
   const cssH = localTop + localH + 52;
   resizeCanvas(cssW, cssH);
   ctx.clearRect(0, 0, cssW, cssH);
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = animationSurface;
   ctx.fillRect(0, 0, cssW, cssH);
 
   const frameStates = new Map();
@@ -975,7 +1003,7 @@ function draw() {
     drawPoliceCarStatus(localView, jadTrafficStatus);
   }
 
-  ctx.fillStyle = '#666';
+  ctx.fillStyle = canvasColors.text;
   ctx.font = '12px Arial';
   ctx.fillText(`${Math.round(fullView.xMin)} m`, fullView.left, fullView.top + fullView.height + 22);
   ctx.fillText(`${Math.round(fullView.xMax)} m`, fullView.left + fullView.width - 46, fullView.top + fullView.height + 22);
