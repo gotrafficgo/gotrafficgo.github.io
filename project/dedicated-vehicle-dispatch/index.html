@@ -233,12 +233,20 @@
     .jad-animation .observation-video-section { padding: 12px 14px 14px; }
     html.animation-only .jad-animation .mobile-home-latest-work {
       display: block;
-      margin: 0 0 20px;
+      margin: 0 0 28px;
       color: #64748b;
       font-size: 18px;
       font-weight: 700;
       line-height: 1.2;
       text-align: left;
+    }
+    html.animation-only .jad-animation .mobile-home-latest-work-subtitle {
+      display: block;
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.2;
     }
     .jad-animation .observation-video-wrap { width: 100%; }
     .jad-animation .observation-video-caption {
@@ -320,7 +328,10 @@
   </div>
   <canvas id="jadCanvas"></canvas>
   <section class="observation-video-section" id="observationVideoSection">
-    <div class="mobile-home-latest-work">My Latest Work</div>
+    <div class="mobile-home-latest-work">
+      My Latest Work
+      <span class="mobile-home-latest-work-subtitle">The Best Is 45s Away</span>
+    </div>
     <div class="observation-video-wrap">
       <div class="observation-video-caption">
         Real-World Observation: Police-Car Swerving Across Freeway
