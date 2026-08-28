@@ -960,7 +960,9 @@ function draw() {
   const baselineTop = 30;
   const globalH = roadMetersH * globalScale;
   const detectorStatusWraps = simT >= 521 && availableW < 520;
-  const globalTop = baselineTop + Math.max(globalH, 10) + 48 + (detectorStatusWraps ? 14 : 0);
+  // Keep the lower panels fixed when the detector status wraps: the label
+  // grows upward from the detector line instead of pushing the scene down.
+  const globalTop = baselineTop + Math.max(globalH, 10) + 48;
   const localScale = containerW < 700 ? 4.0 : 5.5;
   const localTop = globalTop + Math.max(globalH, 10) + 72;
   const localH = roadMetersH * localScale;
