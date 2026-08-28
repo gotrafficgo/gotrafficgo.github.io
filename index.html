@@ -384,13 +384,18 @@
       @media (prefers-reduced-motion: reduce) {
         .home-jad-continue-cue { animation: none; }
       }
-      @media (max-width: 640px) {
-        .home-jad-animation { margin-bottom: 18px; }
+      @media (max-width: 699px) {
+        .home-jad-animation {
+          margin-bottom: 18px;
+        }
+        .home-jad-latest-work,
+        .home-jad-actions { display: none; }
       }
     </style>
   </head>
   <body>
     <div class="home-jad-animation">
+      <div class="home-jad-latest-work" id="homeJadLatestWork">My Latest Work</div>
       <iframe
         id="homeJadAnimation"
         src="project/dedicated-vehicle-dispatch/index.html?animation-only=1"
@@ -398,7 +403,6 @@
         scrolling="no"
         loading="eager"
       ></iframe>
-      <div class="home-jad-latest-work" id="homeJadLatestWork">My Latest Work</div>
       <div class="home-jad-actions">
         <div class="home-jad-continue-cue">
           <span class="direction-arrow" aria-hidden="true">&darr;</span>

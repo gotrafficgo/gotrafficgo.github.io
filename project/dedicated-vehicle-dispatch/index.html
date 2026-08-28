@@ -183,6 +183,8 @@
     margin-top: 10px;
     color: #6b7280;
   }
+  .jad-animation .mobile-home-latest-work,
+  .jad-animation .mobile-home-continue-cue { display: none; }
   html.animation-only body > main.container { display: none; }
   html.animation-only body { background: #fff; }
   @media (max-width: 699px) {
@@ -221,7 +223,29 @@
       min-height: 44px;
     }
     .jad-animation .observation-video-section { padding: 12px 14px 14px; }
+    html.animation-only .jad-animation .mobile-home-latest-work {
+      display: block;
+      margin: 0 0 10px;
+      color: #64748b;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: left;
+    }
     .jad-animation .observation-video-wrap { width: 100%; }
+    .jad-animation .observation-video-caption {
+      position: static;
+      max-width: none;
+      margin-bottom: 7px;
+      padding: 0;
+      color: #475569;
+      background: transparent;
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .jad-animation .observation-video-caption a,
+    .jad-animation .observation-video-caption a:visited { color: #475569; }
     .jad-animation .jad-paper-info {
       position: static;
       width: 100%;
@@ -229,6 +253,33 @@
       text-align: left;
     }
     .jad-animation .jad-paper-link { margin-top: 6px; }
+    html.animation-only .jad-animation .mobile-home-continue-cue {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      color: #64748b;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: left;
+      animation: mobile-home-cue-pulse 1.25s ease-in-out infinite;
+    }
+    .jad-animation .mobile-home-direction-arrow {
+      flex: 0 0 32px;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 0.8;
+      text-align: center;
+    }
+  }
+  @keyframes mobile-home-cue-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.28; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .jad-animation .mobile-home-continue-cue { animation: none; }
   }
 
   </style>
@@ -246,6 +297,7 @@
   </div>
   <canvas id="jadCanvas"></canvas>
   <section class="observation-video-section" id="observationVideoSection">
+    <div class="mobile-home-latest-work">My Latest Work</div>
     <div class="observation-video-wrap">
       <div class="observation-video-caption">
         Real-World Observation: Police-Car Swerving Across Freeway
@@ -260,6 +312,10 @@
     <div class="jad-paper-info">
       <div>Transforming Police-Car Swerving for Mitigating Isolated Stop-and-Go Traffic Waves: A Practice-Oriented Jam-Absorption Driving Strategy</div>
       <a class="jad-paper-link" href="https://arxiv.org/abs/2602.10234" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2602.10234</a>
+    </div>
+    <div class="mobile-home-continue-cue">
+      <span class="mobile-home-direction-arrow" aria-hidden="true">&darr;</span>
+      <span>Continue to My Homepage</span>
     </div>
   </section>
 </div>
