@@ -781,11 +781,20 @@ function drawPoliceCarBelowView(view, positionMeters) {
 }
 
 function drawPoliceCarStatus(view, status) {
+  const lines = view.width < 520 && status.includes('; ')
+    ? status.split('; ').map((line, index, all) => index < all.length - 1 ? `${line};` : line)
+    : [status];
+  const baseY = view.top + view.height + 24;
+  const lineHeight = 14;
   ctx.save();
   ctx.fillStyle = canvasColors.accent;
   ctx.font = '12px Arial';
   ctx.textAlign = 'center';
-  ctx.fillText(status, view.left + view.width / 2, view.top + view.height + 24);
+  // Anchor the final line at the original position so wrapping grows upward
+  // without moving the scene or the text below it.
+  lines.forEach((line, index) => {
+    ctx.fillText(line, view.left + view.width / 2, baseY - (lines.length - 1 - index) * lineHeight);
+  });
   ctx.restore();
 }
 
