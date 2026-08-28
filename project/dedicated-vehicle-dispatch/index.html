@@ -787,7 +787,7 @@ function drawPoliceCarStatus(view, status) {
   const lines = shouldWrap
     ? status.split('; ').map((line, index, all) => index < all.length - 1 ? `${line};` : line)
     : [status];
-  const baseY = view.top + view.height + 24;
+  const baseY = view.top - 12;
   const lineHeight = 14;
   ctx.save();
   ctx.fillStyle = canvasColors.accent;
