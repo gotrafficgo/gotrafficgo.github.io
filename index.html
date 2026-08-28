@@ -344,8 +344,17 @@
         font-size: 20px;
         font-weight: 700;
         line-height: 1;
+        text-align: center;
         transform: translateY(60px);
         pointer-events: none;
+      }
+      .home-jad-latest-work-subtitle {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.2;
       }
       .home-jad-actions {
         position: absolute;
@@ -388,14 +397,27 @@
         .home-jad-animation {
           margin-bottom: 18px;
         }
-        .home-jad-latest-work,
+        .home-jad-latest-work {
+          top: 300px;
+          left: 50%;
+          font-size: 18px;
+          transform: translate(-50%, 60px);
+          white-space: nowrap;
+        }
+        .home-jad-latest-work-subtitle {
+          margin-top: 10px;
+          font-size: 11px;
+        }
         .home-jad-actions { display: none; }
       }
     </style>
   </head>
   <body>
     <div class="home-jad-animation">
-      <div class="home-jad-latest-work" id="homeJadLatestWork">My Latest Work</div>
+      <div class="home-jad-latest-work" id="homeJadLatestWork">
+        My Latest Work
+        <span class="home-jad-latest-work-subtitle">The Best Is 45s Away</span>
+      </div>
       <iframe
         id="homeJadAnimation"
         src="project/dedicated-vehicle-dispatch/index.html?animation-only=1"
