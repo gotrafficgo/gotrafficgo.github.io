@@ -781,7 +781,10 @@ function drawPoliceCarBelowView(view, positionMeters) {
 }
 
 function drawPoliceCarStatus(view, status) {
-  const lines = view.width < 520 && status.includes('; ')
+  ctx.font = '12px Arial';
+  const shouldWrap = status.includes('; ')
+    && ctx.measureText(status).width > view.width - 12;
+  const lines = shouldWrap
     ? status.split('; ').map((line, index, all) => index < all.length - 1 ? `${line};` : line)
     : [status];
   const baseY = view.top + view.height + 24;
