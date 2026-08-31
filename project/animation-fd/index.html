@@ -37,6 +37,16 @@
         border: 0;
       }
 
+      .video-links {
+        padding: 10px 24px 0;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .video-links a {
+        color: #0969da;
+      }
+
       .reference-section {
         padding: 48px 24px;
       }
@@ -79,6 +89,11 @@
       }
 
       @media (max-width: 600px) {
+        .video-links {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+
         .reference-section {
           padding: 28px 16px;
         }
@@ -98,6 +113,12 @@
         allowfullscreen
       ></iframe>
     </div>
+
+    <nav class="video-links" aria-label="Video platforms">
+      <a href="https://www.youtube.com/watch?app=desktop&amp;v=lJVYIVtsLso" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <span aria-hidden="true"> | </span>
+      <a href="https://www.bilibili.com/video/BV1dF8Fz7E8M?t=4.7" target="_blank" rel="noopener noreferrer">Bilibili</a>
+    </nav>
 
     <main class="reference-section">
       <article class="reference">
