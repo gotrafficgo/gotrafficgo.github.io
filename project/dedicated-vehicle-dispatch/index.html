@@ -6,8 +6,12 @@
   <meta name="format-detection" content="telephone=no" />
 
   <script>
-    if (new URLSearchParams(window.location.search).get("animation-only") === "1") {
+    const pageParams = new URLSearchParams(window.location.search);
+    if (pageParams.get("animation-only") === "1") {
       document.documentElement.classList.add("animation-only");
+    }
+    if (pageParams.get("animation-embed") === "1") {
+      document.documentElement.classList.add("animation-embed");
     }
   </script>
 
@@ -195,6 +199,7 @@
   }
   html.animation-only body > main.container { display: none; }
   html.animation-only body { background: #fff; }
+  html.animation-embed body > main.container { display: none; }
   @media (max-width: 699px) {
     .jad-animation {
       width: calc(100% - 16px);
