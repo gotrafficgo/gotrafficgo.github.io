@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Brain Driving video and reference on personalized vehicle speed using DR-EEG decoding and situational embeddings."
+    />
+    <title>Brain Driving Animation | Zhengbing He</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #f7f7f7;
+        color: #222;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+          sans-serif;
+      }
+
+      .video-hero {
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        background: #000;
+      }
+
+      .video-frame {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .reference-section {
+        padding: 48px 20px;
+      }
+
+      .reference-card {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        line-height: 1.6;
+      }
+
+      .paper-title {
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .paper-meta {
+        margin-bottom: 8px;
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .paper-links a,
+      .paper-links button {
+        appearance: none;
+        display: inline-block;
+        margin-right: 14px;
+        padding: 0;
+        border: 0;
+        color: #0969da;
+        background: none;
+        font: inherit;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .copy-status {
+        color: #4b5563;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        .reference-section {
+          padding: 24px 14px;
+        }
+
+        .reference-card {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-hero">
+      <iframe
+        class="video-frame"
+        src="../brain-driving/index.html?video-embed=1"
+        title="Brain-Driving video"
+        scrolling="no"
+        loading="eager"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <main class="reference-section">
+      <article class="reference-card">
+        <div class="paper-title">
+          Brain Driving: Personalizing Vehicle Speed with DR-EEG Decoding and Situational Embeddings
+        </div>
+        <div class="paper-meta">
+          Peihao Li, Geqi Qi, Xuedong Yan, Shuo Zhao, Lin Hu,
+          <strong>Zhengbing He</strong>, Wei Guan · IEEE Transactions on
+          Intelligent Vehicles · 10(3):1658–1677 · 2025
+        </div>
+        <div class="paper-links">
+          <a
+            href="https://doi.org/10.1109/TIV.2024.3430952"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Link</a>
+          <button id="copyBibtex" type="button">Copy BibTeX</button>
+          <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      (() => {
+        const bibtex = `@article{li2025brain,
+  title = {Brain Driving: Personalizing Vehicle Speed with {DR-EEG} Decoding and Situational Embeddings},
+  author = {Li, Peihao and Qi, Geqi and Yan, Xuedong and Zhao, Shuo and Hu, Lin and He, Zhengbing and Guan, Wei},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  volume = {10},
+  number = {3},
+  pages = {1658--1677},
+  year = {2025},
+  doi = {10.1109/TIV.2024.3430952}
+}`;
+
+        const button = document.getElementById("copyBibtex");
+        const status = document.getElementById("copyStatus");
+
+        button.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(bibtex);
+            status.textContent = "Copied";
+          } catch {
+            status.textContent = "Copy failed";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
