@@ -198,9 +198,17 @@
       const videoFrame = document.getElementById("brainDrivingVideo");
       if (!videoFrame) return;
 
-      const bilibiliEmbed = "https://player.bilibili.com/player.html?bvid=BV1WUq7Y9E8k&page=1&autoplay=0";
+      const autoplay = document.documentElement.classList.contains("video-embed");
+      const youtubeEmbed = autoplay
+        ? "https://www.youtube.com/embed/lnkLH9a-5wU?autoplay=1&playsinline=1"
+        : "https://www.youtube.com/embed/lnkLH9a-5wU";
+      const bilibiliEmbed = autoplay
+        ? "https://player.bilibili.com/player.html?bvid=BV1WUq7Y9E8k&page=1&autoplay=1"
+        : "https://player.bilibili.com/player.html?bvid=BV1WUq7Y9E8k&page=1&autoplay=0";
       const youtubeProbe = new Image();
       let settled = false;
+
+      videoFrame.src = youtubeEmbed;
 
       function useBilibili() {
         if (settled) return;
