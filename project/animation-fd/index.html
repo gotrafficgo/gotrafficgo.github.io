@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Full-screen video and reference for constructing traffic-flow fundamental diagrams from large-scale vehicle trajectory data."
+    />
+    <title>Fundamental Diagram Construction | Zhengbing He</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #f7f7f7;
+        color: #222;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+          sans-serif;
+      }
+
+      .video-hero {
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        background: #000;
+      }
+
+      .video-frame {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .reference-section {
+        padding: 48px 24px;
+      }
+
+      .reference {
+        margin: 0;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .paper-title {
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .paper-meta {
+        margin-bottom: 8px;
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .paper-links a,
+      .paper-links button {
+        appearance: none;
+        display: inline-block;
+        margin-right: 14px;
+        padding: 0;
+        border: 0;
+        color: #0969da;
+        background: none;
+        font: inherit;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .copy-status {
+        color: #4b5563;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        .reference-section {
+          padding: 28px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-hero">
+      <iframe
+        class="video-frame"
+        id="fundamentalDiagramVideo"
+        src="https://www.youtube.com/embed/lJVYIVtsLso"
+        title="Fundamental Diagram Construction video on YouTube"
+        loading="eager"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <main class="reference-section">
+      <article class="reference">
+        <div class="paper-title">
+          Constructing the Fundamental Diagrams of Traffic Flow from Large-Scale Vehicle Trajectory Data
+        </div>
+        <div class="paper-meta">
+          <strong>Zhengbing He</strong>, Cathy Wu · arXiv:2507.09648 · 2025
+        </div>
+        <div class="paper-links">
+          <a
+            href="https://arxiv.org/abs/2507.09648"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Link</a>
+          <button id="copyBibtex" type="button">Copy BibTeX</button>
+          <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      (() => {
+        const videoFrame = document.getElementById("fundamentalDiagramVideo");
+        const bilibiliEmbed =
+          "https://player.bilibili.com/player.html?bvid=BV1dF8Fz7E8M&page=1&autoplay=0&t=4.7";
+        const youtubeProbe = new Image();
+        let settled = false;
+
+        const useBilibili = () => {
+          if (settled) return;
+          settled = true;
+          window.clearTimeout(probeTimeout);
+          videoFrame.src = bilibiliEmbed;
+          videoFrame.title = "Fundamental Diagram Construction video on Bilibili";
+        };
+
+        const keepYouTube = () => {
+          if (settled) return;
+          settled = true;
+          window.clearTimeout(probeTimeout);
+        };
+
+        const probeTimeout = window.setTimeout(useBilibili, 4000);
+        youtubeProbe.onload = keepYouTube;
+        youtubeProbe.onerror = useBilibili;
+        youtubeProbe.src =
+          "https://www.youtube.com/favicon.ico?video-probe=" + Date.now();
+
+        const bibtex = `@article{he2025constructing,
+  title = {Constructing the Fundamental Diagrams of Traffic Flow from Large-Scale Vehicle Trajectory Data},
+  author = {He, Zhengbing and Wu, Cathy},
+  journal = {arXiv preprint arXiv:2507.09648},
+  year = {2025},
+  eprint = {2507.09648},
+  archivePrefix = {arXiv},
+  primaryClass = {physics.soc-ph},
+  url = {https://arxiv.org/abs/2507.09648}
+}`;
+
+        const button = document.getElementById("copyBibtex");
+        const status = document.getElementById("copyStatus");
+
+        button.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(bibtex);
+            status.textContent = "Copied";
+          } catch {
+            status.textContent = "Copy failed";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
