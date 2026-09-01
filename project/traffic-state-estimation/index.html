@@ -8,7 +8,7 @@
   <title>Traffic State Estimation: Travel-Time and Lane-Level Methods | Zhengbing He</title>
   <meta
     name="description"
-    content="Zhengbing He's research on traffic state and travel-time estimation, including stochastic three-detector modeling, sparse freeway sensors, and lane-level travel-time distributions in connected urban networks."
+    content="Zhengbing He's research on traffic state and travel-time estimation, including lane-level travel-time reliability and uncertainty, lane-level travel-time distributions, sparse freeway sensors, and stochastic traffic-state modeling."
   />
 
   <style>
@@ -73,22 +73,48 @@
       </p>
 
       <p>
-        Our research advances traffic state and travel-time estimation across freeway and urban networks by combining physics-based stochastic modeling with data-driven learning:
+        Our research advances traffic state and travel-time estimation across freeway and urban networks by combining probabilistic modeling, uncertainty quantification, and data-driven learning:
       </p>
 
       <ul class="work-list">
         <li>
-          In connected urban environments, we <strong class="emphasis">modeled lane-level travel-time distributions by jointly considering link travel time and movement-specific signal delays</strong>, showing that kernel density estimation captures travel-time reliability more comprehensively than conventional parametric distributions<sup class="citation-sup">[1]</sup>.
+          We <strong class="emphasis">modeled lane-level travel-time reliability and uncertainty using Bayesian model averaging copulas</strong>, capturing stochastic dependencies across lanes and freeway segments and identifying distinct reliability characteristics by lane<sup class="citation-sup">[1]</sup>.
         </li>
         <li>
-          For recurrently congested freeways with sparse or malfunctioning detectors, we <strong class="emphasis">integrated self-organizing maps with support vector regression</strong> to identify representative sensors and accurately estimate real-time route travel times from limited data<sup class="citation-sup">[2]</sup>.
+          In connected urban environments, we <strong class="emphasis">modeled lane-level travel-time distributions by jointly considering link travel time and movement-specific signal delays</strong>, showing that kernel density estimation captures travel-time reliability more comprehensively than conventional parametric distributions<sup class="citation-sup">[2]</sup>.
         </li>
         <li>
-          We <strong class="emphasis">extended Newell's three-detector method to infer probabilistic traffic states at unobserved freeway locations</strong> from upstream and downstream counts while accounting for day-to-day demand variation, sensor errors, and uncertainty in fundamental-diagram parameters<sup class="citation-sup">[3]</sup>.
+          For recurrently congested freeways with sparse or malfunctioning detectors, we <strong class="emphasis">integrated self-organizing maps with support vector regression</strong> to identify representative sensors and accurately estimate real-time route travel times from limited data<sup class="citation-sup">[3]</sup>.
+        </li>
+        <li>
+          We <strong class="emphasis">extended Newell's three-detector method to infer probabilistic traffic states at unobserved freeway locations</strong> from upstream and downstream counts while accounting for day-to-day demand variation, sensor errors, and uncertainty in fundamental-diagram parameters<sup class="citation-sup">[4]</sup>.
         </li>
       </ul>
 
       <h2 class="publications-heading">Publications</h2>
+
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/lane-level.png"
+            alt="Lane-level travel-time reliability modeling with Bayesian model averaging copulas"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>Modeling Lane-Level Travel Time Reliability with Uncertainty Quantification
+          </div>
+          <div class="paper-meta">
+            Amin Moeinaddini, Tianren Zhang, Shubo Wu, <strong>Zhengbing He</strong>, Yajie Zou · Transportation Letters · 18(7):1551–1571 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1080/19427867.2026.2632963" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexMoeinaddini2026)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
 
       <div class="paper featured-paper">
         <figure>
@@ -101,7 +127,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[1]</span>Estimation of Lane-Level Travel Time Distributions under a Connected Environment
+            <span class="paper-index">[2]</span>Estimation of Lane-Level Travel Time Distributions under a Connected Environment
           </div>
           <div class="paper-meta">
             Lili Lu, <strong>Zhengbing He</strong>, Jian Wang, Jufeng Chen, Wei Wang · Journal of Intelligent Transportation Systems · 25(5):501–512 · 2021
@@ -124,7 +150,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[2]</span>Real-time Estimation of Freeway Travel Time with Recurrent Congestion Based on Sparse Detector Data
+            <span class="paper-index">[3]</span>Real-time Estimation of Freeway Travel Time with Recurrent Congestion Based on Sparse Detector Data
           </div>
           <div class="paper-meta">
             Lili Lu, Jian Wang, <strong>Zhengbing He*</strong>, Ching-Yao Chan · IET Intelligent Transport Systems · 12(1):2–11 · 2018
@@ -147,7 +173,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[3]</span>Stochastic Extension of Newell's Three-Detector Method
+            <span class="paper-index">[4]</span>Stochastic Extension of Newell's Three-Detector Method
           </div>
           <div class="paper-meta">
             Jorge A. Laval, <strong>Zhengbing He</strong>, Felipe Castrillon · Transportation Research Record · 2315(1):73–80 · 2012
@@ -167,6 +193,17 @@
   </main>
 
   <script>
+    const bibtexMoeinaddini2026 = `@article{Moeinaddini2026LaneLevelReliability,
+  title = {Modeling Lane-Level Travel Time Reliability with Uncertainty Quantification},
+  author = {Moeinaddini, Amin and Zhang, Tianren and Wu, Shubo and He, Zhengbing and Zou, Yajie},
+  journal = {Transportation Letters},
+  volume = {18},
+  number = {7},
+  pages = {1551--1571},
+  year = {2026},
+  doi = {10.1080/19427867.2026.2632963}
+}`;
+
     const bibtexLu2018 = `@article{lu2018real,
   title = {Real-time estimation of freeway travel time with recurrent congestion based on sparse detector data},
   author = {Lu, Lili and Wang, Jian and He, Zhengbing and Chan, Ching-Yao},
