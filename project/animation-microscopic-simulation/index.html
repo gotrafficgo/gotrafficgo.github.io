@@ -37,15 +37,26 @@
         border: 0;
       }
 
+      .repository-link,
       .video-links {
         padding: 10px 24px 0;
         line-height: 1.5;
         text-align: left;
       }
 
+      .video-links {
+        padding-top: 2px;
+      }
+
+      .repository-link a,
       .video-links a,
       .project-links a {
         color: #0969da;
+      }
+
+      .repository-link a {
+        font-weight: 600;
+        text-decoration: none;
       }
 
       .project-section {
@@ -85,6 +96,7 @@
           aspect-ratio: 16 / 9;
         }
 
+        .repository-link,
         .video-links {
           padding-right: 16px;
           padding-left: 16px;
@@ -110,6 +122,10 @@
       ></iframe>
     </div>
 
+    <nav class="repository-link" aria-label="Source code repository">
+      <a href="https://github.com/gotrafficgo/ATSimu" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
     <nav class="video-links" aria-label="Video platforms">
       <a href="https://youtu.be/xm81spwfknk" target="_blank" rel="noopener noreferrer">YouTube</a>
       <span aria-hidden="true"> | </span>
@@ -130,7 +146,6 @@
         GitHub for research reference, reproducibility, and education.
       </p>
       <nav class="project-links" aria-label="ATSimu project resources">
-        <a href="https://github.com/gotrafficgo/ATSimu" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://github.com/gotrafficgo/ATSimu/releases/latest" target="_blank" rel="noopener noreferrer">Download</a>
         <a href="https://atsimu.sourceforge.net/index.html" target="_blank" rel="noopener noreferrer">SourceForge Archive</a>
       </nav>
