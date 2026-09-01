@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Network-scale microscopic traffic simulation video and ATSimu project link."
+    />
+    <title>Network-Scale Microscopic Traffic Simulation | Zhengbing He</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #f7f7f7;
+        color: #222;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+          sans-serif;
+      }
+
+      .video-hero {
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        background: #000;
+      }
+
+      .video-frame {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .video-links {
+        padding: 10px 24px 0;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .video-links a,
+      .project-link a {
+        color: #0969da;
+      }
+
+      .project-link {
+        margin: 0;
+        padding: 48px 24px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .project-link a {
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      @media (max-width: 600px) {
+        .video-hero {
+          height: auto;
+          aspect-ratio: 16 / 9;
+        }
+
+        .video-links {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+
+        .project-link {
+          padding: 28px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-hero">
+      <iframe
+        class="video-frame"
+        id="microscopicTrafficSimulationVideo"
+        src="https://www.youtube.com/embed/xm81spwfknk?autoplay=1&amp;playsinline=1"
+        title="Network-Scale Microscopic Traffic Simulation video on YouTube"
+        loading="eager"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <nav class="video-links" aria-label="Video platforms">
+      <a href="https://youtu.be/xm81spwfknk" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <span aria-hidden="true"> | </span>
+      <a href="https://www.bilibili.com/video/BV14M4y1j7M7?t=1.8" target="_blank" rel="noopener noreferrer">Bilibili</a>
+    </nav>
+
+    <p class="project-link">
+      <a href="https://atsimu.sourceforge.net" target="_blank" rel="noopener noreferrer">ATSimu</a>
+    </p>
+
+    <script>
+      (() => {
+        const frame = document.getElementById("microscopicTrafficSimulationVideo");
+        const youtubeProbe = new Image();
+        let settled = false;
+
+        const useBilibili = () => {
+          if (settled) return;
+          settled = true;
+          window.clearTimeout(probeTimeout);
+          frame.src = "https://player.bilibili.com/player.html?bvid=BV14M4y1j7M7&page=1&autoplay=1&t=1.8";
+          frame.title = "Network-Scale Microscopic Traffic Simulation video on Bilibili";
+        };
+
+        const keepYouTube = () => {
+          if (settled) return;
+          settled = true;
+          window.clearTimeout(probeTimeout);
+        };
+
+        const probeTimeout = window.setTimeout(useBilibili, 4000);
+        youtubeProbe.onload = keepYouTube;
+        youtubeProbe.onerror = useBilibili;
+        youtubeProbe.src = "https://www.youtube.com/favicon.ico?video-probe=" + Date.now();
+      })();
+    </script>
+  </body>
+</html>
