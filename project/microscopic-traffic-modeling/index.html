@@ -8,7 +8,7 @@
   <title>Understanding Traffic Dynamics: Microscopic Modeling | Zhengbing He</title>
   <meta
     name="description"
-    content="Zhengbing He's research on microscopic traffic flow modeling, connecting car-following, lane-changing, visual perception, vehicle-type and driver heterogeneity, reaction time, stochastic multi-regime behavior, traffic stability, safety, fundamental diagrams, shockwaves, and congestion to explain how individual vehicle interactions shape system-level traffic dynamics."
+    content="Zhengbing He's research on microscopic traffic flow modeling, connecting car-following, lane-changing, visual perception, vehicle-type and driver heterogeneity, reaction time, traffic stability, safety, fundamental diagrams, shockwaves, and congestion to explain how individual vehicle interactions shape system-level traffic dynamics."
   />
 
   <style>
@@ -79,39 +79,36 @@
 
       <p>
       Together, my team’s studies establish a multi-scale account of traffic dynamics:
-      <strong class="emphasis">from perception and heterogeneous driving behavior to maneuver-induced disturbances, stochastic behavioral regimes, and network-level traffic phenomena.</strong>
+      <strong class="emphasis">from perception and heterogeneous driving behavior to maneuver-induced disturbances and network-level traffic phenomena.</strong>
       </p>
 
       <ul class="work-list">
         <li>
-          In our early work, we proposed a <strong class="emphasis">visual imaging car-following model</strong>, showing that drivers’ visual perception of the preceding vehicle can better explain following behavior and traffic stability, especially under different vehicle-type conditions<sup class="citation-sup">[5]</sup>.
+          In our early work, we proposed a <strong class="emphasis">visual imaging car-following model</strong>, showing that drivers’ visual perception of the preceding vehicle can better explain following behavior and traffic stability, especially under different vehicle-type conditions<sup class="citation-sup">[4]</sup>.
         </li>
         <li>
-          We then examined <strong class="emphasis">vehicle-type-dependent car-following heterogeneity from both microscopic and macroscopic viewpoints</strong>, demonstrating that larger vehicles lead drivers to maintain lower-risk and larger-spacing behavior<sup class="citation-sup">[4]</sup>.
+          We then examined <strong class="emphasis">vehicle-type-dependent car-following heterogeneity from both microscopic and macroscopic viewpoints</strong>, demonstrating that larger vehicles lead drivers to maintain lower-risk and larger-spacing behavior<sup class="citation-sup">[3]</sup>.
         </li>
         <li>
-          To connect microscopic behavior with aggregate traffic flow characteristics, we developed a flexible traffic stream model that <strong class="emphasis">links reaction time, calmness, and sensitivity with macroscopic fundamental diagrams and shockwave dynamics</strong><sup class="citation-sup">[3]</sup>.
+          To connect microscopic behavior with aggregate traffic flow characteristics, we developed a flexible traffic stream model that <strong class="emphasis">links reaction time, calmness, and sensitivity with macroscopic fundamental diagrams and shockwave dynamics</strong><sup class="citation-sup">[2]</sup>.
         </li>
         <li>
-          We also <strong class="emphasis">derived an anisotropic continuum model directly from car-following behavior</strong> and showed its capability to reproduce real congestion waves<sup class="citation-sup">[6]</sup>.
+          We also <strong class="emphasis">derived an anisotropic continuum model directly from car-following behavior</strong> and showed its capability to reproduce real congestion waves<sup class="citation-sup">[5]</sup>.
         </li>
         <li>
           Extending the focus from car-following to lane-changing, we <strong class="emphasis">quantified the temporal and spatial impact of a single discretionary lane change</strong>, finding that it typically affects <strong class="emphasis">four surrounding vehicles for about 12 seconds</strong><sup class="citation-sup">[1]</sup>.
         </li>
         <li>
-          More recently, we incorporated stochasticity, driver heterogeneity, and time-varying behavioral regimes into Bayesian car-following models, showing that <strong class="emphasis">stochastic multi-regime representations reproduce human driving dynamics more faithfully than deterministic models</strong><sup class="citation-sup">[2]</sup>.
+          At the network scale, we <strong class="emphasis">identified a figure-eight hysteresis pattern in the macroscopic fundamental diagram</strong> and traced its microscopic causes to location-specific flow–occupancy states and different lane-changing rates, demonstrating how local maneuvers and spatial traffic heterogeneity shape aggregate network dynamics<sup class="citation-sup">[6]</sup>.
         </li>
         <li>
-          At the network scale, we <strong class="emphasis">identified a figure-eight hysteresis pattern in the macroscopic fundamental diagram</strong> and traced its microscopic causes to location-specific flow–occupancy states and different lane-changing rates, demonstrating how local maneuvers and spatial traffic heterogeneity shape aggregate network dynamics<sup class="citation-sup">[7]</sup>.
+          We expanded these foundations to <strong class="emphasis">mixed automated–human traffic and priority intersections</strong>, modeling how vehicle composition, communication range, human perception and trust, major-road demand, and headway distributions determine car-following stability, fuel use, and minor-road capacity<sup class="citation-sup">[7,8]</sup>.
         </li>
         <li>
-          We expanded these foundations to <strong class="emphasis">mixed automated–human traffic and priority intersections</strong>, modeling how vehicle composition, communication range, human perception and trust, major-road demand, and headway distributions determine car-following stability, fuel use, and minor-road capacity<sup class="citation-sup">[8,9]</sup>.
+          At freeway merging areas, trajectory data support both <strong class="emphasis">behavioral and safety analysis</strong>: clustering reveals cautious, moderate, and aggressive driving styles, while joint Tobit and survival models characterize conflict severity and duration<sup class="citation-sup">[9,10]</sup>. Lane-changing simulations further locate effective upstream warning points under different traffic flows<sup class="citation-sup">[11]</sup>.
         </li>
         <li>
-          At freeway merging areas, trajectory data support both <strong class="emphasis">behavioral and safety analysis</strong>: clustering reveals cautious, moderate, and aggressive driving styles, while joint Tobit and survival models characterize conflict severity and duration<sup class="citation-sup">[10,11]</sup>. Lane-changing simulations further locate effective upstream warning points under different traffic flows<sup class="citation-sup">[12]</sup>.
-        </li>
-        <li>
-          Two reviews organize the empirical basis of modern traffic-flow modeling: one maps how trajectory data have reshaped microscopic, mesoscopic, and macroscopic studies<sup class="citation-sup">[13]</sup>; the other classifies uses and limitations of the high-fidelity NGSIM datasets and identifies priorities for future data collection<sup class="citation-sup">[14]</sup>.
+          Two reviews organize the empirical basis of modern traffic-flow modeling: one maps how trajectory data have reshaped microscopic, mesoscopic, and macroscopic studies<sup class="citation-sup">[12]</sup>; the other classifies uses and limitations of the high-fidelity NGSIM datasets and identifies priorities for future data collection<sup class="citation-sup">[13]</sup>.
         </li>
       </ul>
     </section>
@@ -143,34 +140,13 @@
       <div class="paper featured-paper">
         <figure>
           <img
-            src="images/car-following-heterogeneity.png"
-            alt="Modeling car-following behaviors considering driver heterogeneity"
-          />
-        </figure>
-        <div class="featured-paper-content">
-          <div class="paper-title">
-            <span class="paper-index">[2]</span>Modeling Car-Following Behaviors Considering Driver Heterogeneity: A Multi-Regime Stochastic Framework
-          </div>
-          <div class="paper-meta">
-            Shubo Wu, Dong Ngoduy, <strong>Zhengbing He</strong>, Yajie Zou, Jian Sun · Transportation Research Part C: Emerging Technologies · 179:105282 · 2025
-          </div>
-          <div class="paper-links">
-            <a href="https://doi.org/10.1016/j.trc.2025.105282" target="_blank" rel="noopener noreferrer">Link</a>
-            <button onclick="copyText(bibtexWu2025)">Copy BibTeX</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="paper featured-paper">
-        <figure>
-          <img
             src="images/flexible-traffic-stream-model.png"
             alt="A flexible traffic stream model and its three representations of traffic flow"
           />
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[3]</span>A Flexible Traffic Stream Model and Its Three Representations of Traffic Flow
+            <span class="paper-index">[2]</span>A Flexible Traffic Stream Model and Its Three Representations of Traffic Flow
           </div>
           <div class="paper-meta">
             Liang Zheng, <strong>Zhengbing He*</strong>, Tian He · Transportation Research Part C: Emerging Technologies · 75:136–167 · 2017
@@ -191,7 +167,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[4]</span>Empirical Validation of Vehicle Type-Dependent Car-Following Heterogeneity from Micro- and Macro-Viewpoints
+            <span class="paper-index">[3]</span>Empirical Validation of Vehicle Type-Dependent Car-Following Heterogeneity from Micro- and Macro-Viewpoints
           </div>
           <div class="paper-meta">
             Liang Zheng, Chuang Zhu, <strong>Zhengbing He*</strong>, Tian He, Sisi Liu · Transportmetrica B: Transport Dynamics · 7(1):765–787 · 2019
@@ -212,7 +188,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[5]</span>A New Car-Following Model from the Perspective of Visual Imaging
+            <span class="paper-index">[4]</span>A New Car-Following Model from the Perspective of Visual Imaging
           </div>
           <div class="paper-meta">
             Liang Zheng, <strong>Zhengbing He*</strong> · International Journal of Modern Physics C · 26(8):1550090 · 2015
@@ -233,7 +209,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[6]</span>An Anisotropic Continuum Model and Its Calibration with an Improved Monkey Algorithm
+            <span class="paper-index">[5]</span>An Anisotropic Continuum Model and Its Calibration with an Improved Monkey Algorithm
           </div>
           <div class="paper-meta">
             Liang Zheng, <strong>Zhengbing He*</strong>, Tian He* · Transportmetrica A: Transport Science · 13(6):519–543 · 2017
@@ -254,7 +230,7 @@
         </figure>
         <div class="featured-paper-content">
           <div class="paper-title">
-            <span class="paper-index">[7]</span>A Figure-Eight Hysteresis Pattern in Macroscopic Fundamental Diagrams and Its Microscopic Causes
+            <span class="paper-index">[6]</span>A Figure-Eight Hysteresis Pattern in Macroscopic Fundamental Diagrams and Its Microscopic Causes
           </div>
           <div class="paper-meta">
             <strong>Zhengbing He*</strong>, Shuyan He, Wei Guan · Transportation Letters · 7(3):133–142 · 2015
@@ -270,7 +246,7 @@
           <img src="images/modeling-the-mixed.png" alt="Mixed traffic capacity of minor roads at a priority intersection" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[8]</span>Modeling the Mixed Traffic Capacity of Minor Roads at a Priority Intersection</div>
+          <div class="paper-title"><span class="paper-index">[7]</span>Modeling the Mixed Traffic Capacity of Minor Roads at a Priority Intersection</div>
           <div class="paper-meta">Yanyan Qin, Qinzhong Luo, Tengfei Xiao, <strong>Zhengbing He*</strong> · Physica A · 636:129541 · 2024</div>
           <div class="paper-links"><a href="https://doi.org/10.1016/j.physa.2024.129541" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexQin2024Capacity)">Copy BibTeX</button></div>
         </div>
@@ -281,7 +257,7 @@
           <img src="images/mixed-traffic-car-following.png" alt="Mixed traffic car-following behavior model" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[9]</span>A Mixed Traffic Car-Following Behavior Model</div>
+          <div class="paper-title"><span class="paper-index">[8]</span>A Mixed Traffic Car-Following Behavior Model</div>
           <div class="paper-meta">Xinke Wang, Jian Zhang, Honghai Li, <strong>Zhengbing He*</strong> · Physica A · 632:129299 · 2023</div>
           <div class="paper-links"><a href="https://doi.org/10.1016/j.physa.2023.129299" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexWang2023Mixed)">Copy BibTeX</button></div>
         </div>
@@ -292,7 +268,7 @@
           <img src="images/analysis-of-vehicle.png" alt="Vehicle driving styles at freeway merging areas using trajectory data" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[10]</span>Analysis of Vehicle Driving Styles at Freeway Merging Areas Using Trajectory Data</div>
+          <div class="paper-title"><span class="paper-index">[9]</span>Analysis of Vehicle Driving Styles at Freeway Merging Areas Using Trajectory Data</div>
           <div class="paper-meta">Shuai Wen, Xin Gu, Shahd Omar, Xi Jin, <strong>Zhengbing He*</strong> · IEEE ITSC · 3652–3656 · 2022</div>
           <div class="paper-links"><a href="https://doi.org/10.1109/ITSC55140.2022.9922336" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexWen2022Styles)">Copy BibTeX</button></div>
         </div>
@@ -303,7 +279,7 @@
           <img src="images/traffic-conflict.png" alt="Traffic conflict analysis at freeway interchange merging areas" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[11]</span>Traffic Conflict Analysis at Freeway Interchange Merging Areas: A Joint Model Based on Tobit and Survival Analysis Model</div>
+          <div class="paper-title"><span class="paper-index">[10]</span>Traffic Conflict Analysis at Freeway Interchange Merging Areas: A Joint Model Based on Tobit and Survival Analysis Model</div>
           <div class="paper-meta">Xin Gu, Yi Yang, Yunxuan Li, <strong>Zhengbing He</strong>, Yanyan Chen · CICTP 2023 · 1615–1625 · 2023</div>
           <div class="paper-links"><a href="https://doi.org/10.1061/9780784484869.154" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexGu2023Conflict)">Copy BibTeX</button></div>
         </div>
@@ -314,7 +290,7 @@
           <img src="images/optimal-location.png" alt="Optimal location of a lane-changing warning point" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[12]</span>Optimal Location of Lane-Changing Warning Point in a Two-Lane Road Considering Different Traffic Flows</div>
+          <div class="paper-title"><span class="paper-index">[11]</span>Optimal Location of Lane-Changing Warning Point in a Two-Lane Road Considering Different Traffic Flows</div>
           <div class="paper-meta">Jia He, <strong>Zhengbing He*</strong>, Bo Fan, Yanyan Chen · Physica A · 540:123000 · 2020</div>
           <div class="paper-links"><a href="https://doi.org/10.1016/j.physa.2019.123000" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexHe2020Warning)">Copy BibTeX</button></div>
         </div>
@@ -325,7 +301,7 @@
           <img src="images/trajectory-data-based.png" alt="Trajectory data-based traffic flow studies" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[13]</span>Trajectory Data-Based Traffic Flow Studies: A Revisit</div>
+          <div class="paper-title"><span class="paper-index">[12]</span>Trajectory Data-Based Traffic Flow Studies: A Revisit</div>
           <div class="paper-meta">Li Li, Rui Jiang, <strong>Zhengbing He*</strong>, Xiqun Chen, Xuesong Zhou · Transportation Research Part C · 114:225–240 · 2020</div>
           <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2020.02.016" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexLi2020Trajectory)">Copy BibTeX</button></div>
         </div>
@@ -336,7 +312,7 @@
           <img src="images/research-based.png" alt="Review of high-fidelity NGSIM vehicle trajectory datasets" loading="lazy" decoding="async" />
         </figure>
         <div class="featured-paper-content">
-          <div class="paper-title"><span class="paper-index">[14]</span>Research Based on High-Fidelity NGSIM Vehicle Trajectory Datasets: A Review</div>
+          <div class="paper-title"><span class="paper-index">[13]</span>Research Based on High-Fidelity NGSIM Vehicle Trajectory Datasets: A Review</div>
           <div class="paper-meta"><strong>Zhengbing He</strong> · ResearchGate preprint · 2017</div>
           <div class="paper-links"><a href="https://doi.org/10.13140/RG.2.2.11429.60643" target="_blank" rel="noopener noreferrer">Link</a><button onclick="copyText(bibtexHe2017NGSIM)">Copy BibTeX</button></div>
         </div>
@@ -358,16 +334,6 @@
   pages = {554--563},
   year = {2023},
   doi = {10.1109/TITS.2022.3209668}
-}`;
-
-    const bibtexWu2025 = `@article{wu2025modeling,
-  title = {Modeling car-following behaviors considering driver heterogeneity: A multi-regime stochastic framework},
-  author = {Wu, Shubo and Ngoduy, Dong and He, Zhengbing and Zou, Yajie and Sun, Jian},
-  journal = {Transportation Research Part C: Emerging Technologies},
-  volume = {179},
-  pages = {105282},
-  year = {2025},
-  doi = {10.1016/j.trc.2025.105282}
 }`;
 
     const bibtexZheng2017Flexible = `@article{zheng2017flexible,

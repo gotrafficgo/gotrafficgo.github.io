@@ -8,7 +8,7 @@
   <title>AI-Driven Modeling of Vehicle Dynamics | Zhengbing He</title>
   <meta
     name="description"
-    content="Zhengbing He's pioneering research on AI-driven vehicle dynamics and driver behavior modeling, featuring an early k-nearest-neighbor data-driven car-following model and the first deep-learning lane-changing model based on deep belief networks and LSTM neural networks, with applications to traffic dynamics, driving behavior analysis, and autonomous driving."
+    content="Zhengbing He's research on AI-driven vehicle dynamics and driver behavior modeling, from pioneering k-nearest-neighbor and deep-learning models to interpretable stochastic frameworks for driver heterogeneity and context-dependent uncertainty."
   />
 
   <style>
@@ -94,6 +94,11 @@
         <a class="citation-link" href="https://ieeexplore.ieee.org/document/10855350">Huang et al., 2025</a>
         ) as a pioneering contribution to AI-driven modeling of driver behavior
         and traffic dynamics.
+      </p>
+
+      <p>
+        Our recent work combines AI with interpretable stochastic modeling to capture <strong class="emphasis">driver heterogeneity across behavioral regimes</strong> and <strong class="emphasis">context-dependent uncertainty</strong> in car-following behavior.
+        These complementary frameworks support more realistic, uncertainty-aware traffic simulation and safety evaluation.
       </p>
     </section>
 
@@ -193,6 +198,32 @@
           <button onclick="copyText(bibtexXie2019)">Copy BibTeX</button>
         </div>
       </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          Modeling Car-Following Behaviors Considering Driver Heterogeneity: A Multi-Regime Stochastic Framework
+        </div>
+        <div class="paper-meta">
+          Shubo Wu, Dong Ngoduy, <strong>Zhengbing He</strong>, Yajie Zou, Jian Sun · Transportation Research Part C: Emerging Technologies · 179:105282 · 2025
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trc.2025.105282" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexWu2025)">Copy BibTeX</button>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">
+          When Context Is Not Enough: Modeling Unexplained Variability in Car-Following Behavior
+        </div>
+        <div class="paper-meta">
+          Chengyuan Zhang, <strong>Zhengbing He</strong>, Cathy Wu, Lijun Sun · Transportation Research Part B: Methodological · 214:103588 · 2026
+        </div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.trb.2026.103588" target="_blank" rel="noopener noreferrer">Link</a>
+          <button onclick="copyText(bibtexZhang2026)">Copy BibTeX</button>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -230,6 +261,26 @@
   pages = {41--60},
   year = {2019},
   doi = {10.1016/j.trc.2019.07.002}
+}`;
+
+    const bibtexWu2025 = `@article{wu2025modeling,
+  title = {Modeling car-following behaviors considering driver heterogeneity: A multi-regime stochastic framework},
+  author = {Wu, Shubo and Ngoduy, Dong and He, Zhengbing and Zou, Yajie and Sun, Jian},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {179},
+  pages = {105282},
+  year = {2025},
+  doi = {10.1016/j.trc.2025.105282}
+}`;
+
+    const bibtexZhang2026 = `@article{zhang2026context,
+  title = {When context is not enough: Modeling unexplained variability in car-following behavior},
+  author = {Zhang, Chengyuan and He, Zhengbing and Wu, Cathy and Sun, Lijun},
+  journal = {Transportation Research Part B: Methodological},
+  volume = {214},
+  pages = {103588},
+  year = {2026},
+  doi = {10.1016/j.trb.2026.103588}
 }`;
 
     function copyText(text) {
