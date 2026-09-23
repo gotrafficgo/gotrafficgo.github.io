@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>The Ripple Effects of Everyday Lane Changing | Zhengbing He</title>
+  <meta name="description" content="How a single discretionary lane change affects surrounding traffic: research on the extent, duration, efficiency and safety of lane-changing ripple effects." />
+  <style>
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; background: #f7f7f7; color: #222; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 48px 20px; }
+    header { margin-bottom: 36px; }
+    h1 { margin: 0; font-size: 2.3rem; line-height: 1.2; }
+    h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 1px solid #eaeaea; font-size: 1.35rem; }
+    p { margin-top: 0; }
+    section { margin-bottom: 24px; padding: 28px; border-radius: 14px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); }
+    footer { margin-top: 36px; color: #777; font-size: 0.9rem; text-align: center; }
+    .back-link, .citation-link, .paper-links a, .paper-links button { color: #0969da; }
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 0.95rem; text-decoration: none; }
+    .emphasis { color: #8b0000; }
+    .citation-sup { font-size: 0.75em; line-height: 0; }
+    .work-list { margin: 12px 0 0; padding-left: 22px; }
+    .work-list li { margin-bottom: 10px; }
+    .overview-highlight { width: 80%; margin: 20px auto 22px; }
+    .overview-highlight img, .media-grid img { display: block; width: 100%; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .media-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .media-grid figure { flex: 1 1 calc(50% - 10px); min-width: 280px; margin: 0; }
+    .featured-paper { display: -webkit-box; display: flex; gap: 24px; align-items: center; min-width: 0; }
+    .featured-paper figure { -webkit-box-flex: 0; flex: 0 0 20%; height: 160px; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #eaeaea; border-radius: 10px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    .featured-paper img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .featured-paper-content { -webkit-box-flex: 1; flex: 1 1 auto; min-width: 0; }
+    .paper { min-width: 0; margin-bottom: 20px; }
+    .paper-title { margin-bottom: 4px; font-weight: 700; }
+    .paper-index, .paper-meta { color: #666; }
+    .paper-index { margin-right: 6px; font-weight: 700; }
+    .paper-meta { margin-bottom: 6px; font-size: 0.95rem; }
+    .paper-links a, .paper-links button { -webkit-appearance: none; appearance: none; display: inline-block; margin-right: 14px; margin-bottom: 8px; padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: none; cursor: pointer; }
+    .feature-video { display: block; width: 50%; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 10px; background: #000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px; }
+      section { padding: 22px; }
+      h1 { font-size: 1.9rem; }
+      .overview-highlight, .feature-video { width: 100%; }
+      .media-grid { display: block; }
+      .media-grid figure { min-width: 0; margin-bottom: 20px; }
+      .featured-paper { display: block; }
+      .featured-paper figure { width: 100%; height: 180px; margin-bottom: 16px; }
+    }
+    .article-section p { line-height: 1.8; }
+    .article-figure { margin: 28px auto 8px; }
+    .article-figure img { display: block; width: 100%; border-radius: 10px; }
+    .figure-1, .figure-2 { max-width: 612px; }
+    figcaption { margin-top: 10px; color: #666; font-size: 0.9rem; text-align: center; }
+    .paper { scroll-margin-top: 24px; }
+    .paper-title { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <a class="back-link" href="../../">← Back to main page</a>
+      <h1>The Ripple Effects of Everyday Lane Changing</h1>
+    </header>
+    <section class="article-section">
+      <p>Almost every driver has had this experience: the lane next to you seems to be moving faster, so you spot a safe gap, signal, and smoothly move over. The entire manoeuvre takes only a few seconds. From the driver’s perspective, it is simply a routine adjustment on the road.</p>
+      <p>What most drivers do not see, however, is the chain reaction that can follow. When a vehicle enters a new lane, vehicles behind it may need to slow down or adjust their spacing. Those adjustments can then affect the next vehicles in line, allowing a seemingly minor disturbance to travel backward through the traffic stream—or “upstream,” in traffic-flow terminology. This is the ripple effect of lane changing: a local disturbance created by one vehicle can propagate through the traffic around it.</p>
+      <p>How many vehicles can a single discretionary lane change affect? How long can that disturbance persist? And what does it ultimately mean for traffic efficiency and safety? Professor Zhengbing He, Professor in Autonomous and Intelligent Systems at the University of Nottingham Ningbo China, and his collaborators have been investigating these everyday but surprisingly complex questions through a series of studies, progressing from identifying the extent and duration of a single lane change’s impact to quantifying its broader effects on traffic operations <sup class="citation-sup">[<a class="citation-link" href="#reference-1">1</a>,<a class="citation-link" href="#reference-2">2</a>]</sup>.</p>
+      <figure class="article-figure figure-1"><img src="images/everyday-traffic.jpg" alt="Vehicles travelling on a multilane highway" width="612" height="420" loading="lazy" decoding="async" /><figcaption>Figure 1. Everyday driving and traffic flow</figcaption></figure>
+    </section>
+    <section class="article-section">
+      <h2>One Lane Change, a Chain Reaction Through Traffic</h2>
+      <p>In 2023, the team published a study in IEEE Transactions on Intelligent Transportation Systems <sup class="citation-sup">[<a class="citation-link" href="#reference-1">1</a>]</sup>, addressing a fundamental question: how far does the impact of an ordinary discretionary lane change actually extend? Here, a “discretionary lane change” refers to a lane change that a driver chooses to make in response to traffic conditions—for example, in search of better driving conditions—rather than one that is required because of an exit, a lane ending, or another route constraint.</p>
+      <p>Using high-resolution vehicle trajectory data, the researchers developed an analytical framework to identify which vehicles were affected by a single lane change and how long those effects lasted. Under the traffic conditions examined, with lane-changing vehicles travelling at approximately 6–20 m/s (22–72 km/h), a typical discretionary lane change affected around four to five following vehicles on average, with an average impact duration of approximately 12–13 seconds.</p>
+      <p>These numbers make visible a microscopic traffic process that is difficult to observe from behind the wheel. A lane change is not simply a momentary interaction between two vehicles. A small movement by one vehicle can prompt the vehicle behind it to adjust its speed and spacing; that response can then influence the next vehicle, and so on. A manoeuvre lasting only a few seconds can therefore leave a disturbance in the traffic stream that persists for considerably longer.</p>
+      <p>This perspective also helps us understand a familiar feature of road traffic: sometimes vehicles slow down or begin moving in stop-and-go patterns even when there is no obvious accident, traffic signal, or physical obstruction ahead. Lane changing is by no means the only cause of such fluctuations, but traffic flow is an interconnected dynamic system. Acceleration, braking and lane-changing decisions alter local traffic conditions, and these small disturbances can propagate from vehicle to vehicle. Studying a single lane change therefore provides a concrete way to understand how local disturbances emerge, spread and eventually dissipate within a traffic stream.</p>
+    </section>
+    <section class="article-section">
+      <h2>From Identifying the Impact to Measuring Its Magnitude</h2>
+      <p>Knowing how many vehicles are affected, and for how long, is only the first part of the story. In real traffic, the effects are not the same for every vehicle. When a vehicle enters its target lane, it occupies space within that traffic stream and may cause following vehicles to slow down or adjust their spacing. At the same time, its departure from the original lane releases space, potentially giving vehicles behind it more favourable driving conditions. Changes in speed and spacing can also alter safety-related conditions within the surrounding traffic.</p>
+      <p>The team’s follow-up study, published in September 2026 in Accident Analysis &amp; Prevention <sup class="citation-sup">[<a class="citation-link" href="#reference-2">2</a>]</sup>, takes the next step: moving from identifying the extent of a lane change’s impact to quantifying its magnitude. The central question becomes: how large are the changes in traffic efficiency and safety associated with the disturbance created by a single lane change?</p>
+      <p>Answering this question is technically challenging because real traffic is constantly fluctuating. If a vehicle slows down after another vehicle changes lanes, the slowdown cannot automatically be attributed to that lane change. The vehicle may already have been decelerating, or it may be responding to traffic conditions further upstream. To reduce such misattribution, the new framework uses information on vehicle behaviour before the lane change together with local dynamic reference trajectories to distinguish, as far as possible, normal background fluctuations from changes associated with the lane-changing event. This makes it possible to move beyond asking whether a vehicle was affected and towards estimating the cumulative changes in traffic efficiency and safety associated with that event.</p>
+      <p>The results show that the same lane change can affect the two lanes differently. In the target lane—the lane the vehicle enters—the identified impact lasted an average of 23.8 seconds and involved approximately 5.6 following vehicles, with an average loss in traffic efficiency. In the original lane—the lane the vehicle leaves—the impact lasted around 25 seconds and involved approximately 5.3 following vehicles, while the average effect on efficiency was an improvement. Safety-related exposure measures increased on average in both lanes. These figures represent average patterns across the events examined rather than a universal outcome for every lane change; in particular, the efficiency and safety effects in the original lane varied substantially across individual events.</p>
+    </section>
+    <section class="article-section">
+      <h2>What Is Best for One Vehicle May Not Be Best for Traffic as a Whole</h2>
+      <p>Simply knowing that a lane change affects five or six vehicles for more than 20 seconds is only part of what makes these findings interesting. Their broader significance lies in changing the scale at which we think about driving decisions.</p>
+      <p>From an individual driver’s perspective, the logic of changing lanes is straightforward: if the neighbouring lane appears faster, there is a sufficient gap, and the manoeuvre can be completed safely, changing lanes may seem like a sensible choice. But when the perspective expands from one vehicle to the traffic system around it, the picture becomes more complicated. Better driving conditions for one vehicle may coincide with several vehicles in another lane having to slow down or adjust their spacing. A decision completed in a few seconds can leave effects that persist for more than 20 seconds downstream of that decision.</p>
+      <p>In other words, a choice that is advantageous for an individual vehicle does not necessarily produce the same benefit for the traffic system as a whole. This does not mean that lane changing is inherently undesirable. Rather, it raises a different question: when evaluating a driving decision, should we consider only what happens to the vehicle making that decision, or should we also account for what happens to the vehicles around it?</p>
+      <p>This is where quantification becomes particularly important. It is relatively easy to measure whether an individual vehicle travels faster after changing lanes. What has traditionally been much harder to measure is the less visible effect that the same manoeuvre imposes on surrounding traffic. By identifying which vehicles are affected, how long the effects persist, and how efficiency and safety conditions change, this line of research begins to make those previously hidden system-level effects measurable. The objective is not simply to classify a lane change as “good” or “bad,” but to broaden the way a driving decision can be evaluated—from the outcome for one vehicle to its consequences for the surrounding traffic system.</p>
+      <p>This perspective could become increasingly relevant as automated vehicles become more common. Today, an automated vehicle considering a lane change naturally needs to ask whether the manoeuvre is safe, whether sufficient space is available, and whether it improves its own driving conditions. But as more vehicles gain the ability to make autonomous decisions, a deeper question emerges: do we want roads filled with individually optimised intelligent vehicles, or a traffic system in which those vehicles can also coordinate their decisions for better overall performance?</p>
+      <p>Consider a future automated vehicle faced with two equally safe lane-changing options that provide similar benefits to itself. One might cause several following vehicles to brake, while the other might create much less disturbance. If such differences can eventually be estimated reliably, the vehicle could potentially incorporate them into its decision-making—not only asking, “Can I make this lane change?” but also, “What effect will my decision have on the traffic around me?” The same type of information could eventually contribute to research on connected and cooperative vehicles, intelligent lane management and network-level traffic control. These are potential directions enabled by this line of research, rather than functions already demonstrated in the two studies.</p>
+      <p>From the 2023 study identifying who is affected and for how long, to the latest work quantifying how much they are affected and in what ways, the two studies progressively reveal an important but often invisible feature of traffic: one vehicle’s decision can reshape the movement of several vehicles behind it for tens of seconds.</p>
+      <p>Road traffic may appear to consist of thousands of vehicles making independent decisions, but in reality it is a highly interconnected and dynamic system. We are now beginning to measure the ripples created by something as ordinary as a single lane change. As vehicles become increasingly capable of sensing, predicting and making decisions for themselves, the meaning of vehicle intelligence may also need to expand: not only enabling each vehicle to travel safely and efficiently, but also enabling it to anticipate and reduce the disturbance its own decisions create for the traffic system around it.</p>
+      <figure class="article-figure figure-2"><img src="images/system-aware-lane-changing.png" alt="A single lane change creates traffic ripples, while system-aware decisions support smoother, safer traffic" width="936" height="468" loading="lazy" decoding="async" /><figcaption>Figure 2. System-aware lane-changing decisions in an intelligent driving environment</figcaption></figure>
+    </section>
+    <section>
+      <h2>Publications</h2>
+      <div class="paper featured-paper" id="reference-1">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[1]</span>The Impact of a Single Discretionary Lane Change on Surrounding Traffic: An Analytic Investigation
+          </div>
+          <div class="paper-meta">
+            Jia He, Jie Qu, Jian Zhang, <strong>Zhengbing He*</strong> · IEEE Transactions on Intelligent Transportation Systems · 24(1):554–563 · 2023
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1109/TITS.2022.3209668" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHe2023)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper featured-paper" id="reference-2">
+        <div class="featured-paper-content">
+          <div class="paper-title">
+            <span class="paper-index">[2]</span>On the Quantification of the Spatiotemporal Impact of a Single Discretionary Lane Change on Upstream Traffic Safety and Efficiency
+          </div>
+          <div class="paper-meta">
+            Kangning Hou, Jia Zou, Fangfang Zheng, Xiaobo Liu, <strong>Zhengbing He</strong> · Accident Analysis &amp; Prevention · 238:108774 · 2026
+          </div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.aap.2026.108774" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexHou2026LaneChangeImpact)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <footer>© 2026 Zhengbing He</footer>
+  </main>
+  <script>
+    const bibtexHou2026LaneChangeImpact = `@article{Hou2026LaneChangeImpact,
+  title = {On the Quantification of the Spatiotemporal Impact of a Single Discretionary Lane Change on Upstream Traffic Safety and Efficiency},
+  author = {Hou, Kangning and Zou, Jia and Zheng, Fangfang and Liu, Xiaobo and He, Zhengbing},
+  journal = {Accident Analysis & Prevention},
+  volume = {238},
+  pages = {108774},
+  year = {2026},
+  doi = {10.1016/j.aap.2026.108774}
+}`;
+
+    const bibtexHe2023 = `@article{he2023impact,
+  title = {The impact of a single discretionary lane change on surrounding traffic: An analytic investigation},
+  author = {He, Jia and Qu, Jie and Zhang, Jian and He, Zhengbing},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {24},
+  number = {1},
+  pages = {554--563},
+  year = {2023},
+  doi = {10.1109/TITS.2022.3209668}
+}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
