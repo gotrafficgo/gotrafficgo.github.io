@@ -1023,7 +1023,7 @@ function draw() {
 
   const jadTrafficStatus = getJadTrafficStatus(simT, jadTrack);
   const baselineTracks = simT < 540 ? data.tracks : data.baselineTracks;
-  drawScene(baselineView, 'Nature Traffic w/ Stop-and-Go Wave', 1, baselineTracks, frameStates, null);
+  drawScene(baselineView, 'Natural Traffic w/ Stop-and-Go Wave', 1, baselineTracks, frameStates, null);
   drawScene(fullView, 'JAD-Intervened Traffic', 1, data.tracks, frameStates, jad);
   drawDetectorLabel(fullView, 7000, detectorStatusWraps);
   drawScene(localView, '', 1, data.tracks, frameStates, jad);
