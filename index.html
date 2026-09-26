@@ -112,17 +112,19 @@
         display: block;
         height: 100%;
         box-sizing: border-box;
-        padding: 0.55em 2.15em 0.55em 0.85em;
+        padding: 0.55em 0.85em;
         color: #1e293b;
         text-decoration: none;
       }
-      .project-showcase a::after {
-        content: "↗";
+      .project-showcase a:has(.project-hot-badge) {
+        padding-right: 2.15em;
+      }
+      .project-hot-badge {
         position: absolute;
-        top: 0.5em;
+        top: 0.55em;
         right: 0.85em;
-        color: #0969da;
-        font-size: 0.95em;
+        font-size: 0.85rem;
+        line-height: 1;
       }
       .project-showcase a:hover {
         color: #0969da;
@@ -483,19 +485,19 @@
 
       <li class="project-category">Traffic Dynamics &amp; Modeling</li>
       <li>
-        <a href="project/occams-razor/" target="_blank" rel="noopener noreferrer"><b>Occam's Razor</b><span class="project-summary">Simple Models for Traffic Dynamics</span></a>
+        <a href="project/occams-razor/" target="_blank" rel="noopener noreferrer"><b>Occam's Razor</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Simple Models for Traffic Dynamics</span></a>
       </li>
       <li>
-        <a href="project/time-space-traffic-diagram/" target="_blank" rel="noopener noreferrer"><b>Time-Space Traffic Diagram</b><span class="project-summary">Construction, Refinement, and Applications</span></a>
+        <a href="project/time-space-traffic-diagram/" target="_blank" rel="noopener noreferrer"><b>Time-Space Traffic Diagram</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Construction, Refinement, and Applications</span></a>
       </li>
       <li>
-        <a href="project/mapping-to-cells/" target="_blank" rel="noopener noreferrer"><b>Sensing Traffic Congestion</b><span class="project-summary">Mapping to Cells</span></a>
+        <a href="project/mapping-to-cells/" target="_blank" rel="noopener noreferrer"><b>Sensing Traffic Congestion</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Mapping to Cells</span></a>
       </li>
       <li>
         <a href="project/microscopic-traffic-modeling/" target="_blank" rel="noopener noreferrer"><b>Understanding Traffic Dynamics</b><span class="project-summary">Microscopic Modeling</span></a>
       </li>
       <li>
-        <a href="project/lane-changing-ripple-effects/" target="_blank" rel="noopener noreferrer"><b>Understanding Traffic Dynamics</b><span class="project-summary">Ripple Effects of Lane Changes</span></a>
+        <a href="project/lane-changing-ripple-effects/" target="_blank" rel="noopener noreferrer"><b>Understanding Traffic Dynamics</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Ripple Effects of Lane Changes</span></a>
       </li>
       <li>
         <a href="project/traffic-state-estimation/" target="_blank" rel="noopener noreferrer"><b>Traffic State Estimation</b><span class="project-summary">Travel-Time and Lane-Level Methods</span></a>
@@ -509,13 +511,13 @@
 
       <li class="project-category">Intelligent Vehicles</li>
       <li>
-        <a href="project/dedicated-vehicle-dispatch/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b><span class="project-summary">Dispatching Dedicated Vehicles</span></a>
+        <a href="project/dedicated-vehicle-dispatch/" target="_blank" rel="noopener noreferrer"><b>Resolving Traffic Congestion</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Dispatching Dedicated Vehicles</span></a>
       </li>
       <li>
         <a href="project/intelligent-vehicle/" target="_blank" rel="noopener noreferrer"><b>Intelligent Vehicles</b><span class="project-summary">Operations and Control</span></a>
       </li>
       <li>
-        <a href="project/autonomous-intersection/" target="_blank" rel="noopener noreferrer"><b>Autonomous Intersection</b><span class="project-summary">Erasing Traffic Lights from Roads</span></a>
+        <a href="project/autonomous-intersection/" target="_blank" rel="noopener noreferrer"><b>Autonomous Intersection</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Erasing Traffic Lights from Roads</span></a>
       </li>
       <li>
         <a href="project/brain-driving/" target="_blank" rel="noopener noreferrer"><b>Brain Driving</b><span class="project-summary">EEG and Driving Simulator</span></a>
@@ -525,13 +527,13 @@
 
       <li class="project-category">AI + <span class="script-x">X</span></li>
       <li>
-        <a href="project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer"><b>AI-Driven Modeling</b><span class="project-summary">Vehicle Dynamics</span></a>
+        <a href="project/ai-vehicle-dynamics/" target="_blank" rel="noopener noreferrer"><b>AI-Driven Modeling</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Vehicle Dynamics</span></a>
       </li>
       <li>
-        <a href="project/motion-prediction/" target="_blank" rel="noopener noreferrer"><b>AI-Powered Motion Forecasting</b><span class="project-summary">for Autonomous Driving</span></a>
+        <a href="project/motion-prediction/" target="_blank" rel="noopener noreferrer"><b>AI-Powered Motion Forecasting</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">for Autonomous Driving</span></a>
       </li>
       <li>
-        <a href="project/large-language-model/" target="_blank" rel="noopener noreferrer"><b>Large Language Model</b><span class="project-summary">Powering Transportation Studies</span></a>
+        <a href="project/large-language-model/" target="_blank" rel="noopener noreferrer"><b>Large Language Model</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Powering Transportation Studies</span></a>
       </li>
       <li>
         <a href="project/traffic-prediction/" target="_blank" rel="noopener noreferrer"><b>Mobility Prediction</b><span class="project-summary">Traffic States, Travel Times, and Demand</span></a>
@@ -543,7 +545,7 @@
 
       <li class="project-category">Urban Mobility</li>
       <li>
-        <a href="project/transportation-resilience/" target="_blank" rel="noopener noreferrer"><b>Transportation Resilience</b><span class="project-summary">Dynamic Demand and Multi-Modal Networks</span></a>
+        <a href="project/transportation-resilience/" target="_blank" rel="noopener noreferrer"><b>Transportation Resilience</b><span class="project-hot-badge" aria-label="Hot">🔥</span><span class="project-summary">Dynamic Demand and Multi-Modal Networks</span></a>
       </li>
       <li>
         <a href="project/day-to-day/" target="_blank" rel="noopener noreferrer"><b>Day-to-Day Route Choice</b><span class="project-summary">Theory, Experiment, LLM Simulation</span></a>
@@ -574,8 +576,8 @@
 
 
       <li class="project-category">Perspectives &amp; Misc</li>
-      <li><a href="project/perspectives/" target="_blank" rel="noopener noreferrer"><b>Review and Perspectives</b></a></li>
-      <li><a href="project/solo-authored-papers/" target="_blank" rel="noopener noreferrer"><b>Solo-Authored Papers</b></a></li>
+      <li><a href="project/perspectives/" target="_blank" rel="noopener noreferrer"><b>Review and Perspectives</b><span class="project-hot-badge" aria-label="Hot">🔥</span></a></li>
+      <li><a href="project/solo-authored-papers/" target="_blank" rel="noopener noreferrer"><b>Solo-Authored Papers</b><span class="project-hot-badge" aria-label="Hot">🔥</span></a></li>
 
 
       <li class="project-category">With Animation</li>
