@@ -79,7 +79,7 @@
       </figure>
 
       <p>
-        Our early and continuing explorations span four directions:
+        Our early and continuing explorations span five directions:
       </p>
 
       <ul class="work-list">
@@ -94,6 +94,9 @@
         </li>
         <li>
           We systematically reviewed <strong class="emphasis">how LLMs can power autonomous driving</strong> across modular and end-to-end systems, covering their roles in perception, reasoning, decision-making, human–vehicle interaction, long-tail scenarios, and the safety and security challenges that remain<sup class="citation-sup">[4]</sup>.
+        </li>
+        <li>
+          We developed <strong class="emphasis">adaptive LLM reasoning for autonomous driving</strong> through LLM-TP<sup>2</sup>, a joint trajectory prediction and planning framework. An uncertainty-driven hierarchical encoder uses a lightweight language model for routine scenes and selectively invokes a larger LLM when deeper semantic reasoning is needed. Latent chain-of-thought distillation transfers reasoning from a teacher LLM to the lightweight model, while a cross-modal decoder incorporates semantic intent into trajectory generation<sup class="citation-sup">[5]</sup>.
         </li>
       </ul>
     </section>
@@ -193,6 +196,24 @@
         </div>
       </div>
 
+      <div class="paper featured-paper">
+        <figure>
+          <img
+            src="images/adaptive.png"
+            alt="Adaptive large language model reasoning for autonomous driving decision-making"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="featured-paper-content">
+          <div class="paper-title"><span class="paper-index">[5]</span>Adaptive Large Language Model Reasoning for Autonomous Driving Decision-Making</div>
+          <div class="paper-meta">Haicheng Liao, Chengyue Wang, Hanlin Kong, Zhenning Li, <strong>Zhengbing He</strong>, Zhiyong Cui, Guohui Zhang, Chengzhong Xu · Artificial Intelligence · 361:104640 · 2026</div>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1016/j.artint.2026.104640" target="_blank" rel="noopener noreferrer">Link</a>
+            <button onclick="copyText(bibtexLiao2026AdaptiveReasoning)">Copy BibTeX</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -241,6 +262,16 @@
   month = {August},
   year = {2026},
   doi = {10.1016/j.eng.2025.07.038}
+}`;
+
+    const bibtexLiao2026AdaptiveReasoning = `@article{Liao2026AdaptiveReasoning,
+  author = {Liao, Haicheng and Wang, Chengyue and Kong, Hanlin and Li, Zhenning and He, Zhengbing and Cui, Zhiyong and Zhang, Guohui and Xu, Chengzhong},
+  title = {Adaptive Large Language Model Reasoning for Autonomous Driving Decision-Making},
+  journal = {Artificial Intelligence},
+  volume = {361},
+  pages = {104640},
+  year = {2026},
+  doi = {10.1016/j.artint.2026.104640}
 }`;
 
     function copyText(text) {
