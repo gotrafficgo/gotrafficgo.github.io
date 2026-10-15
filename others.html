@@ -31,11 +31,34 @@
           sans-serif;
         font-size: 14px;
       }
+      h1 {
+        margin-bottom: 0.6em;
+        font-size: 1.35rem;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 0.9em;
+      }
+      .intro-layout {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+      }
+      .intro-text {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      @media (max-width: 760px) {
+        .intro-layout {
+          flex-direction: column;
+        }
+      }
       .motto {
-        margin: 2em 0;
+        margin: 1.4em 0 0.55em;
+        font-size: 1.35rem;
       }
       .project-list {
-        margin: 1em 0 0;
+        margin: 0;
         padding-left: 1.25em;
       }
       .project-list li {
@@ -53,6 +76,23 @@
     </div>
 
     <main>
+    <div class="intro-layout">
+      <div class="intro-text">
+        <h1>贺正冰</h1>
+        <div class="subtitle">
+          自主与智能系统 教授<br />
+          宁波诺丁汉大学
+        </div>
+        <div>
+          <a href="https://scholar.google.com/citations?user=qH12Xy4AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/gotrafficgo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/zhengbing/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span style="text-decoration: underline; text-decoration-color: #000;">he dot zb at hotmail dot com</span><br />
+          办公室: 海洋楼322, 浙江省宁波市泰康东路199号, 315104
+        </div>
+      </div>
+    </div>
+
       <p class="motto"><strong>励志做一名德艺双馨的老学究，曲高和寡</strong></p>
       <ul class="project-list">
         <li><a href="sand.html">沧海一粟</a></li>
