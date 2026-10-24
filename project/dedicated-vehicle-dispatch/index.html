@@ -278,23 +278,15 @@
     html.animation-only .jad-animation .mobile-home-continue-cue {
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: flex-end;
       margin: 0;
       padding: 18px 14px;
       color: #64748b;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.2;
-      text-align: left;
+      text-align: right;
       animation: mobile-home-cue-pulse 1.25s ease-in-out infinite;
-    }
-    .jad-animation .mobile-home-direction-arrow {
-      flex: 0 0 32px;
-      font-family: "Arial Black", Arial, sans-serif;
-      font-size: 32px;
-      font-weight: 900;
-      line-height: 0.8;
-      text-align: center;
     }
   }
   @keyframes mobile-home-cue-pulse {
@@ -326,7 +318,6 @@
 <body>
 <div class="jad-animation" id="jadAnimation">
   <div class="mobile-home-continue-cue">
-    <span class="mobile-home-direction-arrow" aria-hidden="true">&darr;</span>
     <span>Continue to My Homepage</span>
   </div>
   <div class="jad-toolbar">
