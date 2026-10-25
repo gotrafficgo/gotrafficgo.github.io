@@ -155,6 +155,18 @@
     width: min(720px, 72%);
     margin: 0 auto;
   }
+  .jad-animation .observation-video-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    background: #111827;
+    padding: 6px 12px;
+    border-radius: 6px;
+    pointer-events: none;
+  }
   .jad-animation .observation-video-caption {
     position: absolute;
     z-index: 1;
@@ -344,6 +356,7 @@
         <source src="videos/Cop-Car-Swerving-across-Freeway.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <span class="observation-video-loading" id="observationVideoLoading" role="status">Loading…</span>
     </div>
     <div class="jad-paper-info">
       <div>Transforming Police-Car Swerving for Mitigating Isolated Stop-and-Go Traffic Waves: A Practice-Oriented Jam-Absorption Driving Strategy</div>
@@ -494,6 +507,18 @@ const scrub = document.getElementById('scrub');
 const timeStatusEl = document.getElementById('timeStatus');
 const playBtn = document.getElementById('play');
 const observationVideo = document.getElementById('observationVideo');
+const observationVideoLoading = document.getElementById('observationVideoLoading');
+function updateVideoLoading() {
+  observationVideoLoading.hidden = observationVideo.readyState >= 3;
+}
+observationVideo.addEventListener('canplay', updateVideoLoading);
+observationVideo.addEventListener('playing', updateVideoLoading);
+observationVideo.addEventListener('waiting', () => { observationVideoLoading.hidden = false; });
+observationVideo.addEventListener('error', () => {
+  observationVideoLoading.hidden = false;
+  observationVideoLoading.textContent = 'Video unavailable';
+});
+updateVideoLoading();
 let simT = data.start;
 let playing = true;
 let lastTs = performance.now();
@@ -1060,6 +1085,9 @@ speed.oninput = draw;
 playBtn.onclick = () => { playing = !playing; playBtn.textContent = playing ? 'Pause' : 'Play'; draw(); };
 draw();
 requestAnimationFrame(tick);
+if (window.parent !== window) {
+  window.parent.postMessage('jad-animation-ready', window.location.origin);
+}
 })();
 </script>
 </body>

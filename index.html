@@ -338,6 +338,18 @@
         border: 0;
         overflow: hidden;
       }
+      .home-jad-loading {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #111827;
+        color: #fff;
+        pointer-events: none;
+      }
       .home-jad-latest-work {
         position: absolute;
         top: 340px;
@@ -408,6 +420,7 @@
   </head>
   <body>
     <div class="home-jad-animation">
+      <div class="home-jad-loading" id="homeJadLoading" role="status">Loading…</div>
       <div class="home-jad-latest-work" id="homeJadLatestWork">
         My Latest Work
         <span class="home-jad-latest-work-subtitle">The Best is at 600s</span>
@@ -647,7 +660,16 @@
       (() => {
         const frame = document.getElementById("homeJadAnimation");
         const latestWork = document.getElementById("homeJadLatestWork");
+        const loading = document.getElementById("homeJadLoading");
         let observer;
+
+        window.addEventListener("message", (event) => {
+          if (event.source === frame.contentWindow && event.origin === window.location.origin
+              && event.data === "jad-animation-ready") {
+            loading.hidden = true;
+            fitAnimation();
+          }
+        });
 
         const fitAnimation = () => {
           const animation = frame.contentDocument?.getElementById("jadAnimation");
@@ -665,6 +687,7 @@
         };
 
         frame.addEventListener("load", () => {
+          loading.hidden = true;
           fitAnimation();
           const animation = frame.contentDocument?.getElementById("jadAnimation");
           if (animation && "ResizeObserver" in window) {
