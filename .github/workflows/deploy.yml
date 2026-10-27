@@ -33,7 +33,7 @@ jobs:
           SERVER_HOST: ${{ secrets.SERVER_HOST }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
-          rsync -az --delete \
+          rsync -rz --delete \
             --exclude='.git/' \
             --exclude='.github/' \
             -e "ssh -i ~/.ssh/id_ed25519" \
