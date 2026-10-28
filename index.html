@@ -669,7 +669,7 @@
           if (event.source === frame.contentWindow && event.origin === window.location.origin
               && event.data === "jad-animation-ready") {
             loading.hidden = true;
-            fitAnimation();
+            observeAnimation();
           }
         });
 
@@ -688,7 +688,7 @@
           }
         };
 
-        frame.addEventListener("load", () => {
+        const observeAnimation = () => {
           loading.hidden = true;
           fitAnimation();
           const animation = frame.contentDocument?.getElementById("jadAnimation");
@@ -697,7 +697,8 @@
             observer = new ResizeObserver(fitAnimation);
             observer.observe(animation);
           }
-        });
+        };
+        frame.addEventListener("load", observeAnimation);
         window.addEventListener("resize", fitAnimation);
       })();
     </script>
